@@ -6,6 +6,7 @@
   const VIEWS = {
     overview: ['Overview', 'Content programme', 'Seven distinct brands. One place to find the next draft, its copy and the work behind it.'],
     calendar: ['Calendar', 'The publishing calendar', 'Proposed dates and local times. Open any draft for its captions, creative brief and checks.'],
+    feed: ['Feed', 'Planned Instagram feed', 'A draft feed for one client at a time. Produced artwork and brief-only ideas stay clearly distinct.'],
     posts: ['Posts', 'The post library', 'Find the right idea, copy the caption and give production a clear brief.'],
     brand: ['Brand & audit', 'Brand & profile evidence', 'The supplied identities, what was actually observed and what still needs confirming.'],
     research: ['Research', 'Research & guidance', 'Primary platform guidance, category references and a clearly labelled research backlog.'],
@@ -14,6 +15,7 @@
   const ICONS = {
     overview: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
     calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/>',
+    feed: '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',
     posts: '<path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h6"/>',
     brand: '<path d="m12 3 9 5v8l-9 5-9-5V8zM3 8l9 5 9-5M12 13v8"/>',
     research: '<circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6M10 7v6"/>',
@@ -55,11 +57,12 @@
   const params = new URLSearchParams(location.search);
   const initialView = params.get('view') === 'brand-audit' ? 'brand' : params.get('view');
   const state = {
-    view: VIEWS[initialView] ? initialView : 'overview', client: params.get('client') || 'all',
+    view: VIEWS[initialView] ? initialView : 'feed', client: params.get('client') || 'all',
     query: params.get('q') || '', format: params.get('format') || 'all', pillar: params.get('pillar') || 'all',
     from: isDate(params.get('from')) ? params.get('from') : START, to: isDate(params.get('to')) ? params.get('to') : END,
     week: isDate(params.get('week')) ? monday(params.get('week')) : FIRST_WEEK,
     calendarMode: params.get('layout') === 'list' ? 'list' : 'week', researchTab: ['guidance', 'questions', 'references'].includes(params.get('tab')) ? params.get('tab') : 'guidance',
+    feedOrder: params.get('order') === 'latest' ? 'latest' : 'earliest', previewIndex: 0,
     researchCategory: params.get('topic') || 'all', openPost: params.get('post') || '', dialogTab: 'copy'
   };
   let data = { clients: [], guidance: [], research: [], threads: {} };
@@ -69,6 +72,7 @@
   let toastTimer;
   let searchTimer;
   let lastPostTrigger;
+  const previewAvailability = new Map();
   const dialog = $('#post-dialog');
 
   function normaliseClient(raw) {
@@ -136,6 +140,7 @@
     if (state.calendarMode !== 'week') next.set('layout', state.calendarMode);
     if (state.researchTab !== 'guidance') next.set('tab', state.researchTab);
     if (state.researchCategory !== 'all') next.set('topic', state.researchCategory);
+    if (state.view === 'feed' && state.feedOrder !== 'earliest') next.set('order', state.feedOrder);
     if (state.openPost) next.set('post', state.openPost);
     history.replaceState(null, '', `${location.pathname}${next.size ? `?${next}` : ''}${location.hash}`);
   }
@@ -191,7 +196,7 @@
     const upcomingHTML = upcoming.map(post => `<button class="upcoming-row" type="button" data-post="${esc(post.id)}"><span class="date-block"><strong>${esc(dateLabel(post.date, { month: undefined }))}</strong><span>${esc(dateLabel(post.date, { day: undefined }))}</span></span><span class="upcoming-main"><span class="row-client">${esc(post._name)} <span>·</span> ${esc(post.id)}</span><h3>${esc(post.title)}</h3><span class="row-meta">${formatTag(post)}<span>${esc(post.pillar)}</span></span></span><span class="row-arrow" aria-hidden="true">↗</span></button>`).join('');
     return overview + programmeStrategy() + `<div class="overview-layout"><div class="surface"><div class="schedule-heading"><div><h2>Next on the programme</h2><p>First drafts in the selected date range</p></div><button class="button text-button" data-view="calendar" type="button">View calendar ${icon('arrow', 13)}</button></div>${upcomingHTML}</div><div class="overview-side"><div class="focus-panel"><p class="eyebrow">Production focus</p><h2>Make the real business the subject.</h2><p>A specific product, place or action gives every post a reason to belong to its client.</p><ol class="focus-list"><li><span>1</span><div><strong>Confirm the source</strong>Check the actual product, business detail and current availability.</div></li><li><span>2</span><div><strong>Capture what is real</strong>Follow the shot list. Clear image, likeness and audio rights.</div></li><li><span>3</span><div><strong>Review the exact version</strong>Read the copy, inspect the export and record human approval.</div></li></ol></div><div class="evidence-mini"><h3>Open questions stay visible</h3><p>Account access, brand approval and photo rights vary by client. A supplied logo or a finished caption does not mean a post is approved.</p><button class="text-link button text-button" data-view="brand" type="button">Read brand & audit ${icon('arrow', 13)}</button></div></div></div><section class="client-strip"><div class="section-head"><h2>Client workspaces</h2><span class="section-note">All posts remain drafts</span></div><div class="client-summary-list">${scope.map(client => {
       const count = rows.filter(post => post._client === client.id).length;
-      return `<div class="client-summary-row">${logo(client)}<div><h3>${esc(client.name)}</h3>${logoStatus(client)}<p>${esc(client.location)}</p></div><span class="client-summary-value">${count}<small>drafts in view</small></span><span class="client-summary-value summary-format">${client.posts.filter(post => post.format === 'Reel').length}<small>Reel briefs in full plan</small></span><button type="button" class="button secondary small" data-client-view="${esc(client.id)}">Open workspace</button></div>`;
+      return `<div class="client-summary-row">${logo(client)}<div><h3>${esc(client.name)}</h3>${logoStatus(client)}<p>${esc(client.location)}</p></div><span class="client-summary-value">${count}<small>drafts in view</small></span><span class="client-summary-value summary-format">${client.posts.filter(post => post.format === 'Reel').length}<small>Reel briefs in full plan</small></span><button type="button" class="button secondary small" data-client-view="${esc(client.id)}">Open feed</button></div>`;
     }).join('')}</div></section>`;
   }
 
@@ -211,6 +216,86 @@
       const outside = day < START || day > END;
       return `<section class="calendar-day${outside ? ' outside' : ''}${index > 4 ? ' weekend' : ''}" aria-label="${esc(dateLabel(day, { weekday: 'long' }))}"><h3 class="day-heading"><span>${esc(dateLabel(day, { weekday: 'short', day: undefined, month: undefined }))}</span><strong>${esc(dateLabel(day, { month: undefined }))}</strong><span class="day-count">${dayRows.length} drafts</span></h3><div class="day-posts">${dayRows.length ? dayRows.map(post => `<button type="button" class="calendar-post" data-post="${esc(post.id)}" aria-label="Open ${esc(post.title)}, ${esc(post._name)}, ${esc(dateLabel(post.date))}"><span class="calendar-client">${esc(post._name)}</span><strong>${esc(post.title)}</strong>${formatTag(post)}</button>`).join('') : `<p class="no-post">${outside ? 'Outside programme' : 'No core post planned'}</p>`}</div></section>`;
     }).join('')}</div>`;
+  }
+
+  function safePostAsset(value, postId, downloadAsset = false) {
+    if (typeof value !== 'string' || !/^[a-zA-Z0-9_-]+$/.test(String(postId))) return '';
+    const candidate = value.replace(/^\.\//, '');
+    const prefix = `assets/posts/${postId}/`;
+    if (!candidate.startsWith(prefix)) return '';
+    const filename = candidate.slice(prefix.length);
+    const allowed = downloadAsset ? /^[a-zA-Z0-9][a-zA-Z0-9._-]*\.(png|jpe?g|webp|avif|zip|pdf|mp4)$/i : /^[a-zA-Z0-9][a-zA-Z0-9._-]*\.(png|jpe?g|webp|avif)$/i;
+    return allowed.test(filename) ? `./${candidate}` : '';
+  }
+  function postPreview(post) {
+    const supplied = post.preview;
+    if (!supplied || supplied.status !== 'Visual draft' || !['carousel','image'].includes(supplied.type)) return null;
+    const slides = arr(supplied.slides).map((slide, index) => {
+      const value = typeof slide === 'string' ? {src:slide} : slide || {};
+      return {src:safePostAsset(value.src, post.id),alt:text(value.alt) || `${post.title} — visual draft slide ${index + 1}`};
+    }).filter(slide => slide.src);
+    const cover = safePostAsset(supplied.cover, post.id) || slides[0]?.src || '';
+    if (!cover) return null;
+    if (!slides.length) slides.push({src:cover,alt:text(post.altText) || `${post.title} — visual draft`});
+    return {status:'Visual draft',type:supplied.type,cover,slides,download:safePostAsset(supplied.download, post.id, true)};
+  }
+  function feedTheme(client) {
+    const colour = arr(client.brand.palette).find(item => /^#[0-9a-fA-F]{6}$/.test(item.hex || ''))?.hex || '#343f32';
+    const channels = [1,3,5].map(index => parseInt(colour.slice(index,index+2),16)/255).map(value => value <= .04045 ? value/12.92 : ((value+.055)/1.055)**2.4);
+    const luminance = channels[0]*.2126+channels[1]*.7152+channels[2]*.0722;
+    const darkChannels = [0x24,0x28,0x25].map(value => value/255).map(value => value <= .04045 ? value/12.92 : ((value+.055)/1.055)**2.4);
+    const darkLuminance = darkChannels[0]*.2126+darkChannels[1]*.7152+darkChannels[2]*.0722;
+    const contrastDark = (Math.max(luminance,darkLuminance)+.05)/(Math.min(luminance,darkLuminance)+.05);
+    const contrastWhite = 1.05/(luminance+.05);
+    return `--feed-bg:${colour};--feed-ink:${contrastDark >= contrastWhite ? '#242825' : '#ffffff'}`;
+  }
+  function instagramIdentity(client) {
+    const supplied = typeof client.instagram === 'object' ? client.instagram.url : client.instagram;
+    const url = safeURL(supplied);
+    if (!url) return '<span class="feed-identity-gap">Identity not verified</span>';
+    const parsed = new URL(url);
+    const handle = /(^|\.)instagram\.com$/i.test(parsed.hostname) ? parsed.pathname.split('/').filter(Boolean)[0] : '';
+    if (!handle || !/^[a-zA-Z0-9._]+$/.test(handle) || ['p','reel','stories','explore','accounts'].includes(handle)) return '<span class="feed-identity-gap">Identity not verified</span>';
+    return `<a class="feed-handle" href="${esc(url)}" target="_blank" rel="noopener noreferrer">@${esc(handle)} ${icon('external',13)}</a>`;
+  }
+  function feedTile(post) {
+    const client = getClient(post._client);
+    const preview = postPreview(post);
+    const available = preview ? previewAvailability.get(preview.cover) : 'failed';
+    const ready = available === 'loaded';
+    const pending = preview && available !== 'failed';
+    return `<button class="feed-tile" type="button" data-post="${esc(post.id)}" data-feed-tile="${esc(post.id)}" data-open-tab="media" aria-label="Open ${esc(post.title)}, ${esc(dateLabel(post.date))}, ${ready ? 'visual draft' : 'brief only or preview pending'}"><span class="feed-artwork${ready ? ' has-preview' : ''}" style="${feedTheme(client)}"><span class="brief-only-art"><span class="brief-art-format">${esc(post.format)}</span><strong>${esc(post.title)}</strong><span class="brief-art-label">Brief only</span></span>${pending ? `<img src="${esc(preview.cover)}" alt="${esc(preview.slides[0]?.alt || post.title)}" loading="lazy" decoding="async" width="1080" height="1440" data-feed-preview="${esc(post.id)}">` : ''}${preview?.type === 'carousel' ? `<span class="feed-carousel-symbol" aria-label="Carousel">${icon('copy',17)}</span>` : ''}</span><span class="feed-tile-meta"><time datetime="${esc(post.date)}">${esc(dateLabel(post.date))}</time><span data-feed-status>${ready ? 'Visual draft' : pending ? 'Loading preview' : 'Brief only'}</span></span><span class="feed-tile-title">${esc(post.title)}</span></button>`;
+  }
+  function renderFeed(rows) {
+    const produced = rows.filter(post => postPreview(post));
+    const producedGallery = produced.length ? `<section class="produced-gallery"><div class="section-head"><h2>Created image drafts</h2><span class="proposal-label">${produced.length} posts · open to view every slide</span></div><p>Real artwork is available below. Open a post to see the full-size carousel, its caption and downloads.</p><div class="feed-grid" aria-label="Created image drafts across clients">${produced.map(feedTile).join('')}</div></section>` : '';
+    if (state.client === 'all') return `${producedGallery}<section class="feed-chooser"><div class="section-head"><h2>Choose a client feed</h2><span class="proposal-label">Drafts, not live profiles</span></div><p>Open one client to see the planned visual sequence. Original supplied logos remain separate from post artwork; a brief-only tile is a planning aid.</p><div class="feed-client-list">${clients.map(client => `<button type="button" class="feed-client-choice" data-feed-client="${esc(client.id)}">${logo(client,true)}<span><strong>${esc(client.name)}</strong><span>${esc(client.location)}</span>${logoStatus(client)}</span><span aria-hidden="true">↗</span></button>`).join('')}</div></section>`;
+    const client = getClient(state.client);
+    if (!client) return empty('Choose a client to preview its feed');
+    const ordered = [...rows].sort((a,b) => state.feedOrder === 'latest' ? b.date.localeCompare(a.date) || b.id.localeCompare(a.id) : a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
+    return `<section class="planned-feed"><header class="feed-profile">${logo(client,true)}<div class="feed-profile-copy"><div class="feed-profile-title"><h2>${esc(client.name)}</h2><span class="draft-badge">Planning preview</span></div>${instagramIdentity(client)}<p>${esc(client.location)}</p><div class="feed-profile-status">${logoStatus(client)}<span>Not a live Instagram profile</span></div></div><button type="button" class="button secondary" data-view="brand">Brand & evidence</button></header><div class="feed-toolbar"><div><strong>Planned posts</strong><p>${rows.length} drafts match the current filters. Brief-only tiles are not finished artwork.</p></div><label>Order <select id="feed-order"><option value="earliest"${state.feedOrder === 'earliest' ? ' selected' : ''}>Earliest planned first</option><option value="latest"${state.feedOrder === 'latest' ? ' selected' : ''}>Latest planned first</option></select></label></div>${ordered.length ? `<div class="feed-grid" aria-label="${esc(client.name)} planned post grid">${ordered.map(feedTile).join('')}</div>` : empty('No posts match this feed selection','Adjust the date, format, pillar or search filters to see the client’s planned drafts.')}</section>`;
+  }
+  function renderMedia(post) {
+    const preview = postPreview(post);
+    if (!preview) return `<div class="media-brief-only"><span class="proposal-label">Brief only</span><h3>Artwork has not been supplied for this post.</h3><p>The copy and production brief are ready to review in the other tabs. The feed’s typographic tile is a planning aid, not a produced post.</p></div>`;
+    state.previewIndex = Math.max(0,Math.min(state.previewIndex,preview.slides.length-1));
+    const slide = preview.slides[state.previewIndex];
+    const unavailable = previewAvailability.get(slide.src) === 'failed';
+    const previous = state.previewIndex > 0;
+    const next = state.previewIndex < preview.slides.length-1;
+    return `<div class="media-viewer${unavailable ? ' is-missing' : ''}" data-media-post="${esc(post.id)}"><div class="media-frame"><img src="${esc(slide.src)}" alt="${esc(slide.alt)}" width="1080" height="1440" decoding="async" data-media-image="${esc(post.id)}"${unavailable ? ' hidden' : ''}><div class="media-missing"${unavailable ? '' : ' hidden'}><span class="proposal-label">Brief only</span><p>This artwork file is unavailable. The copy and brief remain available in the other tabs.</p></div></div><div class="media-controls"><button type="button" class="button secondary" data-media-nav="previous" aria-label="Previous slide"${previous ? '' : ' disabled'}>${icon('left',16)} Previous</button><p role="status" aria-live="polite">Slide ${state.previewIndex+1} of ${preview.slides.length}</p><button type="button" class="button secondary" data-media-nav="next" aria-label="Next slide"${next ? '' : ' disabled'}>Next ${icon('right',16)}</button></div><p class="media-draft-status">Visual draft · final rights, fact and human approval checks still apply.</p><div class="media-alt"><strong>Slide alt text</strong><p>${esc(slide.alt)}</p></div><div class="media-downloads"><a class="button secondary" href="${esc(slide.src)}" download="${esc(post.id)}-${String(state.previewIndex+1).padStart(2,'0')}.png" data-current-download${unavailable ? ' hidden' : ''}>Download slide</a><a class="text-link" href="${esc(slide.src)}" target="_blank" rel="noopener noreferrer" data-current-download${unavailable ? ' hidden' : ''}>Open full-size ${icon('external',13)}</a>${preview.download ? `<a class="button secondary" href="${esc(preview.download)}" download>Download set</a>` : ''}</div></div>`;
+  }
+  function moveMedia(direction) {
+    const post = posts.find(item => item.id === state.openPost);
+    const preview = post && postPreview(post);
+    if (!preview) return;
+    state.previewIndex = Math.max(0,Math.min(preview.slides.length-1,state.previewIndex+(direction === 'next' ? 1 : -1)));
+    const host = $('#media-view-container',dialog);
+    if (!host) return;
+    host.innerHTML = renderMedia(post);
+    let target = [...host.querySelectorAll('[data-media-nav]')].find(button => button.dataset.mediaNav === direction && !button.disabled);
+    if (!target) target = [...host.querySelectorAll('[data-media-nav]')].find(button => !button.disabled);
+    (target || host).focus({preventScroll:true});
   }
 
   function sourceDetails(source, expanded = false) {
@@ -264,7 +349,7 @@
   function captureFocus() {
     const active = document.activeElement;
     if (!active || active === document.body || dialog.contains(active)) return null;
-    const keys = ['view','client','clientView','week','layout','researchTab','action'];
+    const keys = ['view','client','clientView','feedClient','week','layout','researchTab','action'];
     const key = keys.find(name => active.dataset?.[name] !== undefined);
     return { id: active.id || '', key, value: key ? active.dataset[key] : '', start: typeof active.selectionStart === 'number' ? active.selectionStart : null, end: typeof active.selectionEnd === 'number' ? active.selectionEnd : null };
   }
@@ -300,7 +385,7 @@
     $('#view-title').textContent = labels[1];
     $('#view-description').textContent = labels[2];
     $('#result-status').textContent = state.view === 'research' ? 'Research is shared across the programme. Client selection filters the category reference library.' : state.view === 'brand' ? `${clientScope().length} client workspace${clientScope().length === 1 ? '' : 's'} · profile access and approval limits shown below` : `${rows.length} of ${posts.length} planned drafts · ${state.client === 'all' ? 'all clients' : getClient(state.client)?.name || 'selected client'} · ${dateLabel(state.from)}—${dateLabel(state.to)} 2026`;
-    $('#view-content').innerHTML = state.view === 'overview' ? renderOverview(rows) : state.view === 'calendar' ? renderCalendar(rows) : state.view === 'posts' ? (rows.length ? postList(rows) : empty()) : state.view === 'brand' ? renderBrands() : state.view === 'research' ? renderResearch() : renderProduction(rows);
+    $('#view-content').innerHTML = state.view === 'overview' ? renderOverview(rows) : state.view === 'calendar' ? renderCalendar(rows) : state.view === 'feed' ? renderFeed(rows) : state.view === 'posts' ? (rows.length ? postList(rows) : empty()) : state.view === 'brand' ? renderBrands() : state.view === 'research' ? renderResearch() : renderProduction(rows);
     document.title = `${state.client === 'all' ? labels[0] : getClient(state.client)?.name || labels[0]} · Social studio · Elk`;
     syncURL();
     restoreFocus(previousFocus);
@@ -323,14 +408,16 @@
     const client = getClient(post._client);
     const sources = postSources(post);
     const onScreen = text(post.onScreen);
-    $('#dialog-content').innerHTML = `<header class="dialog-head"><div class="dialog-topline">${logo(client)}<span>${esc(client.name)}</span><span>·</span><span>${esc(post.id)}</span></div><button class="dialog-close" type="button" data-action="close-dialog" aria-label="Close post detail">×</button><h2 id="post-dialog-title">${esc(post.title)}</h2><p class="dialog-hook">${esc(post.hook)}</p><div class="dialog-meta"><span>${esc(dateLabel(post.date, { weekday: 'long', year: 'numeric' }))}</span>${formatTag(post)}<span>${esc(post.pillar)}</span>${post.series ? `<span class="series-label">Series · ${esc(post.series)}</span>` : ''}<span class="draft-badge">Draft</span></div><p class="dialog-slot"><span>UK · ${esc(post.time || 'Proposed slot to confirm · Europe/London')}${post.ukZone ? ` · ${esc(post.ukZone)}` : ''}</span>${post.indiaTime ? `<span class="india-time">India · ${esc(post.indiaTime)}</span>` : ''}</p></header><div class="dialog-tabs" role="tablist" aria-label="Post details">${[['copy', 'Copy & captions'], ['creative', 'Creative brief'], ['evidence', 'Evidence & approval']].map(([key, label]) => `<button type="button" id="tab-${key}" role="tab" aria-selected="${state.dialogTab === key}" aria-controls="panel-${key}" tabindex="${state.dialogTab === key ? '0' : '-1'}" data-dialog-tab="${key}">${label}</button>`).join('')}</div><div class="dialog-body"><section id="panel-copy" role="tabpanel" aria-labelledby="tab-copy"${state.dialogTab !== 'copy' ? ' hidden' : ''}><p class="dialog-draft-note">Paste-ready copy is kept below. Check the separate evidence and approval conditions before using it.</p>${copyBlock('Instagram caption', post.caption, 'instagram')}${copyBlock('Facebook caption', post.facebookCaption, 'facebook')}${copyBlock('Call to action', post.cta, 'cta')}</section><section id="panel-creative" role="tabpanel" aria-labelledby="tab-creative"${state.dialogTab !== 'creative' ? ' hidden' : ''}><section class="brief-block"><h3>On-screen text</h3><div class="on-screen">${esc(onScreen)}</div></section>${bulletBlock('Shot / slide plan', post.production)}<section class="brief-block"><h3>Motion direction</h3><p>${esc(text(post.motion))}</p></section>${bulletBlock('Story companion', post.story)}${copyBlock('Alt text · match to the final export', post.altText, 'alt')}<section class="brief-block"><h3>Asset brief</h3><p>${esc(text(post.asset))}</p></section></section><section id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence"${state.dialogTab !== 'evidence' ? ' hidden' : ''}><p class="dialog-draft-note">No approval is implied by a draft, a logo or a completed brief. These conditions remain attached to the final version.</p>${bulletBlock('Before publication', post.approvalNeeds, false)}<section class="brief-block"><h3>Test hypothesis</h3><p>${esc(text(post.hypothesis))}</p></section><section class="brief-block"><h3>What to measure</h3><p>${esc(text(post.metric))}</p></section><section class="brief-block"><h3>Source evidence & limits</h3>${sources.map(source => sourceDetails(source, true)).join('') || '<p>Source evidence needs confirmation.</p>'}</section><section class="brief-block"><h3>Brand / rights status</h3><p>${esc(text(client.brand.logo?.status))}</p><p>${esc(text(client.brand.rights))}</p></section></section><div class="dialog-actions"><button type="button" class="button yellow" data-copy="brief">${icon('copy', 13)} Copy entire brief</button><button type="button" class="button secondary" data-copy="link">Copy post link</button>${threadLink(client, true)}<p>Draft only · no account publishing is connected.</p></div></div>`;
+    $('#dialog-content').innerHTML = `<header class="dialog-head"><div class="dialog-topline">${logo(client)}<span>${esc(client.name)}</span><span>·</span><span>${esc(post.id)}</span></div><button class="dialog-close" type="button" data-action="close-dialog" aria-label="Close post detail">×</button><h2 id="post-dialog-title">${esc(post.title)}</h2><p class="dialog-hook">${esc(post.hook)}</p><div class="dialog-meta"><span>${esc(dateLabel(post.date, { weekday: 'long', year: 'numeric' }))}</span>${formatTag(post)}<span>${esc(post.pillar)}</span>${post.series ? `<span class="series-label">Series · ${esc(post.series)}</span>` : ''}<span class="draft-badge">Draft</span></div><p class="dialog-slot"><span>UK · ${esc(post.time || 'Proposed slot to confirm · Europe/London')}${post.ukZone ? ` · ${esc(post.ukZone)}` : ''}</span>${post.indiaTime ? `<span class="india-time">India · ${esc(post.indiaTime)}</span>` : ''}</p></header><div class="dialog-tabs" role="tablist" aria-label="Post details">${[['media', 'Media preview'], ['copy', 'Copy & captions'], ['creative', 'Creative brief'], ['evidence', 'Evidence & approval']].map(([key, label]) => `<button type="button" id="tab-${key}" role="tab" aria-selected="${state.dialogTab === key}" aria-controls="panel-${key}" tabindex="${state.dialogTab === key ? '0' : '-1'}" data-dialog-tab="${key}">${label}</button>`).join('')}</div><div class="dialog-body"><section id="panel-media" role="tabpanel" aria-labelledby="tab-media"${state.dialogTab !== 'media' ? ' hidden' : ''}><div id="media-view-container" tabindex="-1">${renderMedia(post)}</div></section><section id="panel-copy" role="tabpanel" aria-labelledby="tab-copy"${state.dialogTab !== 'copy' ? ' hidden' : ''}><p class="dialog-draft-note">Paste-ready copy is kept below. Check the separate evidence and approval conditions before using it.</p>${copyBlock('Instagram caption', post.caption, 'instagram')}${copyBlock('Facebook caption', post.facebookCaption, 'facebook')}${copyBlock('Call to action', post.cta, 'cta')}</section><section id="panel-creative" role="tabpanel" aria-labelledby="tab-creative"${state.dialogTab !== 'creative' ? ' hidden' : ''}><section class="brief-block"><h3>On-screen text</h3><div class="on-screen">${esc(onScreen)}</div></section>${bulletBlock('Shot / slide plan', post.production)}<section class="brief-block"><h3>Motion direction</h3><p>${esc(text(post.motion))}</p></section>${bulletBlock('Story companion', post.story)}${copyBlock('Alt text · match to the final export', post.altText, 'alt')}<section class="brief-block"><h3>Asset brief</h3><p>${esc(text(post.asset))}</p></section></section><section id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence"${state.dialogTab !== 'evidence' ? ' hidden' : ''}><p class="dialog-draft-note">No approval is implied by a draft, a logo or a completed brief. These conditions remain attached to the final version.</p>${bulletBlock('Before publication', post.approvalNeeds, false)}<section class="brief-block"><h3>Test hypothesis</h3><p>${esc(text(post.hypothesis))}</p></section><section class="brief-block"><h3>What to measure</h3><p>${esc(text(post.metric))}</p></section><section class="brief-block"><h3>Source evidence & limits</h3>${sources.map(source => sourceDetails(source, true)).join('') || '<p>Source evidence needs confirmation.</p>'}</section><section class="brief-block"><h3>Brand / rights status</h3><p>${esc(text(client.brand.logo?.status))}</p><p>${esc(text(client.brand.rights))}</p></section></section><div class="dialog-actions"><button type="button" class="button yellow" data-copy="brief">${icon('copy', 13)} Copy entire brief</button><button type="button" class="button secondary" data-copy="link">Copy post link</button>${threadLink(client, true)}<p>Draft only · no account publishing is connected.</p></div></div>`;
   }
 
-  function openPost(id, tab = 'copy', trigger = null) {
-    if (!posts.some(post => post.id === id)) return;
+  function openPost(id, tab = '', trigger = null) {
+    const selectedPost = posts.find(post => post.id === id);
+    if (!selectedPost) return;
     lastPostTrigger = trigger || document.activeElement;
     state.openPost = id;
-    state.dialogTab = ['copy', 'creative', 'evidence'].includes(tab) ? tab : 'copy';
+    state.dialogTab = ['media', 'copy', 'creative', 'evidence'].includes(tab) ? tab : (postPreview(selectedPost) ? 'media' : 'copy');
+    state.previewIndex = 0;
     renderDialog();
     if (!dialog.open) dialog.showModal();
     dialog.scrollTop = 0;
@@ -342,7 +429,7 @@
     if (dialog.open) dialog.close();
   }
   function setDialogTab(key, focus = true) {
-    if (!['copy', 'creative', 'evidence'].includes(key)) return;
+    if (!['media', 'copy', 'creative', 'evidence'].includes(key)) return;
     state.dialogTab = key;
     for (const tab of dialog.querySelectorAll('[role=tab]')) {
       const active = tab.dataset.dialogTab === key;
@@ -350,7 +437,11 @@
       tab.tabIndex = active ? 0 : -1;
     }
     for (const panel of dialog.querySelectorAll('[role=tabpanel]')) panel.hidden = panel.id !== `panel-${key}`;
-    if (focus) $(`#tab-${key}`, dialog)?.focus();
+    if (focus) {
+      const selectedTab = $(`#tab-${key}`, dialog);
+      selectedTab?.focus();
+      selectedTab?.scrollIntoView({block:'nearest',inline:'nearest',behavior:'instant'});
+    }
   }
 
   function entireBrief(post) {
@@ -422,7 +513,7 @@
   function exportJSON() {
     const rows = filteredPosts();
     const selectedIds = new Set(rows.map(post => post.id));
-    const exported = { title: 'Elk Social studio · draft planning export', version: '1.0', status: 'Draft — not publication approval', period: { from: state.from, to: state.to, timezone: 'Europe/London' }, filters: { client: state.client, format: state.format, pillar: state.pillar, query: state.query }, clients: clientScope().map(client => ({ ...client, posts: client.posts.filter(post => selectedIds.has(post.id)).map(({ _client, _name, ...post }) => post) })), guidance: data.guidance, research: data.research, threads: data.threads };
+    const exported = { title: 'Elk Social studio · draft planning export', version: '1.1', status: 'Draft — not publication approval', period: { from: state.from, to: state.to, timezone: 'Europe/London' }, filters: { client: state.client, format: state.format, pillar: state.pillar, query: state.query }, clients: clientScope().map(client => ({ ...client, posts: client.posts.filter(post => selectedIds.has(post.id)).map(({ _client, _name, ...post }) => post) })), guidance: data.guidance, research: data.research, threads: data.threads };
     download(JSON.stringify(exported, null, 2) + '\n', `elk-social-drafts-${state.client}-${state.from}-${state.to}.json`, 'application/json;charset=utf-8');
     showToast(`${rows.length} draft posts exported as JSON`);
   }
@@ -439,8 +530,34 @@
     $('#view-title').scrollIntoView({ block: 'start', behavior: 'instant' });
   }
 
+  function updatePreviewImage(image, success) {
+    const src = image.getAttribute('src');
+    previewAvailability.set(src,success ? 'loaded' : 'failed');
+    if (image.dataset.feedPreview) {
+      const tile = image.closest('.feed-tile');
+      const artwork = image.closest('.feed-artwork');
+      artwork?.classList.toggle('has-preview',success);
+      image.hidden = !success;
+      const status = tile?.querySelector('[data-feed-status]');
+      if (status) status.textContent = success ? 'Visual draft' : 'Brief only';
+      const post = posts.find(post => post.id === image.dataset.feedPreview);
+      if (tile && post) tile.setAttribute('aria-label', `Open ${post.title}, ${dateLabel(post.date)}, ${success ? 'visual draft' : 'brief only'}`);
+    }
+    if (image.dataset.mediaImage) {
+      const viewer = image.closest('.media-viewer');
+      viewer?.classList.toggle('is-missing',!success);
+      image.hidden = !success;
+      const message = viewer?.querySelector('.media-missing');
+      if (message) message.hidden = success;
+      viewer?.querySelectorAll('[data-current-download]').forEach(link => { link.hidden = !success; });
+      const status = viewer?.querySelector('.media-draft-status');
+      if (status) status.textContent = success ? 'Visual draft · final rights, fact and human approval checks still apply.' : 'Brief only · the selected artwork file is unavailable.';
+    }
+  }
   function bindEvents() {
+    document.addEventListener('load',event => { if (event.target instanceof HTMLImageElement && (event.target.dataset.feedPreview || event.target.dataset.mediaImage)) updatePreviewImage(event.target,true); },true);
     document.addEventListener('error', event => {
+      if (event.target instanceof HTMLImageElement && (event.target.dataset.feedPreview || event.target.dataset.mediaImage)) updatePreviewImage(event.target,false);
       if (event.target instanceof HTMLImageElement && event.target.closest('[data-logo]')) {
         event.target.hidden = true;
         const fallback = event.target.nextElementSibling;
@@ -452,12 +569,14 @@
       if (!target) return;
       if (target.dataset.view) setView(target.dataset.view);
       else if (target.dataset.client) { state.client = target.dataset.client; state.pillar = 'all'; render(); }
-      else if (target.dataset.clientView) { state.client = target.dataset.clientView; state.pillar = 'all'; setView('posts'); }
+      else if (target.dataset.clientView) { state.client = target.dataset.clientView; state.pillar = 'all'; setView('feed'); }
+      else if (target.dataset.feedClient) { state.client = target.dataset.feedClient; state.pillar = 'all'; setView('feed'); }
       else if (target.dataset.post) openPost(target.dataset.post, target.dataset.openTab || 'copy', target);
       else if (target.dataset.week) { state.week = addDays(state.week, target.dataset.week === 'next' ? 7 : -7); render(); }
       else if (target.dataset.layout) { state.calendarMode = target.dataset.layout; render(); }
       else if (target.dataset.researchTab) { state.researchTab = target.dataset.researchTab; state.researchCategory = 'all'; render(); }
       else if (target.dataset.dialogTab) setDialogTab(target.dataset.dialogTab);
+      else if (target.dataset.mediaNav) moveMedia(target.dataset.mediaNav);
       else if (target.dataset.copy) copyValue(target.dataset.copy);
       else if (target.dataset.action === 'reset') resetFilters();
       else if (target.dataset.action === 'close-dialog') closeDialog();
@@ -477,26 +596,29 @@
     $('#export-csv').addEventListener('click', exportCSV);
     $('#export-json').addEventListener('click', exportJSON);
     $('#view-content').addEventListener('change', event => {
-      if (event.target.id === 'week-jump') { state.week = event.target.value; render(); }
+      if (event.target.id === 'feed-order') { state.feedOrder = event.target.value === 'latest' ? 'latest' : 'earliest'; render(); }
+      else if (event.target.id === 'week-jump') { state.week = event.target.value; render(); }
       else if (event.target.id === 'research-category') { state.researchCategory = event.target.value; render(); }
     });
     document.addEventListener('keydown', event => {
       if (event.key === '/' && !dialog.open && !/input|textarea|select/i.test(event.target.tagName)) { event.preventDefault(); $('#search').focus(); }
+      if (dialog.open && event.target.closest('.media-viewer') && ['ArrowLeft','ArrowRight'].includes(event.key)) { event.preventDefault(); moveMedia(event.key === 'ArrowRight' ? 'next' : 'previous'); }
       if (dialog.open && event.target.getAttribute('role') === 'tab' && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
         event.preventDefault();
-        const keys = ['copy', 'creative', 'evidence'];
+        const keys = ['media', 'copy', 'creative', 'evidence'];
         let index = keys.indexOf(state.dialogTab);
-        index = event.key === 'Home' ? 0 : event.key === 'End' ? 2 : (index + (event.key === 'ArrowRight' ? 1 : 2)) % 3;
+        index = event.key === 'Home' ? 0 : event.key === 'End' ? keys.length-1 : (index + (event.key === 'ArrowRight' ? 1 : keys.length-1)) % keys.length;
         setDialogTab(keys[index]);
       }
     });
     dialog.addEventListener('click', event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right) closeDialog(); } });
     dialog.addEventListener('close', () => { state.openPost = ''; document.body.style.overflow = ''; const toast = $('#toast'); if (toast) document.body.append(toast); syncURL(); if (lastPostTrigger?.isConnected) lastPostTrigger.focus(); });
-    window.addEventListener('popstate', () => { const next = new URLSearchParams(location.search); state.view = VIEWS[next.get('view')] ? next.get('view') : 'overview'; state.client = clients.some(client => client.id === next.get('client')) ? next.get('client') : 'all'; render(); const id = next.get('post'); if (id) openPost(id); else closeDialog(); });
+    window.addEventListener('popstate', () => { const next = new URLSearchParams(location.search); state.view = VIEWS[next.get('view')] ? next.get('view') : 'feed'; state.client = clients.some(client => client.id === next.get('client')) ? next.get('client') : 'all'; render(); const id = next.get('post'); if (id) openPost(id); else closeDialog(); });
   }
 
   async function init() {
     $('#search-icon').innerHTML = icon('search', 15);
+    if ($('.version')) $('.version').textContent = 'v1.1';
     bindEvents();
     try {
       const response = await fetch('./data.json', { credentials: 'omit' });
@@ -518,7 +640,7 @@
       if (!posts.some(post => post.id === initialPost)) state.openPost = '';
       render();
       if (initialPost && posts.some(post => post.id === initialPost)) openPost(initialPost);
-      window.__ELK_STUDIO__ = Object.freeze({ version: '1.0', clients: clients.length, posts: posts.length, getView: () => state.view });
+      window.__ELK_STUDIO__ = Object.freeze({ version: '1.1', clients: clients.length, posts: posts.length, getView: () => state.view });
     } catch (_) {
       $('#view-content').innerHTML = '<div class="error-note"><h2>The programme could not be opened</h2><p>The planner needs its sanitised <code>data.json</code> beside this page. Open the deployed team link or serve this folder through a local web server; browsers restrict data loading from a file opened directly.</p><p>No client account is connected, and no data has been changed.</p><button type="button" class="button secondary" id="retry-load" style="margin-top:15px">Try again</button></div>';
       $('#result-status').textContent = 'Programme data unavailable';
