@@ -1,5 +1,5 @@
 {
-  "version": "1.1-visual-draft",
+  "version": "1.3-actual-photo-rework",
   "observed": "2026-10-21",
   "window": {
     "from": "2026-10-22",
@@ -30,7 +30,7 @@
     ],
     "cadence": "Planning assumption: 3 feed posts per week, 26 per client over the rolling two-month window. Each has a three-frame Story companion. Use a weekly source/production review; posting dates and slots are proposals, not accepted delivery commitments.",
     "measurement": "Restaurant outcomes: qualified enquiries and verified booking completions. Retail outcomes: relevant product enquiries and voluntary source answers. Reach, watch time, shares, saves and link taps are separate signals, with their denominator and observation window.",
-    "limits": "All 182 posts remain drafts. Seven posts now have image-led carousel artwork and slide downloads; other entries remain copy and production briefs. The Feed view distinguishes actual visual drafts from Brief only tiles. No account scheduling, live status sync or client approval is implied. Sanitised planning data and explicitly requested draft visual previews are public; raw originals and private source records remain local."
+    "limits": "All 182 posts remain drafts. Seven posts have revised actual-photo carousel artwork and slide downloads, produced in the seven client execution chats; the other 175 entries remain copy and production briefs. Photography & art direction and Feed provide direct previews and captions. This batch uses real client photographs, with no AI-generated food, packs, people or venue pixels. No account scheduling, live status sync or client approval is implied. Raw originals and private source records remain local."
   },
   "clients": [
     {
@@ -197,30 +197,30 @@
         },
         {
           "id": "VISUAL-nazar-cambridge-02-1",
-          "title": "Selected image and composed slide 1 · Three Cambridge meze choices",
+          "title": "Actual-photo revised slide 1 · Three Cambridge meze choices",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "White textured dip with oil, herbs and garnish; supplied catalogue identifies cacik.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A complete white plate of textured dip with oil, herbs, garnish and a dried citrus slice, photographed against a dark surface. The original Nazar logo appears above. Text: Cambridge. Three ways to start. Start with cacik. Yoghurt, cucumber, garlic and mint. Nazar Cambridge · Leisure Park. 01 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-nazar-cambridge-02-2",
-          "title": "Selected image and composed slide 2 · Three Cambridge meze choices",
+          "title": "Actual-photo revised slide 2 · Three Cambridge meze choices",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Beige dip topped with browned diced meat; supplied catalogue identifies hummus kavurma.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A complete white plate of beige dip topped with browned diced meat, photographed against a dark surface. The original Nazar logo appears above. Text: Cambridge. Hummus kavurma. Pan-fried lamb over hummus. Nazar Cambridge · Leisure Park. 02 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-nazar-cambridge-02-3",
-          "title": "Selected image and composed slide 3 · Three Cambridge meze choices",
+          "title": "Actual-photo revised slide 3 · Three Cambridge meze choices",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Golden crumbed rolls with green/white filling, salad and sauce; supplied catalogue identifies sigara borek.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A complete plate of golden crumbed rolls, including cut pieces with green and white filling, with salad, sauce in a blue bowl and a dried citrus slice. The original Nazar logo appears above. Text: Cambridge. Sigara borek. Spinach and feta in filo pastry. Nazar Cambridge · Leisure Park. 03 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "BROWSER-IG",
@@ -340,24 +340,25 @@
           "facebookCaption": "Choosing your first meze at Nazar Cambridge? Cacik brings yoghurt, cucumber, garlic and mint; hummus kavurma adds pan-fried lamb to hummus; sigara borek is filled with spinach and feta.\n\nUse this short guide, then explore the full Cambridge menu. Please discuss dietary requirements with the team before ordering.\nhttps://cambridge.nazarkitchen.com/",
           "cta": "Explore the Cambridge menu.",
           "onScreen": [
-            "CAMBRIDGE MEZE / Start with cacik. / Yoghurt, cucumber, garlic and mint. / Nazar Cambridge · Leisure Park",
-            "CAMBRIDGE MEZE / Or hummus kavurma. / Pan-fried lamb over hummus. / Nazar Cambridge · Leisure Park",
-            "CAMBRIDGE MEZE / Then sigara borek. / Spinach and feta in filo pastry. / Nazar Cambridge · Leisure Park"
+            "CAMBRIDGE / THREE WAYS TO START / Start with / cacik. / Yoghurt, cucumber, garlic and mint. / Nazar Cambridge · Leisure Park / 01 / 03",
+            "CAMBRIDGE / Hummus / kavurma. / Pan-fried lamb over hummus. / Nazar Cambridge · Leisure Park / 02 / 03",
+            "CAMBRIDGE / Sigara / borek. / Spinach and feta in filo pastry. / Nazar Cambridge · Leisure Park / 03 / 03"
           ],
           "production": [
-            "Slide 1: use the produced 1080×1440 image. Start with cacik. Keep the source photograph and supplied logo unchanged.",
-            "Slide 2: use the produced 1080×1440 image. Or hummus kavurma. Keep the source photograph and supplied logo unchanged.",
-            "Slide 3: use the produced 1080×1440 image. Then sigara borek. Keep the source photograph and supplied logo unchanged.",
-            "Upload in numbered order only after exact-version fact, brand, rights and human approval checks; all three slides share one orientation."
+            "Slide 1: use the prepared 1080×1440 actual-photo composition — Start with cacik.",
+            "Slide 2: use the prepared 1080×1440 actual-photo composition — Hummus kavurma.",
+            "Slide 3: use the prepared 1080×1440 actual-photo composition — Sigara borek.",
+            "The original client photograph and logo are separate from editable type/readability layers. Local overlays can affect displayed tones; no AI-generated subject pixels are used.",
+            "Upload in numbered order after exact-version source, brand, rights, crop and human approval checks."
           ],
-          "motion": "Static image carousel. No rendered video or Reel is claimed. No filters, generated food, automatic zoom or fabricated sound; slide changes are viewer-controlled.",
+          "motion": "Static actual-photo carousel. No rendered Reel or invented sound is included. Photo details remain sourced; viewer-controlled slide changes only.",
           "story": [
-            "Proposed Story frame 1: use the same inspected subject with ‘Start with cacik.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 2: use the same inspected subject with ‘Or hummus kavurma.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 3: use the same inspected subject with ‘Then sigara borek.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only."
+            "Proposed Story frame 1: recompose the same actual photographed subject with “Start with cacik.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 2: recompose the same actual photographed subject with “Hummus kavurma.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 3: recompose the same actual photographed subject with “Sigara borek.”. A separate vertical Story export still needs production and review."
           ],
-          "altText": "Slide 1: White textured dip with oil, herbs and garnish. Branded image with the Nazar Cambridge logo. Text: CAMBRIDGE MEZE. Start with cacik. Yoghurt, cucumber, garlic and mint. Nazar Cambridge · Leisure Park. Slide 2: Beige dip topped with browned diced meat. Branded image with the Nazar Cambridge logo. Text: CAMBRIDGE MEZE. Or hummus kavurma. Pan-fried lamb over hummus. Nazar Cambridge · Leisure Park. Slide 3: Golden crumbed rolls with green/white filling, salad and sauce. Branded image with the Nazar Cambridge logo. Text: CAMBRIDGE MEZE. Then sigara borek. Spinach and feta in filo pastry. Nazar Cambridge · Leisure Park.",
-          "asset": "Produced visual draft: three numbered 1080×1440 PNGs, a lightweight cover and downloadable set. Existing selected source photographs and original logos; final photo rights, current subject identity and client brand acceptance remain unverified.",
+          "altText": "Slide 1: A complete white plate of textured dip with oil, herbs, garnish and a dried citrus slice, photographed against a dark surface. The original Nazar logo appears above. Text: Cambridge. Three ways to start. Start with cacik. Yoghurt, cucumber, garlic and mint. Nazar Cambridge · Leisure Park. 01 / 03. Slide 2: A complete white plate of beige dip topped with browned diced meat, photographed against a dark surface. The original Nazar logo appears above. Text: Cambridge. Hummus kavurma. Pan-fried lamb over hummus. Nazar Cambridge · Leisure Park. 02 / 03. Slide 3: A complete plate of golden crumbed rolls, including cut pieces with green and white filling, with salad, sauce in a blue bowl and a dried citrus slice. The original Nazar logo appears above. Text: Cambridge. Sigara borek. Spinach and feta in filo pastry. Nazar Cambridge · Leisure Park. 03 / 03.",
+          "asset": "Produced draft: three 1080×1440 real-photo compositions, lightweight cover and downloadable set. No AI-generated food, packs, people or venue pixels. Current subject identity, final usage rights and exact-version client approval remain open.",
           "sourceIds": [
             "nazar-cambridge-site",
             "nazar-cambridge-menu",
@@ -381,7 +382,7 @@
           "status": "Draft",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 17:45 IST",
-          "productionVersion": "1.1-visual-draft",
+          "productionVersion": "v3.0-actual-photo-integrated",
           "preview": {
             "status": "Visual draft",
             "type": "carousel",
@@ -389,15 +390,15 @@
             "slides": [
               {
                 "src": "assets/posts/nazar-cambridge-02/01.png",
-                "alt": "White textured dip with oil, herbs and garnish. Branded image with the Nazar Cambridge logo. Text: CAMBRIDGE MEZE. Start with cacik. Yoghurt, cucumber, garlic and mint. Nazar Cambridge · Leisure Park."
+                "alt": "A complete white plate of textured dip with oil, herbs, garnish and a dried citrus slice, photographed against a dark surface. The original Nazar logo appears above. Text: Cambridge. Three ways to start. Start with cacik. Yoghurt, cucumber, garlic and mint. Nazar Cambridge · Leisure Park. 01 / 03."
               },
               {
                 "src": "assets/posts/nazar-cambridge-02/02.png",
-                "alt": "Beige dip topped with browned diced meat. Branded image with the Nazar Cambridge logo. Text: CAMBRIDGE MEZE. Or hummus kavurma. Pan-fried lamb over hummus. Nazar Cambridge · Leisure Park."
+                "alt": "A complete white plate of beige dip topped with browned diced meat, photographed against a dark surface. The original Nazar logo appears above. Text: Cambridge. Hummus kavurma. Pan-fried lamb over hummus. Nazar Cambridge · Leisure Park. 02 / 03."
               },
               {
                 "src": "assets/posts/nazar-cambridge-02/03.png",
-                "alt": "Golden crumbed rolls with green/white filling, salad and sauce. Branded image with the Nazar Cambridge logo. Text: CAMBRIDGE MEZE. Then sigara borek. Spinach and feta in filo pastry. Nazar Cambridge · Leisure Park."
+                "alt": "A complete plate of golden crumbed rolls, including cut pieces with green and white filling, with salad, sauce in a blue bowl and a dried citrus slice. The original Nazar logo appears above. Text: Cambridge. Sigara borek. Spinach and feta in filo pastry. Nazar Cambridge · Leisure Park. 03 / 03."
               }
             ],
             "download": "assets/posts/nazar-cambridge-02/nazar-cambridge-02-draft.zip"
@@ -1781,30 +1782,30 @@
         },
         {
           "id": "VISUAL-nazar-bedford-02-1",
-          "title": "Selected image and composed slide 1 · A Bedford meze shortlist",
+          "title": "Actual-photo revised slide 1 · A Bedford meze shortlist",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Swirled beige dip with oil and garnish; supplied catalogue identifies hummus.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A complete white plate of ridged beige dip with oil, red garnish and green herbs, on its photographed dark stone surface. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. Start with a swirl. Hummus · chickpea and tahini. 17 High Street · Bedford. 01 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-nazar-bedford-02-2",
-          "title": "Selected image and composed slide 2 · A Bedford meze shortlist",
+          "title": "Actual-photo revised slide 2 · A Bedford meze shortlist",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Chunky pale dip with oil and garnish; supplied catalogue identifies baba ganoush.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A complete white plate of chunky pale dip, oil, red garnish and herbs, with the photographed dried citrus slice, on dark stone. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. Baba ganoush. Grilled aubergine, tahini and yoghurt. 17 High Street · Bedford. 02 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-nazar-bedford-02-3",
-          "title": "Selected image and composed slide 3 · A Bedford meze shortlist",
+          "title": "Actual-photo revised slide 3 · A Bedford meze shortlist",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Mixed green and dark olives with red pepper and lemon on a dark plate.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A complete dark speckled plate of green and dark olives with red pepper and a lemon wedge, on its photographed dark surface. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. For the middle. Mixed olives. 17 High Street · Bedford. 03 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "BROWSER-IG",
@@ -1917,29 +1918,30 @@
           "format": "Carousel",
           "pillar": "Choices & guidance",
           "title": "A Bedford meze shortlist",
-          "hook": "Something smooth. Something with aubergine. Something for the middle.",
-          "caption": "Something smooth. Something with aubergine. Something for the middle.\n\nHummus, baba ganoush and mixed olives: a short introduction to the Bedford meze menu, one plate at a time.\n\nExplore the menu for Nazar Bedford, 17 High Street. Please discuss dietary requirements with the team.",
-          "facebookCaption": "A useful starting point for the Bedford meze menu: hummus with chickpea and tahini, baba ganoush with grilled aubergine, tahini and yoghurt, and a plate of mixed olives.\n\nFind Nazar Bedford at 17 High Street and explore the full menu before choosing. Please discuss dietary requirements with the team.\nhttps://bedford.nazarkitchen.com/",
+          "hook": "A Bedford meze shortlist: hummus, baba ganoush and mixed olives.",
+          "caption": "A Bedford meze shortlist: hummus, baba ganoush and mixed olives.\n\nThree plates to explore before you choose your start. Find Nazar Bedford at 17 High Street and view the menu. Please discuss dietary requirements with the team.\n\n#NazarBedford #BedfordFood #BedfordHighStreet",
+          "facebookCaption": "A Bedford meze shortlist: hummus, baba ganoush and mixed olives.\n\nThree plates to explore before you choose your start. Find Nazar Bedford at 17 High Street and view the menu. Please discuss dietary requirements with the team.\nhttps://bedford.nazarkitchen.com/",
           "cta": "Explore the Bedford menu.",
           "onScreen": [
-            "BEDFORD MEZE / Hummus. A simple start. / Chickpea and tahini. / 17 High Street · Bedford",
-            "BEDFORD MEZE / Baba ganoush. / Grilled aubergine, tahini and yoghurt. / 17 High Street · Bedford",
-            "BEDFORD MEZE / Olives for the middle. / A small plate for the table. / 17 High Street · Bedford"
+            "BEDFORD / MEZE / Start with / a swirl. / Hummus · chickpea and tahini. / 17 High Street · Bedford / 01 / 03",
+            "BEDFORD / MEZE / Baba / ganoush. / Grilled aubergine, tahini and yoghurt. / 17 High Street · Bedford / 02 / 03",
+            "BEDFORD / MEZE / For the / middle. / Mixed olives. / 17 High Street · Bedford / 03 / 03"
           ],
           "production": [
-            "Slide 1: use the produced 1080×1440 image. Hummus. A simple start. Keep the source photograph and supplied logo unchanged.",
-            "Slide 2: use the produced 1080×1440 image. Baba ganoush. Keep the source photograph and supplied logo unchanged.",
-            "Slide 3: use the produced 1080×1440 image. Olives for the middle. Keep the source photograph and supplied logo unchanged.",
-            "Upload in numbered order only after exact-version fact, brand, rights and human approval checks; all three slides share one orientation."
+            "Slide 1: use the prepared 1080×1440 actual-photo composition — Start with a swirl.",
+            "Slide 2: use the prepared 1080×1440 actual-photo composition — Baba ganoush.",
+            "Slide 3: use the prepared 1080×1440 actual-photo composition — For the middle.",
+            "The original client photograph and logo are separate from editable type/readability layers. Local overlays can affect displayed tones; no AI-generated subject pixels are used.",
+            "Upload in numbered order after exact-version source, brand, rights, crop and human approval checks."
           ],
-          "motion": "Static image carousel. No rendered video or Reel is claimed. No filters, generated food, automatic zoom or fabricated sound; slide changes are viewer-controlled.",
+          "motion": "Static actual-photo carousel. No rendered Reel or invented sound is included. Photo details remain sourced; viewer-controlled slide changes only.",
           "story": [
-            "Proposed Story frame 1: use the same inspected subject with ‘Hummus. A simple start.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 2: use the same inspected subject with ‘Baba ganoush.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 3: use the same inspected subject with ‘Olives for the middle.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only."
+            "Proposed Story frame 1: recompose the same actual photographed subject with “Start with a swirl.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 2: recompose the same actual photographed subject with “Baba ganoush.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 3: recompose the same actual photographed subject with “For the middle.”. A separate vertical Story export still needs production and review."
           ],
-          "altText": "Slide 1: Swirled beige dip with oil and garnish. Branded image with the Nazar Bedford logo. Text: BEDFORD MEZE. Hummus. A simple start. Chickpea and tahini. 17 High Street · Bedford. Slide 2: Chunky pale dip with oil and garnish. Branded image with the Nazar Bedford logo. Text: BEDFORD MEZE. Baba ganoush. Grilled aubergine, tahini and yoghurt. 17 High Street · Bedford. Slide 3: Mixed green and dark olives with red pepper and lemon on a dark plate. Branded image with the Nazar Bedford logo. Text: BEDFORD MEZE. Olives for the middle. A small plate for the table. 17 High Street · Bedford.",
-          "asset": "Produced visual draft: three numbered 1080×1440 PNGs, a lightweight cover and downloadable set. Existing selected source photographs and original logos; final photo rights, current subject identity and client brand acceptance remain unverified.",
+          "altText": "Slide 1: A complete white plate of ridged beige dip with oil, red garnish and green herbs, on its photographed dark stone surface. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. Start with a swirl. Hummus · chickpea and tahini. 17 High Street · Bedford. 01 / 03. Slide 2: A complete white plate of chunky pale dip, oil, red garnish and herbs, with the photographed dried citrus slice, on dark stone. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. Baba ganoush. Grilled aubergine, tahini and yoghurt. 17 High Street · Bedford. 02 / 03. Slide 3: A complete dark speckled plate of green and dark olives with red pepper and a lemon wedge, on its photographed dark surface. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. For the middle. Mixed olives. 17 High Street · Bedford. 03 / 03.",
+          "asset": "Produced draft: three 1080×1440 real-photo compositions, lightweight cover and downloadable set. No AI-generated food, packs, people or venue pixels. Current subject identity, final usage rights and exact-version client approval remain open.",
           "sourceIds": [
             "nazar-bedford-site",
             "nazar-bedford-menu",
@@ -1963,7 +1965,7 @@
           "status": "Draft",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 17:45 IST",
-          "productionVersion": "1.1-visual-draft",
+          "productionVersion": "v3.0-photo-integrated",
           "preview": {
             "status": "Visual draft",
             "type": "carousel",
@@ -1971,15 +1973,15 @@
             "slides": [
               {
                 "src": "assets/posts/nazar-bedford-02/01.png",
-                "alt": "Swirled beige dip with oil and garnish. Branded image with the Nazar Bedford logo. Text: BEDFORD MEZE. Hummus. A simple start. Chickpea and tahini. 17 High Street · Bedford."
+                "alt": "A complete white plate of ridged beige dip with oil, red garnish and green herbs, on its photographed dark stone surface. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. Start with a swirl. Hummus · chickpea and tahini. 17 High Street · Bedford. 01 / 03."
               },
               {
                 "src": "assets/posts/nazar-bedford-02/02.png",
-                "alt": "Chunky pale dip with oil and garnish. Branded image with the Nazar Bedford logo. Text: BEDFORD MEZE. Baba ganoush. Grilled aubergine, tahini and yoghurt. 17 High Street · Bedford."
+                "alt": "A complete white plate of chunky pale dip, oil, red garnish and herbs, with the photographed dried citrus slice, on dark stone. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. Baba ganoush. Grilled aubergine, tahini and yoghurt. 17 High Street · Bedford. 02 / 03."
               },
               {
                 "src": "assets/posts/nazar-bedford-02/03.png",
-                "alt": "Mixed green and dark olives with red pepper and lemon on a dark plate. Branded image with the Nazar Bedford logo. Text: BEDFORD MEZE. Olives for the middle. A small plate for the table. 17 High Street · Bedford."
+                "alt": "A complete dark speckled plate of green and dark olives with red pepper and a lemon wedge, on its photographed dark surface. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. For the middle. Mixed olives. 17 High Street · Bedford. 03 / 03."
               }
             ],
             "download": "assets/posts/nazar-bedford-02/nazar-bedford-02-draft.zip"
@@ -3374,30 +3376,30 @@
         },
         {
           "id": "VISUAL-pera-02-1",
-          "title": "Selected image and composed slide 1 · The green board, in real photographs",
+          "title": "Actual-photo revised slide 1 · The green board, in real photographs",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Square dark layered cake on a green ribbed Pera board with a treble-clef decoration.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Close crop of the left side and layers of a dark square cake, with part of its gold decoration and the ribbed green Pera board visible. Exact Pera logo at upper left. Text: Look closer.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-pera-02-2",
-          "title": "Selected image and composed slide 2 · The green board, in real photographs",
+          "title": "Actual-photo revised slide 2 · The green board, in real photographs",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "White-coated round cake with red crumbs and berries on a green branded board.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A white-coated round cake with red crumbs and berries on a green branded board, shown in a full-bleed real photograph. The headline sits in the blurred space above the cake. Exact Pera logo at upper right. Text: A SMALL PERA DETAIL. Green board. Fine border.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-pera-02-3",
-          "title": "Selected image and composed slide 3 · The green board, in real photographs",
+          "title": "Actual-photo revised slide 3 · The green board, in real photographs",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Dark glossy round cake topped with strawberries and striped side decorations on green board.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A dark glossy round cake with strawberries and striped side decorations on a green board, against a blurred Pera mural. Exact Pera logo at upper right. Text: A SMALL PERA DETAIL. Three cakes. One detail.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "BROWSER-IG",
@@ -3509,29 +3511,30 @@
           "format": "Carousel",
           "pillar": "Place & visit",
           "title": "The green board, in real photographs",
-          "hook": "Look beneath the cake for a moment.",
-          "caption": "Look beneath the cake for a moment.\n\nGreen boards. Fine borders. The Pera name around the edge. Three cake photographs, one easy-to-miss detail beneath the decoration.\n\nNext time you’re choosing at Pera, take a closer look.",
-          "facebookCaption": "A small detail in these Pera cake photographs: the green board, its fine border and the name around the edge.\n\nWe’ve put three photographs together so you can spot it beneath the different cake decorations. Explore Pera Patisserie here:\nhttps://www.perapatisserie.co.uk/",
+          "hook": "Look beneath the decoration.",
+          "caption": "Look beneath the decoration.\n\nGreen boards. Fine borders. A small Pera detail beneath three different cakes.\n\nTake a closer look.",
+          "facebookCaption": "Three cakes. One detail beneath them.\n\nThe green board and its fine border are easy to miss at first. Take a closer look at Pera Patisserie.\nhttps://www.perapatisserie.co.uk/",
           "cta": "Take a closer look at Pera.",
           "onScreen": [
-            "A SMALL PERA DETAIL / The Pera finishing touch. / Look beneath the cake. / Pera Patisserie",
-            "A SMALL PERA DETAIL / Green board. Fine border. / The detail under the decoration. / Pera Patisserie",
-            "A SMALL PERA DETAIL / A name around the edge. / Three cakes. A detail to notice. / Pera Patisserie"
+            "Look / closer.",
+            "A SMALL PERA DETAIL / Green board. / Fine border.",
+            "A SMALL PERA DETAIL / Three cakes. / One detail."
           ],
           "production": [
-            "Slide 1: use the produced 1080×1440 image. The Pera finishing touch. Keep the source photograph and supplied logo unchanged.",
-            "Slide 2: use the produced 1080×1440 image. Green board. Fine border. Keep the source photograph and supplied logo unchanged.",
-            "Slide 3: use the produced 1080×1440 image. A name around the edge. Keep the source photograph and supplied logo unchanged.",
-            "Upload in numbered order only after exact-version fact, brand, rights and human approval checks; all three slides share one orientation."
+            "Slide 1: use the prepared 1080×1440 actual-photo composition — Look closer.",
+            "Slide 2: use the prepared 1080×1440 actual-photo composition — Green board. Fine border.",
+            "Slide 3: use the prepared 1080×1440 actual-photo composition — Three cakes. One detail.",
+            "The original client photograph and logo are separate from editable type/readability layers. Local overlays can affect displayed tones; no AI-generated subject pixels are used.",
+            "Upload in numbered order after exact-version source, brand, rights, crop and human approval checks."
           ],
-          "motion": "Static image carousel. No rendered video or Reel is claimed. No filters, generated food, automatic zoom or fabricated sound; slide changes are viewer-controlled.",
+          "motion": "Static actual-photo carousel. No rendered Reel or invented sound is included. Photo details remain sourced; viewer-controlled slide changes only.",
           "story": [
-            "Proposed Story frame 1: use the same inspected subject with ‘The Pera finishing touch.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 2: use the same inspected subject with ‘Green board. Fine border.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 3: use the same inspected subject with ‘A name around the edge.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only."
+            "Proposed Story frame 1: recompose the same actual photographed subject with “Look closer.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 2: recompose the same actual photographed subject with “Green board. Fine border.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 3: recompose the same actual photographed subject with “Three cakes. One detail.”. A separate vertical Story export still needs production and review."
           ],
-          "altText": "Slide 1: Square dark layered cake on a green ribbed Pera board with a treble-clef decoration. Branded image with the Pera Patisserie logo. Text: A SMALL PERA DETAIL. The Pera finishing touch. Look beneath the cake. Pera Patisserie. Slide 2: White-coated round cake with red crumbs and berries on a green branded board. Branded image with the Pera Patisserie logo. Text: A SMALL PERA DETAIL. Green board. Fine border. The detail under the decoration. Pera Patisserie. Slide 3: Dark glossy round cake topped with strawberries and striped side decorations on green board. Branded image with the Pera Patisserie logo. Text: A SMALL PERA DETAIL. A name around the edge. Three cakes. A detail to notice. Pera Patisserie.",
-          "asset": "Produced visual draft: three numbered 1080×1440 PNGs, a lightweight cover and downloadable set. Existing selected source photographs and original logos; final photo rights, current subject identity and client brand acceptance remain unverified.",
+          "altText": "Slide 1: Close crop of the left side and layers of a dark square cake, with part of its gold decoration and the ribbed green Pera board visible. Exact Pera logo at upper left. Text: Look closer. Slide 2: A white-coated round cake with red crumbs and berries on a green branded board, shown in a full-bleed real photograph. The headline sits in the blurred space above the cake. Exact Pera logo at upper right. Text: A SMALL PERA DETAIL. Green board. Fine border. Slide 3: A dark glossy round cake with strawberries and striped side decorations on a green board, against a blurred Pera mural. Exact Pera logo at upper right. Text: A SMALL PERA DETAIL. Three cakes. One detail.",
+          "asset": "Produced draft: three 1080×1440 real-photo compositions, lightweight cover and downloadable set. No AI-generated food, packs, people or venue pixels. Current subject identity, final usage rights and exact-version client approval remain open.",
           "sourceIds": [
             "P-01",
             "P-03",
@@ -3555,7 +3558,7 @@
           "status": "Draft",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 18:00 IST",
-          "productionVersion": "1.1-visual-draft",
+          "productionVersion": "pera-02-photo-rework-v1.1-review-fix",
           "preview": {
             "status": "Visual draft",
             "type": "carousel",
@@ -3563,15 +3566,15 @@
             "slides": [
               {
                 "src": "assets/posts/pera-02/01.png",
-                "alt": "Square dark layered cake on a green ribbed Pera board with a treble-clef decoration. Branded image with the Pera Patisserie logo. Text: A SMALL PERA DETAIL. The Pera finishing touch. Look beneath the cake. Pera Patisserie."
+                "alt": "Close crop of the left side and layers of a dark square cake, with part of its gold decoration and the ribbed green Pera board visible. Exact Pera logo at upper left. Text: Look closer."
               },
               {
                 "src": "assets/posts/pera-02/02.png",
-                "alt": "White-coated round cake with red crumbs and berries on a green branded board. Branded image with the Pera Patisserie logo. Text: A SMALL PERA DETAIL. Green board. Fine border. The detail under the decoration. Pera Patisserie."
+                "alt": "A white-coated round cake with red crumbs and berries on a green branded board, shown in a full-bleed real photograph. The headline sits in the blurred space above the cake. Exact Pera logo at upper right. Text: A SMALL PERA DETAIL. Green board. Fine border."
               },
               {
                 "src": "assets/posts/pera-02/03.png",
-                "alt": "Dark glossy round cake topped with strawberries and striped side decorations on green board. Branded image with the Pera Patisserie logo. Text: A SMALL PERA DETAIL. A name around the edge. Three cakes. A detail to notice. Pera Patisserie."
+                "alt": "A dark glossy round cake with strawberries and striped side decorations on a green board, against a blurred Pera mural. Exact Pera logo at upper right. Text: A SMALL PERA DETAIL. Three cakes. One detail."
               }
             ],
             "download": "assets/posts/pera-02/pera-02-draft.zip"
@@ -4858,30 +4861,30 @@
         },
         {
           "id": "VISUAL-liman-islington-08-1",
-          "title": "Selected image and composed slide 1 · A table on Penton Street",
+          "title": "Actual-photo revised slide 1 · A table on Penton Street",
           "url": "https://www.liman.co.uk/images/slide2.jpg",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Dining tables, upholstered chairs, exposed brick, flowers and foreground glassware.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Portrait crop of Liman’s dining room: exposed brick, upholstered chairs, table flowers and a large foreground stemmed glass. Original LIMAN wordmark. Text: PENTON STREET · ISLINGTON. A table on Penton Street. 60 Penton Street.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-liman-islington-08-2",
-          "title": "Selected image and composed slide 2 · A table on Penton Street",
+          "title": "Actual-photo revised slide 2 · A table on Penton Street",
           "url": "https://www.liman.co.uk/images/slide1.jpg",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Foreground stemmed glasses, dining table and flower arrangements.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Portrait crop of stemmed glassware and a softly lit table setting in Liman’s dining room. Original LIMAN wordmark. Text: LIMAN · ISLINGTON. Before the first course. 60 Penton Street.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-liman-islington-08-3",
-          "title": "Selected image and composed slide 3 · A table on Penton Street",
+          "title": "Actual-photo revised slide 3 · A table on Penton Street",
           "url": "https://www.liman.co.uk/images/slide3.jpg",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Yellow flowers in a vase beside stemmed glassware on a table.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Portrait crop of yellow and white flowers in a vase, with a soft-focus dining table and partial glassware at Liman. Original LIMAN wordmark. Text: LIMAN · ISLINGTON. The small table details. Explore the menu.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "BROWSER-IG",
@@ -5296,24 +5299,25 @@
           "facebookCaption": "A look at the dining-room details at Liman: exposed brick, table flowers and glassware in the light.\n\nPlanning dinner in Islington? Keep 60 Penton Street with the plan, explore the menu and speak to the team about your table and dietary requirements before visiting.\nhttps://www.liman.co.uk/",
           "cta": "Explore Liman’s menu and contact the team.",
           "onScreen": [
-            "LIMAN · PENTON STREET / A table on Penton Street. / A few details from the Liman dining room. / 60 Penton Street · Islington",
-            "LIMAN · PENTON STREET / Before the first course. / Glassware, light and a table setting. / 60 Penton Street · Islington",
-            "LIMAN · PENTON STREET / The small table details. / Explore the menu. Plan with our team. / 60 Penton Street · Islington"
+            "PENTON STREET · ISLINGTON / A table on / Penton Street. / 60 Penton Street / 01 / 03",
+            "LIMAN · ISLINGTON / Before / the first / course. / 60 Penton Street / 02 / 03",
+            "LIMAN · ISLINGTON / The small / table details. / Explore the menu / 03 / 03"
           ],
           "production": [
-            "Slide 1: use the produced 1080×1440 image. A table on Penton Street. Keep the source photograph and supplied logo unchanged.",
-            "Slide 2: use the produced 1080×1440 image. Before the first course. Keep the source photograph and supplied logo unchanged.",
-            "Slide 3: use the produced 1080×1440 image. The small table details. Keep the source photograph and supplied logo unchanged.",
-            "Upload in numbered order only after exact-version fact, brand, rights and human approval checks; all three slides share one orientation."
+            "Slide 1: use the prepared 1080×1440 actual-photo composition — A table on Penton Street.",
+            "Slide 2: use the prepared 1080×1440 actual-photo composition — Before the first course.",
+            "Slide 3: use the prepared 1080×1440 actual-photo composition — The small table details.",
+            "The original client photograph and logo are separate from editable type/readability layers. Local overlays can affect displayed tones; no AI-generated subject pixels are used.",
+            "Upload in numbered order after exact-version source, brand, rights, crop and human approval checks."
           ],
-          "motion": "Static image carousel. No rendered video or Reel is claimed. No filters, generated food, automatic zoom or fabricated sound; slide changes are viewer-controlled.",
+          "motion": "Static actual-photo carousel. No rendered Reel or invented sound is included. Photo details remain sourced; viewer-controlled slide changes only.",
           "story": [
-            "Proposed Story frame 1: use the same inspected subject with ‘A table on Penton Street.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 2: use the same inspected subject with ‘Before the first course.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 3: use the same inspected subject with ‘The small table details.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only."
+            "Proposed Story frame 1: recompose the same actual photographed subject with “A table on Penton Street.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 2: recompose the same actual photographed subject with “Before the first course.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 3: recompose the same actual photographed subject with “The small table details.”. A separate vertical Story export still needs production and review."
           ],
-          "altText": "Slide 1: Dining tables, upholstered chairs, exposed brick, flowers and foreground glassware. Branded image with the Liman Islington logo. Text: LIMAN · PENTON STREET. A table on Penton Street. A few details from the Liman dining room. 60 Penton Street · Islington. Slide 2: Foreground stemmed glasses, dining table and flower arrangements. Branded image with the Liman Islington logo. Text: LIMAN · PENTON STREET. Before the first course. Glassware, light and a table setting. 60 Penton Street · Islington. Slide 3: Yellow flowers in a vase beside stemmed glassware on a table. Branded image with the Liman Islington logo. Text: LIMAN · PENTON STREET. The small table details. Explore the menu. Plan with our team. 60 Penton Street · Islington.",
-          "asset": "Produced visual draft: three numbered 1080×1440 PNGs, a lightweight cover and downloadable set. Existing selected source photographs and original logos; final photo rights, current subject identity and client brand acceptance remain unverified.",
+          "altText": "Slide 1: Portrait crop of Liman’s dining room: exposed brick, upholstered chairs, table flowers and a large foreground stemmed glass. Original LIMAN wordmark. Text: PENTON STREET · ISLINGTON. A table on Penton Street. 60 Penton Street. Slide 2: Portrait crop of stemmed glassware and a softly lit table setting in Liman’s dining room. Original LIMAN wordmark. Text: LIMAN · ISLINGTON. Before the first course. 60 Penton Street. Slide 3: Portrait crop of yellow and white flowers in a vase, with a soft-focus dining table and partial glassware at Liman. Original LIMAN wordmark. Text: LIMAN · ISLINGTON. The small table details. Explore the menu.",
+          "asset": "Produced draft: three 1080×1440 real-photo compositions, lightweight cover and downloadable set. No AI-generated food, packs, people or venue pixels. Current subject identity, final usage rights and exact-version client approval remain open.",
           "sourceIds": [
             "liman-islington-site",
             "liman-islington-menu",
@@ -5338,7 +5342,7 @@
           "status": "Draft",
           "ukZone": "GMT",
           "indiaTime": "09 Nov 17:45 IST",
-          "productionVersion": "1.1-visual-draft",
+          "productionVersion": "v2.0-photo-rework",
           "preview": {
             "status": "Visual draft",
             "type": "carousel",
@@ -5346,15 +5350,15 @@
             "slides": [
               {
                 "src": "assets/posts/liman-islington-08/01.png",
-                "alt": "Dining tables, upholstered chairs, exposed brick, flowers and foreground glassware. Branded image with the Liman Islington logo. Text: LIMAN · PENTON STREET. A table on Penton Street. A few details from the Liman dining room. 60 Penton Street · Islington."
+                "alt": "Portrait crop of Liman’s dining room: exposed brick, upholstered chairs, table flowers and a large foreground stemmed glass. Original LIMAN wordmark. Text: PENTON STREET · ISLINGTON. A table on Penton Street. 60 Penton Street."
               },
               {
                 "src": "assets/posts/liman-islington-08/02.png",
-                "alt": "Foreground stemmed glasses, dining table and flower arrangements. Branded image with the Liman Islington logo. Text: LIMAN · PENTON STREET. Before the first course. Glassware, light and a table setting. 60 Penton Street · Islington."
+                "alt": "Portrait crop of stemmed glassware and a softly lit table setting in Liman’s dining room. Original LIMAN wordmark. Text: LIMAN · ISLINGTON. Before the first course. 60 Penton Street."
               },
               {
                 "src": "assets/posts/liman-islington-08/03.png",
-                "alt": "Yellow flowers in a vase beside stemmed glassware on a table. Branded image with the Liman Islington logo. Text: LIMAN · PENTON STREET. The small table details. Explore the menu. Plan with our team. 60 Penton Street · Islington."
+                "alt": "Portrait crop of yellow and white flowers in a vase, with a soft-focus dining table and partial glassware at Liman. Original LIMAN wordmark. Text: LIMAN · ISLINGTON. The small table details. Explore the menu."
               }
             ],
             "download": "assets/posts/liman-islington-08/liman-islington-08-draft.zip"
@@ -6449,30 +6453,30 @@
         },
         {
           "id": "VISUAL-aara-01-1",
-          "title": "Selected image and composed slide 1 · A first look at Aara",
+          "title": "Actual-photo revised slide 1 · A first look at Aara",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Exterior Aara fascia and entrance. Filename is misleading: this is not rice steam.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Aara’s frontage and gated entrance fill the slide. Text: Aara, Birmingham; Icknield Street; 108–109 Icknield Street. The Aara elephant-and-pot logo appears at upper right.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-aara-01-2",
-          "title": "Selected image and composed slide 2 · A first look at Aara",
+          "title": "Actual-photo revised slide 2 · A first look at Aara",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Interior of an oven with fire and hot coals, no identifiable dish.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Portrait close-up of a glowing tandoor opening with fuel inside. Text: From the Aara kitchen; At the tandoor; Jewellery Quarter, Birmingham. The Aara logo appears at upper right.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-aara-01-3",
-          "title": "Selected image and composed slide 3 · A first look at Aara",
+          "title": "Actual-photo revised slide 3 · A first look at Aara",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "A pan containing yellow/orange sauced pieces. Filename misleading: no skewers are depicted.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Close-up of yellow-orange sauced pieces and a metal utensil in a pan. Text: To the pan. The Aara logo appears at upper right.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "BROWSER-IG",
@@ -6536,29 +6540,30 @@
           "format": "Carousel",
           "pillar": "Craft & people",
           "title": "A first look at Aara",
-          "hook": "The Icknield Street entrance. The tandoor. A moment at the pan.",
-          "caption": "The Icknield Street entrance. The tandoor. A moment at the pan.\n\nA small look at Aara, from the front door to the kitchen. Our menu brings together Telugu and Hyderabadi cooking in Birmingham’s Jewellery Quarter.\n\nFind Aara at 108–109 Icknield Street. Explore the menu before your visit.",
-          "facebookCaption": "Here’s a first look at Aara through three supplied photographs: the Icknield Street entrance, the tandoor and a moment at the pan.\n\nExplore our Telugu and Hyderabadi menu, then plan a visit to 108–109 Icknield Street in Birmingham’s Jewellery Quarter.\nhttps://www.aaraindian.com/",
+          "hook": "From Icknield Street to the kitchen.",
+          "caption": "From Icknield Street to the kitchen.\n\nThe front door. The tandoor. A moment at the pan. A first look at Aara in Birmingham’s Jewellery Quarter.\n\nExplore our menu before your visit.",
+          "facebookCaption": "Find Aara at 108–109 Icknield Street in Birmingham’s Jewellery Quarter.\n\nHere’s a look from the entrance to the tandoor and pan. Explore our menu before your visit.\nhttps://www.aaraindian.com/",
           "cta": "Explore the Aara menu.",
           "onScreen": [
-            "AARA · BIRMINGHAM / Aara, on Icknield Street. / A first look, from the front door. / 108–109 Icknield Street",
-            "A GLIMPSE INSIDE AARA / At the tandoor. / Fire at the heart of the frame. / Jewellery Quarter · Birmingham",
-            "A GLIMPSE INSIDE AARA / Then, to the pan. / One more kitchen moment. / 108–109 Icknield Street"
+            "AARA · BIRMINGHAM / Icknield / Street. / 108–109 Icknield Street / 01",
+            "FROM THE AARA KITCHEN / At the / tandoor. / Jewellery Quarter · Birmingham / 02",
+            "To the pan. / 03"
           ],
           "production": [
-            "Slide 1: use the produced 1080×1440 image. Aara, on Icknield Street. Keep the source photograph and supplied logo unchanged.",
-            "Slide 2: use the produced 1080×1440 image. At the tandoor. Keep the source photograph and supplied logo unchanged.",
-            "Slide 3: use the produced 1080×1440 image. Then, to the pan. Keep the source photograph and supplied logo unchanged.",
-            "Upload in numbered order only after exact-version fact, brand, rights and human approval checks; all three slides share one orientation."
+            "Slide 1: use the prepared 1080×1440 actual-photo composition — Icknield Street.",
+            "Slide 2: use the prepared 1080×1440 actual-photo composition — At the tandoor.",
+            "Slide 3: use the prepared 1080×1440 actual-photo composition — To the pan.",
+            "The original client photograph and logo are separate from editable type/readability layers. Local overlays can affect displayed tones; no AI-generated subject pixels are used.",
+            "Upload in numbered order after exact-version source, brand, rights, crop and human approval checks."
           ],
-          "motion": "Static image carousel. No rendered video or Reel is claimed. No filters, generated food, automatic zoom or fabricated sound; slide changes are viewer-controlled.",
+          "motion": "Static actual-photo carousel. No rendered Reel or invented sound is included. Photo details remain sourced; viewer-controlled slide changes only.",
           "story": [
-            "Proposed Story frame 1: use the same inspected subject with ‘Aara, on Icknield Street.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 2: use the same inspected subject with ‘At the tandoor.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 3: use the same inspected subject with ‘Then, to the pan.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only."
+            "Proposed Story frame 1: recompose the same actual photographed subject with “Icknield Street.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 2: recompose the same actual photographed subject with “At the tandoor.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 3: recompose the same actual photographed subject with “To the pan.”. A separate vertical Story export still needs production and review."
           ],
-          "altText": "Slide 1: Exterior Aara fascia and entrance. Branded image with the Aara Indian Restaurant logo. Text: AARA · BIRMINGHAM. Aara, on Icknield Street. A first look, from the front door. 108–109 Icknield Street. Slide 2: Interior of an oven with fire and hot coals, no identifiable dish. Branded image with the Aara Indian Restaurant logo. Text: A GLIMPSE INSIDE AARA. At the tandoor. Fire at the heart of the frame. Jewellery Quarter · Birmingham. Slide 3: A pan containing yellow/orange sauced pieces. Branded image with the Aara Indian Restaurant logo. Text: A GLIMPSE INSIDE AARA. Then, to the pan. One more kitchen moment. 108–109 Icknield Street.",
-          "asset": "Produced visual draft: three numbered 1080×1440 PNGs, a lightweight cover and downloadable set. Existing selected source photographs and original logos; final photo rights, current subject identity and client brand acceptance remain unverified.",
+          "altText": "Slide 1: Aara’s frontage and gated entrance fill the slide. Text: Aara, Birmingham; Icknield Street; 108–109 Icknield Street. The Aara elephant-and-pot logo appears at upper right. Slide 2: Portrait close-up of a glowing tandoor opening with fuel inside. Text: From the Aara kitchen; At the tandoor; Jewellery Quarter, Birmingham. The Aara logo appears at upper right. Slide 3: Close-up of yellow-orange sauced pieces and a metal utensil in a pan. Text: To the pan. The Aara logo appears at upper right.",
+          "asset": "Produced draft: three 1080×1440 real-photo compositions, lightweight cover and downloadable set. No AI-generated food, packs, people or venue pixels. Current subject identity, final usage rights and exact-version client approval remain open.",
           "sourceIds": [
             "A-01",
             "A-02",
@@ -6584,7 +6589,7 @@
           "status": "Draft",
           "ukZone": "BST",
           "indiaTime": "23 Oct 22:00 IST",
-          "productionVersion": "1.1-visual-draft",
+          "productionVersion": "2.1-photo-rework",
           "preview": {
             "status": "Visual draft",
             "type": "carousel",
@@ -6592,15 +6597,15 @@
             "slides": [
               {
                 "src": "assets/posts/aara-01/01.png",
-                "alt": "Exterior Aara fascia and entrance. Branded image with the Aara Indian Restaurant logo. Text: AARA · BIRMINGHAM. Aara, on Icknield Street. A first look, from the front door. 108–109 Icknield Street."
+                "alt": "Aara’s frontage and gated entrance fill the slide. Text: Aara, Birmingham; Icknield Street; 108–109 Icknield Street. The Aara elephant-and-pot logo appears at upper right."
               },
               {
                 "src": "assets/posts/aara-01/02.png",
-                "alt": "Interior of an oven with fire and hot coals, no identifiable dish. Branded image with the Aara Indian Restaurant logo. Text: A GLIMPSE INSIDE AARA. At the tandoor. Fire at the heart of the frame. Jewellery Quarter · Birmingham."
+                "alt": "Portrait close-up of a glowing tandoor opening with fuel inside. Text: From the Aara kitchen; At the tandoor; Jewellery Quarter, Birmingham. The Aara logo appears at upper right."
               },
               {
                 "src": "assets/posts/aara-01/03.png",
-                "alt": "A pan containing yellow/orange sauced pieces. Branded image with the Aara Indian Restaurant logo. Text: A GLIMPSE INSIDE AARA. Then, to the pan. One more kitchen moment. 108–109 Icknield Street."
+                "alt": "Close-up of yellow-orange sauced pieces and a metal utensil in a pan. Text: To the pan. The Aara logo appears at upper right."
               }
             ],
             "download": "assets/posts/aara-01/aara-01-draft.zip"
@@ -7924,30 +7929,30 @@
         },
         {
           "id": "VISUAL-TW-02-1",
-          "title": "Selected image and composed slide 1 · Three at-home olive ideas",
+          "title": "Actual-photo revised slide 1 · Three at-home olive ideas",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Actual steel olive counter with several green/dark olive trays and serving spoons.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "TW Fresh Food Centre's steel olive counter: purple olives, green olives and a serving spoon above a pale counter edge. TW logo at the top right. Text: From the TW olive counter. Three at-home ideas. A little on the side. 01 / Bread + yoghurt dip. 283 Upper Grosvenor Road.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-TW-02-2",
-          "title": "Selected image and composed slide 2 · Three at-home olive ideas",
+          "title": "Actual-photo revised slide 2 · Three at-home olive ideas",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Close-up of dark olives in a steel tray, colour varying from brown to black.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A close view of dark olives in TW's steel tray, with glossy highlights. TW logo at the top right. Text: At home / 02. For a tray of roast veg. A small olive bowl alongside. TW Fresh Food Centre.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-TW-02-3",
-          "title": "Selected image and composed slide 3 · Three at-home olive ideas",
+          "title": "Actual-photo revised slide 3 · Three at-home olive ideas",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Green olives with red chilli pieces in liquid in a steel tray.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "A close view of green olives and red chilli pieces in liquid in TW's steel tray. TW logo at the top right. Text: At home / 03. Before dinner, a bowl to share. Put a small bowl on the table. 283 Upper Grosvenor Road.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         }
       ],
       "references": [
@@ -8055,24 +8060,25 @@
           "facebookCaption": "Three simple ways to serve olives at home: with bread and a yoghurt dip, alongside roasted vegetables, or in a small sharing bowl before dinner.\n\nThese photographs show the TW olive counter, rather than the finished pairings. Visit TW Fresh Food Centre at 283 Upper Grosvenor Road, Tunbridge Wells, and ask the team about the current selection.",
           "cta": "Ask the team about the current olive selection.",
           "onScreen": [
-            "FROM THE TW OLIVE COUNTER / Olives. Three home ideas. / Start with bread and a yoghurt dip. / 283 Upper Grosvenor Road",
-            "AN AT-HOME SERVING IDEA / For a tray of roast veg. / A small olive bowl alongside. / TW Fresh Food Centre · Tunbridge Wells",
-            "AN AT-HOME SERVING IDEA / Before dinner, a bowl to share. / Put a small bowl on the table. / 283 Upper Grosvenor Road"
+            "FROM THE TW / OLIVE COUNTER / THREE AT-HOME IDEAS / A little / on the side. / 01 / Bread + yoghurt dip / 283 Upper Grosvenor Road",
+            "AT HOME / 02 / For a tray / of roast veg. / A small olive bowl alongside. / TW Fresh Food Centre",
+            "AT HOME / 03 / Before dinner, / a bowl to share. / Put a small bowl on the table. / 283 Upper Grosvenor Road"
           ],
           "production": [
-            "Slide 1: use the produced 1080×1440 image. Olives. Three home ideas. Keep the source photograph and supplied logo unchanged.",
-            "Slide 2: use the produced 1080×1440 image. For a tray of roast veg. Keep the source photograph and supplied logo unchanged.",
-            "Slide 3: use the produced 1080×1440 image. Before dinner, a bowl to share. Keep the source photograph and supplied logo unchanged.",
-            "Upload in numbered order only after exact-version fact, brand, rights and human approval checks; all three slides share one orientation."
+            "Slide 1: use the prepared 1080×1440 actual-photo composition — A little on the side.",
+            "Slide 2: use the prepared 1080×1440 actual-photo composition — For a tray of roast veg.",
+            "Slide 3: use the prepared 1080×1440 actual-photo composition — Before dinner, a bowl to share.",
+            "The original client photograph and logo are separate from editable type/readability layers. Local overlays can affect displayed tones; no AI-generated subject pixels are used.",
+            "Upload in numbered order after exact-version source, brand, rights, crop and human approval checks."
           ],
-          "motion": "Static image carousel. No rendered video or Reel is claimed. No filters, generated food, automatic zoom or fabricated sound; slide changes are viewer-controlled.",
+          "motion": "Static actual-photo carousel. No rendered Reel or invented sound is included. Photo details remain sourced; viewer-controlled slide changes only.",
           "story": [
-            "Proposed Story frame 1: use the same inspected subject with ‘Olives. Three home ideas.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 2: use the same inspected subject with ‘For a tray of roast veg.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 3: use the same inspected subject with ‘Before dinner, a bowl to share.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only."
+            "Proposed Story frame 1: recompose the same actual photographed subject with “A little on the side.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 2: recompose the same actual photographed subject with “For a tray of roast veg.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 3: recompose the same actual photographed subject with “Before dinner, a bowl to share.”. A separate vertical Story export still needs production and review."
           ],
-          "altText": "Slide 1: steel olive counter with several green/dark olive trays and serving spoons. Branded image with the TW Fresh Food Centre logo. Text: FROM THE TW OLIVE COUNTER. Olives. Three home ideas. Start with bread and a yoghurt dip. 283 Upper Grosvenor Road. Slide 2: Close-up of dark olives in a steel tray, colour varying from brown to black. Branded image with the TW Fresh Food Centre logo. Text: AN AT-HOME SERVING IDEA. For a tray of roast veg. A small olive bowl alongside. TW Fresh Food Centre · Tunbridge Wells. Slide 3: Green olives with red chilli pieces in liquid in a steel tray. Branded image with the TW Fresh Food Centre logo. Text: AN AT-HOME SERVING IDEA. Before dinner, a bowl to share. Put a small bowl on the table. 283 Upper Grosvenor Road.",
-          "asset": "Produced visual draft: three numbered 1080×1440 PNGs, a lightweight cover and downloadable set. Existing selected source photographs and original logos; final photo rights, current subject identity and client brand acceptance remain unverified.",
+          "altText": "Slide 1: TW Fresh Food Centre's steel olive counter: purple olives, green olives and a serving spoon above a pale counter edge. TW logo at the top right. Text: From the TW olive counter. Three at-home ideas. A little on the side. 01 / Bread + yoghurt dip. 283 Upper Grosvenor Road. Slide 2: A close view of dark olives in TW's steel tray, with glossy highlights. TW logo at the top right. Text: At home / 02. For a tray of roast veg. A small olive bowl alongside. TW Fresh Food Centre. Slide 3: A close view of green olives and red chilli pieces in liquid in TW's steel tray. TW logo at the top right. Text: At home / 03. Before dinner, a bowl to share. Put a small bowl on the table. 283 Upper Grosvenor Road.",
+          "asset": "Produced draft: three 1080×1440 real-photo compositions, lightweight cover and downloadable set. No AI-generated food, packs, people or venue pixels. Current subject identity, final usage rights and exact-version client approval remain open.",
           "sourceIds": [
             "TW-PHOTO",
             "TW-FACTS",
@@ -8096,7 +8102,7 @@
           "status": "Draft",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 23:45 IST",
-          "productionVersion": "1.1-visual-draft",
+          "productionVersion": "TW-02-photo-rework-v2.1",
           "preview": {
             "status": "Visual draft",
             "type": "carousel",
@@ -8104,15 +8110,15 @@
             "slides": [
               {
                 "src": "assets/posts/TW-02/01.png",
-                "alt": "steel olive counter with several green/dark olive trays and serving spoons. Branded image with the TW Fresh Food Centre logo. Text: FROM THE TW OLIVE COUNTER. Olives. Three home ideas. Start with bread and a yoghurt dip. 283 Upper Grosvenor Road."
+                "alt": "TW Fresh Food Centre's steel olive counter: purple olives, green olives and a serving spoon above a pale counter edge. TW logo at the top right. Text: From the TW olive counter. Three at-home ideas. A little on the side. 01 / Bread + yoghurt dip. 283 Upper Grosvenor Road."
               },
               {
                 "src": "assets/posts/TW-02/02.png",
-                "alt": "Close-up of dark olives in a steel tray, colour varying from brown to black. Branded image with the TW Fresh Food Centre logo. Text: AN AT-HOME SERVING IDEA. For a tray of roast veg. A small olive bowl alongside. TW Fresh Food Centre · Tunbridge Wells."
+                "alt": "A close view of dark olives in TW's steel tray, with glossy highlights. TW logo at the top right. Text: At home / 02. For a tray of roast veg. A small olive bowl alongside. TW Fresh Food Centre."
               },
               {
                 "src": "assets/posts/TW-02/03.png",
-                "alt": "Green olives with red chilli pieces in liquid in a steel tray. Branded image with the TW Fresh Food Centre logo. Text: AN AT-HOME SERVING IDEA. Before dinner, a bowl to share. Put a small bowl on the table. 283 Upper Grosvenor Road."
+                "alt": "A close view of green olives and red chilli pieces in liquid in TW's steel tray. TW logo at the top right. Text: At home / 03. Before dinner, a bowl to share. Put a small bowl on the table. 283 Upper Grosvenor Road."
               }
             ],
             "download": "assets/posts/TW-02/TW-02-draft.zip"
@@ -9447,30 +9453,30 @@
         },
         {
           "id": "VISUAL-LOCAL-07-1",
-          "title": "Selected image and composed slide 1 · Read the pack. Find the shop.",
+          "title": "Actual-photo revised slide 1 · Read the pack. Find the shop.",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Topaz Mel Klasika flour bags; visible Type500/5kg markings, no origin inferred from category.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Close portrait crop of Topaz Mel Klasika flour bags, with the Cyrillic brand and Klasika name visible. The Local logo is at upper left. Text: Start with the pack. Topaz Mel Klasika. 01 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-LOCAL-07-2",
-          "title": "Selected image and composed slide 2 · Read the pack. Find the shop.",
+          "title": "Actual-photo revised slide 2 · Read the pack. Find the shop.",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Naty cocoa wafer packets with visible cocoa/cacao words and illustrated wafer cross-sections.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "Close portrait crop of a pink Naty cocoa wafer packet with its Naty and Wafers Cocoa lettering visible. The Local logo is at lower right. Text: Then check the flavour. Naty cocoa wafers. 02 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         },
         {
           "id": "VISUAL-LOCAL-07-3",
-          "title": "Selected image and composed slide 3 · Read the pack. Find the shop.",
+          "title": "Actual-photo revised slide 3 · Read the pack. Find the shop.",
           "url": "",
-          "status": "VERIFIED inspected source pixels and exact composed image; final current-subject mapping and rights NOT VERIFIED",
+          "status": "VERIFIED inspected original photograph embedding and revised composition; social rights/current subject mapping/human approval NOT VERIFIED",
           "observed": "2026-10-21",
-          "establishes": "Real installed plum/green The Local Food and Wine fascia; not the concept logo.",
-          "limitation": "Capture date, photographer licence, current serving/stock/room appearance and exact social release approval remain subject to the final checks."
+          "establishes": "The photographed plum and green The Local Food and Wine fascia overlaps a large cream 187. A building mark and The Local logo are at upper left. Text: Find us at 187 Silverdale Road. Tunbridge Wells. 03 / 03.",
+          "limitation": "Original photograph is retained with scaling/crops and disclosed local readability overlays. Displayed tones under overlays can differ; no generated food, packs, people or venue details. Current appearance/stock, rights and final exact-version approval remain open."
         }
       ],
       "references": [
@@ -9819,24 +9825,25 @@
           "facebookCaption": "Looking for a particular pack at The Local? Start with its name, then check the type or flavour. These photographs show Topaz Mel Klasika flour and Naty cocoa wafers, followed by the shop’s Silverdale Road fascia.\n\nCheck the full label for ingredients and dietary information. Photographed stock can change; ask the team about current availability at 187 Silverdale Road, Tunbridge Wells.",
           "cta": "Bring the product name or a pack photo when you visit.",
           "onScreen": [
-            "A CLOSER LOOK AT THE LOCAL / Start with the pack. / Find the name. Check the type. / 187 Silverdale Road · Tunbridge Wells",
-            "READ THE PACK / Then check the flavour. / Naty wafers. Cocoa on the pack. / The Local Food & Wine",
-            "THE LOCAL · TUNBRIDGE WELLS / Find us on Silverdale Road. / Bring a pack name you recognise. / 187 Silverdale Road"
+            "Start with / the pack. / TOPAZ MEL KLASIKA / 01 / 03",
+            "Then check / the flavour. / NATY COCOA WAFERS / 02 / 03",
+            "FIND US AT / 187 / Silverdale / Road. / TUNBRIDGE WELLS / 03 / 03"
           ],
           "production": [
-            "Slide 1: use the produced 1080×1440 image. Start with the pack. Keep the source photograph and supplied logo unchanged.",
-            "Slide 2: use the produced 1080×1440 image. Then check the flavour. Keep the source photograph and supplied logo unchanged.",
-            "Slide 3: use the produced 1080×1440 image. Find us on Silverdale Road. Keep the source photograph and supplied logo unchanged.",
-            "Upload in numbered order only after exact-version fact, brand, rights and human approval checks; all three slides share one orientation."
+            "Slide 1: use the prepared 1080×1440 actual-photo composition — Start with the pack.",
+            "Slide 2: use the prepared 1080×1440 actual-photo composition — Then check the flavour.",
+            "Slide 3: use the prepared 1080×1440 actual-photo composition — Find us at 187 Silverdale Road.",
+            "The original client photograph and logo are separate from editable type/readability layers. Local overlays can affect displayed tones; no AI-generated subject pixels are used.",
+            "Upload in numbered order after exact-version source, brand, rights, crop and human approval checks."
           ],
-          "motion": "Static image carousel. No rendered video or Reel is claimed. No filters, generated food, automatic zoom or fabricated sound; slide changes are viewer-controlled.",
+          "motion": "Static actual-photo carousel. No rendered Reel or invented sound is included. Photo details remain sourced; viewer-controlled slide changes only.",
           "story": [
-            "Proposed Story frame 1: use the same inspected subject with ‘Start with the pack.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 2: use the same inspected subject with ‘Then check the flavour.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only.",
-            "Proposed Story frame 3: use the same inspected subject with ‘Find us on Silverdale Road.’. Reframe and review a separate vertical Story export before use; this batch contains feed images only."
+            "Proposed Story frame 1: recompose the same actual photographed subject with “Start with the pack.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 2: recompose the same actual photographed subject with “Then check the flavour.”. A separate vertical Story export still needs production and review.",
+            "Proposed Story frame 3: recompose the same actual photographed subject with “Find us at 187 Silverdale Road.”. A separate vertical Story export still needs production and review."
           ],
-          "altText": "Slide 1: Topaz Mel Klasika flour bags. Branded image with the The Local logo. Text: A CLOSER LOOK AT THE LOCAL. Start with the pack. Find the name. Check the type. 187 Silverdale Road · Tunbridge Wells. Slide 2: Naty cocoa wafer packets with visible cocoa/cacao words and illustrated wafer cross-sections. Branded image with the The Local logo. Text: READ THE PACK. Then check the flavour. Naty wafers. Cocoa on the pack. The Local Food & Wine. Slide 3: The Local storefront fascia sign, with the green leaf mark and green shop lettering. Branded image with the The Local logo. Text: THE LOCAL · TUNBRIDGE WELLS. Find us on Silverdale Road. Bring a pack name you recognise. 187 Silverdale Road.",
-          "asset": "Produced visual draft: three numbered 1080×1440 PNGs, a lightweight cover and downloadable set. Existing selected source photographs and original logos; final photo rights, current subject identity and client brand acceptance remain unverified.",
+          "altText": "Slide 1: Close portrait crop of Topaz Mel Klasika flour bags, with the Cyrillic brand and Klasika name visible. The Local logo is at upper left. Text: Start with the pack. Topaz Mel Klasika. 01 / 03. Slide 2: Close portrait crop of a pink Naty cocoa wafer packet with its Naty and Wafers Cocoa lettering visible. The Local logo is at lower right. Text: Then check the flavour. Naty cocoa wafers. 02 / 03. Slide 3: The photographed plum and green The Local Food and Wine fascia overlaps a large cream 187. A building mark and The Local logo are at upper left. Text: Find us at 187 Silverdale Road. Tunbridge Wells. 03 / 03.",
+          "asset": "Produced draft: three 1080×1440 real-photo compositions, lightweight cover and downloadable set. No AI-generated food, packs, people or venue pixels. Current subject identity, final usage rights and exact-version client approval remain open.",
           "sourceIds": [
             "LOCAL-PHOTO",
             "LOCAL-STATUS",
@@ -9861,7 +9868,7 @@
           "status": "Draft",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 22:45 IST",
-          "productionVersion": "1.1-visual-draft",
+          "productionVersion": "v3.0-real-photo-rework",
           "preview": {
             "status": "Visual draft",
             "type": "carousel",
@@ -9869,15 +9876,15 @@
             "slides": [
               {
                 "src": "assets/posts/LOCAL-07/01.png",
-                "alt": "Topaz Mel Klasika flour bags. Branded image with the The Local logo. Text: A CLOSER LOOK AT THE LOCAL. Start with the pack. Find the name. Check the type. 187 Silverdale Road · Tunbridge Wells."
+                "alt": "Close portrait crop of Topaz Mel Klasika flour bags, with the Cyrillic brand and Klasika name visible. The Local logo is at upper left. Text: Start with the pack. Topaz Mel Klasika. 01 / 03."
               },
               {
                 "src": "assets/posts/LOCAL-07/02.png",
-                "alt": "Naty cocoa wafer packets with visible cocoa/cacao words and illustrated wafer cross-sections. Branded image with the The Local logo. Text: READ THE PACK. Then check the flavour. Naty wafers. Cocoa on the pack. The Local Food & Wine."
+                "alt": "Close portrait crop of a pink Naty cocoa wafer packet with its Naty and Wafers Cocoa lettering visible. The Local logo is at lower right. Text: Then check the flavour. Naty cocoa wafers. 02 / 03."
               },
               {
                 "src": "assets/posts/LOCAL-07/03.png",
-                "alt": "The Local storefront fascia sign, with the green leaf mark and green shop lettering. Branded image with the The Local logo. Text: THE LOCAL · TUNBRIDGE WELLS. Find us on Silverdale Road. Bring a pack name you recognise. 187 Silverdale Road."
+                "alt": "The photographed plum and green The Local Food and Wine fascia overlaps a large cream 187. A building mark and The Local logo are at upper left. Text: Find us at 187 Silverdale Road. Tunbridge Wells. 03 / 03."
               }
             ],
             "download": "assets/posts/LOCAL-07/LOCAL-07-draft.zip"

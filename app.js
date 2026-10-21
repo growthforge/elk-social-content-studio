@@ -6,6 +6,7 @@
   const VIEWS = {
     overview: ['Overview', 'Content programme', 'Seven distinct brands. One place to find the next draft, its copy and the work behind it.'],
     calendar: ['Calendar', 'The publishing calendar', 'Proposed dates and local times. Open any draft for its captions, creative brief and checks.'],
+    'art-direction': ['Photo direction', 'Photography & art direction', 'Start with the client’s actual photographs. Review the composition, caption and sources together before approving a final post.'],
     feed: ['Feed', 'Planned Instagram feed', 'A draft feed for one client at a time. Produced artwork and brief-only ideas stay clearly distinct.'],
     posts: ['Posts', 'The post library', 'Find the right idea, copy the caption and give production a clear brief.'],
     brand: ['Brand & audit', 'Brand & profile evidence', 'The supplied identities, what was actually observed and what still needs confirming.'],
@@ -15,6 +16,7 @@
   const ICONS = {
     overview: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
     calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/>',
+    'art-direction': '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 6-6 4 4 3-3 5 5"/>',
     feed: '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',
     posts: '<path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h6"/>',
     brand: '<path d="m12 3 9 5v8l-9 5-9-5V8zM3 8l9 5 9-5M12 13v8"/>',
@@ -69,6 +71,8 @@
   let clients = [];
   let posts = [];
   let sourceMap = new Map();
+  let artDirection = { version: '', method: [], concepts: [] };
+  let artDirectionState = 'loading';
   let toastTimer;
   let searchTimer;
   let lastPostTrigger;
@@ -218,6 +222,82 @@
     }).join('')}</div>`;
   }
 
+  function safeConceptAsset(value, clientId, extension) {
+    if (typeof value !== 'string' || !/^[a-z0-9-]+$/.test(clientId)) return '';
+    const candidate = value.replace(/^\.\//, '');
+    const prefix = `assets/concepts/${clientId}`;
+    if (!candidate.startsWith(prefix)) return '';
+    const suffix = candidate.slice(prefix.length);
+    return new RegExp(`^(?:-[a-z0-9]+)*-concept\\.${extension}$`).test(suffix) ? `./${candidate}` : '';
+  }
+  function safeConceptSourceURL(value) {
+    const safe = safeURL(value);
+    if (!safe) return '';
+    const url = new URL(safe);
+    return url.username || url.password || ['localhost','127.0.0.1','::1'].includes(url.hostname) || /(^|\.)(drive\.google\.com|docs\.google\.com|claude\.ai)$/i.test(url.hostname) ? '' : safe;
+  }
+  function directionAssets(concept) {
+    if (concept.kind === 'ai') return { image: safeConceptAsset(concept.image,concept.clientId,'png'), thumbnail: safeConceptAsset(concept.thumbnail,concept.clientId,'webp') };
+    if (concept.kind !== 'photo') return { image: '', thumbnail: '' };
+    const post = getClient(concept.clientId)?.posts.find(item => item.id === concept.postId);
+    if (!post || post.preview?.status !== 'Visual draft') return { image: '', thumbnail: '' };
+    const expectedImage = safePostAsset(post.preview.slides?.[0]?.src,post.id);
+    const expectedThumbnail = safePostAsset(post.preview.cover,post.id);
+    const image = safePostAsset(concept.image,post.id);
+    const thumbnail = safePostAsset(concept.thumbnail,post.id);
+    return image && thumbnail && image === expectedImage && thumbnail === expectedThumbnail ? { image, thumbnail } : { image: '', thumbnail: '' };
+  }
+  function conceptRows() {
+    const query = state.query.trim().toLocaleLowerCase('en-GB');
+    return artDirection.concepts.filter(concept => (state.client === 'all' || concept.clientId === state.client)
+      && (!query || hashText([getClient(concept.clientId)?.name, concept.title, concept.headline, concept.caption, concept.facebookCaption, concept.notes]).includes(query)));
+  }
+  async function loadArtDirection() {
+    artDirectionState = 'loading';
+    if (state.view === 'art-direction') render();
+    try {
+      const response = await fetch('./art-direction.json', { credentials: 'omit', cache: 'no-store' });
+      if (!response.ok) throw new Error('Photo direction collection unavailable');
+      const payload = await response.json();
+      if (!payload || !Array.isArray(payload.concepts) || !Array.isArray(payload.method)) throw new Error('Invalid direction collection');
+      const concepts = payload.concepts.filter(concept => {
+        const client = getClient(concept?.clientId);
+        return client && /^[a-zA-Z0-9_-]+$/.test(concept.id || '')
+          && client.posts.some(post => post.id === concept.postId)
+          && ['photo','ai'].includes(concept.kind)
+          && concept.status === (concept.kind === 'photo' ? 'Real-photo draft' : 'AI concept — internal review')
+          && ['title','alt','headline','caption','facebookCaption'].every(key => typeof concept[key] === 'string' && concept[key].trim())
+          && directionAssets(concept).image && directionAssets(concept).thumbnail;
+      }).map(concept => ({ ...concept, notes: arr(concept.notes).filter(note => typeof note === 'string'), sources: arr(concept.sources).filter(source => source && typeof source.title === 'string' && safeConceptSourceURL(source.url)) }));
+      artDirection = { version: text(payload.version), method: payload.method.filter(item => item && typeof item.title === 'string' && typeof item.detail === 'string'), concepts };
+      artDirectionState = 'ready';
+    } catch (_) {
+      artDirection = { version: '', method: [], concepts: [] };
+      artDirectionState = 'unavailable';
+    }
+    if (['art-direction','feed'].includes(state.view)) render();
+  }
+  function renderConceptTeaser() {
+    const concepts = conceptRows();
+    if (!concepts.length) return '';
+    const hasPhoto = concepts.some(concept => concept.kind === 'photo');
+    return `<section class="concept-teaser" aria-label="${hasPhoto ? 'New photo direction' : 'Additional art direction'}"><div><p class="eyebrow">${hasPhoto ? 'New photo direction' : 'Additional art direction'}</p><h2>${hasPhoto ? 'Start with the real photograph.' : 'Review the proposed direction.'}</h2><p>${hasPhoto ? 'Client photography, considered composition and draft copy.' : 'AI concepts · internal review only · not publishable.'}</p><button type="button" class="button primary" data-view="art-direction">View photo direction ${icon('arrow',14)}</button></div><div class="concept-teaser-images">${concepts.slice(0,3).map(concept => `<button type="button" data-view="art-direction" aria-label="View ${esc(concept.title)}, ${concept.kind === 'photo' ? 'real-photo draft' : 'AI concept'}"><img src="${esc(directionAssets(concept).thumbnail)}" alt="${esc(concept.alt)}" width="540" height="720" loading="lazy" decoding="async" data-concept-image><span class="concept-image-missing" hidden>Preview unavailable</span>${concept.kind === 'ai' ? '<span class="concept-teaser-kind">AI concept · internal only</span>' : ''}</button>`).join('')}</div></section>`;
+  }
+  function renderFeed(rows) { return renderConceptTeaser() + renderPlannedFeed(rows); }
+  function renderArtDirection() {
+    const concepts = conceptRows();
+    const notice = '<p class="concept-boundary"><strong>Drafts for review.</strong> Start with the original client photography and confirm the subject, copy, brand, rights and exact final version before publication. A visible draft is not approval.</p>';
+    const method = artDirection.method.length ? `<details class="concept-method"><summary>Research & composition method</summary><ol>${artDirection.method.map(item => `<li><h3>${esc(item.title)}</h3><p>${esc(item.detail)}</p>${safeConceptSourceURL(item.url) ? external(safeConceptSourceURL(item.url),'Read source') : ''}</li>`).join('')}</ol></details>` : '';
+    if (!concepts.length) return notice + method + `<div class="empty-state"><h2>${artDirectionState === 'loading' ? 'Opening photo direction…' : artDirectionState === 'unavailable' ? 'Photo direction is unavailable' : 'No direction samples in this selection'}</h2><p>${artDirectionState === 'unavailable' ? 'The optional direction collection could not be opened. The calendar and real-photo drafts remain available.' : 'Use the client selector or clear the search to see available samples. The calendar and real-photo drafts remain available.'}</p>${artDirectionState === 'unavailable' ? '<button class="button secondary" type="button" data-action="retry-art-direction">Try again</button>' : artDirectionState !== 'loading' ? '<button class="button secondary" type="button" data-action="reset">Reset filters</button>' : ''}</div>`;
+    return notice + method + `<div class="concept-grid">${concepts.map(concept => {
+      const client = getClient(concept.clientId);
+      const assets = directionAssets(concept);
+      const photo = concept.kind === 'photo';
+      const kindLabel = photo ? 'Real-photo draft' : 'AI concept';
+      return `<article class="concept-card" data-direction-kind="${photo ? 'photo' : 'ai'}"><header class="concept-card-head">${logo(client)}<div><p>${esc(client.name)}</p>${logoStatus(client)}</div><span class="concept-label">${kindLabel}</span></header><a class="concept-image-link" href="${esc(assets.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size ${esc(concept.title)}"><img src="${esc(assets.thumbnail)}" alt="${esc(concept.alt)}" width="540" height="720" loading="lazy" decoding="async" data-concept-image><span class="concept-image-missing" hidden>Preview unavailable · open full-size image</span></a><div class="concept-card-copy"><p class="concept-status">${photo ? 'Original client photography · draft for review' : 'AI concept · internal review · not publishable'}</p><h2>${esc(concept.title)}</h2><p class="concept-headline">${esc(concept.headline)}</p>${photo ? '' : '<p class="concept-ai-boundary">AI-generated details, food, scale and setting may differ from the actual product or venue. Internal concept only; not publishable.</p>'}<div class="concept-card-actions"><a class="text-link" href="${esc(assets.image)}" target="_blank" rel="noopener noreferrer">Open full-size ${icon('external',13)}</a><button type="button" class="button secondary" data-post="${esc(concept.postId)}" data-open-tab="media">View matching draft</button></div><section class="concept-caption"><div><h3>Instagram ${photo ? 'draft' : 'concept'} caption</h3><button type="button" class="button secondary small" data-concept-copy="${esc(concept.id)}" data-concept-channel="instagram">${icon('copy',12)} Copy caption</button></div><pre>${esc(concept.caption)}</pre></section><section class="concept-caption"><div><h3>Facebook ${photo ? 'draft' : 'concept'} caption</h3><button type="button" class="button secondary small" data-concept-copy="${esc(concept.id)}" data-concept-channel="facebook">${icon('copy',12)} Copy caption</button></div><pre>${esc(concept.facebookCaption)}</pre></section><details class="concept-notes"><summary>Direction notes & references</summary>${concept.notes.length ? `<ul>${concept.notes.map(note => `<li>${esc(note)}</li>`).join('')}</ul>` : ''}${concept.sources.length ? `<ul class="concept-references">${concept.sources.map(source => `<li>${external(safeConceptSourceURL(source.url),source.title)}</li>`).join('')}</ul>` : '<p>No additional references supplied.</p>'}</details></div></article>`;
+    }).join('')}</div>`;
+  }
+
   function safePostAsset(value, postId, downloadAsset = false) {
     if (typeof value !== 'string' || !/^[a-zA-Z0-9_-]+$/.test(String(postId))) return '';
     const candidate = value.replace(/^\.\//, '');
@@ -266,7 +346,7 @@
     const pending = preview && available !== 'failed';
     return `<button class="feed-tile" type="button" data-post="${esc(post.id)}" data-feed-tile="${esc(post.id)}" data-open-tab="media" aria-label="Open ${esc(post.title)}, ${esc(dateLabel(post.date))}, ${ready ? 'visual draft' : 'brief only or preview pending'}"><span class="feed-artwork${ready ? ' has-preview' : ''}" style="${feedTheme(client)}"><span class="brief-only-art"><span class="brief-art-format">${esc(post.format)}</span><strong>${esc(post.title)}</strong><span class="brief-art-label">Brief only</span></span>${pending ? `<img src="${esc(preview.cover)}" alt="${esc(preview.slides[0]?.alt || post.title)}" loading="lazy" decoding="async" width="1080" height="1440" data-feed-preview="${esc(post.id)}">` : ''}${preview?.type === 'carousel' ? `<span class="feed-carousel-symbol" aria-label="Carousel">${icon('copy',17)}</span>` : ''}</span><span class="feed-tile-meta"><time datetime="${esc(post.date)}">${esc(dateLabel(post.date))}</time><span data-feed-status>${ready ? 'Visual draft' : pending ? 'Loading preview' : 'Brief only'}</span></span><span class="feed-tile-title">${esc(post.title)}</span></button>`;
   }
-  function renderFeed(rows) {
+  function renderPlannedFeed(rows) {
     const produced = rows.filter(post => postPreview(post));
     const producedGallery = produced.length ? `<section class="produced-gallery"><div class="section-head"><h2>Created image drafts</h2><span class="proposal-label">${produced.length} posts · open to view every slide</span></div><p>Real artwork is available below. Open a post to see the full-size carousel, its caption and downloads.</p><div class="feed-grid" aria-label="Created image drafts across clients">${produced.map(feedTile).join('')}</div></section>` : '';
     if (state.client === 'all') return `${producedGallery}<section class="feed-chooser"><div class="section-head"><h2>Choose a client feed</h2><span class="proposal-label">Drafts, not live profiles</span></div><p>Open one client to see the planned visual sequence. Original supplied logos remain separate from post artwork; a brief-only tile is a planning aid.</p><div class="feed-client-list">${clients.map(client => `<button type="button" class="feed-client-choice" data-feed-client="${esc(client.id)}">${logo(client,true)}<span><strong>${esc(client.name)}</strong><span>${esc(client.location)}</span>${logoStatus(client)}</span><span aria-hidden="true">↗</span></button>`).join('')}</div></section>`;
@@ -384,8 +464,15 @@
     const labels = VIEWS[state.view];
     $('#view-title').textContent = labels[1];
     $('#view-description').textContent = labels[2];
-    $('#result-status').textContent = state.view === 'research' ? 'Research is shared across the programme. Client selection filters the category reference library.' : state.view === 'brand' ? `${clientScope().length} client workspace${clientScope().length === 1 ? '' : 's'} · profile access and approval limits shown below` : `${rows.length} of ${posts.length} planned drafts · ${state.client === 'all' ? 'all clients' : getClient(state.client)?.name || 'selected client'} · ${dateLabel(state.from)}—${dateLabel(state.to)} 2026`;
-    $('#view-content').innerHTML = state.view === 'overview' ? renderOverview(rows) : state.view === 'calendar' ? renderCalendar(rows) : state.view === 'feed' ? renderFeed(rows) : state.view === 'posts' ? (rows.length ? postList(rows) : empty()) : state.view === 'brand' ? renderBrands() : state.view === 'research' ? renderResearch() : renderProduction(rows);
+    const conceptsView = state.view === 'art-direction';
+    for (const selector of ['#format-filter','#pillar-filter']) $(selector).closest('label').hidden = conceptsView;
+    $('#date-toggle').hidden = conceptsView;
+    $('.export-actions').hidden = conceptsView;
+    $('#search').placeholder = conceptsView ? 'Search art directions…' : 'Search posts, ingredients, ideas…';
+    $('#search').setAttribute('aria-label', conceptsView ? 'Search photo and art direction samples' : 'Search posts and research');
+    if (conceptsView) { $('#date-filters').hidden = true; $('#date-toggle').setAttribute('aria-expanded','false'); }
+    $('#result-status').textContent = conceptsView ? `${conceptRows().length} direction samples · ${state.client === 'all' ? 'all clients' : getClient(state.client)?.name || 'selected client'} · client and search filters apply` : state.view === 'research' ? 'Research is shared across the programme. Client selection filters the category reference library.' : state.view === 'brand' ? `${clientScope().length} client workspace${clientScope().length === 1 ? '' : 's'} · profile access and approval limits shown below` : `${rows.length} of ${posts.length} planned drafts · ${state.client === 'all' ? 'all clients' : getClient(state.client)?.name || 'selected client'} · ${dateLabel(state.from)}—${dateLabel(state.to)} 2026`;
+    $('#view-content').innerHTML = state.view === 'overview' ? renderOverview(rows) : state.view === 'calendar' ? renderCalendar(rows) : state.view === 'feed' ? renderFeed(rows) : state.view === 'art-direction' ? renderArtDirection() : state.view === 'posts' ? (rows.length ? postList(rows) : empty()) : state.view === 'brand' ? renderBrands() : state.view === 'research' ? renderResearch() : renderProduction(rows);
     document.title = `${state.client === 'all' ? labels[0] : getClient(state.client)?.name || labels[0]} · Social studio · Elk`;
     syncURL();
     restoreFocus(previousFocus);
@@ -469,7 +556,15 @@
     const post = posts.find(item => item.id === state.openPost);
     if (!post) return;
     const values = { instagram: post.caption, facebook: post.facebookCaption, cta: post.cta, alt: post.altText, brief: entireBrief(post), link: location.href };
-    const value = text(values[key]);
+    const label = key === 'brief' ? 'Entire draft brief copied' : key === 'link' ? 'Post link copied' : `${key === 'instagram' ? 'Instagram caption' : key === 'facebook' ? 'Facebook caption' : key === 'alt' ? 'Alt text' : 'Call to action'} copied`;
+    await copyText(text(values[key]), label);
+  }
+  async function copyConcept(id, channel) {
+    const concept = artDirection.concepts.find(item => item.id === id);
+    if (!concept) return;
+    await copyText(channel === 'facebook' ? concept.facebookCaption : concept.caption, `${channel === 'facebook' ? 'Facebook' : 'Instagram'} ${concept.kind === 'photo' ? 'draft caption copied' : 'concept caption copied · internal review only'}`);
+  }
+  async function copyText(value, label) {
     try {
       if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(value);
       else {
@@ -483,7 +578,7 @@
         field.remove();
         if (!copied) throw new Error('Clipboard unavailable');
       }
-      showToast(key === 'brief' ? 'Entire draft brief copied' : key === 'link' ? 'Post link copied' : `${key === 'instagram' ? 'Instagram caption' : key === 'facebook' ? 'Facebook caption' : key === 'alt' ? 'Alt text' : 'Call to action'} copied`);
+      showToast(label);
     } catch (_) { showToast('Clipboard is unavailable here. Select the text and copy it with your keyboard.'); }
   }
 
@@ -513,7 +608,7 @@
   function exportJSON() {
     const rows = filteredPosts();
     const selectedIds = new Set(rows.map(post => post.id));
-    const exported = { title: 'Elk Social studio · draft planning export', version: '1.1', status: 'Draft — not publication approval', period: { from: state.from, to: state.to, timezone: 'Europe/London' }, filters: { client: state.client, format: state.format, pillar: state.pillar, query: state.query }, clients: clientScope().map(client => ({ ...client, posts: client.posts.filter(post => selectedIds.has(post.id)).map(({ _client, _name, ...post }) => post) })), guidance: data.guidance, research: data.research, threads: data.threads };
+    const exported = { title: 'Elk Social studio · draft planning export', version: '1.3', status: 'Draft — not publication approval', period: { from: state.from, to: state.to, timezone: 'Europe/London' }, filters: { client: state.client, format: state.format, pillar: state.pillar, query: state.query }, clients: clientScope().map(client => ({ ...client, posts: client.posts.filter(post => selectedIds.has(post.id)).map(({ _client, _name, ...post }) => post) })), guidance: data.guidance, research: data.research, threads: data.threads };
     download(JSON.stringify(exported, null, 2) + '\n', `elk-social-drafts-${state.client}-${state.from}-${state.to}.json`, 'application/json;charset=utf-8');
     showToast(`${rows.length} draft posts exported as JSON`);
   }
@@ -555,8 +650,10 @@
     }
   }
   function bindEvents() {
+    document.addEventListener('load', event => { if (event.target instanceof HTMLImageElement && event.target.hasAttribute('data-concept-image')) { event.target.hidden = false; const missing = event.target.nextElementSibling; if (missing) missing.hidden = true; } },true);
     document.addEventListener('load',event => { if (event.target instanceof HTMLImageElement && (event.target.dataset.feedPreview || event.target.dataset.mediaImage)) updatePreviewImage(event.target,true); },true);
     document.addEventListener('error', event => {
+      if (event.target instanceof HTMLImageElement && event.target.hasAttribute('data-concept-image')) { event.target.hidden = true; const missing = event.target.nextElementSibling; if (missing) missing.hidden = false; }
       if (event.target instanceof HTMLImageElement && (event.target.dataset.feedPreview || event.target.dataset.mediaImage)) updatePreviewImage(event.target,false);
       if (event.target instanceof HTMLImageElement && event.target.closest('[data-logo]')) {
         event.target.hidden = true;
@@ -578,6 +675,8 @@
       else if (target.dataset.dialogTab) setDialogTab(target.dataset.dialogTab);
       else if (target.dataset.mediaNav) moveMedia(target.dataset.mediaNav);
       else if (target.dataset.copy) copyValue(target.dataset.copy);
+      else if (target.dataset.conceptCopy) copyConcept(target.dataset.conceptCopy,target.dataset.conceptChannel);
+      else if (target.dataset.action === 'retry-art-direction') loadArtDirection();
       else if (target.dataset.action === 'reset') resetFilters();
       else if (target.dataset.action === 'close-dialog') closeDialog();
     });
@@ -618,7 +717,7 @@
 
   async function init() {
     $('#search-icon').innerHTML = icon('search', 15);
-    if ($('.version')) $('.version').textContent = 'v1.1';
+    if ($('.version')) $('.version').textContent = 'v1.3';
     bindEvents();
     try {
       const response = await fetch('./data.json', { credentials: 'omit' });
@@ -640,7 +739,8 @@
       if (!posts.some(post => post.id === initialPost)) state.openPost = '';
       render();
       if (initialPost && posts.some(post => post.id === initialPost)) openPost(initialPost);
-      window.__ELK_STUDIO__ = Object.freeze({ version: '1.1', clients: clients.length, posts: posts.length, getView: () => state.view });
+      loadArtDirection();
+      window.__ELK_STUDIO__ = Object.freeze({ version: '1.3', clients: clients.length, posts: posts.length, getView: () => state.view });
     } catch (_) {
       $('#view-content').innerHTML = '<div class="error-note"><h2>The programme could not be opened</h2><p>The planner needs its sanitised <code>data.json</code> beside this page. Open the deployed team link or serve this folder through a local web server; browsers restrict data loading from a file opened directly.</p><p>No client account is connected, and no data has been changed.</p><button type="button" class="button secondary" id="retry-load" style="margin-top:15px">Try again</button></div>';
       $('#result-status').textContent = 'Programme data unavailable';

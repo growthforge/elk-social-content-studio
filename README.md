@@ -1,4 +1,4 @@
-# Elk · Social studio v1.1
+# Elk · Social studio v1.3
 
 A buildless, read-only team planner for 22 October–21 December 2026. It contains 182 planned post drafts and a first produced batch of seven real-photo draft carousels: three 1080×1440 PNG slides per client, 21 slides in total. It does not connect social accounts, schedule posts, record approvals or write status changes.
 
@@ -44,7 +44,7 @@ The optional top-level `programme` object supports `thesis`, `phases: [{title,da
 
 Open through a static web server or the deployed team URL. Direct `file:` loading cannot reliably fetch the dataset. This handoff does not start a server or deploy.
 
-The seven views are Overview, Calendar, Feed, Posts, Brand & audit, Research and Production. Client/search/format/pillar/date filters apply to the post programme and CSV/JSON exports. Research has separate guidance/question/reference tabs and category filters. All 182 posts remain drafts.
+The eight views are Overview, Calendar, Feed, Photo direction, Posts, Brand & audit, Research and Production. Client/search/format/pillar/date filters apply to the post programme and CSV/JSON exports. Research has separate guidance/question/reference tabs and category filters. All 182 posts remain drafts.
 
 Feed shows one client profile at a time, with its supplied logo, public handle or “Identity not verified”, and a three-column portrait grid. It is a planning preview, not a live Instagram profile; no follower or engagement figures are invented. All-clients Feed opens a gallery of created drafts and the client chooser. A produced cover appears only from the supplied local artwork file. Other ideas have explicitly labelled “Brief only” typographic planning tiles, which are not finished artwork. Earliest/latest planned ordering is labelled, and existing filters still apply.
 
@@ -77,3 +77,16 @@ The first command validates JavaScript syntax. The second needs the final `data.
 The coordinating task must inspect desktop and 390px layouts, enlarged text, Feed/chooser/order/filter behaviour, loaded and missing artwork, carousel navigation, full-size/download links, calendar navigation, modal keyboard handling, copy/export, source/thread links and the final published dataset. No browser QA or deployment is certified by this README.
 
 The document carries `noindex,nofollow,noarchive`. Crawlers are permitted to read that tag; Google's official guidance explains that blocking crawling can hide noindex. A project-path robots file does not control the hostname root. Search exclusion is requested, not guaranteed, and applies to the Pages HTML rather than GitHub repository search. Anyone with the link can view; there is no authentication. The selected derived real-photo draft previews are intentionally shared here. Raw originals, private documents/plans, credentials, personal data and commercial/account details must remain excluded. The browser loads local app/data/font/logo/post files, with no remote embeds or analytics.
+
+
+## Photography & art direction · photo-first
+
+`?view=art-direction` opens Photography & art direction. Existing client photography comes first; AI is appropriate only when available resources are insufficient, not as the default for this batch. The optional `art-direction.json` is fetched with `cache: no-store`. An unavailable/malformed/empty file does not prevent the calendar or existing seven real-photo carousels from opening. When samples exist, Feed starts with New photo direction using actual lazy-loaded covers. No missing image is replaced by invented artwork.
+
+The collection remains `{version, status, method: [{title, detail, url?}], concepts: [...]}`; `concepts` is a legacy internal collection key. Each item uses `{id, kind, clientId, postId, title, image, thumbnail, alt, headline, caption, facebookCaption, notes: [...], sources: [{title, url}], status}`. Counts are data-driven. `kind: "photo"` requires `status: "Real-photo draft"`; `image` and `thumbnail` must exactly match that same client's/post's existing `post.preview.slides[0].src` (`assets/posts/<post-id>/01.png`) and `post.preview.cover` (`assets/posts/<post-id>/cover.webp`). It reuses these files; no duplicate art exports or additional concept-folder files are required. These are reviewed planning assets, not human-approved social posts.
+
+Photo cards show Real-photo draft and Original client photography · draft for review, with customer-facing draft Instagram/Facebook captions, source-specific alt text, the existing exact logo/status, full-size access, a matching-draft button that opens all carousel slides in Media, and notes/references. No AI warning is shown for a photo item. All items retain the general reminder that drafts are not approved. Client/Search filters apply; unrelated post date/format/pillar controls and programme-export buttons are hidden here. Copying direction text does not alter a canonical draft or imply scheduling/approval.
+
+Optional future `kind: "ai"` items require `status: "AI concept — internal review"`, separate safe `assets/concepts/<client-id>-concept.png` and `.webp` files with matching stems (optional version token such as `-v2-concept`), and explicit per-card AI/internal/not-publishable and fidelity warnings. This does not authorise AI use or publication. The earlier generated examples are superseded research experiments and must be archived outside the public dashboard for the current photo-first batch.
+
+Run `node scripts/validate-concepts.mjs --required` before publishing the direction collection. It checks kind/status, current client/post joins, exact existing preview references for photos, safe separate PNG/WebP paths/counts only for AI items, regular local files/signatures, no unreferenced concept files, source URLs without credentials, and recursive actual-string private-path/token exclusion. Ordinary caption newlines are not mistaken for Windows paths. Without `--required`, an absent optional file reports SKIP; an existing invalid file fails. It does not establish image fidelity, current subject, rights or human acceptance. Independent UI/desktop/390px review of the successor is still required; this implementation's producer cannot approve their own code.

@@ -1,0 +1,248 @@
+{
+  "version": "1.3-actual-photo-direction",
+  "status": "Real client photography — draft for review",
+  "method": [
+    {
+      "title": "Use real client resources first",
+      "detail": "This batch repurposes existing client photography. AI imagery is reserved for a documented lack of suitable resources and must be realistic, labelled and reviewed."
+    },
+    {
+      "title": "Start with the actual subject",
+      "detail": "The actual plate, cake board, shop pack or room supplies the distinctive detail. Source photographs and original logos remain separate from editable graphic layers.",
+      "url": "https://www.pentagram.com/work/ilili/story"
+    },
+    {
+      "title": "Build a coherent composition",
+      "detail": "Match the crop and reading path to existing light, perspective and depth. A close contact shadow grounds a subject; avoid adding a shadow when the photograph already supplies it.",
+      "url": "https://www.adobe.com/in/products/photoshop/composite-photo.html"
+    },
+    {
+      "title": "Blend only where the source allows",
+      "detail": "Use reversible masks at quiet image edges, or full-bleed crops where fine glass/pack edges cannot be extracted faithfully. Keep the product recognisable.",
+      "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+    },
+    {
+      "title": "Give the headline genuine space",
+      "detail": "Use one short headline in a quiet part of the image. Local readability overlays may darken displayed tones; they must not conceal essential product details.",
+      "url": "https://cromaticstudios.com/work/pain-plaisir/"
+    },
+    {
+      "title": "Review the exported artwork",
+      "detail": "Inspect the actual subject, typography, logo, crop and phone-size readability. These are drafts for team review, with no promised reach or virality."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "nazar-cambridge-photo-direction",
+      "kind": "photo",
+      "clientId": "nazar-cambridge",
+      "postId": "nazar-cambridge-02",
+      "title": "Three Cambridge meze choices",
+      "image": "assets/posts/nazar-cambridge-02/01.png",
+      "thumbnail": "assets/posts/nazar-cambridge-02/cover.webp",
+      "alt": "A complete white plate of textured dip with oil, herbs, garnish and a dried citrus slice, photographed against a dark surface. The original Nazar logo appears above. Text: Cambridge. Three ways to start. Start with cacik. Yoghurt, cucumber, garlic and mint. Nazar Cambridge · Leisure Park. 01 / 03.",
+      "headline": "Start with cacik.",
+      "caption": "Cool cacik. Hummus with pan-fried lamb. Filo filled with spinach and feta.\n\nThree different ways to begin at Nazar Cambridge: cacik, hummus kavurma and sigara borek. A little menu knowledge before the first plate reaches the table.\n\nExplore the Cambridge menu. Please discuss dietary requirements with the team.",
+      "facebookCaption": "Choosing your first meze at Nazar Cambridge? Cacik brings yoghurt, cucumber, garlic and mint; hummus kavurma adds pan-fried lamb to hummus; sigara borek is filled with spinach and feta.\n\nUse this short guide, then explore the full Cambridge menu. Please discuss dietary requirements with the team before ordering.\nhttps://cambridge.nazarkitchen.com/",
+      "notes": [
+        "Real client/source photography repurposed into an integrated composition. Food, packaging and room details are not regenerated.",
+        "The original photographed light and depth guide the crop and type. Disclosed local readability overlays may affect displayed tones.",
+        "Proposed display/body type: Montserrat, Abel. Palette: Nazar Gold #A69050, Espresso #443923, Charcoal #202421, Porcelain #F6F6F2, Booth Mustard #B28A36.",
+        "Historical photographs do not promise current stock or presentation. Intended-use rights and exact-version human approval remain required."
+      ],
+      "sources": [
+        {
+          "title": "Gökyüzü — composition reference",
+          "url": "https://gokyuzurestaurant.co.uk/"
+        },
+        {
+          "title": "Adobe — compositing with layers and masks",
+          "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+        }
+      ],
+      "status": "Real-photo draft"
+    },
+    {
+      "id": "nazar-bedford-photo-direction",
+      "kind": "photo",
+      "clientId": "nazar-bedford",
+      "postId": "nazar-bedford-02",
+      "title": "A Bedford meze shortlist",
+      "image": "assets/posts/nazar-bedford-02/01.png",
+      "thumbnail": "assets/posts/nazar-bedford-02/cover.webp",
+      "alt": "A complete white plate of ridged beige dip with oil, red garnish and green herbs, on its photographed dark stone surface. Nazar’s original gold logo is at upper right. Text: BEDFORD / MEZE. Start with a swirl. Hummus · chickpea and tahini. 17 High Street · Bedford. 01 / 03.",
+      "headline": "Start with a swirl.",
+      "caption": "A Bedford meze shortlist: hummus, baba ganoush and mixed olives.\n\nThree plates to explore before you choose your start. Find Nazar Bedford at 17 High Street and view the menu. Please discuss dietary requirements with the team.\n\n#NazarBedford #BedfordFood #BedfordHighStreet",
+      "facebookCaption": "A Bedford meze shortlist: hummus, baba ganoush and mixed olives.\n\nThree plates to explore before you choose your start. Find Nazar Bedford at 17 High Street and view the menu. Please discuss dietary requirements with the team.\nhttps://bedford.nazarkitchen.com/",
+      "notes": [
+        "Real client/source photography repurposed into an integrated composition. Food, packaging and room details are not regenerated.",
+        "The original photographed light and depth guide the crop and type. Disclosed local readability overlays may affect displayed tones.",
+        "Proposed display/body type: Montserrat, Abel. Palette: Nazar Gold #A69050, Espresso #443923, Charcoal #202421, Porcelain #F6F6F2, Velvet Red #8A3737.",
+        "Historical photographs do not promise current stock or presentation. Intended-use rights and exact-version human approval remain required."
+      ],
+      "sources": [
+        {
+          "title": "TAS Restaurants — composition reference",
+          "url": "https://www.tasrestaurants.co.uk/"
+        },
+        {
+          "title": "Adobe — compositing with layers and masks",
+          "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+        }
+      ],
+      "status": "Real-photo draft"
+    },
+    {
+      "id": "pera-patisserie-photo-direction",
+      "kind": "photo",
+      "clientId": "pera-patisserie",
+      "postId": "pera-02",
+      "title": "The green board, in real photographs",
+      "image": "assets/posts/pera-02/01.png",
+      "thumbnail": "assets/posts/pera-02/cover.webp",
+      "alt": "Close crop of the left side and layers of a dark square cake, with part of its gold decoration and the ribbed green Pera board visible. Exact Pera logo at upper left. Text: Look closer.",
+      "headline": "Look closer.",
+      "caption": "Look beneath the decoration.\n\nGreen boards. Fine borders. A small Pera detail beneath three different cakes.\n\nTake a closer look.",
+      "facebookCaption": "Three cakes. One detail beneath them.\n\nThe green board and its fine border are easy to miss at first. Take a closer look at Pera Patisserie.\nhttps://www.perapatisserie.co.uk/",
+      "notes": [
+        "Real client/source photography repurposed into an integrated composition. Food, packaging and room details are not regenerated.",
+        "The original photographed light and depth guide the crop and type. Disclosed local readability overlays may affect displayed tones.",
+        "Proposed display/body type: Gloock, Hanken Grotesk. Palette: Cake Board Green #1D6B53, Fascia Sage #93AEA2, Mural Mint #8FC6A4, Opera Black #160A04, Counter White #EEF2EE, Board Line #EFE6CB.",
+        "Historical photographs do not promise current stock or presentation. Intended-use rights and exact-version human approval remain required."
+      ],
+      "sources": [
+        {
+          "title": "Hafiz Mustafa 1864 — composition reference",
+          "url": "https://www.hafizmustafa.com/"
+        },
+        {
+          "title": "Adobe — compositing with layers and masks",
+          "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+        }
+      ],
+      "status": "Real-photo draft"
+    },
+    {
+      "id": "liman-islington-photo-direction",
+      "kind": "photo",
+      "clientId": "liman-islington",
+      "postId": "liman-islington-08",
+      "title": "A table on Penton Street",
+      "image": "assets/posts/liman-islington-08/01.png",
+      "thumbnail": "assets/posts/liman-islington-08/cover.webp",
+      "alt": "Portrait crop of Liman’s dining room: exposed brick, upholstered chairs, table flowers and a large foreground stemmed glass. Original LIMAN wordmark. Text: PENTON STREET · ISLINGTON. A table on Penton Street. 60 Penton Street.",
+      "headline": "A table on Penton Street.",
+      "caption": "Exposed brick. Flowers on the table. Glassware catching the light.\n\nA few details from Liman’s dining room on Penton Street, Islington. Make the menu part of your dinner plan, then speak to our team about your table and any dietary requirements.\n\nFind Liman at 60 Penton Street.",
+      "facebookCaption": "A look at the dining-room details at Liman: exposed brick, table flowers and glassware in the light.\n\nPlanning dinner in Islington? Keep 60 Penton Street with the plan, explore the menu and speak to the team about your table and dietary requirements before visiting.\nhttps://www.liman.co.uk/",
+      "notes": [
+        "Real client/source photography repurposed into an integrated composition. Food, packaging and room details are not regenerated.",
+        "The original photographed light and depth guide the crop and type. Disclosed local readability overlays may affect displayed tones.",
+        "Proposed display/body type: Fraunces, Source Sans 3. Palette: Penton Ink #243338, Harbour Teal #32686A, Porcelain White #F7F8F4, Pomegranate #8B3945, Leaf Green #52654B.",
+        "Historical photographs do not promise current stock or presentation. Intended-use rights and exact-version human approval remain required."
+      ],
+      "sources": [
+        {
+          "title": "Sofra — composition reference",
+          "url": "https://www.sofra.co.uk/"
+        },
+        {
+          "title": "Adobe — compositing with layers and masks",
+          "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+        }
+      ],
+      "status": "Real-photo draft"
+    },
+    {
+      "id": "aara-birmingham-photo-direction",
+      "kind": "photo",
+      "clientId": "aara-birmingham",
+      "postId": "aara-01",
+      "title": "A first look at Aara",
+      "image": "assets/posts/aara-01/01.png",
+      "thumbnail": "assets/posts/aara-01/cover.webp",
+      "alt": "Aara’s frontage and gated entrance fill the slide. Text: Aara, Birmingham; Icknield Street; 108–109 Icknield Street. The Aara elephant-and-pot logo appears at upper right.",
+      "headline": "Icknield Street.",
+      "caption": "From Icknield Street to the kitchen.\n\nThe front door. The tandoor. A moment at the pan. A first look at Aara in Birmingham’s Jewellery Quarter.\n\nExplore our menu before your visit.",
+      "facebookCaption": "Find Aara at 108–109 Icknield Street in Birmingham’s Jewellery Quarter.\n\nHere’s a look from the entrance to the tandoor and pan. Explore our menu before your visit.\nhttps://www.aaraindian.com/",
+      "notes": [
+        "Real client/source photography repurposed into an integrated composition. Food, packaging and room details are not regenerated.",
+        "The original photographed light and depth guide the crop and type. Disclosed local readability overlays may affect displayed tones.",
+        "Proposed display/body type: Sora, Source Sans 3. Palette: Owner Peach Puff #FFDAB9, Elephant Leaf #2C6848, Diya Orange #F48B22, Coral Accent #E86E60, Tandoor Charcoal #1B201C.",
+        "Historical photographs do not promise current stock or presentation. Intended-use rights and exact-version human approval remain required."
+      ],
+      "sources": [
+        {
+          "title": "We Desi Birmingham — composition reference",
+          "url": "https://www.wedesibirmingham.com/"
+        },
+        {
+          "title": "Adobe — compositing with layers and masks",
+          "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+        }
+      ],
+      "status": "Real-photo draft"
+    },
+    {
+      "id": "tw-fresh-food-centre-photo-direction",
+      "kind": "photo",
+      "clientId": "tw-fresh-food-centre",
+      "postId": "TW-02",
+      "title": "Three at-home olive ideas",
+      "image": "assets/posts/TW-02/01.png",
+      "thumbnail": "assets/posts/TW-02/cover.webp",
+      "alt": "TW Fresh Food Centre's steel olive counter: purple olives, green olives and a serving spoon above a pale counter edge. TW logo at the top right. Text: From the TW olive counter. Three at-home ideas. A little on the side. 01 / Bread + yoghurt dip. 283 Upper Grosvenor Road.",
+      "headline": "A little on the side.",
+      "caption": "A small bowl can earn its place on the table.\n\nThree at-home ideas for olives: beside bread and a yoghurt dip; alongside roasted vegetables; or in a little bowl to share before dinner.\n\nThe photographs show TW’s olive counter. The pairings are serving ideas for your own table. Ask the team what’s available when you visit 283 Upper Grosvenor Road.",
+      "facebookCaption": "Three simple ways to serve olives at home: with bread and a yoghurt dip, alongside roasted vegetables, or in a small sharing bowl before dinner.\n\nThese photographs show the TW olive counter, rather than the finished pairings. Visit TW Fresh Food Centre at 283 Upper Grosvenor Road, Tunbridge Wells, and ask the team about the current selection.",
+      "notes": [
+        "Real client/source photography repurposed into an integrated composition. Food, packaging and room details are not regenerated.",
+        "The original photographed light and depth guide the crop and type. Disclosed local readability overlays may affect displayed tones.",
+        "Proposed display/body type: Cinzel, Barlow. Palette: Forest Green #1E4926, Spring Lime #98CB14, Butcher Red #C8321A, Golden Leaf #F2B23D, Shop White #FFFFFF, Slate #1F2A24.",
+        "Historical photographs do not promise current stock or presentation. Intended-use rights and exact-version human approval remain required.",
+        "The supplied logo is a concept identity awaiting owner selection."
+      ],
+      "sources": [
+        {
+          "title": "Panzer’s — composition reference",
+          "url": "https://panzers.co.uk/"
+        },
+        {
+          "title": "Adobe — compositing with layers and masks",
+          "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+        }
+      ],
+      "status": "Real-photo draft"
+    },
+    {
+      "id": "the-local-shop-photo-direction",
+      "kind": "photo",
+      "clientId": "the-local-shop",
+      "postId": "LOCAL-07",
+      "title": "Read the pack. Find the shop.",
+      "image": "assets/posts/LOCAL-07/01.png",
+      "thumbnail": "assets/posts/LOCAL-07/cover.webp",
+      "alt": "Close portrait crop of Topaz Mel Klasika flour bags, with the Cyrillic brand and Klasika name visible. The Local logo is at upper left. Text: Start with the pack. Topaz Mel Klasika. 01 / 03.",
+      "headline": "Start with the pack.",
+      "caption": "A familiar brand can be the best starting point. The next detail is on the pack.\n\nTopaz Mel Klasika flour. Naty cocoa wafers. Look for the name, then check the type or flavour rather than guessing from the shelf. Please check the full label for ingredients and dietary information.\n\nThese photographs show a past selection. Ask about current availability at The Local, 187 Silverdale Road, Tunbridge Wells.",
+      "facebookCaption": "Looking for a particular pack at The Local? Start with its name, then check the type or flavour. These photographs show Topaz Mel Klasika flour and Naty cocoa wafers, followed by the shop’s Silverdale Road fascia.\n\nCheck the full label for ingredients and dietary information. Photographed stock can change; ask the team about current availability at 187 Silverdale Road, Tunbridge Wells.",
+      "notes": [
+        "Real client/source photography repurposed into an integrated composition. Food, packaging and room details are not regenerated.",
+        "The original photographed light and depth guide the crop and type. Disclosed local readability overlays may affect displayed tones.",
+        "Proposed display/body type: Fraunces, Jost. Palette: Plum #531432, Lime #8DCF45, Tomato Red #E0312F, Cream #F6EFDF, Deep Plum #330B1E.",
+        "Historical photographs do not promise current stock or presentation. Intended-use rights and exact-version human approval remain required.",
+        "The supplied logo is a concept identity awaiting owner selection."
+      ],
+      "sources": [
+        {
+          "title": "Food Plus — composition reference",
+          "url": "https://www.foodplus.eu/"
+        },
+        {
+          "title": "Adobe — compositing with layers and masks",
+          "url": "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/transform-manipulate-reshape/combine-images-in-photoshop.html"
+        }
+      ],
+      "status": "Real-photo draft"
+    }
+  ]
+}
