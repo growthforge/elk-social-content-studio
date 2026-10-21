@@ -1,5 +1,5 @@
 {
-  "version": "1.3-actual-photo-rework",
+  "version": "2.0-direction-reset",
   "observed": "2026-10-21",
   "window": {
     "from": "2026-10-22",
@@ -7,7 +7,7 @@
     "timezone": "Europe/London"
   },
   "programme": {
-    "thesis": "Proposed strategy: earn relevant local attention through recognisable places, specific products and real work, then make the next menu, enquiry or shopping decision easier. There is no promised viral result.",
+    "thesis": "Direction reset: seven distinct story briefs precede further production. The previous creative was rejected.",
     "phases": [
       {
         "title": "Establish the subject",
@@ -28,9 +28,9 @@
         "review": "Use repeated directional evidence and actual enquiries/bookings where attributable. Keep original hypotheses if data is insufficient."
       }
     ],
-    "cadence": "Planning assumption: 3 feed posts per week, 26 per client over the rolling two-month window. Each has a three-frame Story companion. Use a weekly source/production review; posting dates and slots are proposals, not accepted delivery commitments.",
+    "cadence": "Earlier26-per-client calendar is held for rebriefing. New programme sequence is conditional on source qualification, pilot feedback, business capacity and human creative acceptance.",
     "measurement": "Restaurant outcomes: qualified enquiries and verified booking completions. Retail outcomes: relevant product enquiries and voluntary source answers. Reach, watch time, shares, saves and link taps are separate signals, with their denominator and observation window.",
-    "limits": "All 182 posts remain drafts. Seven posts have revised actual-photo carousel artwork and slide downloads, produced in the seven client execution chats; the other 175 entries remain copy and production briefs. Photography & art direction and Feed provide direct previews and captions. This batch uses real client photographs, with no AI-generated food, packs, people or venue pixels. No account scheduling, live status sync or client approval is implied. Raw originals and private source records remain local."
+    "limits": "All182earlier calendar drafts are held. The21existing slides are rejected direction studies preserved for comparison, with caption copying disabled. New Direction reset contains proposed briefs, not final social posts. No account is scheduled or published by this dashboard."
   },
   "clients": [
     {
@@ -323,7 +323,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "BST",
           "indiaTime": "23 Oct 22:00 IST",
           "series": "Place and occasion"
@@ -379,7 +379,7 @@
             "Confirm intended social photography/logo rights and any visible-person consent. No music or speech track is included in these static exports.",
             "Check the actual Instagram upload route, ordering, crop, alt text and caption before release."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 17:45 IST",
           "productionVersion": "v3.0-actual-photo-integrated",
@@ -449,7 +449,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "28 Oct 23:00 IST",
           "series": "Kitchen craft"
@@ -498,7 +498,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Oct 23:00 IST",
           "series": "Place and occasion"
@@ -547,7 +547,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Nov 17:45 IST",
           "series": "Food detail"
@@ -598,7 +598,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Nov 23:00 IST",
           "series": "Menu confidence"
@@ -647,7 +647,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 23:00 IST",
           "series": "Food detail"
@@ -698,7 +698,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Nov 17:45 IST",
           "series": "Visit planning"
@@ -747,7 +747,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Nov 23:00 IST",
           "series": "Kitchen craft"
@@ -794,7 +794,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "13 Nov 23:00 IST",
           "series": "Food detail"
@@ -843,7 +843,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Nov 17:45 IST",
           "series": "Menu confidence"
@@ -892,7 +892,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Nov 23:00 IST",
           "series": "Kitchen craft"
@@ -941,7 +941,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "20 Nov 23:00 IST",
           "series": "Place and occasion"
@@ -990,7 +990,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "23 Nov 17:45 IST",
           "series": "Menu confidence"
@@ -1039,7 +1039,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "25 Nov 23:00 IST",
           "series": "Food detail"
@@ -1090,7 +1090,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Nov 23:00 IST",
           "series": "Place and occasion"
@@ -1142,7 +1142,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Nov 17:45 IST",
           "series": "Visit planning"
@@ -1191,7 +1191,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Dec 23:00 IST",
           "series": "Food detail"
@@ -1240,7 +1240,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Dec 23:00 IST",
           "series": "Place and occasion"
@@ -1289,7 +1289,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "07 Dec 17:45 IST",
           "series": "Kitchen craft"
@@ -1339,7 +1339,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Dec 23:00 IST",
           "series": "Menu confidence"
@@ -1388,7 +1388,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Dec 23:00 IST",
           "series": "Kitchen craft"
@@ -1435,7 +1435,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "14 Dec 17:45 IST",
           "series": "Food detail"
@@ -1487,7 +1487,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Dec 23:00 IST",
           "series": "Visit planning"
@@ -1536,7 +1536,7 @@
             "Final Story overlays and link sticker must use the Cambridge destination stated here; inspect all bio links before making a link-in-bio booking claim.",
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Dec 23:00 IST",
           "series": "Food detail"
@@ -1587,7 +1587,7 @@
             "Check ingredient/variant and current availability against the Cambridge kitchen; partial component text is not a complete allergen statement.",
             "Confirm current Cambridge room appearance against the dated gold-booth reference; no Bedford red-room imagery, copied guest faces or visible stale price/menu cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "21 Dec 17:45 IST",
           "series": "Community and welcome"
@@ -1906,7 +1906,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "BST",
           "indiaTime": "23 Oct 22:00 IST",
           "series": "Place and occasion"
@@ -1962,7 +1962,7 @@
             "Confirm intended social photography/logo rights and any visible-person consent. No music or speech track is included in these static exports.",
             "Check the actual Instagram upload route, ordering, crop, alt text and caption before release."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 17:45 IST",
           "productionVersion": "v3.0-photo-integrated",
@@ -2032,7 +2032,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "28 Oct 23:00 IST",
           "series": "Kitchen craft"
@@ -2083,7 +2083,7 @@
             "Venue confirms the current private-room layout against the dated red-room source; no capacity/package/date promise, copied guest faces or visible stale price cards.",
             "Authorised venue team confirms private-dining enquiry route and present arrangements; published room information is not a promise of availability/exclusivity or service allocation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Oct 23:00 IST",
           "series": "Place and occasion"
@@ -2132,7 +2132,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Nov 17:45 IST",
           "series": "Food detail"
@@ -2186,7 +2186,7 @@
             "Venue confirms the current private-room layout against the dated red-room source; no capacity/package/date promise, copied guest faces or visible stale price cards.",
             "Authorised venue team confirms private-dining enquiry route and present arrangements; published room information is not a promise of availability/exclusivity or service allocation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Nov 23:00 IST",
           "series": "Visit planning"
@@ -2235,7 +2235,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 23:00 IST",
           "series": "Food detail"
@@ -2285,7 +2285,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Nov 17:45 IST",
           "series": "Menu confidence"
@@ -2334,7 +2334,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Nov 23:00 IST",
           "series": "Kitchen craft"
@@ -2381,7 +2381,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "13 Nov 23:00 IST",
           "series": "Food detail"
@@ -2430,7 +2430,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Nov 17:45 IST",
           "series": "Visit planning"
@@ -2479,7 +2479,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Nov 23:00 IST",
           "series": "Kitchen craft"
@@ -2531,7 +2531,7 @@
             "Venue confirms the current private-room layout against the dated red-room source; no capacity/package/date promise, copied guest faces or visible stale price cards.",
             "Authorised venue team confirms private-dining enquiry route and present arrangements; published room information is not a promise of availability/exclusivity or service allocation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "20 Nov 23:00 IST",
           "series": "Private dining planning"
@@ -2581,7 +2581,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "23 Nov 17:45 IST",
           "series": "Menu confidence"
@@ -2630,7 +2630,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "25 Nov 23:00 IST",
           "series": "Food detail"
@@ -2683,7 +2683,7 @@
             "Venue confirms the current private-room layout against the dated red-room source; no capacity/package/date promise, copied guest faces or visible stale price cards.",
             "Authorised venue team confirms private-dining enquiry route and present arrangements; published room information is not a promise of availability/exclusivity or service allocation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Nov 23:00 IST",
           "series": "Place and occasion"
@@ -2732,7 +2732,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Nov 17:45 IST",
           "series": "Visit planning"
@@ -2781,7 +2781,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Dec 23:00 IST",
           "series": "Food detail"
@@ -2833,7 +2833,7 @@
             "Venue confirms the current private-room layout against the dated red-room source; no capacity/package/date promise, copied guest faces or visible stale price cards.",
             "Authorised venue team confirms private-dining enquiry route and present arrangements; published room information is not a promise of availability/exclusivity or service allocation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Dec 23:00 IST",
           "series": "Place and occasion"
@@ -2882,7 +2882,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "07 Dec 17:45 IST",
           "series": "Kitchen craft"
@@ -2931,7 +2931,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Dec 23:00 IST",
           "series": "Menu confidence"
@@ -2980,7 +2980,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Dec 23:00 IST",
           "series": "Kitchen craft"
@@ -3027,7 +3027,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "14 Dec 17:45 IST",
           "series": "Food detail"
@@ -3077,7 +3077,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Dec 23:00 IST",
           "series": "Visit planning"
@@ -3126,7 +3126,7 @@
             "Verify this post’s Bedford-specific Story/FB destination; do not use a Cambridge ordering or table link.",
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Dec 23:00 IST",
           "series": "Food detail"
@@ -3177,7 +3177,7 @@
             "Kitchen confirms the named current menu plate/variant and any ingredient text; partial components are not a complete allergen statement.",
             "Venue confirms the current private-room layout against the dated red-room source; no capacity/package/date promise, copied guest faces or visible stale price cards."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "21 Dec 17:45 IST",
           "series": "Community and welcome"
@@ -3462,29 +3462,23 @@
           "time": "17:30 proposed Europe/London slot; test against account Insights",
           "format": "Reel",
           "pillar": "Craft & people",
-          "title": "The scissors cut",
-          "hook": "The first cut gets your attention. The layers keep it.",
-          "caption": "The first cut gets your attention. The layers keep it.\n\nBaklava at Pera, from the tray to the moment the piece lifts free. Watch the edge, then decide which part you would go for first.\n\nGreen Lanes, Harringay.",
-          "facebookCaption": "Before the first bite comes the cut: pastry gives way, the piece lifts, and the layers come into view. A few seconds at Pera’s baklava tray on Green Lanes, Harringay.",
+          "title": "Withdrawn source premise · rebrief required",
+          "hook": "Earlier cutting/recap premise withdrawn after actual frame inspection.",
+          "caption": "Copy withdrawn pending identification and screening of the actual Pera footage.",
+          "facebookCaption": "Copy withdrawn pending identification and screening of the actual Pera footage.",
           "cta": "Find Pera on Green Lanes, Harringay.",
           "onScreen": [
-            "The first cut",
-            "Baklava at Pera",
-            "Green Lanes, Harringay"
+            "Earlier script withdrawn"
           ],
           "production": [
-            "0–2s: start on the scissors touching pastry; no logo intro.",
-            "2–7s: show one complete cut and lift from the same verified tray.",
-            "7–11s: hold the cut edge, then show the PERA apron."
+            "Rebrief from actual viewed source action; SBV7147 is not verified baklava cutting."
           ],
-          "motion": "Use straight cuts on the real snip; retain natural sound if clean. No artificial crunch or added syrup.",
+          "motion": "No motion edit authorised from the withdrawn premise.",
           "story": [
-            "Replay the clean cut with “A closer look at baklava”.",
-            "Follow with verified current counter photo and location sticker.",
-            "Frame 3: full same-tray photograph, “Baklava at Pera · Green Lanes, Harringay”, with verified location sticker."
+            "Rebrief after source identification."
           ],
-          "altText": "Hands cut and lift a piece of baklava from a tray at Pera.",
-          "asset": "Candidate 20260930_SBV7147.MP4; watch full clip and confirm subject before use.",
+          "altText": "No final video exists for this withdrawn source premise.",
+          "asset": "Source correction21October: SBV7147 sampled frames show scissors working near a layered portion’s top decoration. Product/material and continuous action not verified. Use the new direction/source-screening brief.",
           "sourceIds": [
             "P-03",
             "P-06",
@@ -3499,7 +3493,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm scissors scene in original clip and that sound is authentic."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "BST",
           "indiaTime": "23 Oct 22:00 IST",
           "series": "Texture & craft"
@@ -3555,7 +3549,7 @@
             "Confirm intended social photography/logo rights and any visible-person consent. No music or speech track is included in these static exports.",
             "Check the actual Instagram upload route, ordering, crop, alt text and caption before release."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 18:00 IST",
           "productionVersion": "pera-02-photo-rework-v1.1-review-fix",
@@ -3624,7 +3618,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Identify pudding and slice with staff; confirm current categories."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "28 Oct 23:00 IST",
           "series": "Choosing at the counter"
@@ -3669,7 +3663,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Verify the actual piping subject and use current-process wording only if staff confirms."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Oct 23:00 IST",
           "series": "Texture & craft"
@@ -3716,7 +3710,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm current fascia and entrance, step/access facts only if actually inspected."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Nov 18:00 IST",
           "series": "Local orientation"
@@ -3761,7 +3755,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Recheck tiramisu menu and photograph identity; allergen information comes from staff."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Nov 23:00 IST",
           "series": "Product detail"
@@ -3809,7 +3803,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Owner confirms custom enquiry service and who handles it; no fulfilment guarantee."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 23:00 IST",
           "series": "Celebration planning"
@@ -3854,7 +3848,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Staff confirms spelling, identity, current offering and any factual description."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Nov 18:00 IST",
           "series": "Turkish pudding series"
@@ -3900,7 +3894,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm shown process occurs at Pera and product is not named without staff identification."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Nov 23:00 IST",
           "series": "Texture & craft"
@@ -3948,7 +3942,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm all three images depict same variety; no assumed nut filling or portion equivalence."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "13 Nov 23:00 IST",
           "series": "Product literacy"
@@ -3994,7 +3988,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Approve use of archive interior detail; preserve exact logo geometry."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Nov 18:00 IST",
           "series": "Brand recognition"
@@ -4039,7 +4033,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Current slice identity and rights; do not use invented flavour names."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Nov 23:00 IST",
           "series": "Product detail"
@@ -4086,7 +4080,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Owner confirms custom boxes, actual packaging and enquiry handling; no shipping assumption."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "20 Nov 23:00 IST",
           "series": "Thoughtful sharing"
@@ -4131,7 +4125,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm spelling, photo identity and current menu availability."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "23 Nov 18:00 IST",
           "series": "Turkish pudding series"
@@ -4176,7 +4170,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Consent from filmed worker; verify authentic action and sound."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "25 Nov 23:00 IST",
           "series": "Human craft"
@@ -4221,7 +4215,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Do not imply seating availability or any seasonal offer."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Nov 23:00 IST",
           "series": "Local ritual"
@@ -4268,7 +4262,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm service capabilities and avoid allergen/serving guarantees."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Nov 18:00 IST",
           "series": "Hosting usefulness"
@@ -4313,7 +4307,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Inspect every visible ticket/date/label at full export size."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Dec 23:00 IST",
           "series": "Counter discovery"
@@ -4358,7 +4352,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Current dish identity and serving verified before filming."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Dec 23:00 IST",
           "series": "Turkish pudding series"
@@ -4405,7 +4399,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm kurabiye identity, spelling, actual serving and current offering; no ingredient/texture inference from the name."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "07 Dec 18:00 IST",
           "series": "Product discovery"
@@ -4449,7 +4443,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm Turkish tea is current and actual pictured serving is Pera’s."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Dec 23:00 IST",
           "series": "Local ritual"
@@ -4495,7 +4489,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Approve archive use and factual image descriptions."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Dec 23:00 IST",
           "series": "Visual detail"
@@ -4541,7 +4535,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Verify continuity and current process; no time/handmade claim beyond evidence."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "14 Dec 18:00 IST",
           "series": "Texture & craft"
@@ -4585,7 +4579,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm actual pastry/filling and current range; never use stock bread."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Dec 23:00 IST",
           "series": "Counter variety"
@@ -4633,7 +4627,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Confirm festive-period arrangements privately before giving dates; do not publish assumed terms."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Dec 23:00 IST",
           "series": "Sharing occasion"
@@ -4644,30 +4638,23 @@
           "time": "12:30 proposed Europe/London slot; test against account Insights",
           "format": "Reel",
           "pillar": "Community & recap",
-          "title": "A few Pera moments",
-          "hook": "A cut, a spoonful, a finishing touch.",
-          "caption": "A cut, a spoonful, a finishing touch.\n\nThree Pera moments, from baklava to pudding to cake. Different ways to find the dessert you want to spend a little time with.\n\nKeep exploring on Green Lanes, Harringay.",
-          "facebookCaption": "Baklava leaving the tray, a pudding by the spoonful and the last touch on a cake. Three moments from Pera for anyone still deciding where to begin. Find us on Green Lanes, Harringay.",
+          "title": "Withdrawn source premise · rebrief required",
+          "hook": "Earlier cutting/recap premise withdrawn after actual frame inspection.",
+          "caption": "Copy withdrawn pending identification and screening of the actual Pera footage.",
+          "facebookCaption": "Copy withdrawn pending identification and screening of the actual Pera footage.",
           "cta": "Explore the Pera counter.",
           "onScreen": [
-            "Baklava",
-            "Pudding",
-            "Cake",
-            "Pera, Harringay"
+            "Earlier script withdrawn"
           ],
           "production": [
-            "Reuse only three actually approved, published or cleared clips from this programme.",
-            "Each action gets 3 seconds and its factual category label.",
-            "Final frame shows real logo separately; no fabricated customer or performance montage."
+            "Rebrief from actual viewed source action; SBV7147 is not verified baklava cutting."
           ],
-          "motion": "Three clean match cuts on tool movement; final 2s hold. Cleared audio throughout.",
+          "motion": "No motion edit authorised from the withdrawn premise.",
           "story": [
-            "Share each category still in sequence.",
-            "Ask “What should we show more closely next?” for useful editorial input.",
-            "Frame 3: current frontage and verified location sticker, “Explore Pera on Green Lanes”."
+            "Rebrief after source identification."
           ],
-          "altText": "A montage of real baklava cutting, pudding spooning and cake finishing at Pera.",
-          "asset": "Approved source clips from posts 1/19/23; recheck derivative reuse rights.",
+          "altText": "No final video exists for this withdrawn source premise.",
+          "asset": "Source correction21October: SBV7147 sampled frames show scissors working near a layered portion’s top decoration. Product/material and continuous action not verified. Use the new direction/source-screening brief.",
           "sourceIds": [
             "P-03",
             "P-06",
@@ -4682,7 +4669,7 @@
             "Check original footage, visible labels/prices and factual alt text against the final edit.",
             "Only reuse actual available cleared clips; do not imply all earlier posts were published."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "21 Dec 18:00 IST",
           "series": "Series recap"
@@ -4986,7 +4973,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "BST",
           "indiaTime": "23 Oct 22:00 IST",
           "series": "Place and occasion"
@@ -5036,7 +5023,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 17:45 IST",
           "series": "Menu confidence"
@@ -5085,7 +5072,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "28 Oct 23:00 IST",
           "series": "Kitchen craft"
@@ -5134,7 +5121,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Photograph current actual Liman tableware; historic site wording does not verify today’s porcelain provenance. No handmade/origin claim, recreated pattern or unconsenting guests."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Oct 23:00 IST",
           "series": "Hospitality and people"
@@ -5184,7 +5171,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Show and name the actual cured-beef accompaniment with the scallop starter; never present it as a seafood-only plate."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Nov 17:45 IST",
           "series": "Food detail"
@@ -5233,7 +5220,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Nov 23:00 IST",
           "series": "Menu confidence"
@@ -5282,7 +5269,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 23:00 IST",
           "series": "Kitchen craft"
@@ -5339,7 +5326,7 @@
             "Confirm intended social photography/logo rights and any visible-person consent. No music or speech track is included in these static exports.",
             "Check the actual Instagram upload route, ordering, crop, alt text and caption before release."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Nov 17:45 IST",
           "productionVersion": "v2.0-photo-rework",
@@ -5409,7 +5396,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Nov 23:00 IST",
           "series": "Kitchen craft"
@@ -5456,7 +5443,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "13 Nov 23:00 IST",
           "series": "Food detail"
@@ -5505,7 +5492,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Nov 17:45 IST",
           "series": "Menu confidence"
@@ -5554,7 +5541,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Nov 23:00 IST",
           "series": "Kitchen craft"
@@ -5603,7 +5590,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Photograph current actual Liman tableware; historic site wording does not verify today’s porcelain provenance. No handmade/origin claim, recreated pattern or unconsenting guests."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "20 Nov 23:00 IST",
           "series": "Hospitality and people"
@@ -5653,7 +5640,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "23 Nov 17:45 IST",
           "series": "Menu confidence"
@@ -5702,7 +5689,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "25 Nov 23:00 IST",
           "series": "Food detail"
@@ -5753,7 +5740,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Photograph current actual Liman tableware; historic site wording does not verify today’s porcelain provenance. No handmade/origin claim, recreated pattern or unconsenting guests."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Nov 23:00 IST",
           "series": "Hospitality and people"
@@ -5803,7 +5790,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Nov 17:45 IST",
           "series": "Visit planning"
@@ -5852,7 +5839,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Dec 23:00 IST",
           "series": "Food detail"
@@ -5900,7 +5887,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Dec 23:00 IST",
           "series": "Place and occasion"
@@ -5950,7 +5937,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Keep the red-wine sauce explicit and confirm current recipe; do not imply alcohol-free."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "07 Dec 17:45 IST",
           "series": "Kitchen craft"
@@ -6000,7 +5987,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Dec 23:00 IST",
           "series": "Menu confidence"
@@ -6049,7 +6036,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Dec 23:00 IST",
           "series": "Food detail"
@@ -6098,7 +6085,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Photograph current actual Liman tableware; historic site wording does not verify today’s porcelain provenance. No handmade/origin claim, recreated pattern or unconsenting guests."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "14 Dec 17:45 IST",
           "series": "Hospitality and people"
@@ -6149,7 +6136,7 @@
             "Test this post’s actual Liman menu/contact destination and Story wording; no timed service, instant booking, private-room or holiday-opening claim.",
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Dec 23:00 IST",
           "series": "Visit planning"
@@ -6199,7 +6186,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Show and name the actual cured-beef accompaniment with the scallop starter; never present it as a seafood-only plate."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Dec 23:00 IST",
           "series": "Kitchen craft"
@@ -6251,7 +6238,7 @@
             "Kitchen confirms exact current dish, variant and ingredients; component lists do not replace the full allergen conversation.",
             "Photograph current actual Liman tableware; historic site wording does not verify today’s porcelain provenance. No handmade/origin claim, recreated pattern or unconsenting guests."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "21 Dec 17:45 IST",
           "series": "Community and welcome"
@@ -6586,7 +6573,7 @@
             "Confirm intended social photography/logo rights and any visible-person consent. No music or speech track is included in these static exports.",
             "Check the actual Instagram upload route, ordering, crop, alt text and caption before release."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "BST",
           "indiaTime": "23 Oct 22:00 IST",
           "productionVersion": "2.1-photo-rework",
@@ -6654,7 +6641,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Confirm address with current business source; omit parking and hours."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 18:00 IST",
           "series": "Local orientation"
@@ -6701,7 +6688,7 @@
             "Staff confirms name/identity/current recipe; no blanket cuisine authenticity claim.",
             "Chef confirms every named ingredient/detail against the current recipe; list is descriptive, never a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "28 Oct 23:00 IST",
           "series": "Regional menu discovery"
@@ -6748,7 +6735,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Verify actual pot/dish and authentic sound/steam; no cooking-time claim."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Oct 23:00 IST",
           "series": "Biryani craft"
@@ -6795,7 +6782,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Check current vegetarian labels with staff; confirm kitchen allergen wording."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Nov 18:00 IST",
           "series": "Menu usefulness"
@@ -6841,7 +6828,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Staff confirms identity and process; source video inspection mandatory."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Nov 23:00 IST",
           "series": "Kitchen action"
@@ -6888,7 +6875,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Current categories and corresponding images confirmed."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 23:00 IST",
           "series": "First meal planning"
@@ -6933,7 +6920,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Confirm current drink/service and exact image identity."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Nov 18:00 IST",
           "series": "Small rituals"
@@ -6978,7 +6965,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Only use a genuinely recorded approved answer; caption must match actual interview."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Nov 23:00 IST",
           "series": "Kitchen explanation"
@@ -7024,7 +7011,7 @@
             "Dish identity and recipe/heat description verified by kitchen.",
             "Chef confirms every named ingredient/detail against the current recipe; list is descriptive, never a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "13 Nov 23:00 IST",
           "series": "Starter discovery"
@@ -7071,7 +7058,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Confirm which pepper-fry variant is pictured; heat/ingredient copy approved by chef."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Nov 18:00 IST",
           "series": "Useful food distinctions"
@@ -7117,7 +7104,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Confirm dish variety, serving and current offering."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Nov 23:00 IST",
           "series": "Biryani detail"
@@ -7163,7 +7150,7 @@
             "Confirm current dish identity, spelling and recipe details if added.",
             "Chef confirms every named ingredient/detail against the current recipe; list is descriptive, never a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "20 Nov 23:00 IST",
           "series": "Dessert discovery"
@@ -7210,7 +7197,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Verify room/current frontage and consent; do not promise capacity or walk-in availability."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "23 Nov 18:00 IST",
           "series": "Arrival & hospitality"
@@ -7257,7 +7244,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Verify current menu labels and exact photos; no allergen-free claims."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "25 Nov 23:00 IST",
           "series": "Vegetarian tandoor"
@@ -7303,7 +7290,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Verify source clip, sound rights and no private conversation; inherited title is incorrect."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Nov 23:00 IST",
           "series": "Kitchen sound"
@@ -7349,7 +7336,7 @@
             "Owner/chef identifies exact plate and confirms current menu.",
             "Chef confirms every named ingredient/detail against the current recipe; list is descriptive, never a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Nov 18:00 IST",
           "series": "Regional menu discovery"
@@ -7397,7 +7384,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Verify source continuity and exact tikka; consent and safe filming."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Dec 23:00 IST",
           "series": "Tandoor craft"
@@ -7445,7 +7432,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Client confirms enquiry handling and group arrangements; no seasonal package inference."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Dec 23:00 IST",
           "series": "Group meal usefulness"
@@ -7491,7 +7478,7 @@
             "Confirm exact dal, current menu and any ingredient text.",
             "Chef confirms every named ingredient/detail against the current recipe; list is descriptive, never a complete allergen statement."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "07 Dec 18:00 IST",
           "series": "Homestyle menu"
@@ -7537,7 +7524,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Client approves current allergy wording; staff handles individual safety questions."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Dec 23:00 IST",
           "series": "Useful guest information"
@@ -7582,7 +7569,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Verify bread/curry identities and consent; no invented ingredients."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Dec 23:00 IST",
           "series": "Menu pairing"
@@ -7628,7 +7615,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Chef confirms coriander chicken, the dry-fry action and all named ingredients against the current recipe before filming/release; no allergen completeness implied."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "14 Dec 18:00 IST",
           "series": "Kitchen craft"
@@ -7673,7 +7660,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Every pictured person consents; name/role/relationship verified separately."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Dec 23:00 IST",
           "series": "People & hospitality"
@@ -7719,7 +7706,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Current dish availability checked; no implied bundle or holiday terms."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Dec 23:00 IST",
           "series": "Meal planning"
@@ -7768,7 +7755,7 @@
             "Watch actual original footage and inspect labels at final export size; inherited filenames do not establish scene identity.",
             "Do not imply earlier planned posts were published; confirm current mark and all reuse rights."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "21 Dec 18:00 IST",
           "series": "Programme recap"
@@ -8043,7 +8030,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "BST",
           "indiaTime": "23 Oct 21:00 IST",
           "series": "Find the shop"
@@ -8099,7 +8086,7 @@
             "Confirm intended social photography/logo rights and any visible-person consent. No music or speech track is included in these static exports.",
             "Check the actual Instagram upload route, ordering, crop, alt text and caption before release."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "26 Oct 23:45 IST",
           "productionVersion": "TW-02-photo-rework-v2.1",
@@ -8169,7 +8156,7 @@
             "Hemanth’s dated approval must name this final post/export version.",
             "Butcher approves safe, non-graphic preparation and any buying advice."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "28 Oct 23:45 IST",
           "series": "People and craft"
@@ -8216,7 +8203,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Oct 22:00 IST",
           "series": "Dinner inspiration"
@@ -8266,7 +8253,7 @@
             "Hemanth’s dated approval must name this final post/export version.",
             "Owner verifies current product names/ingredients; no allergen, flavour, provenance or health claim without a checked source."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Nov 23:45 IST",
           "series": "Ingredient literacy"
@@ -8314,7 +8301,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Nov 23:45 IST",
           "series": "Dinner inspiration"
@@ -8364,7 +8351,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 22:00 IST",
           "series": "Counter confidence"
@@ -8414,7 +8401,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Nov 23:45 IST",
           "series": "Ingredient literacy"
@@ -8462,7 +8449,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Nov 23:45 IST",
           "series": "Sensory shop detail"
@@ -8509,7 +8496,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "13 Nov 22:00 IST",
           "series": "Pantry discovery"
@@ -8560,7 +8547,7 @@
             "Hemanth’s dated approval must name this final post/export version.",
             "Owner verifies taro identification and final wording; no uncooked consumption, interchangeability or preparation claim."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Nov 23:45 IST",
           "series": "Ingredient literacy"
@@ -8610,7 +8597,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Nov 23:45 IST",
           "series": "Practical shopping"
@@ -8657,7 +8644,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "20 Nov 22:00 IST",
           "series": "Produce detail"
@@ -8707,7 +8694,7 @@
             "Butcher validates any cut names; do not promise tailored cuts or repeat old daily-preparation claims.",
             "Butcher confirms current lamb rack/chop identity, actual process, filming safety and non-graphic framing; no cooking advice or guaranteed cut service."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "23 Nov 23:45 IST",
           "series": "Counter craft"
@@ -8755,7 +8742,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "25 Nov 23:45 IST",
           "series": "Pantry to plate"
@@ -8803,7 +8790,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Nov 22:00 IST",
           "series": "Weekend meal planning"
@@ -8853,7 +8840,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Nov 23:45 IST",
           "series": "Meal planning"
@@ -8901,7 +8888,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "02 Dec 23:45 IST",
           "series": "Ingredient detail"
@@ -8950,7 +8937,7 @@
             "Hemanth’s dated approval must name this final post/export version.",
             "Butcher verifies the actual process and approves hands/voice use."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Dec 22:00 IST",
           "series": "People and craft"
@@ -8999,7 +8986,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "07 Dec 23:45 IST",
           "series": "Pantry discovery"
@@ -9047,7 +9034,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "09 Dec 23:45 IST",
           "series": "At-home hosting"
@@ -9095,7 +9082,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Dec 22:00 IST",
           "series": "Sweet counter discovery"
@@ -9142,7 +9129,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "14 Dec 23:45 IST",
           "series": "Pantry discovery"
@@ -9192,7 +9179,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "16 Dec 23:45 IST",
           "series": "Festive planning"
@@ -9240,7 +9227,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Dec 22:00 IST",
           "series": "Find the shop"
@@ -9287,7 +9274,7 @@
             "Final creative uses the selected logo only after brand approval; inspect price tickets, customers and halal signage in every frame.",
             "Hemanth’s dated approval must name this final post/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "21 Dec 23:45 IST",
           "series": "Neighbourhood connection"
@@ -9567,7 +9554,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "BST",
           "indiaTime": "23 Oct 21:45 IST",
           "series": "Find your shelf"
@@ -9615,7 +9602,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Oct 00:15 IST",
           "series": "Familiar packs"
@@ -9664,7 +9651,7 @@
             "Hemanth’s dated approval must refer to this exact final copy/export version.",
             "Do not claim the pack is suitable for every recipe or repeat any packaging nutrition/quality claim without verification."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "29 Oct 00:15 IST",
           "series": "Pantry detail"
@@ -9713,7 +9700,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "30 Oct 22:45 IST",
           "series": "New shelf discoveries"
@@ -9760,7 +9747,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "03 Nov 00:15 IST",
           "series": "Pantry to plate"
@@ -9808,7 +9795,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "05 Nov 00:15 IST",
           "series": "Recipe shopping"
@@ -9865,7 +9852,7 @@
             "Confirm intended social photography/logo rights and any visible-person consent. No music or speech track is included in these static exports.",
             "Check the actual Instagram upload route, ordering, crop, alt text and caption before release."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "06 Nov 22:45 IST",
           "productionVersion": "v3.0-real-photo-rework",
@@ -9936,7 +9923,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "10 Nov 00:15 IST",
           "series": "Cupboard planning"
@@ -9984,7 +9971,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "12 Nov 00:15 IST",
           "series": "Pack recognition"
@@ -10031,7 +10018,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "13 Nov 22:45 IST",
           "series": "Food and memory"
@@ -10079,7 +10066,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "17 Nov 00:15 IST",
           "series": "Familiar packs"
@@ -10128,7 +10115,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "19 Nov 00:15 IST",
           "series": "Find the shop"
@@ -10178,7 +10165,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "20 Nov 22:45 IST",
           "series": "Cupboard planning"
@@ -10226,7 +10213,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "24 Nov 00:15 IST",
           "series": "Chiller detail"
@@ -10274,7 +10261,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "26 Nov 00:15 IST",
           "series": "Shelf details"
@@ -10323,7 +10310,7 @@
             "Hemanth’s dated approval must refer to this exact final copy/export version.",
             "Confirm current exact Devin water variant, same-bottle continuity and no health/mineral-content/country inference from brand name."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "27 Nov 22:45 IST",
           "series": "At your table"
@@ -10373,7 +10360,7 @@
             "Hemanth’s dated approval must refer to this exact final copy/export version.",
             "Owner confirms current same-shop Klasika pack; competent reader checks copied Cyrillic; no recipe suitability, nutrition or bakery promise."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "01 Dec 00:15 IST",
           "series": "Pantry detail"
@@ -10421,7 +10408,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "03 Dec 00:15 IST",
           "series": "Pantry textures"
@@ -10469,7 +10456,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "04 Dec 22:45 IST",
           "series": "Sweet shelf discoveries"
@@ -10519,7 +10506,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "08 Dec 00:15 IST",
           "series": "Finding your shelf"
@@ -10567,7 +10554,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "10 Dec 00:15 IST",
           "series": "Practical shopping"
@@ -10614,7 +10601,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "11 Dec 22:45 IST",
           "series": "Pantry details"
@@ -10664,7 +10651,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "15 Dec 00:15 IST",
           "series": "At-home giving"
@@ -10713,7 +10700,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "17 Dec 00:15 IST",
           "series": "Food and memory"
@@ -10762,7 +10749,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "18 Dec 22:45 IST",
           "series": "Find the shop"
@@ -10809,7 +10796,7 @@
             "Approve the final identity; supplied Brand E is a concept. Inspect/crop all prices, alcohol, tobacco, vape, lottery and private customer details.",
             "Hemanth’s dated approval must refer to this exact final copy/export version."
           ],
-          "status": "Draft",
+          "status": "Held for rebriefing",
           "ukZone": "GMT",
           "indiaTime": "22 Dec 00:15 IST",
           "series": "Neighbourhood connection"

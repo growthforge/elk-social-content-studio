@@ -71,7 +71,7 @@ for(const concept of concepts){
   check(Boolean(post),`${concept.id}: matching post must belong to direction client.`);
   for(const field of ['title','alt','headline','caption','facebookCaption'])check(nonempty(concept[field]),`${concept.id}: ${field} required.`);
   check(['photo','ai'].includes(concept.kind),`${concept.id}: kind must be photo or ai.`);
-  check(concept.status===(concept.kind==='photo'?'Real-photo draft':'AI concept — internal review'),`${concept.id}: explicit kind-matched status required.`);
+  check(concept.status===(concept.kind==='photo'?'Rejected direction study · held for rebriefing':'AI concept — internal review'),`${concept.id}: explicit kind-matched status required.`);
   check(Array.isArray(concept.notes)&&concept.notes.every(nonempty),`${concept.id}: notes must be nonempty strings.`);
   check(Array.isArray(concept.sources)&&concept.sources.length>0,`${concept.id}: source references required.`);
   for(const source of Array.isArray(concept.sources)?concept.sources:[]){
@@ -117,4 +117,4 @@ check(!values.some(value=>/\/Users\/|\/private\/|(?:^|[^A-Za-z0-9])[A-Za-z]:[\\/
 check(!values.some(value=>/https?:\/\/(?:drive\.google\.com|docs\.google\.com|claude\.ai)\//i.test(value)),'Collection contains private source/service links.');
 check(!values.some(value=>/(?:api[_-]?key|authorization|bearer|password|session[_-]?cookie|secret)\s*[=:]\s*\S+|gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9_-]{20,}/i.test(value)),'Collection may contain a credential/token; do not publish.');
 if(errors.length){process.stderr.write(errors.map(error=>`FAIL: ${error}`).join('\n')+'\n');process.exit(1);}
-process.stdout.write(`PASS: ${concepts.length-aiCount} Real-photo drafts reuse ${photoFiles.size} exact existing preview files; ${aiCount} AI/internal-review items reference ${aiFiles.size} safe separate PNG/WebP files. Client/post joins, metadata and AI-only asset counts checked. Rights/fidelity/approval remain separate.\n`);
+process.stdout.write(`PASS: ${concepts.length-aiCount} rejected photo studies reuse ${photoFiles.size} exact existing preview files; ${aiCount} AI/internal-review items reference ${aiFiles.size} safe separate PNG/WebP files. Client/post joins, metadata and AI-only asset counts checked. Rights/fidelity/approval remain separate.\n`);

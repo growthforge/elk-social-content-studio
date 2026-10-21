@@ -1,3 +1,17 @@
+# Direction reset · v2.0 draft
+
+21October2026 · [codex]. Hemanth rejected the21photo slides. All182earlier calendar items are held for rebriefing; old caption copying is disabled. The default Direction reset view contains seven new proposed story briefs, three candidates per client and eight conditional periods through21December. These are not finished posts, accepted delivery dates or human creative approvals.
+
+Actual Meta AI/Grok consultations, watched clips, Pinterest/Google Images and pinned GitHub skill reads inform the new briefs. Access limits remain visible. Real source assets come first; no new AI images were commissioned. One Pera process pilot follows separate source qualification and independent review; other clients remain at source-select/beat-sheet stage.
+
+The site remains public/unauthenticated with noindex directives; noindex does not grant privacy or guarantee search absence. No IG/FB account is connected, scheduled or published.
+
+Current sources: `direction-reset.json` for new direction; `data.json` for held prior calendar; `art-direction.json` for rejected studies. The root builder for directions is outside this deployment directory. Keep raw media, private paths, operational records and unapproved camera originals out of this repo.
+
+---
+
+Previous implementation reference (superseded wherever it describes the old creative as current):
+
 # Elk · Social studio v1.3
 
 A buildless, read-only team planner for 22 October–21 December 2026. It contains 182 planned post drafts and a first produced batch of seven real-photo draft carousels: three 1080×1440 PNG slides per client, 21 slides in total. It does not connect social accounts, schedule posts, record approvals or write status changes.

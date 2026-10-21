@@ -1,0 +1,1177 @@
+{
+  "version": "2.0-direction-draft",
+  "date": "2026-10-21",
+  "status": "Direction reset: prior21slides rejected; prior182calendar drafts held for rebriefing.",
+  "goal": "Seven distinct, source-backed client directions; one independently reviewed real-footage pilot before batch production.",
+  "workflow": [
+    "Viewer and useful decision",
+    "Three different stories",
+    "Actual source selection and exact beat sheet",
+    "Independent creative/source review",
+    "One small pilot",
+    "Human creative feedback before scaling"
+  ],
+  "period": "22 October–21 December 2026 · proposed sequence, not agreed delivery dates",
+  "cadence": "Planning hypothesis after pilot acceptance: up to one real Reel and one useful carousel per available production week; timely Stories only with fresh evidence. Reduce output when source/quality/capacity is insufficient. No universal posting rule or booked production commitment.",
+  "measurement": "No account Insights baseline is available. Request actual account data and agreed business priority/capacity. Review the first-frame promise, full-sequence understanding, shares/saves and meaningful menu/enquiry actions in context; compare like formats and distribution, not raw views alone. Direction taps are not visits/bookings. No predicted lift or guaranteed virality.",
+  "ai": "No new AI images commissioned. Existing real assets and unscreened source libraries come first; access gaps are not proof of asset shortage.",
+  "research": [
+    {
+      "title": "Meta AI consultation",
+      "url": "https://www.meta.ai/",
+      "detail": "Actual dialogue; profile/index summaries only, no video/audio. Invented scripts and organic/ad conflation challenged and withdrawn. Suggestions remain hypotheses. Transcript retained in internal research; this link opens the service."
+    },
+    {
+      "title": "Grok / X consultation",
+      "url": "https://grok.com/",
+      "detail": "Actual dialogue and follow-up for primary videos. One restaurant reference directly inspected on X; other reported examples retain reported-only limits. Transcript retained in internal research; this link opens the service."
+    },
+    {
+      "title": "Pera process Reel",
+      "url": "https://www.instagram.com/reel/Dee5rA5sXts/",
+      "detail": "Actually sampled advancing footage: powder/sieve action → consequence → finished green-board product.19.921s; muted, sound not heard."
+    },
+    {
+      "title": "Nazar Cambridge mixology Reel",
+      "url": "https://www.instagram.com/nazarcambridge/reel/DeZ3yNGhGe7/",
+      "detail": "Actually sampled advancing22.522s video: stirring → wider maker/bar → pour/garnish. This is mixology, not grilling; recipe and sound not verified."
+    },
+    {
+      "title": "Nazar Bedford preparation Reel",
+      "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+      "detail": "Actually sampled16.136s video: pepper preparation → operator/workstation → different served plates. It does not prove one same-dish cooking sequence; muted."
+    },
+    {
+      "title": "Aara kitchen Reel",
+      "url": "https://www.instagram.com/aaraindianrestaurant/reel/DeuU5TXzGup/",
+      "detail": "Actually sampled31.137s video: pot/material → clock/workplace → pan/bubbling → spread. Exact ingredients/dishes and the promised kitchen sound were not verified; opening1–3s not sampled."
+    },
+    {
+      "title": "Alma Mill Bakery × Natoora",
+      "url": "https://www.instagram.com/almamillbakery/reel/DdHPGSMKBPZ/",
+      "detail": "Actual partial playback: hands/material/production equipment.33.922901s player; sound not analysed. Reference-only."
+    },
+    {
+      "title": "Mother’s Restaurant on X",
+      "url": "https://x.com/MothersNOLA/status/2113012695431536971",
+      "detail": "Direct partial moving-footage inspection: dining room, people moving and ordering area;27.690666s. US service model does not transfer to UK clients; muted."
+    },
+    {
+      "title": "Natoora / Justified Studio",
+      "url": "https://www.justified.studio/work/natoora",
+      "detail": "Pinterest/Google Images discovery followed to original designer. One naming/subject relationship; no borrowed provenance, health or impact claims."
+    },
+    {
+      "title": "Toklas historical market poster",
+      "url": "https://www.toklaslondon.com/post/toklas-bakery-summer-fruits-market-saturday-7th-june",
+      "detail": "Original event page and poster inspected. Type has a reason when announcing a real event; no event invented for these clients."
+    },
+    {
+      "title": "GitHub social-video-hooks",
+      "url": "https://github.com/adamperlis/video-skills/blob/main/skills/social-video-hooks/SKILL.md",
+      "detail": "Read, not installed/executed. Borrow precise opening/proof/beat-sheet checks; no promised retention result."
+    },
+    {
+      "title": "Pinned HyperFrames story workflow",
+      "url": "https://github.com/heygen-com/hyperframes/blob/1f8ead7bde73a2acb9ff1c5b6327ad0153bd09b8/skills/hyperframes/references/story.md",
+      "detail": "Read upstream. One viewer, three different films, exact beats before building. Local CLI version differs; no blind upgrade."
+    },
+    {
+      "title": "Pinned copywriting skill",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/e85f3cbc2e4a79bf33b2a12e9bdd9087d414735b/skills/copywriting/SKILL.md",
+      "detail": "Read selectively for audience/proof/specific copy. Unsupported performance statistics and generic cadence are excluded."
+    }
+  ],
+  "quality": [
+    "The first shot poses a specific question or begins a meaningful real action.",
+    "The sequence delivers the promised change, answer or useful distinction.",
+    "The client remains identifiable through real place/product/people when the logo is hidden.",
+    "Every dish, person, sound and practical promise has its own source/permission; no plausible invention.",
+    "Full sequence and readable overlays are checked at phone size; technical validity is a separate check.",
+    "Human creative acceptance and exact-version social release remain open; AI scores cannot supply either."
+  ],
+  "clients": [
+    {
+      "id": "nazar-cambridge",
+      "title": "Find your Cambridge table",
+      "audience": "A first-time visitor planning a meal at Cambridge Leisure Park.",
+      "decision": "Can I recognise the right restaurant, picture arriving and understand one first menu choice?",
+      "purpose": "An informed menu or table enquiry for the Cambridge branch. Business priority and service capacity still need confirmation.",
+      "proof": "The actual Leisure Park frontage and mustard-gold booth room; Cambridge-specific menu and photographs. Bedford footage is excluded.",
+      "stop": "Three isolated meze labels; repeated giant dish names; cinema-speed promises; borrowed Bedford rooms or film.",
+      "selected": "Arrival as a small journey: a recognisable threshold becomes a real table, then one useful menu choice.",
+      "stories": [
+        {
+          "title": "The way to your table",
+          "device": "Continuous spatial journey",
+          "firstLine": "Here’s the way in.",
+          "firstShot": "A person opens the actual Cambridge entrance; the sign and threshold share the frame.",
+          "beats": [
+            "Recognisable entrance and opening door",
+            "The same route into the mustard-gold room",
+            "A consenting host or hands places the real menu on the table",
+            "One actual starter arrives; its checked name appears once"
+          ],
+          "payoff": "A newcomer can recognise the entrance, room and first step of a visit.",
+          "cta": "Keep this for your first Cambridge visit.",
+          "needs": "Correct-branch entrance-to-table footage, current layout, participant permission and one staff-identified plate. No suitable Cambridge original video is local yet; inspect the existing Drive batch first."
+        },
+        {
+          "title": "Cold or hot to start?",
+          "device": "A real two-option menu comparison",
+          "firstLine": "Two ways to start the table.",
+          "firstShot": "Two actual Cambridge servings enter the same table shot, with their scale intact.",
+          "beats": [
+            "Both whole servings together",
+            "One real spoon/serving action from each",
+            "Checked menu names and one supported difference",
+            "The two plates return to the shared wide frame"
+          ],
+          "payoff": "The viewer learns one useful distinction rather than three disconnected names.",
+          "cta": "Send it to the person choosing the first plates.",
+          "needs": "The current meze menu, chef-confirmed recipes/photo identity, matched table photos or footage. Cacik/hummus-kavurma/borek catalogue images are leads, not continuous service."
+        },
+        {
+          "title": "One kitchen question",
+          "device": "A specific demonstration with a real answer",
+          "firstLine": "What changes before this reaches the table?",
+          "firstShot": "The actual cook starts one complete, visible preparation action.",
+          "beats": [
+            "Action begins before explanation",
+            "Cook’s own short answer, accurately subtitled",
+            "Action changes the ingredient or assembly",
+            "That same identified serving is shown complete"
+          ],
+          "payoff": "The filmed change explains one real menu item.",
+          "cta": "Explore the Cambridge menu for the dish shown.",
+          "needs": "Correct raw process and result, identified current dish, consented recorded words and usable sound; do not infer house-making or fuel."
+        }
+      ],
+      "caption": "Here’s the way in.\nFrom our restaurant doorway at Leisure Park to a table at Nazar Cambridge.\nKeep it for your first visit.",
+      "voice": "Direct, welcoming and practical. Let the route or real menu distinction carry the copy; avoid luxury adjectives and imagined cinema deadlines.",
+      "motion": "Let the threshold/room/table changes motivate cuts. Keep spatial continuity; no split-screen restaurant montage or simulated walk-through. Hold a readable venue cue rather than repeat a logo.",
+      "layout": "Full-height real arrival footage with one short opening line, followed by unobstructed room and plate views; a compact location identifier closes the journey.",
+      "sources": [
+        "https://www.instagram.com/nazarcambridge/",
+        "https://cambridge.nazarkitchen.com/"
+      ],
+      "readiness": "Source access: Cambridge raw video not established locally. Still catalogue exists. No motion pilot commissioned.",
+      "name": "Nazar Cambridge",
+      "brand": {
+        "status": "PROPOSED companions for readable captions; no new identity or human approval. Photographic colour stays natural.",
+        "palette": [
+          {
+            "name": "Nazar Gold",
+            "hex": "#A69050"
+          },
+          {
+            "name": "Espresso",
+            "hex": "#443923"
+          },
+          {
+            "name": "Charcoal",
+            "hex": "#202421"
+          },
+          {
+            "name": "Porcelain",
+            "hex": "#F6F6F2"
+          },
+          {
+            "name": "Booth Mustard",
+            "hex": "#B28A36"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "Montserrat",
+            "reason": "PROPOSED open substitute for Gotham identified in the historical menu audit; geometric headlines suit the angular original wordmark."
+          },
+          {
+            "name": "Abel",
+            "reason": "PROPOSED open counterpart to Abel Pro identified in the menu audit; use for short section labels, never small ingredient text."
+          }
+        ],
+        "layout": "Full-height real arrival footage with one short opening line, followed by unobstructed room and plate views; a compact location identifier closes the journey."
+      },
+      "status": "PROPOSED direction · source qualification and creative acceptance pending",
+      "copyStatus": "Conditional draft for the filmed sequence described; not current approved copy. Do not paste into a live post until its factual/source and approval gates pass.",
+      "formats": {
+        "reel": "A real action, journey or explanation that develops; no poster relabelled as filmed video.",
+        "carousel": "A pauseable choice, exact label or matched whole/detail sequence. Each swipe adds information; slide count follows the idea.",
+        "story": "Only a timely verified question/answer or update. Current stock, hours and offers need fresh business-controlled checks; no artificial daily quota."
+      },
+      "calendar": [
+        {
+          "period": "22 Oct–4 Nov",
+          "focus": "Sources and one pilot",
+          "episode": "Screen correct Cambridge footage and storyboard the arrival pilot"
+        },
+        {
+          "period": "5–11 Nov",
+          "focus": "Establish the series",
+          "episode": "Door-to-table journey; useful cold/hot menu comparison"
+        },
+        {
+          "period": "12–18 Nov",
+          "focus": "Show a different proof",
+          "episode": "One kitchen question demonstrated through a complete action"
+        },
+        {
+          "period": "19–25 Nov",
+          "focus": "Add a real person or answer",
+          "episode": "Two people planning their first plates: show scale, not a portion promise"
+        },
+        {
+          "period": "26 Nov–2 Dec",
+          "focus": "Deepen the useful distinction",
+          "episode": "An approved host’s answer to one real first-visit question"
+        },
+        {
+          "period": "3–9 Dec",
+          "focus": "A real planning occasion",
+          "episode": "One different menu construction, supported by the same source discipline"
+        },
+        {
+          "period": "10–16 Dec",
+          "focus": "Revise from evidence",
+          "episode": "Revisit the clearest journey or comparison after actual feedback"
+        },
+        {
+          "period": "17–21 Dec",
+          "focus": "Approved recap and next cycle",
+          "episode": "An approved Cambridge recap; verify any dated service information before use"
+        }
+      ]
+    },
+    {
+      "id": "nazar-bedford",
+      "title": "What goes in the middle?",
+      "audience": "The person organising a dinner or catch-up on Bedford High Street.",
+      "decision": "Which real first plates would we put on our shared table, and what does that table feel like?",
+      "purpose": "Help a dinner organiser discuss the correct Bedford menu and make a useful table enquiry; no unconfirmed package, included-side or capacity promise.",
+      "proof": "Bedford’s 17 High Street identity, red seating/gold room details and its retained meze menu. The shared Nazar logo does not make the branches interchangeable.",
+      "stop": "Mock “best near me” searches; swirls described as a campaign; isolated overhead meze plates; invented regular preferences or standard sides.",
+      "selected": "A dinner decision becomes visible through hands placing two whole starters in the middle of the actual Bedford table.",
+      "stories": [
+        {
+          "title": "The first plates",
+          "device": "A tabletop choice, with whole-plate context",
+          "firstLine": "What goes in the middle?",
+          "firstShot": "Two hands place two staff-identified meze servings at the same Bedford table.",
+          "beats": [
+            "Two complete dishes arrive together",
+            "A spoon or serving action reveals one texture from each",
+            "One checked difference is explained, in plain language",
+            "A wider red/gold table frame shows the two choices together"
+          ],
+          "payoff": "The dinner organiser has a concrete choice to discuss.",
+          "cta": "Send this to your dinner organiser.",
+          "needs": "Current recipes and real serving sizes, same-table footage and original audio if usable. Existing silent three-panel website exports are not the raw components."
+        },
+        {
+          "title": "Inside 17 High Street",
+          "device": "A host answers a practical planning question",
+          "firstLine": "Come through to the table.",
+          "firstShot": "A consenting current host turns from the real doorway toward the red/gold room.",
+          "beats": [
+            "Recognisable High Street entrance",
+            "Host’s genuine answer to one agreed question",
+            "The relevant table/room detail actually shown",
+            "Correct Bedford contact/menu route"
+          ],
+          "payoff": "A planning question is answered in the actual place.",
+          "cta": "Explore the Bedford menu before making a plan.",
+          "needs": "Raw entrance/host footage, current layout and approved answer. No access, noise, private-room or capacity guarantees from old photographs."
+        },
+        {
+          "title": "One plate, from the pass",
+          "device": "A focused kitchen-to-table handoff",
+          "firstLine": "Watch this plate come together.",
+          "firstShot": "A real cook begins the finishing action on a confirmed Bedford serving.",
+          "beats": [
+            "One finishing action in full",
+            "The completed plate in the cook’s hands",
+            "Real handoff or plate landing",
+            "Checked dish name beside the whole serving"
+          ],
+          "payoff": "A current dish becomes recognisable beyond its menu name.",
+          "cta": "Look for the named dish on the current Bedford menu.",
+          "needs": "Correct full-frame originals, same-dish continuity, identification and permissions. Do not infer what comes included."
+        }
+      ],
+      "caption": "What goes in the middle?\nTwo first plates, side by side at Nazar Bedford.\nSend this to the person choosing for the table.",
+      "voice": "Social and decisive, with the table as the point of view. Ask one natural dinner-planning question; the images must supply an answer.",
+      "motion": "Start with plates landing, then cut only when a serving action or useful comparison changes the information. Keep whole plates visible before detail. No obligatory zoom or beat-synced chandelier montage.",
+      "layout": "A shared tabletop and real hands lead; short paired labels appear only after both servings are visible. Red/gold room context belongs in the final wide view.",
+      "sources": [
+        "https://www.instagram.com/nazarturkishkitchen/",
+        "https://bedford.nazarkitchen.com/"
+      ],
+      "readiness": "Four local video files are duplicate-format silent website composites. Raw components, sound and usable sequence remain unqualified.",
+      "name": "Nazar Bedford",
+      "brand": {
+        "status": "PROPOSED companions for readable captions; no new identity or human approval. Photographic colour stays natural.",
+        "palette": [
+          {
+            "name": "Nazar Gold",
+            "hex": "#A69050"
+          },
+          {
+            "name": "Espresso",
+            "hex": "#443923"
+          },
+          {
+            "name": "Charcoal",
+            "hex": "#202421"
+          },
+          {
+            "name": "Porcelain",
+            "hex": "#F6F6F2"
+          },
+          {
+            "name": "Velvet Red",
+            "hex": "#8A3737"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "Montserrat",
+            "reason": "PROPOSED open substitute for Gotham identified in the historical menu audit; geometric headlines suit the angular original wordmark."
+          },
+          {
+            "name": "Abel",
+            "reason": "PROPOSED open counterpart to Abel Pro identified in the menu audit; use for short section labels, never small ingredient text."
+          }
+        ],
+        "layout": "A shared tabletop and real hands lead; short paired labels appear only after both servings are visible. Red/gold room context belongs in the final wide view."
+      },
+      "status": "PROPOSED direction · source qualification and creative acceptance pending",
+      "copyStatus": "Conditional draft for the filmed sequence described; not current approved copy. Do not paste into a live post until its factual/source and approval gates pass.",
+      "formats": {
+        "reel": "A real action, journey or explanation that develops; no poster relabelled as filmed video.",
+        "carousel": "A pauseable choice, exact label or matched whole/detail sequence. Each swipe adds information; slide count follows the idea.",
+        "story": "Only a timely verified question/answer or update. Current stock, hours and offers need fresh business-controlled checks; no artificial daily quota."
+      },
+      "calendar": [
+        {
+          "period": "22 Oct–4 Nov",
+          "focus": "Sources and one pilot",
+          "episode": "Locate raw components; choose two current starters and write the shared-table pilot"
+        },
+        {
+          "period": "5–11 Nov",
+          "focus": "Establish the series",
+          "episode": "The first plates; pauseable comparison carousel"
+        },
+        {
+          "period": "12–18 Nov",
+          "focus": "Show a different proof",
+          "episode": "Inside 17 High Street: one approved planning answer"
+        },
+        {
+          "period": "19–25 Nov",
+          "focus": "Add a real person or answer",
+          "episode": "One actual plate finishing/handoff"
+        },
+        {
+          "period": "26 Nov–2 Dec",
+          "focus": "Deepen the useful distinction",
+          "episode": "A second pair with a genuinely different menu distinction"
+        },
+        {
+          "period": "3–9 Dec",
+          "focus": "A real planning occasion",
+          "episode": "One consented person’s real menu explanation; no invented regular story"
+        },
+        {
+          "period": "10–16 Dec",
+          "focus": "Revise from evidence",
+          "episode": "Repeat the clearer table choice after actual review/Insights if provided"
+        },
+        {
+          "period": "17–21 Dec",
+          "focus": "Approved recap and next cycle",
+          "episode": "An approved table-planning recap; no unconfirmed festive offer"
+        }
+      ]
+    },
+    {
+      "id": "pera-patisserie",
+      "title": "One line. Then the next.",
+      "audience": "A nearby Green Lanes customer considering a celebration cake or noticing how its finish is made.",
+      "decision": "What real finishing detail can I see, and what cake question should I ask the team?",
+      "purpose": "Make the making visible and support an informed cake enquiry. This pilot tests interest in a finishing action, not flavours, freshness or bespoke-service terms.",
+      "proof": "Original piping/tool clips and the real green boards. Pera’s own watched Reels use action → consequence → cake/board. The board is a recognition cue, not the whole story.",
+      "stop": "“Look closer” without a discovery; green-board descriptions as the campaign; unverified cake/flavour names; the false SBV7147 baklava-cut premise; “today” on archival clips.",
+      "selected": "Begin with real piping already underway. A line forms, the hand resets and the next line follows, all in one original take; no invented before/after or padded endcard.",
+      "stories": [
+        {
+          "title": "One finishing pass",
+          "device": "A single-take making detail",
+          "firstLine": "One line. Then the next.",
+          "firstShot": "The blue piping bag is already at work on the actual surface in SBV7136.",
+          "beats": [
+            "Piping begins in the first frame, with existing lines already visible",
+            "A fresh line forms under the moving nozzle",
+            "The hand resets and another line follows in the same take",
+            "The hand lifts and the actual linework remains visible; no claim to show the whole finished cake"
+          ],
+          "payoff": "The viewer sees the making rather than a description of the board.",
+          "cta": "Explore Pera’s cakes on Green Lanes.",
+          "needs": "Single original SBV7136 only:0.000–5.280s. Root observed native upright browser playback/endpoints and a3fps full-duration sequence; source/identity/rights and all-frame check remain separate. Audio not heard: omit it from the silent visual pilot. SBV7140 does not establish a plain-lines before/after; SBV7147 is not verified baklava."
+        },
+        {
+          "title": "A cake question, answered",
+          "device": "A real celebration-planning answer",
+          "firstLine": "Start with the question you’d ask.",
+          "firstShot": "An approved team member handles a real cake example while answering one genuine enquiry.",
+          "beats": [
+            "The actual question, accurately quoted or plainly introduced",
+            "One real example that answers it",
+            "Team member’s own explanation over the relevant detail",
+            "Verified current enquiry route"
+          ],
+          "payoff": "A customer can ask a clearer cake question without invented order terms.",
+          "cta": "Bring your cake question to the team.",
+          "needs": "An actual speaker/question, current enquiry process, identified example, consent and accurate subtitles. No guessed serving counts, lead times or customer commissions."
+        },
+        {
+          "title": "Whole, cut, detail",
+          "device": "A pauseable product examination",
+          "firstLine": "The outside is only the start.",
+          "firstShot": "One identified whole product is shown at a useful scale.",
+          "beats": [
+            "Whole product",
+            "Actual cut section of the same item",
+            "One structural detail shown without recipe inference",
+            "Current checked name and enquiry context"
+          ],
+          "payoff": "A viewer can compare structure and appearance at their own pace.",
+          "cta": "Keep the name for your next cake question.",
+          "needs": "Matching whole/cut photos, staff-confirmed identity, current menu link and rights. Use carousel, not a fake filmed cut made from stills."
+        }
+      ],
+      "caption": "One line. Then the next.\nA few seconds of finishing work at Pera.\nGreen Lanes.",
+      "voice": "Short, observant and lightly curious. Name the visible action; stop before adding unverified flavour, smell, freshness or perfection claims.",
+      "motion": "The piping is the motion. Keep the nozzle, surface and forming lines visible at real speed; no flash, fake steam, generated hands, frozen ending or long logo card. Use only7136 in the first pilot. Omitted audio is an editorial choice, not a claim that the original was silent.",
+      "layout": "Full-height original process footage with a short readable prompt away from the hand/tool; the frame clears for the action and ends on its real result.",
+      "sources": [
+        "https://www.instagram.com/perapatisserieuk/",
+        "https://www.perapatisserie.co.uk/",
+        "https://www.instagram.com/reel/Dee5rA5sXts/",
+        "https://www.instagram.com/perapatisserieuk/reel/DePVKnDJB61/"
+      ],
+      "readiness": "One7136single-take visual pilot selected after sampled source screening; native rotation confirmed.7140transformation premise rejected. No new imagery needed. Audio not auditioned; rights, identity and human acceptance remain open.",
+      "name": "Pera Patisserie",
+      "brand": {
+        "status": "PROPOSED companions for readable captions; no new identity or human approval. Photographic colour stays natural.",
+        "palette": [
+          {
+            "name": "Cake Board Green",
+            "hex": "#1D6B53"
+          },
+          {
+            "name": "Fascia Sage",
+            "hex": "#93AEA2"
+          },
+          {
+            "name": "Mural Mint",
+            "hex": "#8FC6A4"
+          },
+          {
+            "name": "Opera Black",
+            "hex": "#160A04"
+          },
+          {
+            "name": "Counter White",
+            "hex": "#EEF2EE"
+          },
+          {
+            "name": "Board Line",
+            "hex": "#EFE6CB"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "Gloock",
+            "reason": "Proposed large product headings; complements the existing elegant wordmark without redrawing it. Test Turkish diacritics."
+          },
+          {
+            "name": "Hanken Grotesk",
+            "reason": "Proposed compact captions, location labels and useful ordering information; clear at phone size."
+          }
+        ],
+        "layout": "Full-height original process footage with a short readable prompt away from the hand/tool; the frame clears for the action and ends on its real result."
+      },
+      "status": "PROPOSED direction · source qualification and creative acceptance pending",
+      "copyStatus": "Conditional draft for the filmed sequence described; not current approved copy. Do not paste into a live post until its factual/source and approval gates pass.",
+      "formats": {
+        "reel": "A real action, journey or explanation that develops; no poster relabelled as filmed video.",
+        "carousel": "A pauseable choice, exact label or matched whole/detail sequence. Each swipe adds information; slide count follows the idea.",
+        "story": "Only a timely verified question/answer or update. Current stock, hours and offers need fresh business-controlled checks; no artificial daily quota."
+      },
+      "calendar": [
+        {
+          "period": "22 Oct–4 Nov",
+          "focus": "Sources and one pilot",
+          "episode": "Screen originals; make ONE7136single-take piping pilot after source/brief review"
+        },
+        {
+          "period": "5–11 Nov",
+          "focus": "Establish the series",
+          "episode": "A real cake question; useful whole/cut/detail carousel if sources match"
+        },
+        {
+          "period": "12–18 Nov",
+          "focus": "Show a different proof",
+          "episode": "A second finishing action with a different visible consequence"
+        },
+        {
+          "period": "19–25 Nov",
+          "focus": "Add a real person or answer",
+          "episode": "A consenting maker explains one actual choice"
+        },
+        {
+          "period": "26 Nov–2 Dec",
+          "focus": "Deepen the useful distinction",
+          "episode": "Arrival/counter context if matching real footage is accessible"
+        },
+        {
+          "period": "3–9 Dec",
+          "focus": "A real planning occasion",
+          "episode": "One genuine celebration-planning question, with approved current process"
+        },
+        {
+          "period": "10–16 Dec",
+          "focus": "Revise from evidence",
+          "episode": "Repeat the clearest making format after pilot feedback"
+        },
+        {
+          "period": "17–21 Dec",
+          "focus": "Approved recap and next cycle",
+          "episode": "An approved process recap; confirm any seasonal orders before stating terms"
+        }
+      ]
+    },
+    {
+      "id": "liman-islington",
+      "title": "A welcome takes shape",
+      "audience": "Someone choosing an Islington dinner with a companion.",
+      "decision": "Can I picture the welcome and understand one actual dish, beyond another room photograph?",
+      "purpose": "Support an informed dinner/menu enquiry through observed care and a recognisable Penton Street setting.",
+      "proof": "Owned-site hospitality wording, actual porcelain/flowers/brick room and menu. Present people/roles and processes need confirmation; old capacity is not current evidence.",
+      "stop": "Three nearly identical amber room stills; VIBE/DRINKS/FOOD panels; invented founder/regular speech; historic capacity and speed promises.",
+      "selected": "Follow one real table being prepared and served, with a person’s purposeful action connecting the room to hospitality.",
+      "stories": [
+        {
+          "title": "A table taking shape",
+          "device": "One real hospitality task develops into service",
+          "firstLine": "Before the first bite.",
+          "firstShot": "A consenting team member places real porcelain or flowers at the actual table.",
+          "beats": [
+            "A whole table before the action",
+            "One genuine setting/preparation action",
+            "A real person welcomes or serves, if recorded and cleared",
+            "The same table with the identified plate and room context"
+          ],
+          "payoff": "Care becomes observable; atmosphere is the setting for an action.",
+          "cta": "Explore Liman’s menu for your next Penton Street plan.",
+          "needs": "Accessible raw Liman footage, actual participant/task, same-table continuity and served plate. Four historic room stills cannot supply this film."
+        },
+        {
+          "title": "One name on the menu",
+          "device": "A dish construction becomes understandable",
+          "firstLine": "What’s inside this dish?",
+          "firstShot": "The cook opens or serves an identified karniyarik or another confirmed dish.",
+          "beats": [
+            "Whole serving and checked name",
+            "A real cut/serving action",
+            "One cook-confirmed construction detail",
+            "Plate at a table, without dietary or recipe guarantees"
+          ],
+          "payoff": "The unfamiliar menu name gains a visible meaning.",
+          "cta": "Keep the dish name beside the current menu.",
+          "needs": "Actual Liman dish footage/photos, current identification, correct menu and approved explanation; never substitute another restaurant’s aubergine."
+        },
+        {
+          "title": "One question for the host",
+          "device": "A real answer reveals a relevant detail",
+          "firstLine": "Ask us about your evening.",
+          "firstShot": "Current host is in the actual room, responding naturally to one genuine planning question.",
+          "beats": [
+            "Question introduced without a fake testimonial",
+            "Host’s own answer",
+            "The detail that substantiates the answer",
+            "Correct menu/contact route"
+          ],
+          "payoff": "A dinner organiser gets a useful answer from a real person.",
+          "cta": "Bring the team your planning question.",
+          "needs": "Verified speaker/role, consent, recorded words and current practical answer. No invented regular, private-room availability, noise/access or seating claims."
+        }
+      ],
+      "caption": "Before the first bite, there’s a welcome.\nA table taking shape at Liman on Penton Street.\nExplore the menu for the evening you’re planning.",
+      "voice": "Warm and particular, with a person’s action doing the persuasion. No hidden-gem, award or generic luxury language.",
+      "motion": "Hold the whole table long enough to understand the task, then reveal the changed setting and actual service. A purposeful handoff is stronger than panning three flower photographs. Genuine room sound only if recorded and cleared.",
+      "layout": "One full-frame table journey alternates contextual wides with the relevant human action; compact dish labels replace a multi-panel atmosphere collage.",
+      "sources": [
+        "https://www.instagram.com/liman_kitchen/",
+        "https://www.liman.co.uk/",
+        "https://www.liman.co.uk/documents/a-La-Carte-2025.pdf"
+      ],
+      "readiness": "No local source video; earlier Drive folder denied access. Current room images alone do not support this pilot. Source access precedes filming decisions.",
+      "name": "Liman Islington",
+      "brand": {
+        "status": "PROPOSED companions for readable captions; no new identity or human approval. Photographic colour stays natural.",
+        "palette": [
+          {
+            "name": "Penton Ink",
+            "hex": "#243338"
+          },
+          {
+            "name": "Harbour Teal",
+            "hex": "#32686A"
+          },
+          {
+            "name": "Porcelain White",
+            "hex": "#F7F8F4"
+          },
+          {
+            "name": "Pomegranate",
+            "hex": "#8B3945"
+          },
+          {
+            "name": "Leaf Green",
+            "hex": "#52654B"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "Fraunces",
+            "reason": "PROPOSED: a restrained expressive display face for short dish names; distinct from a generic luxury restaurant template."
+          },
+          {
+            "name": "Source Sans 3",
+            "reason": "PROPOSED: highly readable ingredient, address and caption text; all-caps restrained."
+          }
+        ],
+        "layout": "One full-frame table journey alternates contextual wides with the relevant human action; compact dish labels replace a multi-panel atmosphere collage."
+      },
+      "status": "PROPOSED direction · source qualification and creative acceptance pending",
+      "copyStatus": "Conditional draft for the filmed sequence described; not current approved copy. Do not paste into a live post until its factual/source and approval gates pass.",
+      "formats": {
+        "reel": "A real action, journey or explanation that develops; no poster relabelled as filmed video.",
+        "carousel": "A pauseable choice, exact label or matched whole/detail sequence. Each swipe adds information; slide count follows the idea.",
+        "story": "Only a timely verified question/answer or update. Current stock, hours and offers need fresh business-controlled checks; no artificial daily quota."
+      },
+      "calendar": [
+        {
+          "period": "22 Oct–4 Nov",
+          "focus": "Sources and one pilot",
+          "episode": "Resolve media access; map one real table/service story"
+        },
+        {
+          "period": "5–11 Nov",
+          "focus": "Establish the series",
+          "episode": "A table taking shape; menu-name carousel only with matched food images"
+        },
+        {
+          "period": "12–18 Nov",
+          "focus": "Show a different proof",
+          "episode": "One dish construction, demonstrated rather than claimed"
+        },
+        {
+          "period": "19–25 Nov",
+          "focus": "Add a real person or answer",
+          "episode": "One approved host answer with a visible supporting detail"
+        },
+        {
+          "period": "26 Nov–2 Dec",
+          "focus": "Deepen the useful distinction",
+          "episode": "A different actual care/preparation task"
+        },
+        {
+          "period": "3–9 Dec",
+          "focus": "A real planning occasion",
+          "episode": "Menu choice for two companions without a package/portion promise"
+        },
+        {
+          "period": "10–16 Dec",
+          "focus": "Revise from evidence",
+          "episode": "Repeat the clearest hospitality or dish explanation after review"
+        },
+        {
+          "period": "17–21 Dec",
+          "focus": "Approved recap and next cycle",
+          "episode": "An approved dinner-planning recap; verify seasonal menu before use"
+        }
+      ]
+    },
+    {
+      "id": "aara-birmingham",
+      "title": "Know the name. See the dish.",
+      "audience": "A first-time Jewellery Quarter diner curious about the regional names on Aara’s menu.",
+      "decision": "What does this actual menu name refer to, and what useful question should I ask before ordering?",
+      "purpose": "Turn menu uncertainty into an informed menu question or visit enquiry without invented heat scales or regional stereotypes.",
+      "proof": "Owned menu names Andhra chicken fry and Telangana mutton curry, current public Telugu/Hyderabadi positioning and real kitchen leads. Image filenames have already contradicted the pixels.",
+      "stop": "Shut-gate exterior as the appetite hook; an unnamed pan labelled as a dish; rickshaw/nostalgia assumptions; heat numbers, invented recipes and lid-opening promises.",
+      "selected": "One actual cook identifies one real plate and explains one concrete distinction; annotations follow the cook’s answer and the filmed food.",
+      "stories": [
+        {
+          "title": "The name, explained",
+          "device": "Menu literacy through a real serving and voice",
+          "firstLine": "Know the name. See the dish.",
+          "firstShot": "A cook or server presents one staff-identified whole Aara plate.",
+          "beats": [
+            "Whole serving with the exact checked menu name",
+            "The cook’s own short answer to one menu question",
+            "A visible detail or real serving action that supports that answer",
+            "Return to the whole plate and current menu route"
+          ],
+          "payoff": "A first-timer can connect a name to a real dish and one supported difference.",
+          "cta": "Keep the name beside Aara’s current menu.",
+          "needs": "Staff-identified real plate, approved current recipe wording and real recorded answer. Telugu/English subtitles require a competent native reader where used."
+        },
+        {
+          "title": "One action to the plate",
+          "device": "Real cooking continuity",
+          "firstLine": "Watch what changes in the pan.",
+          "firstShot": "One actual cooking action starts with the relevant ingredient visible.",
+          "beats": [
+            "Same-item action begins",
+            "Its physical consequence is visible",
+            "Real completion or transfer",
+            "Matching identified served result"
+          ],
+          "payoff": "A cooking action earns its place by leading to the actual serving.",
+          "cta": "Explore the menu for the dish shown.",
+          "needs": "Screen original AARA/2026/SEP/card1 files and map action/result. Silent website loops and filenames are not proof of steam, tandoor dishes or same-item continuity."
+        },
+        {
+          "title": "First visit, one answer",
+          "device": "A practical welcome in the current place",
+          "firstLine": "Here’s where your first visit starts.",
+          "firstShot": "A staff member opens the current entrance and welcomes the viewer.",
+          "beats": [
+            "Recognisable entrance",
+            "One approved practical question answered",
+            "Actual room/menu detail supporting the answer",
+            "Verified current contact/menu route"
+          ],
+          "payoff": "The viewer recognises the place and knows one next step.",
+          "cta": "Bring the team your menu question.",
+          "needs": "Current entrance/room film and participant consent. No parking, access, hours, noise, capacity or table availability inference."
+        }
+      ],
+      "caption": "Know the name. See the dish.\nOne Aara menu question, answered by the cook and shown on the plate.\nKeep it beside the menu for your first visit.",
+      "voice": "Clear and curious, using approved regional names precisely. Let a real cook explain; no invented family history, heat ranking, authenticity superlative or claim that all regional cooking is the same.",
+      "motion": "Introduce the whole serving before any macro. A label points to the exact filmed detail only while the real answer explains it. Cuts follow cooking/serving changes; no synthetic fire or steam. Subtitles prioritise readability over tiny branding.",
+      "layout": "A real plate and approved speaker lead; one checked menu name and one supporting annotation appear beside the relevant detail, with an unobstructed whole-serving return.",
+      "sources": [
+        "https://www.instagram.com/aaraindianrestaurant/",
+        "https://www.aaraindian.com/",
+        "https://www.aaraindian.com/menu"
+      ],
+      "readiness": "Two silent website derivatives local; raw Drive scene mappings/served dishes unresolved. Current logo master and source authenticity need confirmation. No motion pilot commissioned.",
+      "name": "Aara Indian Restaurant",
+      "brand": {
+        "status": "PROPOSED companions for readable captions; no new identity or human approval. Photographic colour stays natural.",
+        "palette": [
+          {
+            "name": "Owner Peach Puff",
+            "hex": "#FFDAB9"
+          },
+          {
+            "name": "Elephant Leaf",
+            "hex": "#2C6848"
+          },
+          {
+            "name": "Diya Orange",
+            "hex": "#F48B22"
+          },
+          {
+            "name": "Coral Accent",
+            "hex": "#E86E60"
+          },
+          {
+            "name": "Tandoor Charcoal",
+            "hex": "#1B201C"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "Sora",
+            "reason": "Proposed confident English headings; simple shapes leave the supplied illustrated mark room to breathe."
+          },
+          {
+            "name": "Source Sans 3",
+            "reason": "Proposed readable body/subtitles and practical menu/location labels; test all required diacritics."
+          }
+        ],
+        "layout": "A real plate and approved speaker lead; one checked menu name and one supporting annotation appear beside the relevant detail, with an unobstructed whole-serving return."
+      },
+      "status": "PROPOSED direction · source qualification and creative acceptance pending",
+      "copyStatus": "Conditional draft for the filmed sequence described; not current approved copy. Do not paste into a live post until its factual/source and approval gates pass.",
+      "formats": {
+        "reel": "A real action, journey or explanation that develops; no poster relabelled as filmed video.",
+        "carousel": "A pauseable choice, exact label or matched whole/detail sequence. Each swipe adds information; slide count follows the idea.",
+        "story": "Only a timely verified question/answer or update. Current stock, hours and offers need fresh business-controlled checks; no artificial daily quota."
+      },
+      "calendar": [
+        {
+          "period": "22 Oct–4 Nov",
+          "focus": "Sources and one pilot",
+          "episode": "Screen actual raw batch and identify one complete dish/answer"
+        },
+        {
+          "period": "5–11 Nov",
+          "focus": "Establish the series",
+          "episode": "The name, explained; useful menu-name carousel with matched real plates"
+        },
+        {
+          "period": "12–18 Nov",
+          "focus": "Show a different proof",
+          "episode": "One action through to its matching served result"
+        },
+        {
+          "period": "19–25 Nov",
+          "focus": "Add a real person or answer",
+          "episode": "A second menu question with a genuinely different answer"
+        },
+        {
+          "period": "26 Nov–2 Dec",
+          "focus": "Deepen the useful distinction",
+          "episode": "One approved bilingual explanation if a native reviewer is available"
+        },
+        {
+          "period": "3–9 Dec",
+          "focus": "A real planning occasion",
+          "episode": "First-visit answer with actual current place footage"
+        },
+        {
+          "period": "10–16 Dec",
+          "focus": "Revise from evidence",
+          "episode": "Repeat the clearest explanation after review; no fabricated heat test"
+        },
+        {
+          "period": "17–21 Dec",
+          "focus": "Approved recap and next cycle",
+          "episode": "An approved regional-menu recap; verify any dated service/seasonal claim"
+        }
+      ]
+    },
+    {
+      "id": "tw-fresh-food-centre",
+      "title": "Your first scoop",
+      "audience": "A nearby shopper making a practical counter choice for food at home.",
+      "decision": "What do these real counter choices look like, and which question should I ask the team?",
+      "purpose": "Make a specific counter decision tangible; current stock and an approved business contact/identity must be checked before publication.",
+      "proof": "The historical September shoot shows steel olive trays, the red butcher block and green FRESH corner fascia. Exact Instagram identity and the final logo remain unresolved.",
+      "stop": "Anonymous tinted olive macros; imagined prepared pairings; floating food; unverified varieties, sourcing, certification or nutritional claims; a guessed Instagram handle.",
+      "selected": "Open on a real scoop from the counter. Show two identified choices together, not an isolated product-poster treatment.",
+      "stories": [
+        {
+          "title": "Your first scoop",
+          "device": "A useful counter comparison",
+          "firstLine": "Green or dark first?",
+          "firstShot": "A real spoon enters an actual olive tray, with a second real choice visible nearby if true.",
+          "beats": [
+            "Physical scoop begins",
+            "Two actual choices shown without changing their colour",
+            "One staff-verified distinction, or just checked names",
+            "Wider real counter and place cue"
+          ],
+          "payoff": "A shopper sees the choice and knows what to ask at the counter.",
+          "cta": "Ask the team which varieties are available when you visit.",
+          "needs": "Access existing Drive VIDEO folder; identify original scoop/choice/wide shots and current names/stock. Avoid certification signage, bystanders and stale prices."
+        },
+        {
+          "title": "One cut, one useful answer",
+          "device": "Shopkeeper knowledge demonstrated",
+          "firstLine": "What would you ask at the counter?",
+          "firstShot": "An approved staff member handles one identified cut on the actual red block.",
+          "beats": [
+            "Whole identified cut/tool context",
+            "Actual staff answer to a real selection question",
+            "The action that substantiates the answer",
+            "Correct counter/contact cue"
+          ],
+          "payoff": "A practical choice is explained without fabricated expertise or recipe promises.",
+          "cta": "Bring your cooking question to the counter.",
+          "needs": "Current product identity, competent approved answer, real participant and food-safe/context checks. No health, certification or cooking-safety claim without its own source."
+        },
+        {
+          "title": "Corner to counter",
+          "device": "Spatial shopping orientation",
+          "firstLine": "Start at the green corner.",
+          "firstShot": "Actual corner frontage leads into the real produce/counter route.",
+          "beats": [
+            "Recognisable corner",
+            "Actual threshold/route",
+            "One retrieved product or counter interaction",
+            "Place/contact cue"
+          ],
+          "payoff": "The shop becomes a specific nearby place rather than a generic ingredient source.",
+          "cta": "Keep the shop location for your next food shop.",
+          "needs": "Original continuous/compatible route film, privacy screening and verified address/contact. Do not invent shop adjacency or a new interior."
+        }
+      ],
+      "caption": "First scoop: green or dark?\nA closer look at the olive counter at TW Fresh Food Centre.\nAsk the team which varieties are available when you visit.",
+      "voice": "Practical, neighbourly and appetite-led. One honest shopping choice; no luxury slogan, exoticising language or imagined current-stock statement.",
+      "motion": "Start on a tactile real action; widen to explain the choice; end with the counter. Keep actual pack/tray colour. Record genuine spoon/room sound only if present and cleared. No floating olives, artificial scoops or simulated service.",
+      "layout": "The actual counter/action occupies the frame; paired names appear beside the two choices only when verified, followed by one recognisable place view.",
+      "sources": [
+        "https://www.facebook.com/profile.php?id=61588610740327",
+        "https://www.justified.studio/work/natoora"
+      ],
+      "readiness": "No local source clips; historical Drive VIDEO listing exists. Media screening, exact social identity, current products and final branding unresolved.",
+      "name": "TW Fresh Food Centre",
+      "brand": {
+        "status": "PROPOSED companions for readable captions; no new identity or human approval. Photographic colour stays natural.",
+        "palette": [
+          {
+            "name": "Forest Green",
+            "hex": "#1E4926"
+          },
+          {
+            "name": "Spring Lime",
+            "hex": "#98CB14"
+          },
+          {
+            "name": "Butcher Red",
+            "hex": "#C8321A"
+          },
+          {
+            "name": "Golden Leaf",
+            "hex": "#F2B23D"
+          },
+          {
+            "name": "Shop White",
+            "hex": "#FFFFFF"
+          },
+          {
+            "name": "Slate",
+            "hex": "#1F2A24"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "Cinzel",
+            "reason": "Proposed short department headings: continues the existing local website direction without pretending to reproduce logo lettering."
+          },
+          {
+            "name": "Barlow",
+            "reason": "Proposed readable labels, subtitles and shopping questions; condensed widths fit narrow counter footage."
+          }
+        ],
+        "layout": "The actual counter/action occupies the frame; paired names appear beside the two choices only when verified, followed by one recognisable place view."
+      },
+      "status": "PROPOSED direction · source qualification and creative acceptance pending",
+      "copyStatus": "Conditional draft for the filmed sequence described; not current approved copy. Do not paste into a live post until its factual/source and approval gates pass.",
+      "formats": {
+        "reel": "A real action, journey or explanation that develops; no poster relabelled as filmed video.",
+        "carousel": "A pauseable choice, exact label or matched whole/detail sequence. Each swipe adds information; slide count follows the idea.",
+        "story": "Only a timely verified question/answer or update. Current stock, hours and offers need fresh business-controlled checks; no artificial daily quota."
+      },
+      "calendar": [
+        {
+          "period": "22 Oct–4 Nov",
+          "focus": "Sources and one pilot",
+          "episode": "Inspect existing VIDEO folder and select an actual counter-choice sequence"
+        },
+        {
+          "period": "5–11 Nov",
+          "focus": "Establish the series",
+          "episode": "Your first scoop; useful two-choice carousel after name/stock checks"
+        },
+        {
+          "period": "12–18 Nov",
+          "focus": "Show a different proof",
+          "episode": "One real counter question with an approved staff answer"
+        },
+        {
+          "period": "19–25 Nov",
+          "focus": "Add a real person or answer",
+          "episode": "Corner-to-counter route using genuine spatial continuity"
+        },
+        {
+          "period": "26 Nov–2 Dec",
+          "focus": "Deepen the useful distinction",
+          "episode": "A different produce/counter distinction from checked real stock"
+        },
+        {
+          "period": "3–9 Dec",
+          "focus": "A real planning occasion",
+          "episode": "A real retrieval/handling sequence; no invented cooked serving"
+        },
+        {
+          "period": "10–16 Dec",
+          "focus": "Revise from evidence",
+          "episode": "Repeat the clearest useful choice after review/available account data"
+        },
+        {
+          "period": "17–21 Dec",
+          "focus": "Approved recap and next cycle",
+          "episode": "An approved shopping recap; timely availability/hours require fresh verification"
+        }
+      ]
+    },
+    {
+      "id": "the-local-shop",
+      "title": "Your usual, by name",
+      "audience": "A nearby or returning shopper seeking a familiar pantry pack, alongside a curious shopper learning its label.",
+      "decision": "Can I recognise the exact pack, find the right shelf/shop and understand one label-supported difference?",
+      "purpose": "Make pack recognition and retrieval useful at the real Silverdale Road shop; no invented nostalgia, owner history or current stock.",
+      "proof": "Actual September photographs of Topaz Mel Klasika/Naty packs and the brick corner shop. The historical meeting discussed familiar packs and a brief human introduction over product views; this is not permission to fabricate a memory.",
+      "stop": "Giant pack crops and plum fades as the whole story; detached187fascia graphics; national stereotypes; guesses from the mixed-shop till list; treating the concept logo as an installed rebrand.",
+      "selected": "A real shopkeeper finds and handles a recognisable pack. The route from a name to the shelf supplies the story.",
+      "stories": [
+        {
+          "title": "Your usual, by name",
+          "device": "A specific pack retrieval",
+          "firstLine": "The name is familiar. Here’s the pack.",
+          "firstShot": "A real hand reaches for an identified pack on the actual shelf, leaving its label readable.",
+          "beats": [
+            "The retrieval starts immediately",
+            "Pack front held at a readable scale",
+            "One genuine label detail or approved shopkeeper observation",
+            "Real shelf/frontage cue links the pack to Silverdale Road"
+          ],
+          "payoff": "The viewer recognises the exact item and the place to ask about it.",
+          "cta": "Ask the shop about the pack you’re looking for.",
+          "needs": "Screen existing111remote clip leads; select actual retrieval/handling/voice, current shop-only product check, consent and identity. No invented customer request/dialogue."
+        },
+        {
+          "title": "One shelf, one difference",
+          "device": "Two packs compared through their actual labels",
+          "firstLine": "Same shelf. What’s different?",
+          "firstShot": "Two genuinely current variants are shown together, label fronts visible.",
+          "beats": [
+            "Both packs in the shelf context",
+            "One checked label difference",
+            "Back/front detail if relevant and readable",
+            "Both pack names return, with a verified enquiry route"
+          ],
+          "payoff": "A real label distinction helps the shopper choose or ask a better question.",
+          "cta": "Keep the pack name for your next shopping question.",
+          "needs": "Current matching packs and a competent label/language reader. No recipe, origin, health, allergy or suitability inference from colours or filename."
+        },
+        {
+          "title": "From the corner to the shelf",
+          "device": "One practical spatial route",
+          "firstLine": "Here’s the shelf behind the name.",
+          "firstShot": "Food-only frontage/window detail establishes the actual corner before entering.",
+          "beats": [
+            "Correct corner/threshold",
+            "Actual route, without invented adjacency",
+            "Same pack retrieved from its true shelf",
+            "Food-only place cue"
+          ],
+          "payoff": "A first visitor can recognise this shop and understand the shopping task.",
+          "cta": "Keep the Silverdale Road location for your next food shop.",
+          "needs": "Real compatible route film, privacy and restricted-display screening, verified address/contact. No lottery/tobacco, stale price/hour signs or unrelated customer faces."
+        }
+      ],
+      "caption": "The name is familiar. Here’s the pack.\nA closer look at one shelf at The Local, Silverdale Road.\nAsk the shop about the pack you’re looking for.",
+      "voice": "Neighbourly, precise and inclusive. Let the actual name/label and a real person’s words carry familiarity; do not script a customer’s childhood or treat different countries as one culture.",
+      "motion": "Retrieval → readable pack → real place. Keep label geometry and colour intact; never rotate a generated3Dpack or invent unseen back artwork. A genuine voice can continue over hands if recorded and approved, otherwise no fake quote/voice.",
+      "layout": "Readable real packs stay within their shelf context before a closer view; a compact identifying caption replaces the full-width coloured fade, ending on the recognisable food-only corner.",
+      "sources": [],
+      "readiness": "111remote video filenames recorded historically, none locally screened. Exact public Instagram, approved brand, shop-only stock and rights unresolved.",
+      "name": "The Local",
+      "brand": {
+        "status": "PROPOSED companions for readable captions; no new identity or human approval. Photographic colour stays natural.",
+        "palette": [
+          {
+            "name": "Plum",
+            "hex": "#531432"
+          },
+          {
+            "name": "Lime",
+            "hex": "#8DCF45"
+          },
+          {
+            "name": "Tomato Red",
+            "hex": "#E0312F"
+          },
+          {
+            "name": "Cream",
+            "hex": "#F6EFDF"
+          },
+          {
+            "name": "Deep Plum",
+            "hex": "#330B1E"
+          }
+        ],
+        "fonts": [
+          {
+            "name": "Fraunces",
+            "reason": "Proposed brief shelf-story headlines, continuing the supplied Brand E pack; do not use it to recreate or replace the original logo."
+          },
+          {
+            "name": "Jost",
+            "reason": "Proposed large product names, real-language labels and clear practical copy; verify all required diacritics before export."
+          }
+        ],
+        "layout": "Readable real packs stay within their shelf context before a closer view; a compact identifying caption replaces the full-width coloured fade, ending on the recognisable food-only corner."
+      },
+      "status": "PROPOSED direction · source qualification and creative acceptance pending",
+      "copyStatus": "Conditional draft for the filmed sequence described; not current approved copy. Do not paste into a live post until its factual/source and approval gates pass.",
+      "formats": {
+        "reel": "A real action, journey or explanation that develops; no poster relabelled as filmed video.",
+        "carousel": "A pauseable choice, exact label or matched whole/detail sequence. Each swipe adds information; slide count follows the idea.",
+        "story": "Only a timely verified question/answer or update. Current stock, hours and offers need fresh business-controlled checks; no artificial daily quota."
+      },
+      "calendar": [
+        {
+          "period": "22 Oct–4 Nov",
+          "focus": "Sources and one pilot",
+          "episode": "Screen existing remote clips for retrieval/voice; confirm one shop-only pack"
+        },
+        {
+          "period": "5–11 Nov",
+          "focus": "Establish the series",
+          "episode": "Your usual, by name; label-detail carousel"
+        },
+        {
+          "period": "12–18 Nov",
+          "focus": "Show a different proof",
+          "episode": "One shelf, one difference with checked labels"
+        },
+        {
+          "period": "19–25 Nov",
+          "focus": "Add a real person or answer",
+          "episode": "Corner-to-shelf route using actual location footage"
+        },
+        {
+          "period": "26 Nov–2 Dec",
+          "focus": "Deepen the useful distinction",
+          "episode": "One approved shopkeeper observation over actual handling"
+        },
+        {
+          "period": "3–9 Dec",
+          "focus": "A real planning occasion",
+          "episode": "A different familiar pack; no invented cultural backstory"
+        },
+        {
+          "period": "10–16 Dec",
+          "focus": "Revise from evidence",
+          "episode": "Repeat the clearest retrieval/label format after review"
+        },
+        {
+          "period": "17–21 Dec",
+          "focus": "Approved recap and next cycle",
+          "episode": "An approved pack/location recap; verify dated stock/hours before use"
+        }
+      ]
+    }
+  ],
+  "pilot": {
+    "clientId": "pera-patisserie",
+    "status": "Silent visual study · creative feedback pending",
+    "title": "One line. Then the next.",
+    "description": "A 5.28-second single take from Pera’s existing process footage, presented as a silent visual study. The piping action carries the idea. No AI imagery, baked overlay, new scene, music or invented before-and-after.",
+    "limits": "Not a final Instagram upload or social release. Native 25 fps retained for source-motion review; final platform export, exposure/branding, archive identity, visual rights and human acceptance remain unresolved. Source sound was omitted, not auditioned.",
+    "file": "assets/pilots/pera-piping-v1/01.mp4",
+    "poster": "assets/pilots/pera-piping-v1/poster.jpg"
+  }
+}

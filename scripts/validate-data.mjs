@@ -174,10 +174,10 @@ for (const client of clients) {
     check(post.date >= '2026-10-22' && post.date <= '2026-12-21', `${post.id}: date outside planning window.`);
     check([1,3,5].includes(new Date(`${post.date}T12:00:00Z`).getUTCDay()), `${post.id}: expected Monday, Wednesday or Friday.`);
     check(['Reel','Carousel','Photo'].includes(post.format), `${post.id}: unknown format.`);
-    check(post.status === 'Draft', `${post.id}: status must remain Draft.`);
-    check(post.caption !== post.facebookCaption, `${post.id}: channel captions must be distinct.`);
-    check(Array.isArray(post.production) && post.production.length >= 3, `${post.id}: production brief incomplete.`);
-    check(Array.isArray(post.story) && post.story.length >= 3, `${post.id}: Story companion incomplete.`);
+    check(post.status === (data.version === '2.0-direction-reset' ? 'Held for rebriefing' : 'Draft'), `${post.id}: status must match programme phase.`);
+    if (!post.title.startsWith('Withdrawn source premise')) check(post.caption !== post.facebookCaption, `${post.id}: channel captions must be distinct.`);
+    check(Array.isArray(post.production) && post.production.length >= (post.title.startsWith('Withdrawn source premise') ? 1 : 3), `${post.id}: production brief incomplete.`);
+    check(Array.isArray(post.story) && post.story.length >= (post.title.startsWith('Withdrawn source premise') ? 1 : 3), `${post.id}: Story companion incomplete.`);
     check(Array.isArray(post.approvalNeeds) && post.approvalNeeds.length > 0, `${post.id}: approval conditions missing.`);
     check(Array.isArray(post.sourceIds) && post.sourceIds.every(id => sources.has(id)), `${post.id}: source IDs do not resolve within client.`);
     check(!/\b(TODO|TBD|INSERT HERE|PLACEHOLDER)\b/i.test(`${post.caption} ${post.facebookCaption}`), `${post.id}: placeholder in paste-ready copy.`);
@@ -198,4 +198,4 @@ if (errors.length) {
   process.stderr.write(errors.map(error => `FAIL: ${error}`).join('\n') + '\n');
   process.exit(1);
 }
-process.stdout.write(`PASS: ${clients.length} clients, ${allPosts.length} Draft posts, ${(data.research || []).length} research questions; ${previewPosts.length} Visual draft carousels, ${previewPNGs.size} PNG slides at 1080×1440, ${previewCovers.size} WebP covers and ${previewZIPs.size} three-slide ZIPs. Sources, safe paths and required assets resolve.\n`);
+process.stdout.write(`PASS: ${clients.length} clients, ${allPosts.length} ${data.version === "2.0-direction-reset" ? "held calendar drafts" : "Draft posts"}, ${(data.research || []).length} research questions; ${previewPosts.length} preserved study carousels, ${previewPNGs.size} PNG slides at 1080×1440, ${previewCovers.size} WebP covers and ${previewZIPs.size} three-slide ZIPs. Sources, safe paths and required assets resolve.\n`);
