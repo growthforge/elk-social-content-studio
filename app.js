@@ -9,7 +9,7 @@
     calendar: ['Calendar', 'The publishing calendar', 'Proposed dates and local times. Open any draft for its captions, creative brief and checks.'],
     'art-direction': ['Rejected studies', 'Previous photo studies · rejected', 'Preserved for comparison. These studies were rejected as a creative direction and must not be used as the new production system.'],
     feed: ['Feed', 'Planned Instagram feed', 'A draft feed for one client at a time. Produced artwork and brief-only ideas stay clearly distinct.'],
-    posts: ['Posts', 'The post library', 'Find the right idea, copy the caption and give production a clear brief.'],
+    posts: ['Posts', 'The post library', 'Earlier ideas and captions are held for rebriefing. Open Direction reset for the new story briefs.'],
     brand: ['Brand & audit', 'Brand & profile evidence', 'The supplied identities, what was actually observed and what still needs confirming.'],
     research: ['Research', 'Research & guidance', 'Primary platform guidance, category references and a clearly labelled research backlog.'],
     production: ['Production', 'From draft to final creative', 'A practical queue for assets, production and review. Approval is recorded separately by the authorised people.']
