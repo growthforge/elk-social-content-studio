@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# The HTML carries noindex,nofollow,noarchive. Permit crawlers to read it.
+# GitHub Pages project-path robots.txt is not the hostname-root robots policy.

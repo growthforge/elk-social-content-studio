@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="googlebot" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="description" content="Elk Social studio: a draft team content programme for 22 October–21 December 2026.">
+  <meta name="theme-color" content="#f6f5f0">
+  <title>Social studio · Elk</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <a class="wordmark" href="./" aria-label="Elk Social studio home"><span>elk<span class="wordmark-dot">.</span></span><span class="wordmark-sub">Social studio</span></a>
+      <p class="nav-label">Workspace</p>
+      <nav id="view-nav" class="view-nav" aria-label="Views"></nav>
+      <div class="client-nav-head"><p class="nav-label">Client workspaces</p><span id="client-count" class="quiet-count">—</span></div>
+      <nav id="client-nav" class="client-nav" aria-label="Client filters"></nav>
+      <div class="sidebar-foot"><span class="status-dot"></span><span>Planning draft<br><small>22 Oct—21 Dec 2026</small></span><span class="version">v1.0</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span class="breadcrumb">Elk <span>/</span> Content programme</span><span class="draft-badge">Draft for team review</span></header>
+      <main id="main" tabindex="-1">
+        <div class="page-heading"><div><p class="eyebrow">22 October—21 December 2026</p><h1 id="view-title">Content programme</h1><p id="view-description" class="page-description">Research, copy and production in one place.</p></div><div class="export-actions"><button id="export-csv" class="button secondary" type="button">Export CSV</button><button id="export-json" class="button secondary" type="button">Export JSON</button></div></div>
+        <div class="draft-notice"><span class="notice-symbol" aria-hidden="true">i</span><p>Every post is a draft. Check the evidence, assets and final approval before use. Proposed times use Europe/London. <span>Reach is a test outcome; virality is never guaranteed.</span></p></div>
+        <section id="filters" class="filters" aria-label="Filter the programme">
+          <label class="search-field"><span class="sr-only">Search posts and research</span><span id="search-icon" aria-hidden="true"></span><input id="search" type="search" placeholder="Search posts, ingredients, ideas…" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
+          <div class="filter-selects"><label><span>Client</span><select id="client-filter"><option value="all">All clients</option></select></label><label><span>Format</span><select id="format-filter"><option value="all">All formats</option><option>Reel</option><option>Carousel</option><option>Photo</option></select></label><label><span>Pillar</span><select id="pillar-filter"><option value="all">All pillars</option></select></label><button id="date-toggle" type="button" class="button text-button" aria-expanded="false" aria-controls="date-filters">Dates <span aria-hidden="true">⌄</span></button><button id="clear-filters" class="button text-button clear-button" type="button">Reset</button></div>
+          <div id="date-filters" class="date-filters" hidden><label>From <input id="date-from" type="date" min="2026-10-22" max="2026-12-21" value="2026-10-22"></label><label>To <input id="date-to" type="date" min="2026-10-22" max="2026-12-21" value="2026-12-21"></label><span>Filters apply to overview, calendar, posts, production and exports.</span></div>
+        </section>
+        <div id="result-status" class="result-status" role="status" aria-live="polite"></div>
+        <section id="view-content" aria-label="Programme content"><div class="loading-state"><span class="loading-mark" aria-hidden="true"></span><p>Opening the programme…</p></div></section>
+      </main>
+      <footer class="workspace-foot"><span>Elk · Social studio</span><span>No posts are scheduled or published by this dashboard. <span class="footer-privacy">Anyone with the link can view. Noindex is not access control.</span></span></footer>
+    </div>
+  </div>
+  <dialog id="post-dialog" class="post-dialog" aria-labelledby="post-dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><div class="noscript-note">This planner needs JavaScript to search and open draft posts. No account is connected.</div></noscript>
+</body>
+</html>
