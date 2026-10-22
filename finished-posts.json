@@ -1,0 +1,258 @@
+{
+  "version": "finished-wave-1-preview-3",
+  "observed": "2026-10-22",
+  "status": "Finished drafts for team review",
+  "summary": "Nine exported review drafts from real client media are available. The fourteen-post first wave remains in production.",
+  "posts": [
+    {
+      "id": "pera-finishing-image-20261022",
+      "type": "image",
+      "title": "Placed by hand.",
+      "caption": "A strawberry placed by hand.\nA moment of finishing work at Pera Patisserie.\nGreen Lanes, Harringay.",
+      "facebookCaption": "A small moment of finishing work at Pera: a strawberry placed by hand.\nPera Patisserie, Green Lanes, Harringay.",
+      "alt": "A black-gloved hand places a strawberry on a dark-glazed cake. Other cakes on green boards and a PERA-branded apron are visible. Text: FINISHING AT PERA. Placed by hand.",
+      "version": "v1.0",
+      "sourceSummary": "Original client Drive photograph, composed around the finishing action.",
+      "clientId": "pera-patisserie",
+      "status": "Finished draft",
+      "notes": [],
+      "review": {
+        "status": "Independent media review passed",
+        "scope": "Actual media and exact download pack reviewed for team use. Final rights and human social-release approval remain pending."
+      },
+      "slides": [
+        {
+          "src": "assets/finished/pera-patisserie/pera-finishing-image-20261022/01.png",
+          "alt": "A black-gloved hand places a strawberry on a dark-glazed cake. Other cakes on green boards and a PERA-branded apron are visible. Text: FINISHING AT PERA. Placed by hand."
+        }
+      ],
+      "cover": "assets/finished/pera-patisserie/pera-finishing-image-20261022/cover.webp",
+      "download": "assets/finished/pera-patisserie/pera-finishing-image-20261022/post-pack.zip"
+    },
+    {
+      "id": "pera-finishing-reel-20261022",
+      "type": "reel",
+      "title": "One line. Then the next.",
+      "caption": "One line. Then the next.\nA few seconds of finishing work at Pera.\nGreen Lanes.",
+      "facebookCaption": "One line, then the next. A short look at finishing work at Pera Patisserie on Green Lanes.",
+      "alt": "A hand moves a blue piping bag over a yellow-topped rectangular surface, drawing parallel white lines, resetting and lifting away. Pera logo and the opening words One line. Then the next. appear away from the working area.",
+      "version": "v1.0",
+      "sourceSummary": "Original client camera footage; a complete short finishing action.",
+      "clientId": "pera-patisserie",
+      "status": "Finished draft",
+      "notes": [
+        "Designed without audio."
+      ],
+      "review": {
+        "status": "Independent media review passed",
+        "scope": "Actual media and exact download pack reviewed for team use. Final rights and human social-release approval remain pending."
+      },
+      "video": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 5.266,
+        "fps": 30,
+        "src": "assets/finished/pera-patisserie/pera-finishing-reel-20261022/reel.mp4",
+        "audioStatus": "Designed without audio",
+        "poster": "assets/finished/pera-patisserie/pera-finishing-reel-20261022/poster.jpg"
+      },
+      "cover": "assets/finished/pera-patisserie/pera-finishing-reel-20261022/cover.webp",
+      "download": "assets/finished/pera-patisserie/pera-finishing-reel-20261022/post-pack.zip"
+    },
+    {
+      "id": "tw-butchers-counter-image-20261022",
+      "type": "image",
+      "title": "What are you cooking?",
+      "caption": "Start with what you’re cooking.\n\nBring your dinner idea to the butcher’s counter at TW Fresh Food Centre and ask about the cuts on display.\n\n283 Upper Grosvenor Road, Tunbridge Wells.",
+      "facebookCaption": "Planning dinner? Bring your meal idea to TW’s butcher’s counter and ask the team about the cuts on display.\n\nTW Fresh Food Centre, 283 Upper Grosvenor Road, Tunbridge Wells.",
+      "alt": "A gloved hand holding a cleaver above rows of bone-in meat cuts on TW's red butcher block, with a red-and-white striped apron behind. Text: At the butcher’s counter. What are you cooking? TW Fresh Food Centre, Tunbridge Wells. TW logo at the lower right.",
+      "version": "v1.0",
+      "sourceSummary": "Original client Drive photograph of the butcher’s counter.",
+      "clientId": "tw-fresh-food-centre",
+      "status": "Finished draft",
+      "notes": [
+        "Supplied logo preview; final brand selection remains pending."
+      ],
+      "review": {
+        "status": "Independent media review passed",
+        "scope": "Actual media and exact download pack reviewed for team use. Final rights and human social-release approval remain pending."
+      },
+      "slides": [
+        {
+          "src": "assets/finished/tw-fresh-food-centre/tw-butchers-counter-image-20261022/01.png",
+          "alt": "A gloved hand holding a cleaver above rows of bone-in meat cuts on TW's red butcher block, with a red-and-white striped apron behind. Text: At the butcher’s counter. What are you cooking? TW Fresh Food Centre, Tunbridge Wells. TW logo at the lower right."
+        }
+      ],
+      "cover": "assets/finished/tw-fresh-food-centre/tw-butchers-counter-image-20261022/cover.webp",
+      "download": "assets/finished/tw-fresh-food-centre/tw-butchers-counter-image-20261022/post-pack.zip"
+    },
+    {
+      "id": "aara-finished-photo-01",
+      "type": "image",
+      "title": "Before the plate",
+      "caption": "Rice, steam and a wire skimmer.\n\nA closer look at Aara’s kitchen work on Icknield Street, in Birmingham’s Jewellery Quarter.",
+      "facebookCaption": "A wire skimmer above a rice-filled pot, with steam across the frame. A moment behind the menu at Aara, on Icknield Street in Birmingham’s Jewellery Quarter.",
+      "alt": "A hand holds a wire skimmer above a large metal pot containing rice, with visible vapour. Text reads “Before the plate” and “Aara · Icknield Street”. A small Aara logo appears at upper right.",
+      "version": "1.0-finished-photo-draft",
+      "sourceSummary": "Real kitchen photograph: hand-held wire skimmer above a rice-filled pot. Historical original-file mapping and final permissions remain unconfirmed.",
+      "clientId": "aara-birmingham",
+      "status": "Finished draft",
+      "notes": [
+        "Historical photo derivative; original-file and client-source confirmation remains pending."
+      ],
+      "review": {
+        "status": "Independent image and pack review passed",
+        "scope": "Single image reviewed for team use. Source reconciliation, final rights and human social-release approval remain pending."
+      },
+      "slides": [
+        {
+          "src": "assets/finished/aara-birmingham/aara-finished-photo-01/01.png",
+          "alt": "A hand holds a wire skimmer above a large metal pot containing rice, with visible vapour. Text reads “Before the plate” and “Aara · Icknield Street”. A small Aara logo appears at upper right."
+        }
+      ],
+      "cover": "assets/finished/aara-birmingham/aara-finished-photo-01/cover.webp",
+      "download": "assets/finished/aara-birmingham/aara-finished-photo-01/post-pack.zip"
+    },
+    {
+      "id": "the-local-shop-image-20261022",
+      "type": "image",
+      "title": "Cocoa or hazelnut?",
+      "caption": "Naty cocoa and hazelnut wafers, photographed together at The Local.\n\n187 Silverdale Road, Tunbridge Wells.\n\nPhotographed in September 2026; ask about current availability.",
+      "facebookCaption": "Two Naty flavours, side by side: cocoa and hazelnut.\n\nThe Local, 187 Silverdale Road, Tunbridge Wells. This shelf photograph is from September 2026; please ask about current availability.",
+      "alt": "A close comparison of two real Naty wafer packets on the same shelf: orange cocoa at left and green hazelnut at right. The Naty branding and flavour words remain visible. A small plum corner contains the question Cocoa or hazelnut? and The Local, 187 Silverdale Road.",
+      "version": "v2.0-photo-led-comparison",
+      "sourceSummary": "Original September shelf photograph, composed as a real flavour comparison.",
+      "clientId": "the-local-shop",
+      "status": "Finished draft",
+      "notes": [
+        "Supplied brand preview; final brand selection remains pending."
+      ],
+      "review": {
+        "status": "Independent image and pack review passed",
+        "scope": "Single image reviewed for team use. Final source, rights and human social-release approval remain pending."
+      },
+      "slides": [
+        {
+          "src": "assets/finished/the-local-shop/the-local-shop-image-20261022/01.png",
+          "alt": "A close comparison of two real Naty wafer packets on the same shelf: orange cocoa at left and green hazelnut at right. The Naty branding and flavour words remain visible. A small plum corner contains the question Cocoa or hazelnut? and The Local, 187 Silverdale Road."
+        }
+      ],
+      "cover": "assets/finished/the-local-shop/the-local-shop-image-20261022/cover.webp",
+      "download": "assets/finished/the-local-shop/the-local-shop-image-20261022/post-pack.zip"
+    },
+    {
+      "id": "the-local-shop-reel-20261022",
+      "type": "reel",
+      "title": "Your usual rye?",
+      "caption": "Bakerbird Borodinski rye bread with seeds, up close at The Local.\n\nFilmed in September 2026 at 187 Silverdale Road, Tunbridge Wells. Ask about current availability.",
+      "facebookCaption": "A closer look at the Bakerbird pack marked Borodinski rye bread with seeds.\n\nFilmed at The Local in September 2026. Find the shop at 187 Silverdale Road, Tunbridge Wells, and ask about current availability.",
+      "alt": "Close-up of a wrapped Bakerbird rye bread pack labelled Borodinski with seeds, supported by a person's hands. The pack tips slightly as it is held; no face is shown. A small portion of another wrapped loaf remains at the top edge. Text changes from Your usual rye? to The Local · Silverdale Road. Designed without audio.",
+      "version": "v1.0-bakerbird-label-closeup",
+      "sourceSummary": "Original client camera footage, reframed at the original action speed.",
+      "clientId": "the-local-shop",
+      "status": "Finished draft",
+      "notes": [
+        "Designed without audio."
+      ],
+      "review": {
+        "status": "Independent media and pack review passed",
+        "scope": "Actual source, edit, media and pack reviewed for team use; native playback checked. Final rights and human social-release approval remain pending."
+      },
+      "video": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 5.2,
+        "fps": 30,
+        "src": "assets/finished/the-local-shop/the-local-shop-reel-20261022/reel.mp4",
+        "audioStatus": "Designed without audio",
+        "poster": "assets/finished/the-local-shop/the-local-shop-reel-20261022/poster.jpg"
+      },
+      "cover": "assets/finished/the-local-shop/the-local-shop-reel-20261022/cover.webp",
+      "download": "assets/finished/the-local-shop/the-local-shop-reel-20261022/post-pack.zip"
+    },
+    {
+      "id": "nazar-bedford-image-20261022",
+      "type": "image",
+      "title": "Make time to catch up",
+      "caption": "Make time for a catch-up at Nazar Bedford.\n\nExplore the menu, then talk to our team about your table at 17 High Street.\nhttps://bedford.nazarkitchen.com/\n\n#NazarBedford #BedfordFood",
+      "facebookCaption": "Make time for a catch-up at Nazar Bedford.\n\nExplore the menu, then talk to our team about your table at 17 High Street.\nhttps://bedford.nazarkitchen.com/\n\n#NazarBedford #BedfordFood",
+      "alt": "A plated meal in the foreground of Nazar Bedford’s photographed dining room, with red seating, gold details and a stemmed glass. Original Nazar logo. Text: Bedford / 17 High Street. Make time to catch up.",
+      "version": "v1.0-finished-wave-draft",
+      "sourceSummary": "Retained client catalogue photograph; camera-original mapping remains unconfirmed.",
+      "clientId": "nazar-bedford",
+      "status": "Finished draft",
+      "notes": [
+        "Historical catalogue photo; camera-original and current scene confirmation remain pending."
+      ],
+      "review": {
+        "status": "Independent image and pack review passed",
+        "scope": "Single image reviewed for team use. Final source, rights and human social-release approval remain pending."
+      },
+      "slides": [
+        {
+          "src": "assets/finished/nazar-bedford/nazar-bedford-image-20261022/01.png",
+          "alt": "A plated meal in the foreground of Nazar Bedford’s photographed dining room, with red seating, gold details and a stemmed glass. Original Nazar logo. Text: Bedford / 17 High Street. Make time to catch up."
+        }
+      ],
+      "cover": "assets/finished/nazar-bedford/nazar-bedford-image-20261022/cover.webp",
+      "download": "assets/finished/nazar-bedford/nazar-bedford-image-20261022/post-pack.zip"
+    },
+    {
+      "id": "nazar-bedford-reel-20261022",
+      "type": "reel",
+      "title": "A moment at the grill",
+      "caption": "A moment at the grill at Nazar Bedford.\n\nExplore the menu before making dinner plans. Find us at 17 High Street.\nhttps://bedford.nazarkitchen.com/\n\n#NazarBedford #BedfordFood",
+      "facebookCaption": "A moment at the grill at Nazar Bedford.\n\nExplore the menu before making dinner plans. Find us at 17 High Street.\nhttps://bedford.nazarkitchen.com/\n\n#NazarBedford #BedfordFood",
+      "alt": "A continuous close view of minced meat on flat metal skewers above a grill, with natural visible vapour and a slight camera move. The original gold Nazar logo and the text “A moment at the grill.” and “BEDFORD · 17 HIGH STREET” sit at the upper edge. Designed without audio.",
+      "version": "v1.1-real-footage-draft",
+      "sourceSummary": "Original client camera footage, reframed at the original action speed.",
+      "clientId": "nazar-bedford",
+      "status": "Finished draft",
+      "notes": [
+        "Designed without audio."
+      ],
+      "review": {
+        "status": "Independent media and pack review passed",
+        "scope": "Actual source, edit, media and pack reviewed for team use; native playback checked. Final rights and human social-release approval remain pending."
+      },
+      "video": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 5.3,
+        "fps": 30,
+        "src": "assets/finished/nazar-bedford/nazar-bedford-reel-20261022/reel.mp4",
+        "audioStatus": "Designed without audio",
+        "poster": "assets/finished/nazar-bedford/nazar-bedford-reel-20261022/poster.png"
+      },
+      "cover": "assets/finished/nazar-bedford/nazar-bedford-reel-20261022/cover.webp",
+      "download": "assets/finished/nazar-bedford/nazar-bedford-reel-20261022/post-pack.zip"
+    },
+    {
+      "id": "nazar-cambridge-finished-2026-10-22-image-01",
+      "type": "image",
+      "title": "The sign to look for",
+      "caption": "Looking for Nazar Cambridge? This is the restaurant frontage at Cambridge Leisure Park, Clifton Way.\n\nKeep the sign in mind for your first visit.\n\n#NazarCambridge #CambridgeLeisurePark",
+      "facebookCaption": "Looking for Nazar Cambridge? This is the restaurant frontage at Cambridge Leisure Park, Clifton Way.\n\nKeep the sign in mind for your first visit.\nhttps://cambridge.nazarkitchen.com/",
+      "alt": "The Nazar Turkish Kitchen + Bar frontage, with its angular sign, dark awnings, restaurant doors, terrace screens, plants and green parasol. Overlay: Cambridge. Leisure Park. The sign to look for. The original Nazar logo appears at the lower right.",
+      "version": "v1.0-historical-frontage",
+      "sourceSummary": "Retained Cambridge catalogue photograph of the restaurant frontage; camera-original mapping remains unconfirmed.",
+      "clientId": "nazar-cambridge",
+      "status": "Finished draft",
+      "notes": [
+        "Historical frontage photograph; current signage, services and intended-use permission remain to be confirmed."
+      ],
+      "review": {
+        "status": "Independent image and pack review passed",
+        "scope": "Actual full-size and phone-size image plus pack reviewed for team use. Final rights and human social-release approval remain pending."
+      },
+      "slides": [
+        {
+          "src": "assets/finished/nazar-cambridge/nazar-cambridge-finished-2026-10-22-image-01/01.png",
+          "alt": "The Nazar Turkish Kitchen + Bar frontage, with its angular sign, dark awnings, restaurant doors, terrace screens, plants and green parasol. Overlay: Cambridge. Leisure Park. The sign to look for. The original Nazar logo appears at the lower right."
+        }
+      ],
+      "cover": "assets/finished/nazar-cambridge/nazar-cambridge-finished-2026-10-22-image-01/cover.webp",
+      "download": "assets/finished/nazar-cambridge/nazar-cambridge-finished-2026-10-22-image-01/post-pack.zip"
+    }
+  ]
+}

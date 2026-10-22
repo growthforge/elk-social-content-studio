@@ -1,106 +1,97 @@
-# Direction reset · v2.0 draft
+# Elk · Social studio v3.0
 
-21October2026 · [codex]. Hemanth rejected the21photo slides. All182earlier calendar items are held for rebriefing; old caption copying is disabled. The default Direction reset view contains seven new proposed story briefs, three candidates per client and eight conditional periods through21December. These are not finished posts, accepted delivery dates or human creative approvals.
+22 October 2026 · [codex]. A buildless, read-only team gallery for produced Instagram post and Reel drafts. The default **Finished posts** view shows actual files from `finished-posts.json`; the earlier 182 calendar briefs and rejected studies remain accessible in **Held feed**, **Held briefs**, **Rejected studies** and the existing planning/research views. They are excluded from finished counts. Earlier caption copying stays disabled.
 
-Actual Meta AI/Grok consultations, watched clips, Pinterest/Google Images and pinned GitHub skill reads inform the new briefs. Access limits remain visible. Real source assets come first; no new AI images were commissioned. One Pera process pilot follows separate source qualification and independent review; other clients remain at source-select/beat-sheet stage.
+A finished draft is a produced export, not a live post or human approval. The dashboard does not connect accounts, schedule, publish, record approval or change the working status register. Selected derivative media are intentionally shared for team review under the current user request. Raw originals, private source/Drive records and operating documents remain outside this public deployment. Final social rights, consent, current facts and human acceptance need separate evidence.
 
-The site remains public/unauthenticated with noindex directives; noindex does not grant privacy or guarantee search absence. No IG/FB account is connected, scheduled or published.
+The site is public and unauthenticated. `noindex,nofollow,noarchive` requests crawler exclusion; it is not access control and does not guarantee search absence. Local files, fonts and media only; no remote embeds or analytics.
 
-Current sources: `direction-reset.json` for new direction; `data.json` for held prior calendar; `art-direction.json` for rejected studies. The root builder for directions is outside this deployment directory. Keep raw media, private paths, operational records and unapproved camera originals out of this repo.
+## Finished collection contract
 
----
-
-Previous implementation reference (superseded wherever it describes the old creative as current):
-
-# Elk · Social studio v1.3
-
-A buildless, read-only team planner for 22 October–21 December 2026. It contains 182 planned post drafts and a first produced batch of seven real-photo draft carousels: three 1080×1440 PNG slides per client, 21 slides in total. It does not connect social accounts, schedule posts, record approvals or write status changes.
-
-The user requested real-photo previews in the shareable team dashboard. These selected, derived review images are included for that purpose. Final social publication rights, likeness permissions where applicable and dated approval of the exact post version still need to be recorded. A visible image is not a released social post.
-
-## Files and data
-
-- `index.html`, `styles.css`, `app.js`: the application, with all links relative for a GitHub Pages project path.
-- `data.json`: supplied separately by the coordinating task. Schema: `{clients: [...], guidance: [...], research: [...], threads: {...}}`.
-- `assets/logos/<client-id>.png`: supplied original logo previews, preserved without redraw. Each brand panel displays its own recorded logo/approval status. A failed image shows “Original logo unavailable”.
-- `assets/posts/<post-id>/`: the seven selected produced draft sets, each with `01.png`, `02.png`, `03.png`, a WebP cover and a ZIP download containing the three slides plus the public caption and alt-text files. Raw photo originals, the private artwork plan, source hashes and crop/provenance records are excluded from this public directory and dataset.
-- `assets/fonts/`: local Manrope weights 400/500/600/700 and the bundled licence.
-- `robots.txt`, `.nojekyll`: crawler request and static hosting support.
-- `scripts/validate-data.mjs`: checks the final planning dataset before deployment.
-
-Client objects use the agreed `id`, `name`, `location`, `instagram`, `website`, `brand`, `audit`, `sources`, `references`, `posts` and `assetNeeds` fields. `onScreen` may be a string or array. Source `local`/logo `path` fields are not rendered; the supplied dataset must still be sanitised before it is hosted or exported.
-
-Only the seven produced posts carry public `post.preview` data:
+Root integration supplies `finished-posts.json` beside the app:
 
 ```json
 {
-  "status": "Visual draft",
-  "type": "carousel",
-  "cover": "assets/posts/<post-id>/cover.webp",
-  "slides": [
-    {"src": "assets/posts/<post-id>/01.png", "alt": "The actual first slide description"},
-    {"src": "assets/posts/<post-id>/02.png", "alt": "The actual second slide description"},
-    {"src": "assets/posts/<post-id>/03.png", "alt": "The actual third slide description"}
-  ],
-  "download": "assets/posts/<post-id>/slides.zip"
+  "version": "1.0",
+  "observed": "2026-10-22",
+  "status": "Finished drafts · social release pending",
+  "summary": "One image post and one Reel for each client.",
+  "posts": [
+    {
+      "id": "client-image-01",
+      "clientId": "client-slug",
+      "type": "carousel",
+      "title": "The actual post title",
+      "caption": "Exact Instagram caption",
+      "facebookCaption": "Exact Facebook caption",
+      "alt": "Description of the cover or video",
+      "status": "Finished draft",
+      "version": "1.0",
+      "cover": "assets/finished/client-slug/client-image-01/cover.webp",
+      "slides": [
+        {"src": "assets/finished/client-slug/client-image-01/01.png", "alt": "Actual slide one description"},
+        {"src": "assets/finished/client-slug/client-image-01/02.png", "alt": "Actual slide two description"}
+      ],
+      "download": "assets/finished/client-slug/client-image-01/post-pack.zip",
+      "notes": ["The remaining source or publication conditions"],
+      "sourceSummary": "Public-safe description of the original client media used",
+      "review": {"status": "Independent export review pending", "scope": "No human approval inferred"}
+    }
+  ]
 }
 ```
 
-Filenames for the cover/ZIP may differ; their paths must remain relative, inside that same post's folder. Preview records carry display/download paths and slide alt text only. They must not contain `imagePath`, `originalSource`, source hashes or crop metadata. The earlier single-image Pera study is superseded and archived; it is not an eighth produced post or a twenty-second slide.
+`type` is exactly `image`, `carousel` or `reel`. Image records have exactly one slide; carousels have 2–20 unique actual slides. Reels omit `slides` or use an empty array, and supply:
 
-Guidance items support `id,title,category,status,summary,action,url,observed`. Research questions support `id,title,category,question,status,finding,nextAction,sourceIds,url`. Proposed tests remain distinct from findings. Thread records use `{threadId,title,url}` by client ID; permitted explicit Codex thread links use `codex://threads/<id>`.
-
-The optional top-level `programme` object supports `thesis`, `phases: [{title,dates,action,review}]`, `cadence`, `measurement` and `limits`; Overview displays this as a compact proposed two-month direction. Each optional `client.strategy` supports `goal,audience,thesis,priority,measure`, shown in Brand & audit and Production. These are proposed planning directions, not contracts or results. Supplied versus concept logo labels appear near the client navigation, Overview client list and brand heading. Optional post `ukZone` and `indiaTime` fields appear beside the UK slot in the drawer and in CSV/full-brief exports; the app does not invent time conversions.
-
-`client.previewWebsite` is a separate draft-preview link, labelled “Draft website preview — not a live business site”; it is not used in post CTAs. Optional `post.series` appears separately from the broad pillar in post detail, full briefs and CSV. Original Nazar and Liman logo assets have a dark backing for contrast without modifying their images. View navigation focuses the view heading; client/week/research controls restore logical keyboard focus after rendering, and search preserves its text selection.
-
-## Use
-
-Open through a static web server or the deployed team URL. Direct `file:` loading cannot reliably fetch the dataset. This handoff does not start a server or deploy.
-
-The eight views are Overview, Calendar, Feed, Photo direction, Posts, Brand & audit, Research and Production. Client/search/format/pillar/date filters apply to the post programme and CSV/JSON exports. Research has separate guidance/question/reference tabs and category filters. All 182 posts remain drafts.
-
-Feed shows one client profile at a time, with its supplied logo, public handle or “Identity not verified”, and a three-column portrait grid. It is a planning preview, not a live Instagram profile; no follower or engagement figures are invented. All-clients Feed opens a gallery of created drafts and the client chooser. A produced cover appears only from the supplied local artwork file. Other ideas have explicitly labelled “Brief only” typographic planning tiles, which are not finished artwork. Earliest/latest planned ordering is labelled, and existing filters still apply.
-
-Open a feed tile to inspect the Media preview tab. It has the actual slides, previous/next controls, slide alt text, full-size links and downloads. Missing files show a clear brief-only state. Copy & captions, Creative brief and Evidence & approval remain separate tabs; the caption Copy buttons copy the text rather than internal checks. Cover images load lazily, and the viewer displays one active carousel slide at a time.
-
-The Copy buttons use the browser clipboard with a local fallback. CSV fields are quoted and formula-like values are neutralised. Exports contain only the supplied planning data and the current filtered post selection; no user information or account access is collected.
-
-Deep links:
-
-```
-?client=nazar-bedford&view=posts
-?client=nazar-bedford&view=feed
-?client=the-local-shop
-?client=pera-patisserie&view=feed&order=latest
-?client=the-local-shop&view=calendar&week=2026-11-02
-?post=TW-01
+```json
+"video": {
+  "src": "assets/finished/client-slug/client-reel-01/01.mp4",
+  "poster": "assets/finished/client-slug/client-reel-01/poster.jpg",
+  "width": 1080,
+  "height": 1920,
+  "duration": 12.4,
+  "fps": 30,
+  "audioStatus": "Describe the actual export audio and its qualification"
+}
 ```
 
-An explicit `view` is respected; a client link without a view defaults to Feed. Overview's client shortcut opens that feed. The search shortcut is `/`. Post drawers use native modal dialog keyboard containment and Escape to close. Detail tabs support Left/Right/Home/End; the media carousel has labelled buttons and Left/Right controls while focus is in its viewer. Calendar posts are native buttons; the List display gives a linear alternative. Reduced motion is respected.
+The Reel's `id`, `cover` and `download` must use that same `client-reel-01` directory. `duration` is the actual numeric seconds, not a target. All post media are flat relative paths under `assets/finished/<clientId>/<post-id>/`; no URLs, traversal, nested folders or private paths. Image files are PNG/JPEG/WebP. `download` is the final post-pack ZIP. Include the final image(s) or MP4, caption text containing both exact channel captions, and alt-text descriptions in flat public-safe files. A cover/poster may also be in the pack. Do not include raw originals, private handoffs, build/provenance details or Drive IDs.
 
-## Validation and remaining checks
+Client identity, logo status and public handle come from existing `data.json`. No guessed handles, followers or performance figures are created. The app retains supplied batch order; it does not invent publication dates. Runtime metadata checks exclude incomplete records; a failed cover is marked unavailable and excluded from counts rather than replaced with fake artwork.
+
+## Use and deep links
+
+Open the deployed team URL or serve this directory over HTTP. Direct `file:` access cannot reliably fetch JSON. This handoff does not start a server or deploy.
+
+```
+?view=finished
+?view=finished&client=pera-patisserie
+?view=finished&client=pera-patisserie&post=pera-reel-01
+?view=finished&format=Reel&q=detail
+?view=directions
+?view=feed&client=the-local-shop
+?view=posts&client=nazar-bedford
+```
+
+An omitted view defaults to Finished posts, including a client-only link. All seven client buttons, the sidebar and Client select filter this gallery. Search covers client, title, caption, alt and type; Format selects Photo, Carousel or Reel. Calendar dates/pillars are hidden because finished exports have no invented schedule. CSV/JSON exports use only the displayed finished selection in this view; historical views retain their separate planning exports.
+
+The three-column portrait grid loads lazy still covers only. It contains no video players. Opening a Reel mounts one native `controls playsinline preload="none"` player with its actual poster; leaving the media tab, closing the drawer, navigating or hiding the page pauses playback. A closed drawer removes the player. Image/carousel details display one full-size slide at a time with previous/next controls, slide-specific alt copy and direct downloads. All posts have exact Instagram/Facebook copy, complete alt copy, a ZIP link, version and separate source/review notes. Copying does not grant release approval.
+
+Native modal dialog contains keyboard focus and supports Escape. Tabs use Left/Right/Home/End; focused carousel controls support Left/Right. View navigation focuses the heading, filters preserve logical focus, and `/` focuses search. The layout uses local Manrope, readable captions, visible focus and horizontal client navigation on narrow screens.
+
+## Files and checks
+
+Current data files are separate: `finished-posts.json` (new produced media), `direction-reset.json` (proposed stories), `data.json` (held calendar, clients and research), and `art-direction.json` (rejected studies). Existing validators remain unchanged. Original app/style/index/README files were moved to `99-archive/2026-10-22-finished-posts-dashboard/` with a source/destination/SHA-256 manifest before these successors were written.
 
 ```
 node --check app.js
+node --check scripts/validate-finished.mjs
+node scripts/validate-finished.mjs
+node scripts/validate-directions.mjs
 node scripts/validate-data.mjs
+node scripts/validate-concepts.mjs --required
 ```
 
-The first command validates JavaScript syntax. The second needs the final `data.json`, all seven logo files and the seven produced artwork folders. It preserves the original seven-client / 182-draft / 100-question checks, then verifies exactly seven produced preview records, three uniquely referenced PNG slides per set, 21 PNG slides in total, PNG signatures and 1080×1440 dimensions, safe post-relative paths, cover and ZIP existence, WebP/ZIP signatures, nonempty slide alt text and exclusion of private preview fields. ZIP contents must be the same three slide PNGs plus `captions.txt` and `alt-text.txt`; the text is checked against the public draft captions/slide descriptions and for private-path/provenance leaks. No raw originals or private plan are allowed. This validates the integrated release data and files; it is not a rights or human approval check.
+The finished validator requires **14 actual exports, seven clients, one still post/carousel plus one Reel each**. It checks safe local paths, regular files, recognised image headers/dimensions (full still slides 1080×1350 or 1080×1440), MP4 header/fast-start box order and ffprobe H264/yuv420p/1080×1920/30fps/duration metadata, explicit audio status, ZIP structure/media/text presence, exact caption/alt agreement and private-path/credential-like leaks. `--partial` permits an incomplete collection solely for integration checks and explicitly does not certify the first wave. `ffprobe` must be on PATH. Source fidelity, real action, sound suitability, storytelling, rights, current identity and human acceptance require independent actual-output review.
 
-The coordinating task must inspect desktop and 390px layouts, enlarged text, Feed/chooser/order/filter behaviour, loaded and missing artwork, carousel navigation, full-size/download links, calendar navigation, modal keyboard handling, copy/export, source/thread links and the final published dataset. No browser QA or deployment is certified by this README.
-
-The document carries `noindex,nofollow,noarchive`. Crawlers are permitted to read that tag; Google's official guidance explains that blocking crawling can hide noindex. A project-path robots file does not control the hostname root. Search exclusion is requested, not guaranteed, and applies to the Pages HTML rather than GitHub repository search. Anyone with the link can view; there is no authentication. The selected derived real-photo draft previews are intentionally shared here. Raw originals, private documents/plans, credentials, personal data and commercial/account details must remain excluded. The browser loads local app/data/font/logo/post files, with no remote embeds or analytics.
-
-
-## Photography & art direction · photo-first
-
-`?view=art-direction` opens Photography & art direction. Existing client photography comes first; AI is appropriate only when available resources are insufficient, not as the default for this batch. The optional `art-direction.json` is fetched with `cache: no-store`. An unavailable/malformed/empty file does not prevent the calendar or existing seven real-photo carousels from opening. When samples exist, Feed starts with New photo direction using actual lazy-loaded covers. No missing image is replaced by invented artwork.
-
-The collection remains `{version, status, method: [{title, detail, url?}], concepts: [...]}`; `concepts` is a legacy internal collection key. Each item uses `{id, kind, clientId, postId, title, image, thumbnail, alt, headline, caption, facebookCaption, notes: [...], sources: [{title, url}], status}`. Counts are data-driven. `kind: "photo"` requires `status: "Real-photo draft"`; `image` and `thumbnail` must exactly match that same client's/post's existing `post.preview.slides[0].src` (`assets/posts/<post-id>/01.png`) and `post.preview.cover` (`assets/posts/<post-id>/cover.webp`). It reuses these files; no duplicate art exports or additional concept-folder files are required. These are reviewed planning assets, not human-approved social posts.
-
-Photo cards show Real-photo draft and Original client photography · draft for review, with customer-facing draft Instagram/Facebook captions, source-specific alt text, the existing exact logo/status, full-size access, a matching-draft button that opens all carousel slides in Media, and notes/references. No AI warning is shown for a photo item. All items retain the general reminder that drafts are not approved. Client/Search filters apply; unrelated post date/format/pillar controls and programme-export buttons are hidden here. Copying direction text does not alter a canonical draft or imply scheduling/approval.
-
-Optional future `kind: "ai"` items require `status: "AI concept — internal review"`, separate safe `assets/concepts/<client-id>-concept.png` and `.webp` files with matching stems (optional version token such as `-v2-concept`), and explicit per-card AI/internal/not-publishable and fidelity warnings. This does not authorise AI use or publication. The earlier generated examples are superseded research experiments and must be archived outside the public dashboard for the current photo-first batch.
-
-Run `node scripts/validate-concepts.mjs --required` before publishing the direction collection. It checks kind/status, current client/post joins, exact existing preview references for photos, safe separate PNG/WebP paths/counts only for AI items, regular local files/signatures, no unreferenced concept files, source URLs without credentials, and recursive actual-string private-path/token exclusion. Ordinary caption newlines are not mistaken for Windows paths. Without `--required`, an absent optional file reports SKIP; an existing invalid file fails. It does not establish image fidelity, current subject, rights or human acceptance. Independent UI/desktop/390px review of the successor is still required; this implementation's producer cannot approve their own code.
+Integration still requires actual desktop/390px and enlarged-text review; client/search/format filters; native playback and pause/close behaviour; carousel, copy, downloads and deep links; final dataset/pack inspection; and deployed-byte verification. The producer's syntax and fixture checks are not browser, creative or human approval.

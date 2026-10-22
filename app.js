@@ -4,17 +4,19 @@
   const START = '2026-10-22';
   const END = '2026-12-21';
   const VIEWS = {
+    finished: ['Finished posts', 'Finished posts & Reels', 'Actual produced media, ready to inspect, copy and download. These are review drafts, not live Instagram posts.'],
     directions: ['Direction reset', 'The story comes first', 'Seven distinct client directions, the research behind them and the real resources each one needs. One pilot precedes further production.'],
     overview: ['Overview', 'Content programme', 'Seven distinct brands. One place to find the next draft, its copy and the work behind it.'],
     calendar: ['Calendar', 'The publishing calendar', 'Proposed dates and local times. Open any draft for its captions, creative brief and checks.'],
     'art-direction': ['Rejected studies', 'Previous photo studies · rejected', 'Preserved for comparison. These studies were rejected as a creative direction and must not be used as the new production system.'],
-    feed: ['Feed', 'Planned Instagram feed', 'A draft feed for one client at a time. Produced artwork and brief-only ideas stay clearly distinct.'],
-    posts: ['Posts', 'The post library', 'Earlier ideas and captions are held for rebriefing. Open Direction reset for the new story briefs.'],
+    feed: ['Held feed', 'Earlier planned feed · held', 'Previous planning previews are held for rebriefing. Open Finished posts for the current produced exports.'],
+    posts: ['Held briefs', 'Earlier post briefs · held', 'Earlier ideas and captions are held for rebriefing. Open Direction reset for the new story briefs.'],
     brand: ['Brand & audit', 'Brand & profile evidence', 'The supplied identities, what was actually observed and what still needs confirming.'],
     research: ['Research', 'Research & guidance', 'Primary platform guidance, category references and a clearly labelled research backlog.'],
     production: ['Production', 'From draft to final creative', 'A practical queue for assets, production and review. Approval is recorded separately by the authorised people.']
   };
   const ICONS = {
+    finished: '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="m10 8 6 4-6 4z"/>',
     directions: '<path d="M4 5h16v14H4zM8 9h8M8 13h5M8 16h3"/>',
     overview: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
     calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/>',
@@ -61,7 +63,7 @@
   const params = new URLSearchParams(location.search);
   const initialView = params.get('view') === 'brand-audit' ? 'brand' : params.get('view');
   const state = {
-    view: VIEWS[initialView] ? initialView : 'directions', client: params.get('client') || 'all',
+    view: VIEWS[initialView] ? initialView : 'finished', client: params.get('client') || 'all',
     query: params.get('q') || '', format: params.get('format') || 'all', pillar: params.get('pillar') || 'all',
     from: isDate(params.get('from')) ? params.get('from') : START, to: isDate(params.get('to')) ? params.get('to') : END,
     week: isDate(params.get('week')) ? monday(params.get('week')) : FIRST_WEEK,
@@ -76,6 +78,10 @@
   let artDirection = { version: '', method: [], concepts: [] };
   let artDirectionState = 'loading';
   let directionReset = null;
+  let finishedData = null;
+  let finishedPosts = [];
+  let finishedState = 'loading';
+  const finishedUnavailable = new Set();
   let toastTimer;
   let searchTimer;
   let lastPostTrigger;
@@ -134,10 +140,95 @@
       && (!query || hashText([post._name, post.id, post.title, post.hook, post.caption, post.facebookCaption, post.pillar, post.production, post.motion, post.story, post.asset]).includes(query)));
   }
 
+  // Finished media has a separate contract and never borrows an old planning preview.
+  function safeFinishedAsset(value, post, extensions) {
+    if (typeof value !== 'string' || !/^[a-z0-9-]+$/.test(post.clientId || '') || !/^[a-zA-Z0-9_-]+$/.test(post.id || '')) return '';
+    const prefix = `assets/finished/${post.clientId}/${post.id}/`;
+    if (!value.startsWith(prefix)) return '';
+    const name = value.slice(prefix.length);
+    return /^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(name) && extensions.test(name) ? `./${value}` : '';
+  }
+  function normaliseFinished(raw) {
+    if (!raw || typeof raw.id !== 'string' || typeof raw.clientId !== 'string' || raw.status !== 'Finished draft' || !getClient(raw.clientId) || !['image','carousel','reel'].includes(raw.type)) return null;
+    const post = {...raw};
+    post.cover = safeFinishedAsset(raw.cover, post, /\.(png|jpe?g|webp|avif)$/i);
+    post.slides = arr(raw.slides).map(s => ({src:safeFinishedAsset(s?.src, post, /\.(png|jpe?g|webp|avif)$/i),alt:typeof s?.alt === 'string' ? s.alt.trim() : ''}));
+    post.download = safeFinishedAsset(raw.download, post, /\.zip$/i);
+    const client = getClient(post.clientId);
+    post._client = client.id; post._name = client.name; post._finished = true;
+    post.format = {image:'Photo',carousel:'Carousel',reel:'Reel'}[post.type];
+    if (!post.cover || !post.download || !text(raw.title).trim() || !text(raw.caption).trim() || !text(raw.facebookCaption).trim() || !text(raw.alt).trim()) return null;
+    if (post.type === 'reel') {
+      const supplied = raw.video || {};
+      post.video = {...supplied,src:safeFinishedAsset(supplied.src,post,/\.mp4$/i),poster:safeFinishedAsset(supplied.poster,post,/\.(png|jpe?g|webp|avif)$/i)};
+      if (!post.video.src || !post.video.poster || !text(post.video.audioStatus).trim()) return null;
+    } else if (post.slides.length < (post.type === 'carousel' ? 2 : 1) || (post.type === 'image' && post.slides.length !== 1) || post.slides.some(s => !s.src || !s.alt)) return null;
+    return post;
+  }
+  function filteredFinished() {
+    const query = state.query.trim().toLocaleLowerCase('en-GB');
+    return finishedPosts.filter(post => !finishedUnavailable.has(post.id)
+      && (state.client === 'all' || post.clientId === state.client)
+      && (state.format === 'all' || post.format === state.format)
+      && (!query || hashText([post._name,post.id,post.title,post.caption,post.facebookCaption,post.alt,post.type]).includes(query)));
+  }
+  function finishedTile(post) {
+    const client = getClient(post.clientId);
+    return `<button class="finished-tile" type="button" data-finished-post="${esc(post.id)}" aria-label="Open ${esc(post._name)}: ${esc(post.title)}, ${esc(post.format)}, finished draft"><span class="finished-cover"><img src="${esc(post.cover)}" alt="${esc(post.alt)}" width="1080" height="1440" loading="lazy" decoding="async" data-finished-image="${esc(post.id)}"><span class="finished-file-error" hidden>Media unavailable</span></span><span class="finished-tile-copy"><span class="finished-type">${post.type === 'reel' ? '<span aria-hidden="true">▷</span> Reel' : post.type === 'carousel' ? `${icon('copy',14)} ${post.slides.length} slides` : 'Photo'}</span>${state.client === 'all' ? `<span class="finished-client-name">${esc(client.name)}</span>` : ''}<strong>${esc(post.title)}</strong></span></button>`;
+  }
+  function renderFinished() {
+    const rows = filteredFinished();
+    const allScope = finishedPosts.filter(p => !finishedUnavailable.has(p.id) && (state.client === 'all' || p.clientId === state.client));
+    const client = getClient(state.client);
+    const chooser = `<div class="finished-client-tabs" role="group" aria-label="Finished posts by client"><button type="button" data-finished-client="all" aria-pressed="${state.client === 'all'}">All clients</button>${clients.map(c => `<button type="button" data-finished-client="${esc(c.id)}" aria-pressed="${state.client === c.id}">${esc(c.name)}</button>`).join('')}</div>`;
+    const profile = client ? `<header class="feed-profile finished-profile">${logo(client,true)}<div class="feed-profile-copy"><div class="feed-profile-title"><h2>${esc(client.name)}</h2><span class="draft-badge">Review drafts</span></div>${instagramIdentity(client)}<p>${esc(client.location)}</p><div class="feed-profile-status">${logoStatus(client)}<span>${allScope.length} produced ${allScope.length === 1 ? 'post' : 'posts'} · no live profile data</span></div></div><button type="button" class="button secondary" data-view="brand">Brand & evidence</button></header>` : '';
+    const intro = finishedData?.summary ? `<div class="finished-intro"><p>${esc(finishedData.summary)}</p></div>` : '';
+    if (finishedState === 'unavailable') return chooser + profile + '<div class="empty-state"><h2>Finished media could not be opened</h2><p>The finished collection is unavailable. The earlier calendar remains held; its briefs are not counted as completed posts.</p><button class="button secondary" data-action="reload-finished" type="button">Try again</button></div>';
+    const missingCount = (arr(finishedData?.posts).length - finishedPosts.length) + finishedUnavailable.size;
+    const gap = missingCount > 0 ? `<p class="finished-gap" role="status">${missingCount} supplied ${missingCount === 1 ? 'record is' : 'records are'} unavailable or incomplete and excluded from the finished gallery.</p>` : '';
+    return chooser + profile + intro + gap + (rows.length ? `<div class="finished-gallery-head"><h2>${client ? 'Posts & Reels' : 'All client posts & Reels'}</h2><span>${rows.length} actual ${rows.length === 1 ? 'export' : 'exports'} in supplied batch order</span></div><div class="finished-grid" aria-label="${esc(client?.name || 'All clients')} finished media grid">${rows.map(finishedTile).join('')}</div>` : empty('No finished media in this selection', 'Choose another client or format, or clear the search. Planning briefs do not appear in this gallery.'));
+  }
+
+  function finishedMedia(post) {
+    if (post.type === 'reel') return `<div class="finished-video-wrap"><video class="finished-video" controls playsinline preload="none" poster="${esc(post.video.poster)}" aria-label="${esc(post.title)}" aria-describedby="finished-video-description"><source src="${esc(post.video.src)}" type="video/mp4"><p>Your browser cannot play this video. Use the MP4 download.</p></video><p id="finished-video-description">${esc(post.alt)}</p><p class="finished-audio"><strong>Audio:</strong> ${esc(post.video.audioStatus)}</p><div class="finished-player-error" hidden role="status">The video could not be played here. Try the direct MP4 download.</div><a class="button secondary" href="${esc(post.video.src)}" download>Download Reel MP4</a></div>`;
+    state.previewIndex = Math.max(0,Math.min(state.previewIndex,post.slides.length-1));
+    const slide = post.slides[state.previewIndex];
+    return `<div class="finished-image-viewer" tabindex="-1"><div class="finished-image-frame"><img src="${esc(slide.src)}" alt="${esc(slide.alt)}" width="1080" height="1440" decoding="async" data-finished-detail="${esc(post.id)}"><p class="finished-player-error" hidden role="status">This slide is unavailable. No replacement artwork is shown.</p></div>${post.slides.length > 1 ? `<div class="media-controls"><button type="button" class="button secondary" data-finished-nav="previous" aria-label="Previous slide"${state.previewIndex === 0 ? ' disabled' : ''}>${icon('left',16)} Previous</button><p role="status" aria-live="polite">Slide ${state.previewIndex+1} of ${post.slides.length}</p><button type="button" class="button secondary" data-finished-nav="next" aria-label="Next slide"${state.previewIndex === post.slides.length-1 ? ' disabled' : ''}>Next ${icon('right',16)}</button></div>` : ''}<div class="media-alt"><strong>${post.slides.length > 1 ? `Slide ${state.previewIndex+1} alt text` : 'Image alt text'}</strong><p>${esc(slide.alt)}</p><button type="button" class="button secondary small" data-finished-copy="slide-alt">Copy this alt text</button></div><div class="media-downloads"><a class="button secondary" href="${esc(slide.src)}" download>Download ${post.slides.length > 1 ? 'slide' : 'image'}</a><a class="text-link" href="${esc(slide.src)}" target="_blank" rel="noopener noreferrer">Open full size ${icon('external',13)}</a></div></div>`;
+  }
+  function finishedCopyBlock(label, value, key) {
+    return `<section class="copy-block"><div class="copy-block-head"><h3>${esc(label)}</h3><button class="button secondary small" type="button" data-finished-copy="${key}">${icon('copy',12)} Copy</button></div><pre class="copy-content">${esc(text(value))}</pre></section>`;
+  }
+  function finishedAlt(post) {
+    return post.type === 'reel' ? post.alt : post.slides.map((slide,index) => `${post.slides.length > 1 ? `Slide ${index+1}\n` : ''}${slide.alt}`).join('\n\n');
+  }
+  function renderFinishedDialog(post) {
+    const client = getClient(post.clientId);
+    $('#dialog-content').innerHTML = `<header class="dialog-head"><div class="dialog-topline">${logo(client)}<span>${esc(client.name)}</span><span>·</span><span>${esc(post.id)}</span></div><button class="dialog-close" type="button" data-action="close-dialog" aria-label="Close post detail">×</button><h2 id="post-dialog-title">${esc(post.title)}</h2><div class="dialog-meta">${formatTag(post)}<span class="draft-badge">Finished draft</span><span>${esc(post.version || 'Version not supplied')}</span></div><p class="finished-detail-boundary">Produced media for review · not published or approved by this dashboard.</p></header><div class="dialog-tabs" role="tablist" aria-label="Finished post details">${[['media','Media'],['copy','Captions & alt text'],['evidence','Review & sources']].map(([key,label]) => `<button type="button" id="tab-${key}" role="tab" aria-selected="${state.dialogTab === key}" aria-controls="panel-${key}" tabindex="${state.dialogTab === key ? '0' : '-1'}" data-dialog-tab="${key}">${label}</button>`).join('')}</div><div class="dialog-body"><section id="panel-media" role="tabpanel" aria-labelledby="tab-media"${state.dialogTab !== 'media' ? ' hidden' : ''}><div id="finished-media-container" tabindex="-1">${finishedMedia(post)}</div></section><section id="panel-copy" role="tabpanel" aria-labelledby="tab-copy"${state.dialogTab !== 'copy' ? ' hidden' : ''}>${finishedCopyBlock('Instagram caption',post.caption,'instagram')}${finishedCopyBlock('Facebook caption',post.facebookCaption,'facebook')}${finishedCopyBlock(post.type === 'reel' ? 'Video description' : 'Alt text',finishedAlt(post),'alt')}</section><section id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence"${state.dialogTab !== 'evidence' ? ' hidden' : ''}><section class="brief-block"><h3>Source summary</h3><p>${esc(text(post.sourceSummary) || 'Source summary not supplied.')}</p></section><section class="brief-block"><h3>Review status</h3><p>${esc(text(post.review?.status) || 'Not verified')}</p><p>${esc(text(post.review?.scope) || 'Independent review scope has not been supplied.')}</p></section>${arr(post.notes).length ? bulletBlock('Notes & remaining checks',post.notes,false) : ''}<p class="finished-detail-boundary">A technical or AI review does not supply human approval. Check current facts, media and audio rights, consent and the exact final version before social publication.</p></section><div class="dialog-actions"><a class="button yellow" href="${esc(post.download)}" download>Download post pack ZIP</a><button class="button secondary" type="button" data-finished-copy="link">Copy post link</button>${threadLink(client,true)}</div></div>`;
+  }
+  function moveFinishedMedia(direction) {
+    const post = finishedPosts.find(p => p.id === state.openPost);
+    if (!post || post.type === 'reel') return;
+    state.previewIndex = Math.max(0,Math.min(post.slides.length-1,state.previewIndex+(direction === 'next' ? 1 : -1)));
+    const host = $('#finished-media-container',dialog);
+    if (!host) return;
+    host.innerHTML = finishedMedia(post);
+    const target = [...host.querySelectorAll('[data-finished-nav]')].find(b => b.dataset.finishedNav === direction && !b.disabled) || [...host.querySelectorAll('[data-finished-nav]')].find(b => !b.disabled) || host;
+    target.focus({preventScroll:true});
+  }
+  function stopVideos(scope = document) {
+    scope.querySelectorAll('video').forEach(video => video.pause());
+  }
+  async function copyFinished(key) {
+    const post = finishedPosts.find(p => p.id === state.openPost);
+    if (!post) return;
+    const values = {instagram:post.caption,facebook:post.facebookCaption,alt:finishedAlt(post),'slide-alt':post.slides[state.previewIndex]?.alt || post.alt,link:location.href};
+    if (Object.hasOwn(values,key)) await copyText(text(values[key]),`${key === 'link' ? 'Post link' : key.includes('alt') ? 'Alt text' : key === 'facebook' ? 'Facebook caption' : 'Instagram caption'} copied`);
+  }
+
   function syncURL() {
     const next = new URLSearchParams();
     if (state.client !== 'all') next.set('client', state.client);
-    if (state.view !== 'overview') next.set('view', state.view);
+    next.set('view', state.view);
     if (state.query) next.set('q', state.query);
     if (state.format !== 'all') next.set('format', state.format);
     if (state.pillar !== 'all') next.set('pillar', state.pillar);
@@ -155,7 +246,9 @@
   function renderNavigation() {
     $('#view-nav').innerHTML = Object.entries(VIEWS).map(([key, labels]) => `<button type="button" class="nav-button" data-view="${key}"${state.view === key ? ' aria-current="page"' : ''}>${icon(key)}${esc(labels[0])}</button>`).join('');
     $('#client-count').textContent = clients.length;
-    $('#client-nav').innerHTML = `<button type="button" class="client-button" data-client="all" aria-pressed="${state.client === 'all'}"><span class="brand-logo all-clients-icon">${icon('overview', 15)}</span><span>All clients</span><span class="client-number">${posts.length}</span></button>` + clients.map(client => `<button type="button" class="client-button" data-client="${esc(client.id)}" aria-pressed="${state.client === client.id}">${logo(client)}<span class="client-label"><span>${esc(client.name)}</span>${logoStatus(client)}</span><span class="client-number">${client.posts.length}</span></button>`).join('');
+    const actual = finishedPosts.filter(p => !finishedUnavailable.has(p.id));
+    const count = id => state.view === 'finished' ? actual.filter(p => id === 'all' || p.clientId === id).length : id === 'all' ? posts.length : getClient(id).posts.length;
+    $('#client-nav').innerHTML = `<button type="button" class="client-button" data-client="all" aria-pressed="${state.client === 'all'}"><span class="brand-logo all-clients-icon">${icon('overview', 15)}</span><span>All clients</span><span class="client-number" title="${state.view === 'finished' ? 'Produced exports' : 'Held calendar drafts'}">${count('all')}</span></button>` + clients.map(client => `<button type="button" class="client-button" data-client="${esc(client.id)}" aria-pressed="${state.client === client.id}">${logo(client)}<span class="client-label"><span>${esc(client.name)}</span>${logoStatus(client)}</span><span class="client-number" title="${state.view === 'finished' ? 'Produced exports' : 'Held calendar drafts'}">${count(client.id)}</span></button>`).join('');
   }
 
   function updateFilters() {
@@ -446,7 +539,7 @@
   function captureFocus() {
     const active = document.activeElement;
     if (!active || active === document.body || dialog.contains(active)) return null;
-    const keys = ['view','client','clientView','feedClient','week','layout','researchTab','action'];
+    const keys = ['view','client','clientView','feedClient','finishedClient','week','layout','researchTab','action'];
     const key = keys.find(name => active.dataset?.[name] !== undefined);
     return { id: active.id || '', key, value: key ? active.dataset[key] : '', start: typeof active.selectionStart === 'number' ? active.selectionStart : null, end: typeof active.selectionEnd === 'number' ? active.selectionEnd : null };
   }
@@ -475,6 +568,7 @@
   }
   function render() {
     const previousFocus = captureFocus();
+    stopVideos($('#view-content'));
     updateFilters();
     renderNavigation();
     const rows = filteredPosts();
@@ -482,15 +576,20 @@
     $('#view-title').textContent = labels[1];
     $('#view-description').textContent = labels[2];
     const directionsView = state.view === 'directions';
+    const finishedView = state.view === 'finished';
     const conceptsView = state.view === 'art-direction' || directionsView;
-    for (const selector of ['#format-filter','#pillar-filter']) $(selector).closest('label').hidden = conceptsView;
-    $('#date-toggle').hidden = conceptsView;
+    $('#format-filter').closest('label').hidden = conceptsView;
+    $('#pillar-filter').closest('label').hidden = conceptsView || finishedView;
+    $('#date-toggle').hidden = conceptsView || finishedView;
     $('.export-actions').hidden = conceptsView;
-    $('#search').placeholder = directionsView ? 'Search client stories, sources, decisions…' : conceptsView ? 'Search rejected studies…' : 'Search held drafts and research…';
-    $('#search').setAttribute('aria-label', directionsView ? 'Search client stories, sources and decisions' : conceptsView ? 'Search rejected photo studies' : 'Search held posts and research');
-    if (conceptsView) { $('#date-filters').hidden = true; $('#date-toggle').setAttribute('aria-expanded','false'); }
-    $('#result-status').textContent = directionsView ? `${directionRows().length} proposed client directions · source qualification and human creative acceptance pending` : conceptsView ? `${conceptRows().length} rejected studies preserved for comparison · client and search filters apply` : state.view === 'research' ? 'Research is shared across the programme. Client selection filters the category reference library.' : state.view === 'brand' ? `${clientScope().length} client workspace${clientScope().length === 1 ? '' : 's'} · profile access and approval limits shown below` : `${rows.length} of ${posts.length} held drafts · rebriefing required · ${dateLabel(state.from)}—${dateLabel(state.to)} 2026`;
-    $('#view-content').innerHTML = directionsView ? renderDirections() : state.view === 'overview' ? renderOverview(rows) : state.view === 'calendar' ? renderCalendar(rows) : state.view === 'feed' ? renderFeed(rows) : state.view === 'art-direction' ? renderArtDirection() : state.view === 'posts' ? (rows.length ? postList(rows) : empty()) : state.view === 'brand' ? renderBrands() : state.view === 'research' ? renderResearch() : renderProduction(rows);
+    $('#search').placeholder = finishedView ? 'Search finished posts, clients, captions…' : directionsView ? 'Search client stories, sources, decisions…' : conceptsView ? 'Search rejected studies…' : 'Search held drafts and research…';
+    $('#search').setAttribute('aria-label', finishedView ? 'Search finished posts, clients and captions' : directionsView ? 'Search client stories, sources and decisions' : conceptsView ? 'Search rejected photo studies' : 'Search held posts and research');
+    if (conceptsView || finishedView) { $('#date-filters').hidden = true; $('#date-toggle').setAttribute('aria-expanded','false'); }
+    $('.topbar > .draft-badge').textContent = finishedView ? 'Finished drafts' : 'Drafts · human acceptance pending';
+    $('.draft-notice').hidden = finishedView;
+    $('.draft-notice p').innerHTML = finishedView ? 'This gallery contains produced review exports. Open a post for its actual media, captions, alt text and download pack. <span>No social account is connected or published by this dashboard.</span>' : 'The previous 21 slides were rejected. All 182 earlier calendar drafts are held for rebriefing; their caption copying is disabled. Open Direction reset for the new story briefs and source gaps. <span>No final social release or guaranteed result is implied.</span>';
+    $('#result-status').textContent = finishedView ? `${filteredFinished().length} produced exports shown · ${finishedPosts.filter(p => !finishedUnavailable.has(p.id)).length} in the finished collection · review drafts, not live posts` : directionsView ? `${directionRows().length} proposed client directions · source qualification and human creative acceptance pending` : conceptsView ? `${conceptRows().length} rejected studies preserved for comparison · client and search filters apply` : state.view === 'research' ? 'Research is shared across the programme. Client selection filters the category reference library.' : state.view === 'brand' ? `${clientScope().length} client workspace${clientScope().length === 1 ? '' : 's'} · profile access and approval limits shown below` : `${rows.length} of ${posts.length} held drafts · rebriefing required · ${dateLabel(state.from)}—${dateLabel(state.to)} 2026`;
+    $('#view-content').innerHTML = finishedView ? renderFinished() : directionsView ? renderDirections() : state.view === 'overview' ? renderOverview(rows) : state.view === 'calendar' ? renderCalendar(rows) : state.view === 'feed' ? renderFeed(rows) : state.view === 'art-direction' ? renderArtDirection() : state.view === 'posts' ? (rows.length ? postList(rows) : empty()) : state.view === 'brand' ? renderBrands() : state.view === 'research' ? renderResearch() : renderProduction(rows);
     document.querySelectorAll('[data-concept-copy]').forEach(button => { button.disabled = true; button.title = 'Rejected creative: caption copying is held for rebriefing'; });
     document.title = `${state.client === 'all' ? labels[0] : getClient(state.client)?.name || labels[0]} · Social studio · Elk`;
     syncURL();
@@ -509,6 +608,8 @@
     return `<section class="brief-block"><h3>${esc(title)}</h3><${tag} class="brief-list">${arr(items).map(item => `<li>${esc(text(item))}</li>`).join('')}</${tag}></section>`;
   }
   function renderDialog() {
+    const finished = finishedPosts.find(item => item.id === state.openPost);
+    if (finished && state.view === 'finished') { renderFinishedDialog(finished); return; }
     const post = posts.find(item => item.id === state.openPost);
     if (!post) return;
     const client = getClient(post._client);
@@ -520,11 +621,12 @@
   }
 
   function openPost(id, tab = '', trigger = null) {
-    const selectedPost = posts.find(post => post.id === id);
+    const selectedPost = state.view === 'finished' ? finishedPosts.find(post => post.id === id) : posts.find(post => post.id === id);
     if (!selectedPost) return;
     lastPostTrigger = trigger || document.activeElement;
     state.openPost = id;
-    state.dialogTab = ['media', 'copy', 'creative', 'evidence'].includes(tab) ? tab : (postPreview(selectedPost) ? 'media' : 'copy');
+    stopVideos(dialog);
+    state.dialogTab = selectedPost._finished ? (['media','copy','evidence'].includes(tab) ? tab : 'media') : ['media', 'copy', 'creative', 'evidence'].includes(tab) ? tab : (postPreview(selectedPost) ? 'media' : 'copy');
     state.previewIndex = 0;
     renderDialog();
     if (!dialog.open) dialog.showModal();
@@ -535,9 +637,23 @@
   }
   function closeDialog() {
     if (dialog.open) dialog.close();
+    finishDialogClose();
+  }
+  function finishDialogClose() {
+    if (dialog.open) return;
+    stopVideos(dialog);
+    state.openPost = '';
+    const toast = $('#toast');
+    if (toast) document.body.append(toast);
+    $('#dialog-content').innerHTML = '';
+    document.body.style.overflow = '';
+    syncURL();
+    if (lastPostTrigger?.isConnected) lastPostTrigger.focus();
   }
   function setDialogTab(key, focus = true) {
     if (!['media', 'copy', 'creative', 'evidence'].includes(key)) return;
+    if (!$(`#tab-${key}`,dialog)) return;
+    if (key !== 'media') stopVideos(dialog);
     state.dialogTab = key;
     for (const tab of dialog.querySelectorAll('[role=tab]')) {
       const active = tab.dataset.dialogTab === key;
@@ -612,6 +728,14 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   function exportCSV() {
+    if (state.view === 'finished') {
+      const rows = filteredFinished();
+      const cell = value => { let clean = text(value); if (/^\s*[=+@-]/.test(clean) || /^[\t\r]/.test(clean)) clean = `'${clean}`; return `"${clean.replace(/"/g,'""')}"`; };
+      const columns = ['Client','Post ID','Title','Type','Version','Status','Instagram caption','Facebook caption','Alt text','Download pack','Review status','Review scope'];
+      const csv = [columns,...rows.map(p => [p._name,p.id,p.title,p.type,p.version,p.status,p.caption,p.facebookCaption,finishedAlt(p),p.download,p.review?.status,p.review?.scope])].map(row => row.map(cell).join(',')).join('\r\n');
+      download('\uFEFF'+csv,`elk-finished-drafts-${state.client}.csv`,'text/csv;charset=utf-8');
+      showToast(`${rows.length} finished draft records exported`); return;
+    }
     const rows = filteredPosts();
     const columns = ['Client', 'Post ID', 'Date', 'Proposed Europe/London time', 'UK zone', 'India time', 'Format', 'Pillar', 'Series', 'Title', 'Hook', 'Instagram caption', 'Facebook caption', 'CTA', 'On-screen text', 'Production', 'Motion', 'Stories', 'Alt text', 'Assets', 'Hypothesis', 'Metric', 'Approval conditions', 'Source IDs', 'Status'];
     const csvCell = value => {
@@ -624,6 +748,12 @@
     showToast(`${rows.length} draft posts exported as CSV`);
   }
   function exportJSON() {
+    if (state.view === 'finished') {
+      const ids = new Set(filteredFinished().map(p => p.id));
+      const payload = {...finishedData,posts:arr(finishedData?.posts).filter(p => ids.has(p.id))};
+      download(JSON.stringify(payload,null,2)+'\n',`elk-finished-drafts-${state.client}.json`,'application/json;charset=utf-8');
+      showToast(`${ids.size} finished draft records exported`); return;
+    }
     const rows = filteredPosts();
     const selectedIds = new Set(rows.map(post => post.id));
     const exported = { title: 'Elk Social studio · draft planning export', version: '2.0', status: 'Held for rebriefing — no publication approval', period: { from: state.from, to: state.to, timezone: 'Europe/London' }, filters: { client: state.client, format: state.format, pillar: state.pillar, query: state.query }, clients: clientScope().map(client => ({ ...client, posts: client.posts.filter(post => selectedIds.has(post.id)).map(({ _client, _name, ...post }) => post) })), guidance: data.guidance, research: data.research, threads: data.threads };
@@ -637,6 +767,7 @@
   }
   function setView(view) {
     if (!VIEWS[view]) return;
+    closeDialog();
     state.view = view;
     render();
     focusViewTitle();
@@ -671,6 +802,18 @@
     document.addEventListener('load', event => { if (event.target instanceof HTMLImageElement && event.target.hasAttribute('data-concept-image')) { event.target.hidden = false; const missing = event.target.nextElementSibling; if (missing) missing.hidden = true; } },true);
     document.addEventListener('load',event => { if (event.target instanceof HTMLImageElement && (event.target.dataset.feedPreview || event.target.dataset.mediaImage)) updatePreviewImage(event.target,true); },true);
     document.addEventListener('error', event => {
+      if (event.target instanceof HTMLImageElement && event.target.dataset.finishedImage) {
+        const id = event.target.dataset.finishedImage;
+        finishedUnavailable.add(id);
+        const tile = event.target.closest('.finished-tile');
+        event.target.hidden = true;
+        if (tile) { tile.disabled = true; tile.querySelector('.finished-file-error').hidden = false; tile.setAttribute('aria-label','Media unavailable; excluded from finished count'); }
+        if (state.view === 'finished') {
+          render();
+        }
+      }
+      if (event.target instanceof HTMLImageElement && event.target.dataset.finishedDetail) { event.target.hidden = true; event.target.nextElementSibling.hidden = false; }
+      if (event.target instanceof HTMLVideoElement && event.target.classList.contains('finished-video')) { const message = event.target.parentElement.querySelector('.finished-player-error'); if (message) message.hidden = false; }
       if (event.target instanceof HTMLImageElement && event.target.hasAttribute('data-concept-image')) { event.target.hidden = true; const missing = event.target.nextElementSibling; if (missing) missing.hidden = false; }
       if (event.target instanceof HTMLImageElement && (event.target.dataset.feedPreview || event.target.dataset.mediaImage)) updatePreviewImage(event.target,false);
       if (event.target instanceof HTMLImageElement && event.target.closest('[data-logo]')) {
@@ -683,6 +826,10 @@
       const target = event.target.closest('button');
       if (!target) return;
       if (target.dataset.view) setView(target.dataset.view);
+      else if (target.dataset.finishedClient) { state.client = target.dataset.finishedClient; state.pillar = 'all'; setView('finished'); }
+      else if (target.dataset.finishedPost) openPost(target.dataset.finishedPost,'media',target);
+      else if (target.dataset.finishedNav) moveFinishedMedia(target.dataset.finishedNav);
+      else if (target.dataset.finishedCopy) copyFinished(target.dataset.finishedCopy);
       else if (target.dataset.client) { state.client = target.dataset.client; state.pillar = 'all'; render(); }
       else if (target.dataset.clientView) { state.client = target.dataset.clientView; state.pillar = 'all'; setView('feed'); }
       else if (target.dataset.feedClient) { state.client = target.dataset.feedClient; state.pillar = 'all'; setView('feed'); }
@@ -696,6 +843,7 @@
       else if (target.dataset.conceptCopy) copyConcept(target.dataset.conceptCopy,target.dataset.conceptChannel);
       else if (target.dataset.directionCopy) { const c = directionReset?.clients.find(x => x.id === target.dataset.directionCopy); if (c) copyText(c.caption, 'Conditional draft copied · filmed proof and approval still required'); }
       else if (target.dataset.action === 'reload-directions') location.reload();
+      else if (target.dataset.action === 'reload-finished') location.reload();
       else if (target.dataset.action === 'retry-art-direction') loadArtDirection();
       else if (target.dataset.action === 'reset') resetFilters();
       else if (target.dataset.action === 'close-dialog') closeDialog();
@@ -721,23 +869,25 @@
     });
     document.addEventListener('keydown', event => {
       if (event.key === '/' && !dialog.open && !/input|textarea|select/i.test(event.target.tagName)) { event.preventDefault(); $('#search').focus(); }
+      if (dialog.open && event.target.closest('.finished-image-viewer') && ['ArrowLeft','ArrowRight'].includes(event.key)) { event.preventDefault(); moveFinishedMedia(event.key === 'ArrowRight' ? 'next' : 'previous'); }
       if (dialog.open && event.target.closest('.media-viewer') && ['ArrowLeft','ArrowRight'].includes(event.key)) { event.preventDefault(); moveMedia(event.key === 'ArrowRight' ? 'next' : 'previous'); }
       if (dialog.open && event.target.getAttribute('role') === 'tab' && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
         event.preventDefault();
-        const keys = ['media', 'copy', 'creative', 'evidence'];
+        const keys = [...dialog.querySelectorAll('[role=tab]')].map(tab => tab.dataset.dialogTab);
         let index = keys.indexOf(state.dialogTab);
         index = event.key === 'Home' ? 0 : event.key === 'End' ? keys.length-1 : (index + (event.key === 'ArrowRight' ? 1 : keys.length-1)) % keys.length;
         setDialogTab(keys[index]);
       }
     });
     dialog.addEventListener('click', event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right) closeDialog(); } });
-    dialog.addEventListener('close', () => { state.openPost = ''; document.body.style.overflow = ''; const toast = $('#toast'); if (toast) document.body.append(toast); syncURL(); if (lastPostTrigger?.isConnected) lastPostTrigger.focus(); });
-    window.addEventListener('popstate', () => { const next = new URLSearchParams(location.search); state.view = VIEWS[next.get('view')] ? next.get('view') : 'directions'; state.client = clients.some(client => client.id === next.get('client')) ? next.get('client') : 'all'; render(); const id = next.get('post'); if (id) openPost(id); else closeDialog(); });
+    dialog.addEventListener('close', finishDialogClose);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) stopVideos(); });
+    window.addEventListener('popstate', () => { const next = new URLSearchParams(location.search); const id = next.get('post'); closeDialog(); state.view = VIEWS[next.get('view')] ? next.get('view') : 'finished'; state.client = clients.some(client => client.id === next.get('client')) ? next.get('client') : 'all'; render(); if (id) openPost(id); });
   }
 
   async function init() {
     $('#search-icon').innerHTML = icon('search', 15);
-    if ($('.version')) $('.version').textContent = 'v2.0';
+    if ($('.version')) $('.version').textContent = 'v3.0';
     bindEvents();
     try {
       const response = await fetch('./data.json', { credentials: 'omit' });
@@ -746,6 +896,16 @@
       if (!Array.isArray(payload.clients) || !payload.clients.length) throw new Error('No client data was supplied');
       data = { ...payload, guidance: arr(payload.guidance), research: arr(payload.research), threads: payload.threads || {} };
       clients = data.clients.map(normaliseClient);
+      try {
+        const response = await fetch('./finished-posts.json',{credentials:'omit',cache:'no-store'});
+        if (!response.ok) throw new Error('Finished collection unavailable');
+        const payload = await response.json();
+        if (!payload || !Array.isArray(payload.posts)) throw new Error('Invalid finished collection');
+        finishedData = payload;
+        const ids = new Set();
+        finishedPosts = payload.posts.map(normaliseFinished).filter(post => { if (!post || ids.has(post.id)) return false; ids.add(post.id); return true; });
+        finishedState = 'loaded';
+      } catch (_) { finishedState = 'unavailable'; }
       try { const response = await fetch('./direction-reset.json', { credentials: 'omit', cache: 'no-store' }); if (!response.ok) throw new Error('Direction data unavailable'); const next = await response.json(); if (!Array.isArray(next.clients) || next.clients.length !== 7 || next.clients.some(c => !clients.some(x => x.id === c.id))) throw new Error('Invalid client directions'); directionReset = next; } catch (_) { directionReset = null; }
       posts = clients.flatMap(client => client.posts).sort((a, b) => a.date.localeCompare(b.date) || a._name.localeCompare(b._name) || a.id.localeCompare(b.id));
       sourceMap = new Map([...clients.flatMap(client => client.sources), ...arr(payload.sources), ...data.guidance].map(source => [String(source.id), source]));
@@ -757,11 +917,12 @@
       if (state.week < FIRST_WEEK || state.week > LAST_WEEK) state.week = FIRST_WEEK;
       $('#client-filter').innerHTML = '<option value="all">All clients</option>' + clients.map(client => `<option value="${esc(client.id)}">${esc(client.name)}</option>`).join('');
       const initialPost = state.openPost;
-      if (!posts.some(post => post.id === initialPost)) state.openPost = '';
+      const initialCollection = state.view === 'finished' ? finishedPosts : posts;
+      if (!initialCollection.some(post => post.id === initialPost)) state.openPost = '';
       render();
-      if (initialPost && posts.some(post => post.id === initialPost)) openPost(initialPost);
+      if (initialPost && initialCollection.some(post => post.id === initialPost)) openPost(initialPost);
       loadArtDirection();
-      window.__ELK_STUDIO__ = Object.freeze({ version: '2.0', clients: clients.length, posts: posts.length, directions: directionReset?.clients.length || 0, getView: () => state.view });
+      window.__ELK_STUDIO__ = Object.freeze({ version: '3.0', clients: clients.length, posts: posts.length, finishedPosts: finishedPosts.length, directions: directionReset?.clients.length || 0, getView: () => state.view });
     } catch (_) {
       $('#view-content').innerHTML = '<div class="error-note"><h2>The programme could not be opened</h2><p>The planner needs its sanitised <code>data.json</code> beside this page. Open the deployed team link or serve this folder through a local web server; browsers restrict data loading from a file opened directly.</p><p>No client account is connected, and no data has been changed.</p><button type="button" class="button secondary" id="retry-load" style="margin-top:15px">Try again</button></div>';
       $('#result-status').textContent = 'Programme data unavailable';
