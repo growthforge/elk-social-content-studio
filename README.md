@@ -1,100 +1,64 @@
-# Elk · Social studio v3.0
+# Elk · Photo programme v5
 
-22 October 2026 · [codex]. A buildless, read-only team gallery for produced Instagram post and Reel drafts. The default **Finished posts** view shows actual files from `finished-posts.json`; the earlier 182 calendar briefs and rejected studies remain accessible in **Held feed**, **Held briefs**, **Rejected studies** and the existing planning/research views. They are excluded from finished counts. Earlier caption copying stays disabled.
+22 October 2026 · [codex]. VERIFIED implementation: `index.html`, `app.js` and `styles.css`, inspected 22 October 2026. Buildless, read-only team review on the existing GitHub Pages host. The primary collection is `photo-programme.json`; its supplied window determines the header, month/week options, date bounds and calendar. The current authorised production scope is **22–31 October 2026**, with four proposed dates per client: 23, 25, 28 and 30 October. Only actual photo or carousel exports enter the primary gallery, calendar, CSV and finished counts. Video ideas appear in **Video directions** as **Concept / direction only**. No video players, embeds, video requests, external fonts or analytics are created.
 
-A finished draft is a produced export, not a live post or human approval. The dashboard does not connect accounts, schedule, publish, record approval or change the working status register. Selected derivative media are intentionally shared for team review under the current user request. Raw originals, private source/Drive records and operating documents remain outside this public deployment. Final social rights, consent, current facts and human acceptance need separate evidence.
+Dates are proposed posting dates. A finished draft means an export exists; it does not mean scheduled, published, creatively accepted or approved for social release. The October target is 28 posts, four for each of seven clients. Expected collection/client totals and the cadence label are read from the dataset and displayed separately from actual counts. The retained full October–November schema remains supported for explicit archive validation; its 119/17 targets do not describe current October work. November media and sources remain local historical work, without new progress credit. Root owns replacement of actual public JSON; this code change does not relabel the existing dataset or claim 28 reviewed posts exist.
 
-The site is public and unauthenticated. `noindex,nofollow,noarchive` requests crawler exclusion; it is not access control and does not guarantee search absence. Local files, fonts and media only; no remote embeds or analytics.
+The earlier wave is **Previous wave · needs rebrief** and contributes no new progress. Its cover images, captions and retained ZIPs remain inspectable without a video player. The 182 older briefs remain **Held briefs · archive**, with copying disabled. Existing brand and platform evidence remains accessible in **Brand & research**.
 
-## Finished collection contract
+The site remains public and unauthenticated. `noindex,nofollow,noarchive` is a crawler instruction, not access control or a guarantee of search absence. No account is connected and the app cannot schedule, publish, record human approval or write to the agency register.
 
-Root integration supplies `finished-posts.json` beside the app:
+## Collection and files
 
-```json
-{
-  "version": "1.0",
-  "observed": "2026-10-22",
-  "status": "Finished drafts · social release pending",
-  "summary": "One image post and one Reel for each client.",
-  "posts": [
-    {
-      "id": "client-image-01",
-      "clientId": "client-slug",
-      "type": "carousel",
-      "title": "The actual post title",
-      "caption": "Exact Instagram caption",
-      "facebookCaption": "Exact Facebook caption",
-      "alt": "Description of the cover or video",
-      "status": "Finished draft",
-      "version": "1.0",
-      "cover": "assets/finished/client-slug/client-image-01/cover.webp",
-      "slides": [
-        {"src": "assets/finished/client-slug/client-image-01/01.png", "alt": "Actual slide one description"},
-        {"src": "assets/finished/client-slug/client-image-01/02.png", "alt": "Actual slide two description"}
-      ],
-      "download": "assets/finished/client-slug/client-image-01/post-pack.zip",
-      "notes": ["The remaining source or publication conditions"],
-      "sourceSummary": "Public-safe description of the original client media used",
-      "review": {"status": "Independent export review pending", "scope": "No human approval inferred"}
-    }
-  ]
-}
+The integration contract and complete sample shape are in `../01-photo-programme-schema.md`. Root integration owns the real JSON and media. Client identity, original logos and public account links come from existing `data.json`.
+
+Every new post must have an ID, known client ID, proposed date in the window, type `image` or `carousel`, status exactly `Finished draft`, title, exact Instagram/Facebook copy, cover description, actual slide descriptions, version, public-safe source summary, review status/scope and a ZIP. Images have exactly one slide; carousels have 2–20 unique actual slides. All new files are flat paths under:
+
+```
+assets/programme/<clientId>/<postId>/<filename>
 ```
 
-`type` is exactly `image`, `carousel` or `reel`. Image records have exactly one slide; carousels have 2–20 unique actual slides. Reels omit `slides` or use an empty array, and supply:
+The runtime rejects unsafe paths, invalid window/target metadata and incomplete post metadata. It clips all calendar dates to the supplied window and selected date/month range, including weeks that cross a month boundary. Outdated month/week deep links reset, and date links clamp to the new window. Once per load it checks each unique image/ZIP path using at most four concurrent HEAD requests, with availability cached by the dataset version. Filtering never repeats the file checks. Missing files exclude the whole post from finished totals. No image bytes are fetched by this preflight; gallery images use native lazy loading, and the slide viewer inserts only its active full image. A later image decode error also removes the affected primary post from the counts. A HEAD success proves file availability only; the validator and actual export review provide the deeper checks.
 
-```json
-"video": {
-  "src": "assets/finished/client-slug/client-reel-01/01.mp4",
-  "poster": "assets/finished/client-slug/client-reel-01/poster.jpg",
-  "width": 1080,
-  "height": 1920,
-  "duration": 12.4,
-  "fps": 30,
-  "audioStatus": "Describe the actual export audio and its qualification"
-}
-```
+A post ZIP contains the actual final images, exact caption text and exact alt text in flat public-safe files. It must omit raw originals, private paths, Drive IDs, source handoffs, agency process and credential-bearing material. Rights, factual/currentness and approval notes belong in contextual evidence fields rather than consumer copy.
 
-The Reel's `id`, `cover` and `download` must use that same `client-reel-01` directory. `duration` is the actual numeric seconds, not a target. All post media are flat relative paths under `assets/finished/<clientId>/<post-id>/`; no URLs, traversal, nested folders or private paths. Image files are PNG/JPEG/WebP. `download` is the final post-pack ZIP. Include the final image(s) or MP4, caption text containing both exact channel captions, and alt-text descriptions in flat public-safe files. A cover/poster may also be in the pack. Do not include raw originals, private handoffs, build/provenance details or Drive IDs.
-
-Client identity, logo status and public handle come from existing `data.json`. No guessed handles, followers or performance figures are created. The app retains supplied batch order; it does not invent publication dates. Runtime metadata checks exclude incomplete records; a failed cover is marked unavailable and excluded from counts rather than replaced with fake artwork.
+Video direction references provide a direct video URL, why it applies and what was actually inspected. A page title or thumbnail is not represented as video playback. No competitor media is copied or embedded. Directions never enter post or media completion counts.
 
 ## Use and deep links
 
-Open the deployed team URL or serve this directory over HTTP. Direct `file:` access cannot reliably fetch JSON. This handoff does not start a server or deploy.
+Serve this directory over HTTP, or use the existing deployed GitHub Pages URL. Direct `file:` access cannot reliably fetch JSON.
 
 ```
+?view=programme
 ?view=finished
-?view=finished&client=pera-patisserie
-?view=finished&client=pera-patisserie&post=pera-reel-01
-?view=finished&format=Reel&q=detail
-?view=directions
-?view=feed&client=the-local-shop
-?view=posts&client=nazar-bedford
+?view=programme&client=pera-patisserie&month=2026-10
+?view=calendar&week=2026-10-26
+?view=programme&client=nazar-bedford&post=<actual-post-id>
+?view=video-directions&client=aara-birmingham
+?view=previous
+?view=held
+?view=references
 ```
 
-An omitted view defaults to Finished posts, including a client-only link. All seven client buttons, the sidebar and Client select filter this gallery. Search covers client, title, caption, alt and type; Format selects Photo, Carousel or Reel. Calendar dates/pillars are hidden because finished exports have no invented schedule. CSV/JSON exports use only the displayed finished selection in this view. Earlier calendar exports are held for rebriefing; their export buttons show a hold notice and produce no file.
+`finished` remains an alias for the new programme. Client, month, Monday-starting week, date range, image/carousel format and search filters combine. Date filters apply only to the new programme. Results can sort by earliest or latest proposed date. CSV exports only the filtered new finished posts, with their dates explicitly marked proposed.
 
-The three-column portrait grid loads lazy still covers only. Reel covers are shown in full within the grid frame, retaining their complete logos and headlines; the gallery does not simulate an exact Instagram uploader crop. It contains no video players. Opening a Reel mounts one native `controls playsinline preload="none"` player with its actual poster; leaving the media tab, closing the drawer, navigating or hiding the page pauses playback. A closed drawer removes the player. Image/carousel details display one full-size slide at a time with previous/next controls, slide-specific alt copy and direct downloads. All posts have exact Instagram/Facebook copy, complete alt copy, a ZIP link, version and separate source/review notes. Copying does not grant release approval.
+Open a post to view the full contained image, step through every actual slide, copy exact Instagram/Facebook captions or alt text, and download individual images or the ZIP. Arrow keys switch slides; Escape closes the native dialog. Every supplied logo uses `object-fit:contain`; cover previews also contain the complete artwork rather than cropping it. The mobile gallery retains three columns, with full-size inspection in the dialog.
 
-Native modal dialog contains keyboard focus and supports Escape. Tabs use Left/Right/Home/End; focused carousel controls support Left/Right. View navigation focuses the heading, filters preserve logical focus, and `/` focuses search. The layout uses local Manrope, readable captions, visible focus and horizontal client navigation on narrow screens.
-
-## Files and checks
-
-Current data files are separate: `finished-posts.json` (new produced media), `direction-reset.json` (proposed stories), `data.json` (held calendar, clients and research), and `art-direction.json` (rejected studies). Existing validators remain unchanged. Original app/style/index/README files were moved to `99-archive/2026-10-22-finished-posts-dashboard/` with a source/destination/SHA-256 manifest before these successors were written.
+## Validation
 
 ```
 node --check app.js
-node --check scripts/validate-finished.mjs
-node scripts/validate-finished.mjs
-node scripts/validate-directions.mjs
-node scripts/validate-data.mjs
-node scripts/validate-concepts.mjs --required
+node scripts/validate-photo-programme.mjs --mode october --partial
+node scripts/validate-photo-programme.mjs --mode october
+# Historical full schema only:
+node scripts/validate-photo-programme.mjs --mode full --partial
+node scripts/validate-photo-programme.mjs --mode full
 ```
 
-The finished validator requires **14 actual exports, seven clients, one still post/carousel plus one Reel each**. It checks safe local paths, regular files, recognised image headers/dimensions (full still slides 1080×1350 or 1080×1440), MP4 header/fast-start box order, absence of edit-list boxes (edts/elst), duration of at least 3 seconds and ffprobe H264/yuv420p/1080×1920/30fps/duration metadata, explicit audio status, ZIP structure/media/text presence, exact caption/alt agreement and private-path/credential-like leaks. `--partial` permits an incomplete collection solely for integration checks and explicitly does not certify the first wave. `ffprobe` must be on PATH. Source fidelity, real action, sound suitability, storytelling, rights, current identity and human acceptance require independent actual-output review.
+An explicit `--mode october` or `--mode full` is required; scope is never inferred from counts. October requires window 22–31 October, expected 28/four per client and only 23/25/28/30 October. Full retains the archived 22 October–30 November, 119/17 contract. `--partial` permits missing actual posts but still rejects wrong metadata, dates, duplicate placements, excess posts or broken supplied files; without it every client must have every expected date. October video directions are optional: omitted/empty, or 14 briefs/two per client for a complete direction collection; partial collection validation allows fewer. They never satisfy a photo count. The archived full complete mode retains its earlier separate-direction-per-client check.
 
-Integration still requires actual desktop/390px and enlarged-text review; client/search/format filters; native playback and pause/close behaviour; carousel, copy, downloads and deep links; final dataset/pack inspection; and deployed-byte verification. The producer's syntax and fixture checks are not browser, creative or human approval.
+Both modes validate safe paths, actual file signatures/dimensions, ZIP media equality, exact caption/alt inclusion, public-safe fields and direction references. Neither mode establishes creative acceptance, current facts, rights or human approval. Empty or missing primary data has an honest empty/unavailable state; it never borrows earlier media.
 
+Implementation palette: Field Paper `#F6F7F2`, White `#FFFFFF`, Forest Ink `#27362A`, Moss `#455E3A`, Sage Line `#DCE2D4`, Harvest Gold `#DEC56D`. Manrope remains the supplied local interface family for continuity; Arial is the local fallback for robust system rendering. No new consumer brand system is invented. Layout: a compact client rail and filter bar lead directly to an Instagram-style three-column export gallery, with a full-image review dialog.
 
-First-wave Reel duration guard: exported Reels must be at least 3 seconds to retain Meta publishing-API compatibility. This house preflight floor follows Meta’s official sample repository requirements read 22 October 2026; it does not claim the consumer-app upload route has been trialled. Shorter raw/action inserts may be used inside a longer truthful sequence, without repetition, slowdown or padding to manufacture duration.
+Predecessors and SHA-256 movement manifests: `99-archive/2026-10-22-photo-programme-dashboard/` and `99-archive/2026-10-22-photo-dashboard-october-window/` in the workspace. Deployment, public data integration and shared/client logs belong to the parent task. Browser visual verification at desktop and 390 px must be performed on the final actual dataset before deployment; static checks alone do not establish it.
