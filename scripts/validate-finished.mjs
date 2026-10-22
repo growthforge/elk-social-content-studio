@@ -67,23 +67,46 @@ function zipText(buffer,entry){
   if(!decoded||decoded.length!==entry.bytes)throw new Error('Unsupported pack text');
   return decoded.toString('utf8');
 }
-function fastStart(file){
-  const fd=fs.openSync(file,'r'),size=fs.fstatSync(fd).size,header=Buffer.alloc(16);
-  let at=0,moov=-1,mdat=-1,count=0;
-  try{
-    while(at+8<=size&&count++<10000){
-      fs.readSync(fd,header,0,Math.min(16,size-at),at);
-      let length=header.readUInt32BE(0);
-      const type=header.toString('ascii',4,8);
-      if(length===1){if(at+16>size)return false;length=Number(header.readBigUInt64BE(8));}
-      if(length===0)length=size-at;
-      if(!Number.isSafeInteger(length)||length<8||at+length>size)return false;
-      if(type==='moov')moov=at;
-      if(type==='mdat')mdat=at;
-      if(moov>=0&&mdat>=0)return moov<mdat;
+// Read box headers only: mdat and other leaf payloads are skipped, not buffered.
+// Throw on malformed/truncated metadata instead of treating an unreadable file as edit-list-free.
+export function inspectMp4Boxes(file){
+  const fd=fs.openSync(file,'r'),size=fs.fstatSync(fd).size,boxes=[];
+  const containers=new Set(['moov','trak','mdia','minf','stbl','edts','dinf','mvex','moof','traf']);
+  let count=0;
+  const read=(at,length)=>{
+    const buffer=Buffer.alloc(length);
+    if(fs.readSync(fd,buffer,0,length,at)!==length)throw new Error(`Truncated MP4 header at ${at}.`);
+    return buffer;
+  };
+  const walk=(start,end,prefix='',depth=0)=>{
+    if(depth>32)throw new Error('MP4 box nesting limit exceeded.');
+    let at=start;
+    while(at<end){
+      if(++count>100000)throw new Error('MP4 box count limit exceeded.');
+      if(end-at<8)throw new Error(`Truncated MP4 box header at ${at}.`);
+      const header=read(at,8),type=header.toString('latin1',4,8);
+      let length=header.readUInt32BE(0),headerSize=8;
+      if(length===1){
+        if(end-at<16)throw new Error(`Truncated extended MP4 header at ${at}.`);
+        const extended=read(at+8,8).readBigUInt64BE(0);
+        if(extended>BigInt(Number.MAX_SAFE_INTEGER))throw new Error('MP4 box size exceeds safe range.');
+        length=Number(extended);headerSize=16;
+      }else if(length===0)length=end-at;
+      if(type==='uuid')headerSize+=16;
+      if(!Number.isSafeInteger(length)||length<headerSize||length>end-at)throw new Error(`Invalid MP4 ${type} size at ${at}.`);
+      const boxPath=`${prefix}/${type}`;
+      boxes.push({path:boxPath,type,offset:at,size:length});
+      if(containers.has(type))walk(at+headerSize,at+length,boxPath,depth+1);
       at+=length;
     }
-    return false;
+  };
+  try{
+    if(!Number.isSafeInteger(size)||size<8)throw new Error('Invalid MP4 file size.');
+    walk(0,size);
+    const moov=boxes.find(box=>box.path==='/moov'),mdat=boxes.find(box=>box.path==='/mdat');
+    if(!moov||!mdat||!boxes.some(box=>box.path==='/moov/trak'))throw new Error('MP4 movie, track or media-data box missing.');
+    const editLists=boxes.filter(box=>box.type==='edts'||box.type==='elst');
+    return {boxes,editLists,noEditLists:editLists.length===0,fastStart:moov.offset<mdat.offset};
   }finally{fs.closeSync(fd);}
 }
 
@@ -156,14 +179,18 @@ export function validateFinished(root=DEFAULT_ROOT,{partial=false,probe=true}={}
         const absolute=file(video.src,post,/\.mp4$/i,'video');
         image(video.poster,post,'video poster');
         check(video.width===1080&&video.height===1920,`${post.id}: Reel must be 1080×1920.`);
-        check(Number.isFinite(video.duration)&&video.duration>0,`${post.id}: positive actual duration required.`);
+        check(Number.isFinite(video.duration)&&video.duration>=3,`${post.id}: first-wave Reel must be at least 3 seconds for publishing-API compatibility.`);
         check(video.fps===30,`${post.id}: first wave target is 30fps; exceptions need root/reviewer reconciliation.`);
         check(nonempty(video.audioStatus),`${post.id}: explicit audio status required.`);
         if(absolute){
           expected.push(path.basename(video.src));
           const header=Buffer.alloc(12),fd=fs.openSync(absolute,'r');try{fs.readSync(fd,header,0,12,0);}finally{fs.closeSync(fd);}
           check(header.toString('ascii',4,8)==='ftyp',`${post.id}: file does not have an MP4 ftyp header.`);
-          check(fastStart(absolute),`${post.id}: MP4 moov must precede mdat for fast start.`);
+          try{
+            const container=inspectMp4Boxes(absolute);
+            check(container.fastStart,`${post.id}: MP4 moov must precede mdat for fast start.`);
+            check(container.noEditLists,`${post.id}: first-wave MP4 must contain no edit-list boxes (edts/elst).`);
+          }catch(error){check(false,`${post.id}: malformed MP4 container: ${error.message}`);}
           if(assets.get(video.src)>25*1024*1024)warnings.push(`${post.id}: Reel exceeds 25MB; review download performance.`);
           if(probe){
             const result=spawnSync('ffprobe',['-v','error','-show_entries','stream=codec_type,codec_name,width,height,pix_fmt,avg_frame_rate:format=duration','-of','json',absolute],{encoding:'utf8',maxBuffer:1024*1024,timeout:15000});

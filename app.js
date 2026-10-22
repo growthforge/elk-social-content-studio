@@ -161,7 +161,7 @@
     if (post.type === 'reel') {
       const supplied = raw.video || {};
       post.video = {...supplied,src:safeFinishedAsset(supplied.src,post,/\.mp4$/i),poster:safeFinishedAsset(supplied.poster,post,/\.(png|jpe?g|webp|avif)$/i)};
-      if (!post.video.src || !post.video.poster || !text(post.video.audioStatus).trim()) return null;
+      if (!post.video.src || !post.video.poster || !text(post.video.audioStatus).trim() || !Number.isFinite(post.video.duration) || post.video.duration < 3) return null;
     } else if (post.slides.length < (post.type === 'carousel' ? 2 : 1) || (post.type === 'image' && post.slides.length !== 1) || post.slides.some(s => !s.src || !s.alt)) return null;
     return post;
   }
@@ -728,6 +728,7 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   function exportCSV() {
+    if (state.view !== 'finished') { showToast('Earlier calendar drafts are held for rebriefing. Open Finished posts to export produced media records.'); return; }
     if (state.view === 'finished') {
       const rows = filteredFinished();
       const cell = value => { let clean = text(value); if (/^\s*[=+@-]/.test(clean) || /^[\t\r]/.test(clean)) clean = `'${clean}`; return `"${clean.replace(/"/g,'""')}"`; };
@@ -748,6 +749,7 @@
     showToast(`${rows.length} draft posts exported as CSV`);
   }
   function exportJSON() {
+    if (state.view !== 'finished') { showToast('Earlier calendar drafts are held for rebriefing. Open Finished posts to export produced media records.'); return; }
     if (state.view === 'finished') {
       const ids = new Set(filteredFinished().map(p => p.id));
       const payload = {...finishedData,posts:arr(finishedData?.posts).filter(p => ids.has(p.id))};
