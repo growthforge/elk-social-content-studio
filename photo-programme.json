@@ -1,5 +1,5 @@
 {
-  "version": "deeksha-reviewed-385afd13e44c",
+  "version": "deeksha-reviewed-bead2eee59c8-source-notes",
   "observed": "2026-10-23",
   "brief": {
     "id": "deeksha-2026-10-23",
@@ -87,6 +87,51 @@
       "download": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-24/post-pack-v4807f6eb5a28b8cc.zip"
     },
     {
+      "id": "liman-islington-deeksha-2026-10-24",
+      "clientId": "liman-islington",
+      "date": "2026-10-24",
+      "type": "image",
+      "title": "Meet you on Penton Street",
+      "version": "v1.0-deeksha-reference",
+      "mediaTreatment": "designed",
+      "artworkCopy": {
+        "mode": "adapted",
+        "text": [
+          "Liman · Penton Street, Islington",
+          "Meet you on",
+          "Penton Street.",
+          "Penton Street",
+          "Islington"
+        ]
+      },
+      "status": "Finished draft",
+      "slides": [
+        {
+          "src": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-24/01-v904e69687e9f0f23.png",
+          "alt": "A burgundy and taupe location-card design for Liman. A search bar names Penton Street, Islington. A large pink drink photograph is in the foreground, with a smaller rounded photograph of Liman’s real purple frontage and greenery beside a location pin. Text reads Meet you on Penton Street.",
+          "width": 1080,
+          "height": 1350
+        }
+      ],
+      "references": [
+        {
+          "title": "Mitre Restaurant & Bar location-board composition",
+          "url": "https://www.instagram.com/p/DecQapRRA8z/",
+          "why": "Actual inspected rounded search/location card, foreground drink and venue-photo inset adapted with Liman original photographs and verified street wording.",
+          "inspected": "2026-10-23: actual supplied Instagram post images inspected; visual mechanism adapted with Liman sources."
+        }
+      ],
+      "notes": [],
+      "sourceSummary": "Original Liman drink and frontage photographs arranged around the supplied location-post reference.",
+      "review": {
+        "status": "Independent draft review passed.",
+        "scope": "Actual reviewed media and copy; human social approval and intended-use rights remain open."
+      },
+      "alt": "A burgundy and taupe location-card design for Liman. A search bar names Penton Street, Islington. A large pink drink photograph is in the foreground, with a smaller rounded photograph of Liman’s real purple frontage and greenery beside a location pin. Text reads Meet you on Penton Street.",
+      "cover": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-24/01-v904e69687e9f0f23.png",
+      "download": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-24/post-pack-v904e69687e9f0f23.zip"
+    },
+    {
       "id": "tw-fresh-food-centre-deeksha-2026-10-24",
       "clientId": "tw-fresh-food-centre",
       "date": "2026-10-24",
@@ -143,6 +188,69 @@
       "alt": "Adonis zaatar jars on a grocery shelf, with Aleppo Style and Jordanian Style labels. The green heading reads A world of flavours, with warm layered waves and the TW seal below.\n\nJars labelled Odysea Spicy Ajvar, Aubergine Imam and Harissa Spicy Meze on a grocery shelf. The green heading reads Meze, your way, with warm layered waves and the TW seal below.\n\nMulino Bianco Baiocchi Pistacchio and Settembrini biscuit packs on a grocery shelf. The green heading reads The sweet shelf, with warm layered waves and the TW seal below.",
       "cover": "assets/programme/tw-fresh-food-centre/tw-fresh-food-centre-deeksha-2026-10-24/cover-vcb8781b64d2c9c70.webp",
       "download": "assets/programme/tw-fresh-food-centre/tw-fresh-food-centre-deeksha-2026-10-24/post-pack-vcb8781b64d2c9c70.zip"
+    },
+    {
+      "id": "aara-birmingham-deeksha-2026-10-26",
+      "clientId": "aara-birmingham",
+      "date": "2026-10-26",
+      "type": "carousel",
+      "title": "This Diwali, celebrate a little more.",
+      "version": "AARA-DEEKSHA26-LOCAL-v1.0",
+      "mediaTreatment": "designed",
+      "artworkCopy": {
+        "mode": "same-reference",
+        "referenceScope": "artwork",
+        "text": [
+          "THIS DIWALI, celebrate a little more.",
+          "MORE light.",
+          "MORE happiness.",
+          "MORE flavour to the season"
+        ]
+      },
+      "status": "Finished draft",
+      "slides": [
+        {
+          "src": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-26/01-v92feb94e510948aa.png",
+          "alt": "A warmly lit table at Aara with copper-coloured serving dishes, rice, a basket of flatbread, drinks and painted lamps. White lettering reads “THIS DIWALI, celebrate a little more.” The supplied white Aara logo sits near the bottom.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-26/02-v92feb94e510948aa.png",
+          "alt": "A copper-coloured vessel of rice surrounded by lit painted lamps on a wooden table, with other food softly out of focus. White lettering reads “MORE light.” The supplied white Aara logo sits near the bottom.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-26/03-v92feb94e510948aa.png",
+          "alt": "A hand pours a brown drink from a white teapot into a glass beside a basket of golden food and lit lamps. White lettering in the dark upper-left area reads “MORE happiness.” The supplied white Aara logo sits near the bottom.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-26/04-v92feb94e510948aa.png",
+          "alt": "A pale layered cake slice with green garnish on a pink plate, with a lit lamp and soft food background. White lettering reads “MORE flavour to the season”. The supplied white Aara logo sits near the bottom.",
+          "width": 1080,
+          "height": 1350
+        }
+      ],
+      "references": [
+        {
+          "title": "Supplied four-slide Diwali composition reference",
+          "url": "https://www.instagram.com/p/Ddt4G29juhs/",
+          "why": "Exact four short on-art phrases, real photo-led frames, quiet upper typography and proportional lower logo; adapted using supplied Aara photography and brand typefaces.",
+          "inspected": "23 October 2026: all four saved actual reference frames inspected."
+        }
+      ],
+      "notes": [],
+      "sourceSummary": "Four supplied Aara photographs in the brief’s order, with the reference’s exact on-image wording and original Aara logo.",
+      "review": {
+        "status": "Independent draft review passed.",
+        "scope": "Actual reviewed media and copy; human social approval and intended-use rights remain open."
+      },
+      "alt": "A warmly lit table at Aara with copper-coloured serving dishes, rice, a basket of flatbread, drinks and painted lamps. White lettering reads “THIS DIWALI, celebrate a little more.” The supplied white Aara logo sits near the bottom.\n\nA copper-coloured vessel of rice surrounded by lit painted lamps on a wooden table, with other food softly out of focus. White lettering reads “MORE light.” The supplied white Aara logo sits near the bottom.\n\nA hand pours a brown drink from a white teapot into a glass beside a basket of golden food and lit lamps. White lettering in the dark upper-left area reads “MORE happiness.” The supplied white Aara logo sits near the bottom.\n\nA pale layered cake slice with green garnish on a pink plate, with a lit lamp and soft food background. White lettering reads “MORE flavour to the season”. The supplied white Aara logo sits near the bottom.",
+      "cover": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-26/01-v92feb94e510948aa.png",
+      "download": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-26/post-pack-v92feb94e510948aa.zip"
     },
     {
       "id": "baker-crafts-deeksha-2026-10-28",
@@ -275,6 +383,83 @@
       "download": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/post-pack-v6e3fd463a4eb68a5.zip"
     },
     {
+      "id": "liman-islington-deeksha-2026-10-28",
+      "clientId": "liman-islington",
+      "date": "2026-10-28",
+      "type": "carousel",
+      "title": "3 reasons to make time for Liman",
+      "version": "v1.1-original-line-gestures",
+      "mediaTreatment": "designed",
+      "artworkCopy": {
+        "mode": "adapted",
+        "text": [
+          "3 reasons\nto make time\nfor Liman",
+          "Penton Street · Islington",
+          "Art on the walls.",
+          "A little more to look at.",
+          "01 / THE DETAILS",
+          "Time for\nyour people.",
+          "Make dinner the catch-up.",
+          "02 / THE COMPANY",
+          "03 / THE FIRST ROUND",
+          "A drink\nto begin.",
+          "Let dinner take its time.",
+          "What brings\nyou to Liman?",
+          "The details, the company, the drinks."
+        ]
+      },
+      "status": "Finished draft",
+      "slides": [
+        {
+          "src": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-28/01-v174207f301fbef18.png",
+          "alt": "Liman’s actual table, blue pillar, plant and pendant lamp. A small taupe title panel reads 3 reasons to make time for Liman, with Penton Street, Islington beneath. An original white line-drawn hand gesture enters from the lower edge.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-28/02-v174207f301fbef18.png",
+          "alt": "Closer view of framed artwork on Liman’s brick wall, with the title Art on the walls and the line A little more to look at.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-28/03-v174207f301fbef18.png",
+          "alt": "A closer view of a set table and chairs at Liman. Text reads Time for your people and Make dinner the catch-up. An original white line-drawn hand gesture enters from the lower edge as a graphic.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-28/04-v174207f301fbef18.png",
+          "alt": "Two actual Liman drinks and the printed Cocktail Menu on a wood table, with the title A drink to begin and Let dinner take its time. A small Liman wordmark sits in a burgundy badge.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-28/05-v174207f301fbef18.png",
+          "alt": "Liman’s real purple frontage beneath hanging greenery. Text asks What brings you to Liman, followed by The details, the company, the drinks.",
+          "width": 1080,
+          "height": 1350
+        }
+      ],
+      "references": [
+        {
+          "title": "The Ninth ambience-and-reasons carousel",
+          "url": "https://www.instagram.com/p/Dcym1pcCRl6/",
+          "why": "Actual inspected cover/reason/final-question sequence, real ambience photographs, selective original white line illustration and serif emphasis adapted to three Liman source-visible subjects.",
+          "inspected": "2026-10-23: actual supplied Instagram post images inspected; visual mechanism adapted with Liman sources."
+        }
+      ],
+      "notes": [],
+      "sourceSummary": "Original Liman ambience, table, drink and frontage photographs, with selective line illustrations.",
+      "review": {
+        "status": "Independent draft review passed.",
+        "scope": "Actual reviewed media and copy; human social approval and intended-use rights remain open."
+      },
+      "alt": "Liman’s actual table, blue pillar, plant and pendant lamp. A small taupe title panel reads 3 reasons to make time for Liman, with Penton Street, Islington beneath. An original white line-drawn hand gesture enters from the lower edge.\n\nCloser view of framed artwork on Liman’s brick wall, with the title Art on the walls and the line A little more to look at.\n\nA closer view of a set table and chairs at Liman. Text reads Time for your people and Make dinner the catch-up. An original white line-drawn hand gesture enters from the lower edge as a graphic.\n\nTwo actual Liman drinks and the printed Cocktail Menu on a wood table, with the title A drink to begin and Let dinner take its time. A small Liman wordmark sits in a burgundy badge.\n\nLiman’s real purple frontage beneath hanging greenery. Text asks What brings you to Liman, followed by The details, the company, the drinks.",
+      "cover": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-28/01-v174207f301fbef18.png",
+      "download": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-28/post-pack-v174207f301fbef18.zip"
+    },
+    {
       "id": "tw-fresh-food-centre-deeksha-2026-10-28",
       "clientId": "tw-fresh-food-centre",
       "date": "2026-10-28",
@@ -393,6 +578,38 @@
       "alt": "Three brownies on a white plate beside the original Vizyon Chocolate Fudge Brownie Mix bag. Text reads “10 kg”, “Vizyon Chocolate Fudge Brownie Mix” and “bakercrafts.co.uk”. The brownies are labelled “AI serving suggestion”.",
       "cover": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-30/01-vf7073e0c9af64503.jpg",
       "download": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-30/post-pack-vf7073e0c9af64503.zip"
+    },
+    {
+      "id": "liman-islington-deeksha-2026-10-30",
+      "clientId": "liman-islington",
+      "date": "2026-10-30",
+      "type": "image",
+      "title": "Liman · natural colour correction",
+      "version": "v1.1-shadow-recovery",
+      "mediaTreatment": "logo-only",
+      "artworkCopy": {
+        "mode": "logo-only",
+        "text": []
+      },
+      "status": "Finished draft",
+      "slides": [
+        {
+          "src": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-30/01-vfc7668a843178b2a.png",
+          "alt": "A naturally corrected photograph of several plated dishes, glasses, folded napkins and cutlery on a wood table at Liman. Dark upholstered chairs and the room remain in the original frame. Only the small supplied Liman wordmark is added near the lower left.",
+          "width": 1080,
+          "height": 1620
+        }
+      ],
+      "references": [],
+      "notes": [],
+      "sourceSummary": "The specified original RAW photograph, naturally corrected and exported as PNG with the supplied Liman logo.",
+      "review": {
+        "status": "Independent draft review passed.",
+        "scope": "Actual reviewed media and copy; human social approval and intended-use rights remain open."
+      },
+      "alt": "A naturally corrected photograph of several plated dishes, glasses, folded napkins and cutlery on a wood table at Liman. Dark upholstered chairs and the room remain in the original frame. Only the small supplied Liman wordmark is added near the lower left.",
+      "cover": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-30/01-vfc7668a843178b2a.png",
+      "download": "assets/programme/liman-islington/liman-islington-deeksha-2026-10-30/post-pack-vfc7668a843178b2a.zip"
     },
     {
       "id": "tw-fresh-food-centre-deeksha-2026-10-30",
