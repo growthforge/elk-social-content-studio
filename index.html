@@ -9,9 +9,10 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'none'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="Elk Social: photo and carousel drafts with proposed dates, captions, downloads and separate video directions.">
   <meta name="theme-color" content="#f6f7f2">
-  <title>Photo programme · Elk Social</title>
+  <title>Brief deliverables · Elk Social</title>
   <link rel="stylesheet" href="./styles.css?v=photo-programme-compact-2">
-  <script defer src="./app.js?v=photo-programme-window-3"></script>
+  <script defer src="./brief-contract.js?v=deeksha-1"></script>
+  <script defer src="./app.js?v=deeksha-brief-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -22,13 +23,13 @@
       <nav id="view-nav" aria-label="Views"></nav>
       <div class="client-nav-head"><p class="nav-label">Clients</p><span id="client-count">—</span></div>
       <nav id="client-nav" aria-label="Client filters"></nav>
-      <div class="sidebar-foot"><span class="status-dot"></span><span><span id="sidebar-window">Photo programme</span><br><small>Review drafts · proposed dates</small></span></div>
+      <div class="sidebar-foot"><span class="status-dot"></span><span><span id="sidebar-window">Photo programme</span><br><small>Review drafts · brief dates</small></span></div>
     </aside>
     <div class="workspace">
       <header class="topbar"><span>Elk <span aria-hidden="true">/</span> Social studio</span><span class="badge">Team review</span></header>
       <main id="main" tabindex="-1">
         <div class="page-heading"><div><p id="programme-window" class="eyebrow">Photo programme</p><h1 id="view-title">Photos & carousels</h1><p id="view-description">Inspect slides, copy captions and download a post.</p></div></div>
-        <div class="programme-boundary"><strong>Review drafts.</strong> Dates are proposed; social approval pending.</div>
+        <div class="programme-boundary"><strong>Review drafts.</strong> Dates follow Deeksha’s brief; social approval pending.</div>
         <section id="filters" class="filters" aria-label="Filter the programme">
           <div class="primary-filters">
             <label>Client<select id="client-filter"><option value="all">All clients</option></select></label>
@@ -39,7 +40,7 @@
           <div id="more-filters" class="more-filter-fields" hidden>
             <label>Week<select id="week-filter"><option value="all">All weeks</option></select></label>
             <label>Format<select id="format-filter"><option value="all">Photos & carousels</option><option value="image">Photo</option><option value="carousel">Carousel</option></select></label>
-            <label>Order<select id="order"><option value="earliest">Proposed date · earliest</option><option value="latest">Proposed date · latest</option></select></label>
+            <label>Order<select id="order"><option value="earliest">Brief date · earliest</option><option value="latest">Brief date · latest</option></select></label>
             <button id="dates-toggle" class="button text-button" type="button" aria-expanded="false" aria-controls="date-filters">Date range</button>
             <button id="reset-filters" class="button text-button" type="button">Reset all</button>
             <button id="export-csv" class="button secondary" type="button" disabled>Export posts CSV</button>

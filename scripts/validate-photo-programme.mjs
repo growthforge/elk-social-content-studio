@@ -4,10 +4,12 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {inflateRawSync} from 'node:zlib';
 import {imageSize} from './validate-finished.mjs';
+import '../brief-contract.js';
 
 const ROOT=path.dirname(fileURLToPath(new URL('../index.html',import.meta.url)));
 export const EXPECTED_DATES=['2026-10-23','2026-10-25','2026-10-28','2026-10-30','2026-11-01','2026-11-04','2026-11-06','2026-11-08','2026-11-11','2026-11-13','2026-11-15','2026-11-18','2026-11-20','2026-11-22','2026-11-25','2026-11-27','2026-11-29'];
 export const PROGRAMME_MODES=Object.freeze({
+  deeksha:Object.freeze({...globalThis.ELK_PHOTO_BRIEF.metadata().window,expectedPosts:11,rows:globalThis.ELK_PHOTO_BRIEF.rows,label:'Deeksha’s row-driven brief'}),
   october:Object.freeze({from:'2026-10-22',to:'2026-10-31',dates:Object.freeze(EXPECTED_DATES.slice(0,4)),expectedPosts:28,perClient:4,label:'October-only programme'}),
   full:Object.freeze({from:'2026-10-22',to:'2026-11-30',dates:Object.freeze([...EXPECTED_DATES]),expectedPosts:119,perClient:17,label:'Archived October–November programme'})
 });
@@ -37,24 +39,93 @@ function entries(buffer){
   }
   return out;
 }
-function decode(buffer,entry){
+function decode(buffer,entry,maxBytes=30*1024*1024){
   const at=entry.offset;
-  if(entry.size>30*1024*1024||at+30>buffer.length||buffer.readUInt32LE(at)!==0x04034b50)throw new Error('ZIP entry invalid or exceeds 30 MB.');
+  if(entry.size>maxBytes||at+30>buffer.length||buffer.readUInt32LE(at)!==0x04034b50)throw new Error('ZIP entry invalid or exceeds allowed size.');
   const start=at+30+buffer.readUInt16LE(at+26)+buffer.readUInt16LE(at+28),end=start+entry.compressed;
   if(end>buffer.length)throw new Error('ZIP entry truncated.');
-  const bytes=buffer.subarray(start,end),out=entry.method===0?bytes:entry.method===8?inflateRawSync(bytes,{maxOutputLength:30*1024*1024}):null;
+  const bytes=buffer.subarray(start,end),out=entry.method===0?bytes:entry.method===8?inflateRawSync(bytes,{maxOutputLength:maxBytes}):null;
   if(!out||out.length!==entry.size)throw new Error('ZIP method or decoded size invalid.');
   return out;
 }
-export function validatePhotoProgramme(root=ROOT,{partial=false,mode}={}){
+export function validateDeekshaProgramme(root=ROOT,{partial=false,sourceBindings}={}) {
+  const errors=[],warnings=[],assetPaths=new Set();
+  const check=(ok,message)=>{if(!ok)errors.push(message);return !!ok;};
+  const brief=globalThis.ELK_PHOTO_BRIEF;
+  let d,base,bindingRows=[];
+  try {d=JSON.parse(fs.readFileSync(path.join(root,'photo-programme.json'),'utf8'));base=JSON.parse(fs.readFileSync(path.join(root,'data.json'),'utf8'));if(sourceBindings)bindingRows=arr(JSON.parse(fs.readFileSync(sourceBindings,'utf8')).rows);} catch(e) {return {errors:[e.message],warnings,posts:0,clients:0,directions:0,assets:0};}
+  const identities=new Map(arr(base.clients).map(c=>[c.id,c.name]));identities.set('baker-crafts','Baker Crafts');
+  check(own(d,['version','observed','brief','window','cadence','expectedPosts','clients','posts','videoDirections','summary','status']),'Unknown/private collection field.');
+  check(own(d.brief,['id','title'])&&nonempty(d.brief.title)&&brief.validMetadata(d),'Deeksha mode requires the exact 11-row brief, 24–30 October window and client expectations 3/2/3/3.');
+  check(nonempty(d.version)&&date(d.observed),'Collection version and valid observation date required.');
+  check(own(d.cadence,['label','status'])&&nonempty(d.cadence.label)&&nonempty(d.cadence.status),'Brief date label/status required.');
+  for(const c of arr(d.clients))check(own(c,['id','name','expectedPosts'])&&identities.has(c.id)&&c.name===identities.get(c.id),`${c.id}: preserve supplied identity; Baker Crafts has no inferred branding/business facts.`);
+  const leak=/\/Users\/|\/private\/|file:\/\/|[A-Z]:\\|(?:^|\s)execution\/|sourceDrive|sourceHash|originalSource|imagePath|drive\.google\.com|docs\.google\.com|canva\.link|canva\.com\/design\/|(?:api[_-]?key|access[_-]?token|refresh[_-]?token|password|session[_-]?cookie)\s*[:=]/i;
+  const scan=(v,p='collection')=>{if(typeof v==='string')check(!leak.test(v),`${p}: private path/source ID, Canva edit/shortlink or credential-like text.`);else if(Array.isArray(v))v.forEach((x,i)=>scan(x,`${p}[${i}]`));else if(v&&typeof v==='object')Object.entries(v).forEach(([k,x])=>{check(!/imagePath|originalSource|sourcehash|sourceDrive|buildcommand|localexport|private/i.test(k),`${p}: private field ${k}.`);scan(x,`${p}.${k}`);});};scan(d);
+  check(Array.isArray(d.posts),'posts must be an array.');
+  const rootReal=fs.realpathSync(root)+path.sep;
+  const file=(value,p,pattern,label)=>{
+    if(!check(safeProgrammeAsset(value,p,pattern),`${p.id}: unsafe ${label} path.`))return null;
+    try {const absolute=path.resolve(root,value),stat=fs.lstatSync(absolute);if(!check(stat.isFile()&&!stat.isSymbolicLink()&&stat.size>0&&stat.size<=100*1024*1024&&fs.realpathSync(absolute).startsWith(rootReal),`${p.id}: ${label} must be a nonempty local regular file within 100 MB.`))return null;assetPaths.add(value);return absolute;} catch {check(false,`${p.id}: ${label} missing.`);return null;}
+  };
+  const readImage=(value,p,label)=>{const f=file(value,p,IMAGE,label);if(!f)return null;const bytes=fs.readFileSync(f),dimensions=imageSize(bytes);if(!check(dimensions&&dimensions[0]>0&&dimensions[1]>0,`${p.id}: ${label} invalid image signature/dimensions.`))return null;return {bytes,dimensions,sha256:createHash('sha256').update(bytes).digest('hex')};};
+  const ids=new Set();
+  for(const p of arr(d.posts)) {
+    if(!check(own(p,['id','clientId','date','type','status','title','caption','facebookCaption','alt','version','cover','slides','download','sourceSummary','references','notes','review','mediaTreatment','artworkCopy']),'Unknown/private post field.'))continue;
+    check(!ids.has(p.id),`${p.id}: duplicate brief row.`);ids.add(p.id);
+    const row=brief.rowFor(p);check(row&&brief.validPost(p),`${p.id}: exact brief row ID/client/date/type/slide count/media treatment/artwork copy required.`);
+    check(p.status==='Finished draft',`${p.id}: status must remain Finished draft; source-only is an asset draft.`);
+    for(const k of ['id','title','alt','version','sourceSummary'])check(nonempty(p[k]),`${p.id}: ${k} required.`);
+    check(own(p.artworkCopy,['mode','text','referenceScope']),`${p.id}: artworkCopy is separate from optional social captions.`);
+    check(own(p.review,['status','scope'])&&nonempty(p.review.status)&&nonempty(p.review.scope),`${p.id}: actual review status/scope required.`);
+    check(Array.isArray(p.notes)&&p.notes.every(nonempty),`${p.id}: public-safe notes array required (empty allowed).`);
+    check(Array.isArray(p.references),`${p.id}: references array required (empty allowed).`);
+    for(const r of arr(p.references))check(own(r,['title','url','why','inspected'])&&nonempty(r.title)&&http(r.url)&&nonempty(r.why)&&nonempty(r.inspected),`${p.id}: public-safe direct reference/inspection record required.`);
+    readImage(p.cover,p,'cover');const expected=new Map(),dimensions=[];
+    for(const [i,s]of arr(p.slides).entries()) {
+      check(own(s,['src','alt','width','height'])&&nonempty(s.alt),`${p.id}: slide ${i+1} fields/alt required.`);
+      const image=readImage(s.src,p,`slide ${i+1}`);if(!image)continue;
+      check(image.dimensions[0]===s.width&&image.dimensions[1]===s.height,`${p.id}: declared dimensions must match the actual original/export.`);
+      check(!expected.has(path.basename(s.src)),`${p.id}: duplicate slide.`);expected.set(path.basename(s.src),image.sha256);dimensions.push(image.dimensions);
+      if(row?.mediaTreatment==='source-only') {
+        const binding=bindingRows.filter(b=>b.id===p.id);
+        check(binding.length===1&&binding[0].originalSHA256===image.sha256&&Array.isArray(binding[0].dimensions)&&binding[0].dimensions.join('x')===image.dimensions.join('x'),`${p.id}: source-only image must match one internal original-byte/dimension binding supplied with --source-bindings; no crop/re-encode/overlay allowed.`);
+      }
+    }
+    if(row?.mediaTreatment!=='source-only')check(new Set(dimensions.map(d=>d.join('x'))).size<=1,`${p.id}: designed carousel dimensions must be consistent.`);
+    const pack=file(p.download,p,/\.zip$/i,'pack');if(!pack)continue;
+    try {
+      const buffer=fs.readFileSync(pack),items=entries(buffer),names=items.map(e=>e.name),texts=new Map();
+      const requiredTexts=new Map([['alt-text.txt',arr(p.slides).map((s,i)=>`Slide ${i+1}\n${s.alt}`).join('\n\n')]]);
+      if(nonempty(p.caption))requiredTexts.set('instagram-caption.txt',p.caption);
+      if(nonempty(p.facebookCaption))requiredTexts.set('facebook-caption.txt',p.facebookCaption);
+      const allowed=new Set([...expected.keys(),...requiredTexts.keys()]);
+      check(names.length===allowed.size&&new Set(names).size===names.length&&names.every(n=>/^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(n)&&allowed.has(n)),`${p.id}: pack must contain exactly flat final slides, alt and only supplied channel captions.`);
+      for(const entry of items) {
+        const bytes=decode(buffer,entry,row?.mediaTreatment==='source-only'?100*1024*1024:30*1024*1024);
+        if(expected.has(entry.name))check(createHash('sha256').update(bytes).digest('hex')===expected.get(entry.name),`${p.id}: packed image differs from inspected public slide.`);
+        if(/\.txt$/i.test(entry.name)){const value=bytes.toString('utf8');check(!leak.test(value),`${p.id}: private material in pack text.`);texts.set(entry.name,value);}
+      }
+      for(const [name,value]of requiredTexts)check(texts.has(name)&&(texts.get(name)===value||texts.get(name)===value+'\n'),`${p.id}: ${name} must match its exact designated consumer string (one final LF allowed).`);
+    } catch(e) {check(false,`${p.id}: ${e.message}`);}
+  }
+  const allowedIds=new Set(brief.rows.map(r=>r.id));check(arr(d.posts).every(p=>allowedIds.has(p.id)),'Only assigned brief rows count; held/Pera/old programme rows are excluded.');
+  if(!partial)check(arr(d.posts).length===brief.rows.length&&brief.rows.every(r=>ids.has(r.id)),'Complete Deeksha handoff requires all 11 exact rows.');
+  check(arr(d.posts).length<=brief.rows.length,'Brief scope permits at most 11 actual deliverables.');
+  check(d.videoDirections===undefined||(Array.isArray(d.videoDirections)&&d.videoDirections.length===0),'No video directions are assigned by this brief; retain historical directions separately.');
+  return {errors,warnings,mode:'deeksha',expectedPosts:brief.rows.length,posts:arr(d.posts).length,clients:new Set(arr(d.posts).map(p=>p.clientId)).size,directions:0,assets:assetPaths.size,scope:`Deeksha’s 11-row brief: ${partial?'partial actual delivery; no completion claim':'complete actual draft delivery; human approval separate'}`};
+}
+
+export function validatePhotoProgramme(root=ROOT,{partial=false,mode,sourceBindings}={}){
+  if(mode==='deeksha')return validateDeekshaProgramme(root,{partial,sourceBindings});
   const errors=[],warnings=[],assets=new Map(),qualifiedFiles=new Map();
   const check=(ok,message)=>{if(!ok)errors.push(message);return !!ok;};
   const plan=Object.hasOwn(PROGRAMME_MODES,mode)?PROGRAMME_MODES[mode]:null;
-  if(!plan)return {errors:['Explicit mode required: october or full. The validator never infers the programme scope from supplied counts.'],warnings,posts:0,clients:0,directions:0,assets:0};
+  if(!plan)return {errors:['Explicit mode required: deeksha, october or full. The validator never infers the programme scope from supplied counts.'],warnings,posts:0,clients:0,directions:0,assets:0};
   let d,base;
   try{d=JSON.parse(fs.readFileSync(path.join(root,'photo-programme.json'),'utf8'));base=JSON.parse(fs.readFileSync(path.join(root,'data.json'),'utf8'));}catch(e){return {errors:[e.message],warnings,posts:0,clients:0,directions:0,assets:0};}
   const identities=new Map(arr(base.clients).map(c=>[c.id,c.name]));
-  check(identities.size===7,'Exactly seven existing client identities required.');
+  check(identities.size>=7,'Seven historical client identities required.');
   check(own(d,['version','observed','window','cadence','expectedPosts','clients','posts','videoDirections','summary','status']),'Unknown/private collection field.');
   check(nonempty(d.version)&&date(d.observed),'Collection version and valid observation date required.');
   check(own(d.window,['from','to','timezone'])&&d.window.from===plan.from&&d.window.to===plan.to&&d.window.timezone==='Europe/London',`${mode} mode requires window ${plan.from}–${plan.to}, Europe/London.`);
@@ -122,7 +193,7 @@ export function validatePhotoProgramme(root=ROOT,{partial=false,mode}={}){
     check(Array.isArray(direction.footageNeeded)&&direction.footageNeeded.every(nonempty),`${direction.id}: footageNeeded must be a string array.`);if(direction.notes!=null)check(typeof direction.notes==='string',`${direction.id}: notes must be a public-safe string.`);
     refs(direction.references,`${direction.id} video references`,true);
   }
-  for(const id of identities.keys()){
+  for(const id of suppliedClients.map(c=>c.id)){
     const selected=arr(d.posts).filter(p=>p.clientId===id),dates=selected.map(p=>p.date);
     check(new Set(dates).size===dates.length,`${id}: one new post per proposed date; duplicate date found.`);
     check(selected.length<=plan.perClient,`${id}: ${mode} scope permits at most ${plan.perClient} actual posts.`);
@@ -131,13 +202,14 @@ export function validatePhotoProgramme(root=ROOT,{partial=false,mode}={}){
   }
   check(arr(d.posts).length<=plan.expectedPosts,`${mode} scope permits at most ${plan.expectedPosts} actual photo/carousel posts.`);
   if(!partial)check(arr(d.posts).length===plan.expectedPosts,`Complete ${mode} programme requires ${plan.expectedPosts} actual photo/carousel posts.`);
-  if(mode==='october'&&!partial&&arr(d.videoDirections).length){check(arr(d.videoDirections).length===14,'Optional complete October direction collection requires 14 briefs, separate from the 28 photo/carousel posts.');for(const id of identities.keys())check(arr(d.videoDirections).filter(d=>d.clientId===id).length===2,`${id}: optional complete October directions require two briefs.`);}
+  if(mode==='october'&&!partial&&arr(d.videoDirections).length){check(arr(d.videoDirections).length===14,'Optional complete October direction collection requires 14 briefs, separate from the 28 photo/carousel posts.');for(const id of suppliedClients.map(c=>c.id))check(arr(d.videoDirections).filter(d=>d.clientId===id).length===2,`${id}: optional complete October directions require two briefs.`);}
   return {errors,warnings,mode,expectedPosts:plan.expectedPosts,posts:arr(d.posts).length,clients:new Set(arr(d.posts).map(p=>p.clientId)).size,directions:arr(d.videoDirections).length,assets:assets.size,scope:`${plan.label}: ${partial?'partial integration; no completion claim':'complete proposed photo/carousel programme'}`};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const rootIndex=process.argv.indexOf('--root'),root=rootIndex>=0?path.resolve(process.argv[rootIndex+1]):ROOT;
   const modeIndex=process.argv.indexOf('--mode'),mode=modeIndex>=0?process.argv[modeIndex+1]:undefined;
-  const result=validatePhotoProgramme(root,{partial:process.argv.includes('--partial'),mode});
+  const bindingIndex=process.argv.indexOf('--source-bindings'),sourceBindings=bindingIndex>=0?path.resolve(process.argv[bindingIndex+1]):undefined;
+  const result=validatePhotoProgramme(root,{partial:process.argv.includes('--partial'),mode,sourceBindings});
   for(const warning of result.warnings)console.warn(`WARN ${warning}`);
   for(const error of result.errors)console.error(`FAIL ${error}`);
   if(result.errors.length)process.exitCode=1;

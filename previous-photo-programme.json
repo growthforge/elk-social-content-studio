@@ -1,0 +1,695 @@
+{
+  "version": "october-v1-pera-four-reviewed-pngs",
+  "observed": "2026-10-22",
+  "window": {
+    "from": "2026-10-22",
+    "to": "2026-10-31",
+    "timezone": "Europe/London"
+  },
+  "expectedPosts": 28,
+  "cadence": {
+    "label": "Four photo/carousel posts per client through 31 Oct; November deferred pending review",
+    "status": "October-only draft review; dates proposed, not scheduled or published"
+  },
+  "clients": [
+    {
+      "id": "nazar-cambridge",
+      "name": "Nazar Cambridge",
+      "expectedPosts": 4
+    },
+    {
+      "id": "nazar-bedford",
+      "name": "Nazar Bedford",
+      "expectedPosts": 4
+    },
+    {
+      "id": "liman-islington",
+      "name": "Liman Islington",
+      "expectedPosts": 4
+    },
+    {
+      "id": "pera-patisserie",
+      "name": "Pera Patisserie",
+      "expectedPosts": 4
+    },
+    {
+      "id": "aara-birmingham",
+      "name": "Aara Indian Restaurant",
+      "expectedPosts": 4
+    },
+    {
+      "id": "tw-fresh-food-centre",
+      "name": "TW Fresh Food Centre",
+      "expectedPosts": 4
+    },
+    {
+      "id": "the-local-shop",
+      "name": "The Local",
+      "expectedPosts": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": "pera-patisserie-photo-01",
+      "clientId": "pera-patisserie",
+      "date": "2026-10-23",
+      "type": "image",
+      "status": "Finished draft",
+      "title": "Biscuit first.",
+      "caption": "For the person who always eats the biscuit first. The swirl and crumb-coated edge can wait their turn.",
+      "facebookCaption": "For the person who always eats the biscuit first. The swirl and crumb-coated edge can wait their turn.",
+      "version": "pera-october-reset-v1.1",
+      "sourceSummary": "Client-supplied original Drive photography, with source provenance retained.",
+      "notes": [
+        "Review draft; proposed date, not scheduled.",
+        "Current representation, intended social-use permissions and exact human release acceptance remain open."
+      ],
+      "review": {
+        "status": "Independent draft review passed; final web derivatives pending",
+        "scope": "Exact source-visible artwork, full-size and phone proofs, consumer copy and original post packs inspected. Human social-release approval is separate."
+      },
+      "references": [
+        {
+          "title": "Benne individual design",
+          "url": "https://uk.pinterest.com/pin/95560823341096816/",
+          "why": "One reader idea placed in naturally quiet actual image space.",
+          "inspected": "Actual Pinterest pin pixels inspected22 October2026. Attribution and performance not independently established; composition reference only."
+        },
+        {
+          "title": "Made in Cake hands and sugar",
+          "url": "https://ca.pinterest.com/pin/864128247267510206/",
+          "why": "Actual hands supply scale and action; no invented maker identity.",
+          "inspected": "Actual Pinterest pin pixels inspected22 October2026. Attribution and performance not independently established; composition reference only."
+        }
+      ],
+      "alt": "A black-gloved hand places a Lotus biscuit on a small crumb-coated cake. More cakes and a PERA apron are visible. Text: Biscuit first.",
+      "cover": "assets/programme/pera-patisserie/pera-patisserie-photo-01/cover-vfd876147e583f50e.webp",
+      "slides": [
+        {
+          "src": "assets/programme/pera-patisserie/pera-patisserie-photo-01/01-vfd876147e583f50e.jpg",
+          "alt": "A black-gloved hand places a Lotus biscuit on a small crumb-coated cake. More cakes and a PERA apron are visible. Text: Biscuit first."
+        }
+      ],
+      "download": "assets/programme/pera-patisserie/pera-patisserie-photo-01/post-pack-vfd876147e583f50e.zip"
+    },
+    {
+      "id": "pera-patisserie-photo-02",
+      "clientId": "pera-patisserie",
+      "date": "2026-10-25",
+      "type": "image",
+      "status": "Finished draft",
+      "title": "All the colours.",
+      "caption": "For the friend whose favourite colour is all of them. A slice that refuses to pick just one.",
+      "facebookCaption": "For the friend whose favourite colour is all of them. A slice that refuses to pick just one.",
+      "version": "pera-october-reset-v1.1",
+      "sourceSummary": "Client-supplied original Drive photography, with source provenance retained.",
+      "notes": [
+        "Review draft; proposed date, not scheduled.",
+        "Current representation, intended social-use permissions and exact human release acceptance remain open."
+      ],
+      "review": {
+        "status": "Independent draft review passed; final web derivatives pending",
+        "scope": "Exact source-visible artwork, full-size and phone proofs, consumer copy and original post packs inspected. Human social-release approval is separate."
+      },
+      "references": [
+        {
+          "title": "Nabil Asakly cut-face photography",
+          "url": "https://au.pinterest.com/pin/1051590581793842525/",
+          "why": "Readable cut face, real layers and diagonal rhythm; no assigned flavour.",
+          "inspected": "Actual Pinterest pin pixels inspected22 October2026. Attribution and performance not independently established; composition reference only."
+        }
+      ],
+      "alt": "A cake slice with coloured layers and pale filling sits on a white plate. Sprinkles, white swirls, a flower and striped decoration sit on top. Text: All the colours. Pera Artisan Patisserie logo beneath.",
+      "cover": "assets/programme/pera-patisserie/pera-patisserie-photo-02/cover-va96f529b11b5baba.webp",
+      "slides": [
+        {
+          "src": "assets/programme/pera-patisserie/pera-patisserie-photo-02/01-va96f529b11b5baba.jpg",
+          "alt": "A cake slice with coloured layers and pale filling sits on a white plate. Sprinkles, white swirls, a flower and striped decoration sit on top. Text: All the colours. Pera Artisan Patisserie logo beneath."
+        }
+      ],
+      "download": "assets/programme/pera-patisserie/pera-patisserie-photo-02/post-pack-va96f529b11b5baba.zip"
+    },
+    {
+      "id": "pera-patisserie-photo-03",
+      "clientId": "pera-patisserie",
+      "date": "2026-10-28",
+      "type": "carousel",
+      "status": "Finished draft",
+      "title": "For the host.",
+      "caption": "For the host who says, “Don’t bring anything.” Golden layers and a little extra sweetness make a convincing counterargument.",
+      "facebookCaption": "For the host who says, “Don’t bring anything.” Golden layers and a little extra sweetness make a convincing counterargument.",
+      "version": "pera-october-reset-v1.1",
+      "sourceSummary": "Client-supplied original Drive photography, with source provenance retained.",
+      "notes": [
+        "Review draft; proposed date, not scheduled.",
+        "Current representation, intended social-use permissions and exact human release acceptance remain open."
+      ],
+      "review": {
+        "status": "Independent draft review passed; final web derivatives pending",
+        "scope": "Exact source-visible artwork, full-size and phone proofs, consumer copy and original post packs inspected. Human social-release approval is separate."
+      },
+      "references": [
+        {
+          "title": "Made in Cake hands and sugar",
+          "url": "https://ca.pinterest.com/pin/864128247267510206/",
+          "why": "Actual hands supply scale and action; no invented maker identity.",
+          "inspected": "Actual Pinterest pin pixels inspected22 October2026. Attribution and performance not independently established; composition reference only."
+        },
+        {
+          "title": "Hot Hands Bakery held cake",
+          "url": "https://in.pinterest.com/pin/696650636113862558/",
+          "why": "Recognisable real product at useful scale; no borrowed size/weight claim.",
+          "inspected": "Actual Pinterest pin pixels inspected22 October2026. Attribution and performance not independently established; composition reference only."
+        }
+      ],
+      "alt": "A person in a PERA apron holds a metal tray filled with rectangular golden baklava. The face is outside the frame. Text: For the host. Close view of folded, shell-like golden baklava arranged across a metal tray.",
+      "cover": "assets/programme/pera-patisserie/pera-patisserie-photo-03/cover-v2f8d7f5dcf3f8009.webp",
+      "slides": [
+        {
+          "src": "assets/programme/pera-patisserie/pera-patisserie-photo-03/01-v2f8d7f5dcf3f8009.jpg",
+          "alt": "A person in a PERA apron holds a metal tray filled with rectangular golden baklava. The face is outside the frame. Text: For the host."
+        },
+        {
+          "src": "assets/programme/pera-patisserie/pera-patisserie-photo-03/02-v2f8d7f5dcf3f8009.jpg",
+          "alt": "Close view of folded, shell-like golden baklava arranged across a metal tray."
+        }
+      ],
+      "download": "assets/programme/pera-patisserie/pera-patisserie-photo-03/post-pack-v2f8d7f5dcf3f8009.zip"
+    },
+    {
+      "id": "pera-patisserie-photo-04",
+      "clientId": "pera-patisserie",
+      "date": "2026-10-30",
+      "type": "image",
+      "status": "Finished draft",
+      "title": "Start with the guest list.",
+      "caption": "Guest count, flavour, finish. Three things to bring to a cake enquiry, so the design you love also suits the celebration.",
+      "facebookCaption": "Guest count, flavour, finish. Three things to bring to a cake enquiry, so the design you love also suits the celebration.",
+      "version": "pera-october-reset-v1.1",
+      "sourceSummary": "Client-supplied original Drive photography, with source provenance retained.",
+      "notes": [
+        "Review draft; proposed date, not scheduled.",
+        "Current representation, intended social-use permissions and exact human release acceptance remain open."
+      ],
+      "review": {
+        "status": "Independent draft review passed; final web derivatives pending",
+        "scope": "Exact source-visible artwork, full-size and phone proofs, consumer copy and original post packs inspected. Human social-release approval is separate."
+      },
+      "references": [
+        {
+          "title": "Ahmed Saber bakery photography",
+          "url": "https://in.pinterest.com/pin/386042999325851028/",
+          "why": "Large real food and usable natural backdrop, without decorative script.",
+          "inspected": "Actual Pinterest pin pixels inspected22 October2026. Attribution and performance not independently established; composition reference only."
+        },
+        {
+          "title": "Hot Hands Bakery held cake",
+          "url": "https://in.pinterest.com/pin/696650636113862558/",
+          "why": "Recognisable real product at useful scale; no borrowed size/weight claim.",
+          "inspected": "Actual Pinterest pin pixels inspected22 October2026. Attribution and performance not independently established; composition reference only."
+        }
+      ],
+      "alt": "A dark glossy whole cake topped with strawberries sits on a green board and white stand. Pale striped triangular decorations circle the sides. Text: Start with the guest list. Pera Artisan Patisserie logo appears on the cake stand.",
+      "cover": "assets/programme/pera-patisserie/pera-patisserie-photo-04/cover-vdc8e887b69899805.webp",
+      "slides": [
+        {
+          "src": "assets/programme/pera-patisserie/pera-patisserie-photo-04/01-vdc8e887b69899805.jpg",
+          "alt": "A dark glossy whole cake topped with strawberries sits on a green board and white stand. Pale striped triangular decorations circle the sides. Text: Start with the guest list. Pera Artisan Patisserie logo appears on the cake stand."
+        }
+      ],
+      "download": "assets/programme/pera-patisserie/pera-patisserie-photo-04/post-pack-vdc8e887b69899805.zip"
+    }
+  ],
+  "videoDirections": [
+    {
+      "id": "CAM-V1",
+      "clientId": "nazar-cambridge",
+      "status": "Direction only",
+      "title": "Charcoal, then the whole plate.",
+      "viewerDecision": "A Cambridge diner understands the real finish and serving behind one named grill choice.",
+      "hook": "Start on an actual finishing gesture above the grill, with the hand and visible result together.",
+      "payoff": "A satisfying real action resolves into a useful whole-dish choice.",
+      "cta": "Find your next Cambridge grill order.",
+      "beats": [
+        "Show one real finishing action before it resolves; do not pad with a logo opening.",
+        "Move only through matched footage of that same serving, keeping the food recognisable.",
+        "End on the intact plate and its menu-checked name, with Cambridge identity small and clear."
+      ],
+      "footageNeeded": [
+        "A screened Cambridge finishing take and genuinely matched complete serving.",
+        "Current exact menu-name mapping and participant/use permission."
+      ],
+      "references": [
+        {
+          "title": "Nazar Cambridge · bar finishing action",
+          "url": "https://www.instagram.com/nazarcambridge/reel/DeZ3yNGhGe7/",
+          "why": "Adapt tight action → place/operator context → complete serving. Its actual subject is a drink, not a grill dish.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (22.522 s). A saved drink-garnishing frame was reopened on 22 Oct. This is a bar reference; this normalization did not replay it. Drink identity, audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Use the real maker/workstation and whole-serving scale; do not turn separate dishes into one recipe.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "Direction only, not a new finished Reel. Retained Cambridge finishing footage is a lead; a complete-plate continuation must be sourced or filmed, never invented from unrelated dishes. No time, portion or side promise."
+    },
+    {
+      "id": "CAM-V2",
+      "clientId": "nazar-cambridge",
+      "status": "Direction only",
+      "title": "The finishing touch, then the whole plate.",
+      "viewerDecision": "A Cambridge diner connects one visible finishing detail with the whole identified menu choice.",
+      "hook": "Begin before a genuine finishing action resolves, with hand, tool and food consequence visible.",
+      "payoff": "A craft detail resolves into a recognisable whole dish, rather than an unrelated montage.",
+      "cta": "Explore the Cambridge menu.",
+      "beats": [
+        "Show the finishing action on one real Cambridge serving.",
+        "Pull back to the same operator/table context so the detail has a place.",
+        "Reveal the same complete serving; show its staff-checked name once after the food is clear."
+      ],
+      "footageNeeded": [
+        "Matched Cambridge finishing, context and whole-serving originals.",
+        "Positive staff identification and current menu-name check for the same item."
+      ],
+      "references": [
+        {
+          "title": "Nazar Cambridge · bar finishing action",
+          "url": "https://www.instagram.com/nazarcambridge/reel/DeZ3yNGhGe7/",
+          "why": "Adapt tight action → place/operator context → complete serving. Its actual subject is a drink, not a grill dish.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (22.522 s). A saved drink-garnishing frame was reopened on 22 Oct. This is a bar reference; this normalization did not replay it. Drink identity, audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Use the real maker/workstation and whole-serving scale; do not turn separate dishes into one recipe.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "The bar reference supplies shot grammar only. Keep all food and footage Cambridge-specific; do not infer a dish from appearance."
+    },
+    {
+      "id": "BED-V1",
+      "clientId": "nazar-bedford",
+      "status": "Direction only",
+      "title": "First round, in the middle.",
+      "viewerDecision": "A Bedford dinner organiser can see and distinguish two real starters before deciding what to put in the middle.",
+      "hook": "Two whole, positively identified starters land together on the same Bedford table.",
+      "payoff": "The pair becomes a useful real choice, with scale and context preserved.",
+      "cta": "Keep the pair in mind when choosing your starters.",
+      "beats": [
+        "Show both complete servings together, with an unmistakable Bedford room cue.",
+        "Follow one real serving gesture and show its visible consequence.",
+        "Give one staff-approved distinction, then return to the pair and red/gold room context."
+      ],
+      "footageNeeded": [
+        "Original footage of two identified starters together at one Bedford table.",
+        "One genuine serving gesture and an approved, factual distinction."
+      ],
+      "references": [
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Keep whole-serving and maker context so the viewer can understand scale.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Pera · pour and cut",
+          "url": "https://www.instagram.com/perapatisserieuk/reel/DePVKnDJB61/",
+          "why": "Let one physical serving action earn the next shot through its visible result.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (18.900 s). A saved jug/slice/serving frame was reopened on 22 Oct. This normalization did not replay it. Same-occasion serving is the observed mechanism; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "No portion-suitability, standard-side or sharing-size promise is inferred from the image."
+    },
+    {
+      "id": "BED-V2",
+      "clientId": "nazar-bedford",
+      "status": "Direction only",
+      "title": "One plate leaves the pass.",
+      "viewerDecision": "A Bedford diner can connect the last real preparation action with the same complete dish arriving.",
+      "hook": "Start just before one visible finishing action resolves at the pass.",
+      "payoff": "One plate has a clear beginning and arrival; the viewer sees the consequence of the work.",
+      "cta": "Find the named dish on the Bedford menu.",
+      "beats": [
+        "Keep the same plate visible through the finishing action.",
+        "Follow a documented handoff or table landing of that plate.",
+        "Finish on the whole serving and display its checked menu name once."
+      ],
+      "footageNeeded": [
+        "Enough matched Bedford action/handoff/landing footage to prove one-plate continuity.",
+        "Current menu mapping and any participant clearance."
+      ],
+      "references": [
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Use Bedford’s own working context and whole plate, while avoiding the reference’s montage/long logo hold.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Allpress Lates × Natoora · hands and plate composition",
+          "url": "https://www.instagram.com/allpressespressouk/reel/DdTgDE-gppI/",
+          "why": "Borrow only the hands-to-plate composition. Its edit timing, progression and sound were not verified.",
+          "inspected": "Only the original page and a video frame were observed on 21 Oct 2026; playback progression/timing was not verified after a timeout. The saved plated-food frame was reopened on 22 Oct. This normalization did not replay it. Use composition only; rhythm, duration, audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "If a real journey is not documented, retain one honest short action. Avoid unrelated grill inserts, letterboxing and an extended logo ending."
+    },
+    {
+      "id": "LIM-V1",
+      "clientId": "liman-islington",
+      "status": "Direction only",
+      "title": "Meet the plate.",
+      "viewerDecision": "A diner sees an actual Liman person and a recognisable dish, then learns one useful reason to choose it.",
+      "hook": "A real team member brings one whole plate towards camera; food stays sharp and the person stays present.",
+      "payoff": "The plate gains a specific human explanation instead of generic restaurant atmosphere.",
+      "cta": "Keep the dish name for your Liman visit.",
+      "beats": [
+        "Open on the whole real plate and person together, without an empty-room preamble.",
+        "Ask what a first-time diner should notice; use only the person’s real recorded and approved answer.",
+        "Reveal the detail that supports that answer, then the intact serving and checked name."
+      ],
+      "footageNeeded": [
+        "New current cleared participant/plate footage; ELK13 and ELK18 are still-photo composition leads, not existing motion.",
+        "A positively matched dish name, genuine answer and same-subject detail."
+      ],
+      "references": [
+        {
+          "title": "Pera · pour and cut",
+          "url": "https://www.instagram.com/perapatisserieuk/reel/DePVKnDJB61/",
+          "why": "Use one same-subject serving event with a visible consequence.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (18.900 s). A saved jug/slice/serving frame was reopened on 22 Oct. This normalization did not replay it. Same-occasion serving is the observed mechanism; audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Preserve complete-serving scale; do not treat different plates as stages of the same item.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "Direction only. No invented chef name, role, quote or recipe. A still photograph does not establish a plate journey. One real answer and one visible consequence are enough; no long logo ending."
+    },
+    {
+      "id": "LIM-V2",
+      "clientId": "liman-islington",
+      "status": "Direction only",
+      "title": "One dish, opened up.",
+      "viewerDecision": "A diner understands one identified Liman dish by seeing its whole serving and a real construction detail.",
+      "hook": "Show the complete positively identified serving before its actual cut or serving action.",
+      "payoff": "The whole-to-detail sequence makes a real menu name easier to understand without invented recipe stages.",
+      "cta": "Ask the team about the named dish.",
+      "beats": [
+        "Establish the whole real Liman serving and checked name.",
+        "A matched cut or serving action reveals one specific detail.",
+        "If a real approved cook answer exists, pair it with a detail that supports it, then return to the whole serving."
+      ],
+      "footageNeeded": [
+        "An identified, clearly exposed Liman serving with its own matching cut/serve footage.",
+        "A checked menu name; any spoken explanation must be recorded and approved."
+      ],
+      "references": [
+        {
+          "title": "Pera · pour and cut",
+          "url": "https://www.instagram.com/perapatisserieuk/reel/DePVKnDJB61/",
+          "why": "Use one same-subject serving event with a visible consequence.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (18.900 s). A saved jug/slice/serving frame was reopened on 22 Oct. This normalization did not replay it. Same-occasion serving is the observed mechanism; audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Preserve complete-serving scale; do not treat different plates as stages of the same item.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "No old-menu price, included-side or dietary-safety inference. Karniyarik remains only a possible subject until an actual matched source proves it; the dark rejected photo is not a fallback."
+    },
+    {
+      "id": "PER-V1",
+      "clientId": "pera-patisserie",
+      "status": "Direction only",
+      "title": "Follow the line.",
+      "viewerDecision": "A patisserie viewer can follow a real decorating gesture and see the new line it makes.",
+      "hook": "Frame the actual nozzle and surface before a new line begins to form.",
+      "payoff": "The new line is the visible payoff; the film does not claim a complete-cake transformation.",
+      "cta": "Explore Pera’s patisserie.",
+      "beats": [
+        "Keep nozzle, contact point and newly forming line visible in the source frame.",
+        "Stay with the uninterrupted real action rather than inventing intermediate stages.",
+        "Let the hand reset or lift; hold only long enough to see the line’s actual result."
+      ],
+      "footageNeeded": [
+        "A clearly screened original piping take with the beginning, contact and lift/reset visible.",
+        "Same-item continuity, final representation and intended-use checks."
+      ],
+      "references": [
+        {
+          "title": "Pera · real process",
+          "url": "https://www.instagram.com/reel/Dee5rA5sXts/",
+          "why": "Let real tool contact change the material; no artificial before/after or ingredient inference.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (19.921 s). The curator reopened a saved hand/material/bowl frame on 22 Oct. This normalization read those records; it did not replay the film. Ingredients, audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Alma Mill Bakery × Natoora · material, hand and tool",
+          "url": "https://www.instagram.com/almamillbakery/reel/DdHPGSMKBPZ/",
+          "why": "Use the observed material/hand/tool relationship, acknowledging that only part of the reference was watched.",
+          "inspected": "Only part of an advancing player was observed on 21 Oct 2026 (33.922901 s total container). A saved hand/material/container frame was reopened on 22 Oct. This normalization did not replay it. Full sequence, audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "Use the retained qualified piping lead only within what it proves. A short opening must clear before the key action. The earlier silent edit is not ASMR; source sound has not been verified."
+    },
+    {
+      "id": "PER-V2",
+      "clientId": "pera-patisserie",
+      "status": "Direction only",
+      "title": "Outside. Then inside.",
+      "viewerDecision": "A Pera customer can recognise a whole named product and understand its real inside texture.",
+      "hook": "Begin on one whole, staff-identified product before its genuine cut or serving event.",
+      "payoff": "Outside and inside belong to the same real product and serving occasion.",
+      "cta": "Ask about the named product at Pera.",
+      "beats": [
+        "Show the whole selected item clearly.",
+        "Follow its actual cut or serving action without borrowing another product’s sauce or interior.",
+        "Give a clean same-item texture view, then finish in recognisable Pera context."
+      ],
+      "footageNeeded": [
+        "Matched whole/cut/interior footage for one positively identified product.",
+        "Current name and actual Pera setting; use stills as a carousel if a motion sequence does not exist."
+      ],
+      "references": [
+        {
+          "title": "Pera · pour and cut",
+          "url": "https://www.instagram.com/perapatisserieuk/reel/DePVKnDJB61/",
+          "why": "Develop one actual serving occasion so a close detail follows naturally from the whole item.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (18.900 s). A saved jug/slice/serving frame was reopened on 22 Oct. This normalization did not replay it. Same-occasion serving is the observed mechanism; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "No invented flavour, sauce, serving count, ordering deadline or generated crumbs."
+    },
+    {
+      "id": "AAR-V1",
+      "clientId": "aara-birmingham",
+      "status": "Direction only",
+      "title": "Before your first bite.",
+      "viewerDecision": "Aara’s diner connects a real kitchen gesture with the food they are choosing.",
+      "hook": "Begin just before one actual gloved-hand or skewer action changes the food, keeping hand, tool and subject clear.",
+      "payoff": "A specific piece of real kitchen work earns attention and gives the restaurant human character.",
+      "cta": "Explore Aara’s Telugu and Hyderabadi menu.",
+      "beats": [
+        "Show one real short action in the Aara kitchen rather than a generic dining-room montage.",
+        "Hold its visible consequence; if a team member explains it, use their genuine checked words.",
+        "Only if a matched serving exists, resolve to the same finished food and checked menu name; otherwise finish honestly on the action."
+      ],
+      "footageNeeded": [
+        "A current qualified action take with food identity checked; retained kitchen footage is a lead, not proof of every intended beat.",
+        "Matching finished serving only if genuinely available, and participant/intended-use clearance."
+      ],
+      "references": [
+        {
+          "title": "Aara · actual kitchen routine",
+          "url": "https://www.instagram.com/aaraindianrestaurant/reel/DeuU5TXzGup/",
+          "why": "Anchor the premise in Aara’s real working environment; do not infer the reference food’s identity or copy its sound promise.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (31.137 s). A saved bubbling-liquid/golden-pieces frame was reopened on 22 Oct. This normalization did not replay it. Food identity, the opening two seconds, audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Connect a real maker with the complete serving, preserving scale and identity.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "Direction only. No invented cooking stages, ingredients, staff biography or regional recipe assertion. No promise of source sound: listen and clear actual audio separately."
+    },
+    {
+      "id": "AAR-V2",
+      "clientId": "aara-birmingham",
+      "status": "Direction only",
+      "title": "One cup, one explanation.",
+      "viewerDecision": "If chai is currently selected, an Aara customer can understand one real brewing or serving choice in the team’s words.",
+      "hook": "Start on a single visible, genuine brewing or pouring action for the selected drink.",
+      "payoff": "One observed action makes one real explanation concrete, with drink/process continuity intact.",
+      "cta": "Ask the team about the selected drink.",
+      "beats": [
+        "Establish the actual drink process and the same cup/utensils.",
+        "A consenting team member explains one approved choice in their own words.",
+        "Show only the matching process detail and finish on the same cup."
+      ],
+      "footageNeeded": [
+        "Current masala-chai selection/identity and genuinely matching brewing/pour/cup footage.",
+        "A real recorded and approved explanation; no unrelated pot or recipe insert."
+      ],
+      "references": [
+        {
+          "title": "Aara · actual kitchen routine",
+          "url": "https://www.instagram.com/aaraindianrestaurant/reel/DeuU5TXzGup/",
+          "why": "Use a real Aara routine with one clear editorial premise, without an unverified sound or dish claim.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (31.137 s). A saved bubbling-liquid/golden-pieces frame was reopened on 22 Oct. This normalization did not replay it. Food identity, the opening two seconds, audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Dishoom · Introducing the House Chai",
+          "url": "https://www.youtube.com/watch?v=u0f11Mc5w00",
+          "why": "Supplementary explanation-format lead only: name the actual drink and answer one real question. This film was not watched and no Dishoom recipe or service claim transfers.",
+          "inspected": "NOT WATCHED. Only primary YouTube search metadata was inspected on 22 Oct 2026: Dishoom, published 28 Apr 2021, described as a step-by-step guide. The watch-page fetch failed; a separate Dishoom Chai article was read. No camera, timing, sequence or audio observation is verified."
+        }
+      ],
+      "notes": "Source-conditional. V05 supplies the observed real-working-setting mechanism; Dishoom is a metadata-only supplementary lead, not a watched camera/audio/recipe model. No price or all-day-service promise."
+    },
+    {
+      "id": "TW-V1",
+      "clientId": "tw-fresh-food-centre",
+      "status": "Direction only",
+      "title": "First scoop.",
+      "viewerDecision": "A counter shopper can recognise two actual olive trays and hear or read one checked practical distinction.",
+      "hook": "A real scoop enters an actual olive tray, with the tray context visible.",
+      "payoff": "The shopper sees two real choices and one verified difference, rather than an inferred variety from colour.",
+      "cta": "Ask at the counter about the trays shown.",
+      "beats": [
+        "Show the scoop and selected olives in their real counter context.",
+        "Reveal a second actual tray rather than a second crop of the first.",
+        "If an approved useful difference exists, let a cleared staff member supply it, then finish with the correct counter/fascia cue."
+      ],
+      "footageNeeded": [
+        "Matched current scoop/tray footage and a distinct second tray.",
+        "An approved factual distinction and correctly identified current counter context."
+      ],
+      "references": [
+        {
+          "title": "Alma Mill Bakery × Natoora · material, hand and tool",
+          "url": "https://www.instagram.com/almamillbakery/reel/DdHPGSMKBPZ/",
+          "why": "Borrow the tactile material/hand/tool relationship, with the partial-playback limit explicit.",
+          "inspected": "Only part of an advancing player was observed on 21 Oct 2026 (33.922901 s total container). A saved hand/material/container frame was reopened on 22 Oct. This normalization did not replay it. Full sequence, audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Pera · pour and cut",
+          "url": "https://www.instagram.com/perapatisserieuk/reel/DePVKnDJB61/",
+          "why": "Let a single physical action resolve in a visible serving result.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (18.900 s). A saved jug/slice/serving frame was reopened on 22 Oct. This normalization did not replay it. Same-occasion serving is the observed mechanism; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "Cross-category references supply motion grammar only; they do not prove TW bakes or cooks. No olive variety, origin, seasoning, nutrition or current-stock promise is inferred."
+    },
+    {
+      "id": "TW-V2",
+      "clientId": "tw-fresh-food-centre",
+      "status": "Direction only",
+      "title": "Ask at the red block.",
+      "viewerDecision": "A shopper gets one genuine buying question answered by the appropriate current counter expert.",
+      "hook": "Introduce a real buying question plainly; do not turn an invented sentence into a customer quote.",
+      "payoff": "One clear answer is backed by the visible real task and correct expertise.",
+      "cta": "Bring your own question to the counter.",
+      "beats": [
+        "State the actual question and identify the correct current counter context.",
+        "A consenting, verified-role butcher/counter expert gives a short approved answer.",
+        "Show only the relevant safe real task that demonstrates the answer, ending on the actual red block and identified subject."
+      ],
+      "footageNeeded": [
+        "A genuine supplied question and approved factual answer.",
+        "Verified current expert/role, participant permission and matching safe counter-action footage."
+      ],
+      "references": [
+        {
+          "title": "Nazar Bedford · preparation and whole serving",
+          "url": "https://www.instagram.com/nazarturkishkitchen/reel/DePUE3Fpktn/",
+          "why": "Keep a working person and whole subject in context so the answer has visible proof.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (16.136 s). Whole-serving and logo-ending frames were reopened on 22 Oct. This normalization did not replay it. Separate dishes are not proved recipe stages; audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Alma Mill Bakery × Natoora · material, hand and tool",
+          "url": "https://www.instagram.com/almamillbakery/reel/DdHPGSMKBPZ/",
+          "why": "Make the material/tool consequence legible without transferring bakery services to TW.",
+          "inspected": "Only part of an advancing player was observed on 21 Oct 2026 (33.922901 s total container). A saved hand/material/container frame was reopened on 22 Oct. This normalization did not replay it. Full sequence, audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "No invented preparation, provenance, halal, organic or cooking-safety claim. Any future spoken answer needs separate listening and clearance; reference sound is not verified."
+    },
+    {
+      "id": "LOC-V1",
+      "clientId": "the-local-shop",
+      "status": "Direction only",
+      "title": "A bag of flour. A plan for the weekend.",
+      "viewerDecision": "A home baker connects an actual recognisable flour pack with a realistic next use.",
+      "hook": "Start with the complete readable Klasika flour bag, then a real home-baking preparation using that exact product.",
+      "payoff": "The product becomes a concrete home-use idea rather than another shelf label.",
+      "cta": "Put a home-baking day on the calendar.",
+      "beats": [
+        "Keep the actual product name and format readable; no re-created pack text or historical price.",
+        "Show a genuinely filmed measuring/mixing action at home, with recipe and ingredient quantities checked beforehand.",
+        "Finish on the actual loaf only if the same documented bake reaches it; otherwise end on the useful next-step preparation."
+      ],
+      "footageNeeded": [
+        "Current pack and a real cleared home-baking participant/location; no claim that The Local bakes bread.",
+        "One supported recipe/use and enough same-product continuity for every shown action."
+      ],
+      "references": [
+        {
+          "title": "Pera · pour and cut",
+          "url": "https://www.instagram.com/perapatisserieuk/reel/DePVKnDJB61/",
+          "why": "Use its documented same-subject action or practical orientation only; the new home-baking sequence is a proposed original shoot, not an observed Local film.",
+          "inspected": "The dated record reports an advancing player on 21 Oct 2026 (18.900 s). A saved jug/slice/serving frame was reopened on 22 Oct. This normalization did not replay it. Same-occasion serving is the observed mechanism; audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "Mother’s Restaurant · arrival and ordering orientation",
+          "url": "https://x.com/MothersNOLA/status/2113012695431536971",
+          "why": "Use its documented same-subject action or practical orientation only; the new home-baking sequence is a proposed original shoot, not an observed Local film.",
+          "inspected": "The dated record reports muted progression on 21 Oct 2026 at about 0.09/7.79/14.85 s of a 27.690666 s video. A saved ordering-line/service-explanation frame was reopened on 22 Oct. This normalization did not replay it. The US service model does not transfer; audio and soundtrack rights are NOT VERIFIED."
+        }
+      ],
+      "notes": "Direction only, no existing film claimed. Retained Klasika packet photograph and maker’s bread-use description are source leads. Do not fabricate a loaf, stock promise, customer quote or shop bakery service. References below supply same-subject action grammar only, not an observed Local flour sequence."
+    },
+    {
+      "id": "LOC-V2",
+      "clientId": "the-local-shop",
+      "status": "Direction only",
+      "title": "Your usual, in your words.",
+      "viewerDecision": "A shopper hears one real person explain a use for one actual product, while its pack stays recognisable.",
+      "hook": "A consenting current participant holds the actual pack and supplies one short sentence in their own words.",
+      "payoff": "A genuine human sentence adds a useful idea to the correct product without an invented biography or recipe.",
+      "cta": "Keep the product name for your next shop.",
+      "beats": [
+        "Establish the person, complete pack and correct shop context.",
+        "Use only the participant’s recorded, approved sentence.",
+        "Show only a package or serving action that is actually documented, then return to the real shelf."
+      ],
+      "footageNeeded": [
+        "One real, approved product-use sentence from a cleared current staff member or customer.",
+        "Current pack identity and matching shelf/action footage; otherwise use LOC-V1 or a pack-first photo."
+      ],
+      "references": [
+        {
+          "title": "Alma Mill Bakery × Natoora · material, hand and tool",
+          "url": "https://www.instagram.com/almamillbakery/reel/DdHPGSMKBPZ/",
+          "why": "Keep real person/material context and an intelligible action; do not transfer bakery activity to a grocery shop.",
+          "inspected": "Only part of an advancing player was observed on 21 Oct 2026 (33.922901 s total container). A saved hand/material/container frame was reopened on 22 Oct. This normalization did not replay it. Full sequence, audio and soundtrack rights are NOT VERIFIED."
+        },
+        {
+          "title": "GAIL’s · Bakers",
+          "url": "https://www.youtube.com/watch?v=kFxr5AjjCKU",
+          "why": "Supplementary real-maker editorial lead only. The film was not watched; no speaker, quote, camera grammar or bakery claim transfers to The Local.",
+          "inspected": "NOT WATCHED. Only primary YouTube search metadata was inspected on 22 Oct 2026: GAIL’s Bakery, published 12 Jul 2017, asking what being a baker means. The watch-page fetch failed. A separate baker/article link does not verify this film. No speaker, sequence, camera, timing or audio observation is verified."
+        }
+      ],
+      "notes": "No invented childhood memory, nationality, supplier provenance, cooked-food service or in-store baking. GAIL’s is a metadata-only editorial lead; it does not establish a watched speaker or sequence."
+    }
+  ]
+}
