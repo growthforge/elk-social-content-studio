@@ -1,5 +1,5 @@
 {
-  "version": "deeksha-first4-4c23387edce4",
+  "version": "deeksha-reviewed-385afd13e44c",
   "observed": "2026-10-23",
   "brief": {
     "id": "deeksha-2026-10-23",
@@ -38,6 +38,54 @@
     "status": "Editorial dates; social scheduling and approval are separate"
   },
   "posts": [
+    {
+      "id": "baker-crafts-deeksha-2026-10-24",
+      "clientId": "baker-crafts",
+      "date": "2026-10-24",
+      "type": "image",
+      "title": "Vizyon Carrot Cake Mix",
+      "version": "v1.1",
+      "mediaTreatment": "designed",
+      "artworkCopy": {
+        "mode": "adapted",
+        "text": [
+          "10 kg",
+          "VIZYON",
+          "Carrot",
+          "Cake Mix",
+          "bakercrafts.co.uk",
+          "AI serving suggestion"
+        ]
+      },
+      "status": "Finished draft",
+      "slides": [
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-24/01-v4807f6eb5a28b8cc.jpg",
+          "alt": "A slice of frosted carrot cake beside the original Vizyon Carrot Cake Mix bag. Text reads “10 kg”, “Vizyon Carrot Cake Mix” and “bakercrafts.co.uk”. The cake is labelled “AI serving suggestion”.",
+          "width": 1080,
+          "height": 1350
+        }
+      ],
+      "references": [
+        {
+          "title": "Baker Crafts · Green Velvet product composition",
+          "url": "https://www.instagram.com/p/DeuVDStSzfQ/",
+          "why": "Inspected the complete static artwork: warm cake scene, original bag at lower left, curved panel, product title and brand mark. Applied this composition to the exact assigned product; size replaces the reference price.",
+          "inspected": "2026-10-23"
+        }
+      ],
+      "notes": [],
+      "sourceSummary": "Original Vizyon product pack and Baker Crafts mark; generated serving suggestion is explicitly labelled.",
+      "review": {
+        "status": "Independent draft review passed.",
+        "scope": "Actual reviewed media and copy; human social approval and intended-use rights remain open."
+      },
+      "caption": "Carrot cake for the next bake? Vizyon Carrot Cake Mix comes in a 10 kg bag. The ingredients list includes 15% dried carrot, plus cinnamon.\n\nFind the mix and its directions at bakercrafts.co.uk.\n\nAI serving suggestion shown.",
+      "facebookCaption": "Carrot cake for the next bake? Vizyon Carrot Cake Mix comes in a 10 kg bag. The ingredients list includes 15% dried carrot, plus cinnamon.\n\nFind the mix and its directions at bakercrafts.co.uk.\n\nAI serving suggestion shown.",
+      "alt": "A slice of frosted carrot cake beside the original Vizyon Carrot Cake Mix bag. Text reads “10 kg”, “Vizyon Carrot Cake Mix” and “bakercrafts.co.uk”. The cake is labelled “AI serving suggestion”.",
+      "cover": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-24/01-v4807f6eb5a28b8cc.jpg",
+      "download": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-24/post-pack-v4807f6eb5a28b8cc.zip"
+    },
     {
       "id": "tw-fresh-food-centre-deeksha-2026-10-24",
       "clientId": "tw-fresh-food-centre",
@@ -95,6 +143,136 @@
       "alt": "Adonis zaatar jars on a grocery shelf, with Aleppo Style and Jordanian Style labels. The green heading reads A world of flavours, with warm layered waves and the TW seal below.\n\nJars labelled Odysea Spicy Ajvar, Aubergine Imam and Harissa Spicy Meze on a grocery shelf. The green heading reads Meze, your way, with warm layered waves and the TW seal below.\n\nMulino Bianco Baiocchi Pistacchio and Settembrini biscuit packs on a grocery shelf. The green heading reads The sweet shelf, with warm layered waves and the TW seal below.",
       "cover": "assets/programme/tw-fresh-food-centre/tw-fresh-food-centre-deeksha-2026-10-24/cover-vcb8781b64d2c9c70.webp",
       "download": "assets/programme/tw-fresh-food-centre/tw-fresh-food-centre-deeksha-2026-10-24/post-pack-vcb8781b64d2c9c70.zip"
+    },
+    {
+      "id": "baker-crafts-deeksha-2026-10-28",
+      "clientId": "baker-crafts",
+      "date": "2026-10-28",
+      "type": "carousel",
+      "title": "Nine Vizyon glaze options",
+      "version": "v1.5",
+      "mediaTreatment": "designed",
+      "artworkCopy": {
+        "mode": "adapted",
+        "text": [
+          "VIZYON",
+          "01 / 10",
+          "Pick your glaze.",
+          "Nine Vizyon options · 7 kg",
+          "bakercrafts.co.uk",
+          "Chocolate",
+          "Vanilla White",
+          "Caramel Tres Leches",
+          "Neutral",
+          "Strawberry",
+          "Raspberry",
+          "Banana",
+          "Blueberry",
+          "Caramel",
+          "02 / 10",
+          "Chocolate-flavoured cold glaze · 7 kg",
+          "Vizyon",
+          "03 / 10",
+          "Vanilla-flavoured white cold glaze · 7 kg",
+          "04 / 10",
+          "Tres Leches Sauce",
+          "Caramel sauce · 7 kg",
+          "05 / 10",
+          "Fruit cake mirror gel · 7 kg",
+          "06 / 10",
+          "Strawberry-flavoured cold glaze · 7 kg",
+          "07 / 10",
+          "Raspberry-flavoured cold glaze · 7 kg",
+          "08 / 10",
+          "Banana-flavoured cold glaze · 7 kg",
+          "09 / 10",
+          "Blueberry-flavoured cold glaze · 7 kg",
+          "10 / 10",
+          "Caramel-flavoured cold glaze · 7 kg"
+        ]
+      },
+      "status": "Finished draft",
+      "slides": [
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/01-v6e3fd463a4eb68a5.jpg",
+          "alt": "Nine Vizyon glaze and sauce pails in a three-by-three arrangement on a white field. The cover reads “Pick your glaze. Nine Vizyon options · 7 kg”.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/02-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Chocolate 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/03-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Vanilla White 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/04-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Caramel Tres Leches Sauce 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/05-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Neutral 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/06-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Strawberry 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/07-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Raspberry 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/08-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Banana 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/09-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Blueberry 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        },
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/10-v6e3fd463a4eb68a5.jpg",
+          "alt": "A Vizyon Caramel 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+          "width": 1080,
+          "height": 1350
+        }
+      ],
+      "references": [
+        {
+          "title": "Bakersville · glaze range carousel",
+          "url": "https://www.instagram.com/p/DdTo17bmM22/",
+          "why": "Inspected all seven slides: range cover, individual product/flavour pages and final promotion. Adapted the group/variant sequence and serif hierarchy to nine actual Vizyon listings; the reference promotion is excluded.",
+          "inspected": "2026-10-23"
+        }
+      ],
+      "notes": [],
+      "sourceSummary": "Nine actual Vizyon website listings, including two distinct caramel products, represented with original product photographs.",
+      "review": {
+        "status": "Independent draft review passed.",
+        "scope": "Actual reviewed media and copy; human social approval and intended-use rights remain open."
+      },
+      "caption": "Pick your glaze. Explore nine Vizyon options listed in 7 kg packs:\n\nChocolate · Vanilla White · Caramel Tres Leches Sauce · Neutral · Strawberry · Raspberry · Banana · Blueberry · Caramel.\n\nWhich one would you choose first? Browse the range at bakercrafts.co.uk.",
+      "facebookCaption": "Pick your glaze. Explore nine Vizyon options listed in 7 kg packs:\n\nChocolate · Vanilla White · Caramel Tres Leches Sauce · Neutral · Strawberry · Raspberry · Banana · Blueberry · Caramel.\n\nWhich one would you choose first? Browse the range at bakercrafts.co.uk.",
+      "alt": "Nine Vizyon glaze and sauce pails in a three-by-three arrangement on a white field. The cover reads “Pick your glaze. Nine Vizyon options · 7 kg”.\n\nA Vizyon Chocolate 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Vanilla White 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Caramel Tres Leches Sauce 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Neutral 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Strawberry 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Raspberry 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Banana 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Blueberry 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.\n\nA Vizyon Caramel 7 kg pail on a white background with a warm textured header, with the product name above and “bakercrafts.co.uk” below.",
+      "cover": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/01-v6e3fd463a4eb68a5.jpg",
+      "download": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-28/post-pack-v6e3fd463a4eb68a5.zip"
     },
     {
       "id": "tw-fresh-food-centre-deeksha-2026-10-28",
@@ -167,6 +345,54 @@
       "alt": "Aara’s illuminated frontage at night, with its fascia, entrance grille and warm window lights. The full photograph includes a street pole and pavement signs.",
       "cover": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-30/01-v64c8020ae5e968ff.jpg",
       "download": "assets/programme/aara-birmingham/aara-birmingham-deeksha-2026-10-30/post-pack-v64c8020ae5e968ff.zip"
+    },
+    {
+      "id": "baker-crafts-deeksha-2026-10-30",
+      "clientId": "baker-crafts",
+      "date": "2026-10-30",
+      "type": "image",
+      "title": "Vizyon Chocolate Fudge Brownie Mix",
+      "version": "v1.3",
+      "mediaTreatment": "designed",
+      "artworkCopy": {
+        "mode": "adapted",
+        "text": [
+          "10 kg",
+          "VIZYON",
+          "Chocolate Fudge",
+          "Brownie Mix",
+          "bakercrafts.co.uk",
+          "AI serving suggestion"
+        ]
+      },
+      "status": "Finished draft",
+      "slides": [
+        {
+          "src": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-30/01-vf7073e0c9af64503.jpg",
+          "alt": "Three brownies on a white plate beside the original Vizyon Chocolate Fudge Brownie Mix bag. Text reads “10 kg”, “Vizyon Chocolate Fudge Brownie Mix” and “bakercrafts.co.uk”. The brownies are labelled “AI serving suggestion”.",
+          "width": 1080,
+          "height": 1350
+        }
+      ],
+      "references": [
+        {
+          "title": "Baker Crafts · Green Velvet product composition",
+          "url": "https://www.instagram.com/p/DeuVDStSzfQ/",
+          "why": "Inspected the complete static artwork: warm cake scene, original bag at lower left, curved panel, product title and brand mark. Applied this composition to the exact assigned product; size replaces the reference price.",
+          "inspected": "2026-10-23"
+        }
+      ],
+      "notes": [],
+      "sourceSummary": "Original Vizyon product pack and Baker Crafts mark; generated serving suggestion is explicitly labelled.",
+      "review": {
+        "status": "Independent draft review passed.",
+        "scope": "Actual reviewed media and copy; human social approval and intended-use rights remain open."
+      },
+      "caption": "Chocolate Fudge Brownie Mix, in Vizyon’s 10 kg bag. Check the product page for the ingredient list and mixing directions before your next batch.\n\nbakercrafts.co.uk\n\nAI serving suggestion shown.",
+      "facebookCaption": "Chocolate Fudge Brownie Mix, in Vizyon’s 10 kg bag. Check the product page for the ingredient list and mixing directions before your next batch.\n\nbakercrafts.co.uk\n\nAI serving suggestion shown.",
+      "alt": "Three brownies on a white plate beside the original Vizyon Chocolate Fudge Brownie Mix bag. Text reads “10 kg”, “Vizyon Chocolate Fudge Brownie Mix” and “bakercrafts.co.uk”. The brownies are labelled “AI serving suggestion”.",
+      "cover": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-30/01-vf7073e0c9af64503.jpg",
+      "download": "assets/programme/baker-crafts/baker-crafts-deeksha-2026-10-30/post-pack-vf7073e0c9af64503.zip"
     },
     {
       "id": "tw-fresh-food-centre-deeksha-2026-10-30",

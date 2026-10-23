@@ -82,7 +82,7 @@
   }
   function client(id) {return clients.find(c => c.id === id);}
   function name(id) {return client(id)?.name || 'Client unavailable';}
-  function logo(c) {return c && c.id !== 'baker-crafts' ? `<span class="brand-logo${['nazar-cambridge','nazar-bedford','liman-islington'].includes(c.id) ? ' dark-logo' : ''}"><img src="./assets/logos/${esc(c.id)}.png" alt="" width="44" height="44" loading="lazy" data-logo><span hidden aria-hidden="true">${esc(c.name.slice(0,2))}</span></span>` : '';}
+  function logo(c) {return c ? `<span class="brand-logo${['nazar-cambridge','nazar-bedford','liman-islington'].includes(c.id) ? ' dark-logo' : ''}"><img src="./assets/logos/${esc(c.id)}.${c.id === 'baker-crafts' ? 'jpg' : 'png'}" alt="" width="44" height="44" loading="lazy" data-logo><span hidden aria-hidden="true">${esc(c.name.slice(0,2))}</span></span>` : '';}
   function empty(title, detail) {return `<div class="empty-state"><h2>${esc(title)}</h2><p>${esc(detail)}</p></div>`;}
   function syncURL() {
     const p = new URLSearchParams({view:state.view});
@@ -148,7 +148,9 @@
     const expected = state.client === 'all' ? programme?.expectedPosts : arr(programme?.clients).find(c => c.id === state.client)?.expectedPosts;
     const expectedLabel = Number.isInteger(expected) && expected > 0 ? `<span class="count-context">of ${expected} brief deliverables</span>` : '';
     const shown = filteredPosts().length;
-    return `<div class="programme-summary" aria-label="Actual delivered assets against the brief"><span><strong>${scoped.length}</strong> available ${scoped.length === 1 ? 'deliverable' : 'deliverables'}</span>${expectedLabel}<span>${scoped.filter(p => p.type === 'carousel').length} carousels · ${scoped.filter(p => p.type === 'image').length} static assets</span>${str(programme?.cadence?.label) ? `<span class="summary-cadence" title="${esc(programme.cadence.status || '')}">${esc(programme.cadence.label)}</span>` : ''}${shown !== scoped.length ? `<span class="selection-count"><strong>${shown}</strong> shown</span>` : ''}</div>`;
+    const carouselCount = scoped.filter(p => p.type === 'carousel').length;
+    const staticCount = scoped.filter(p => p.type === 'image').length;
+    return `<div class="programme-summary" aria-label="Actual delivered assets against the brief"><span><strong>${scoped.length}</strong> available ${scoped.length === 1 ? 'deliverable' : 'deliverables'}</span>${expectedLabel}<span>${carouselCount} ${carouselCount === 1 ? 'carousel' : 'carousels'} · ${staticCount} static ${staticCount === 1 ? 'asset' : 'assets'}</span>${str(programme?.cadence?.label) ? `<span class="summary-cadence" title="${esc(programme.cadence.status || '')}">${esc(programme.cadence.label)}</span>` : ''}${shown !== scoped.length ? `<span class="selection-count"><strong>${shown}</strong> shown</span>` : ''}</div>`;
   }
   function primaryMessage() {
     if (primaryState === 'awaiting') return summary()+empty('Current brief exports are not supplied yet','The 11 assigned rows are the current scope. Earlier programme drafts remain separate and provide no completion credit.');
